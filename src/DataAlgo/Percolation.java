@@ -31,6 +31,15 @@ public class Percolation {
 			for(int secondRunner = 1; secondRunner < sides; secondRunner++) {
 				board[runner][secondRunner] = -1;
 				
+				
+				if(counter != 0 && counter <= sides) {
+					uniqueValueList[counter] = counter;
+				}else if(counter > (sides * (sides - 1))) {
+					uniqueValueList[counter] = (sides * sides);
+				}
+				
+				
+				
 				uniqueValueList[counter] = counter;
 				counter++;
 			}
@@ -123,22 +132,6 @@ public class Percolation {
 		board[row][col] = uniqueValueList[((leng*(row - 1)) + col)];
 		
 		
-		/*
-		if(row == 1 && col != 0) {
-			board[row][col] = row * col;
-		}else if(col == board.length - 1 && row != 0) {
-			board[row][col] = row * col;
-		}else {
-			
-			board[row][col] = uniqueValueList[((leng*(row - 1)) + col)]; 
-			
-			//System.out.println("North: " + uniqueValueList[((leng*(row - 2)) + col)]);
-			//System.out.println("South: " + uniqueValueList[((leng*(row )) + col)]);
-			//System.out.println("East: " + uniqueValueList[((leng*(row - 1)) + (col + 1))]);
-			//System.out.println("West: " + uniqueValueList[((leng*(row - 1)) + (col - 1))]);
-		}
-		*/
-		
 		//Testing for corner cases and edge cases
 		if((row == 1 && col == 1)){
 			
@@ -149,7 +142,6 @@ public class Percolation {
 			if(isOpen(row + 1, col)) {
 				
 				//System.out.println("South: " + uniqueValueList[((leng*(row )) + col)]);
-				
 				this.union(row,col,row+1,col,leng);
 				
 			}
@@ -157,11 +149,9 @@ public class Percolation {
 			if(isOpen(row ,col +1)) {
 				
 				//System.out.println("East: " + uniqueValueList[((leng*(row - 1)) + (col + 1))]);
-				
 				this.union(row,col,row,col+1,leng);
 				
 			}
-			
 			
 			//Assingment to 0
 			
@@ -175,14 +165,12 @@ public class Percolation {
 			if(isOpen(row + 1, col)) {
 				
 				//System.out.println("South: " + uniqueValueList[((leng*(row )) + col)]);
-			
 				this.union(row, col, row + 1, col, leng);
 			}
 			
 			if(isOpen(row ,col -1)) {
 				
 				//System.out.println("West: " + uniqueValueList[((leng*(row - 1)) + (col - 1))]);
-			
 				this.union(row, col, row , col - 1, leng);
 			
 			}
@@ -241,10 +229,24 @@ public class Percolation {
 			System.out.println("Top Edge case  hit " + row + " " + col);
 			System.out.println("North: " + 0);
 			
+			if(isOpen(row ,col + 1)) {
+				//System.out.println("East: " + uniqueValueList[((leng*(row - 1)) + (col + 1))]);
+				
+				this.union(row, col, row, col + 1, leng);
+			}
 			
-			System.out.println("East: " + uniqueValueList[((leng*(row - 1)) + (col + 1))]);
-			System.out.println("West: " + uniqueValueList[((leng*(row - 1)) + (col - 1))]);
-			System.out.println("South: " + uniqueValueList[((leng*(row )) + col)]);
+			if(isOpen(row , col - 1)) {
+				//System.out.println("West: " + uniqueValueList[((leng*(row - 1)) + (col - 1))]);
+				
+				
+				this.union(row, col, row, col - 1, leng);
+			}
+			
+			if(isOpen(row + 1,col)) {
+				//System.out.println("South: " + uniqueValueList[((leng*(row )) + col)]);
+				
+				this.union(row, col, row + 1, col , leng);
+			}
 			
 		}else if(row == leng && col > 1 && col < leng) {
 			
@@ -253,10 +255,23 @@ public class Percolation {
 			System.out.println("Bottom Edge case  hit " + row + " " + col);
 			System.out.println("South: " + -1);
 			
+			if(isOpen(row, col + 1)) {
+				//System.out.println("East: " + uniqueValueList[((leng*(row - 1)) + (col + 1))]);
+				
+				this.union(row, col, row, col + 1, leng);
+			}
 			
-			System.out.println("East: " + uniqueValueList[((leng*(row - 1)) + (col + 1))]);
-			System.out.println("West: " + uniqueValueList[((leng*(row - 1)) + (col - 1))]);
-			System.out.println("North: " + uniqueValueList[((leng*(row - 2)) + col)]);
+			if(isOpen(row,col - 1)) {
+				//System.out.println("West: " + uniqueValueList[((leng*(row - 1)) + (col - 1))]);
+				
+				this.union(row, col, row, col - 1, leng);
+			}
+			
+			if(isOpen(row - 1,col )) {
+				//System.out.println("North: " + uniqueValueList[((leng*(row - 2)) + col)]);
+				
+				this.union(row, col, row - 1, col , leng);
+			}
 			
 			
 			
@@ -266,9 +281,23 @@ public class Percolation {
 			//Left Edge Case
 			System.out.println("Left Edge case  hit " + row + " " + col);
 			
-			System.out.println("North: " + uniqueValueList[((leng*(row - 2)) + col)]);
-			System.out.println("South: " + uniqueValueList[((leng*(row )) + col)]);
-			System.out.println("East: " + uniqueValueList[((leng*(row - 1)) + (col + 1))]);
+			if(isOpen(row-1,col)) {
+				//System.out.println("North: " + uniqueValueList[((leng*(row - 2)) + col)]);
+				
+				this.union(row, col, row - 1, col , leng);
+			}
+			
+			if(isOpen(row + 1,col)) {
+				//System.out.println("South: " + uniqueValueList[((leng*(row )) + col)]);
+				
+				this.union(row, col, row + 1, col, leng);
+			}
+			
+			if(isOpen(row, col + 1)) {
+				//System.out.println("East: " + uniqueValueList[((leng*(row - 1)) + (col + 1))]);
+				
+				this.union(row, col, row, col + 1, leng);
+			}
 			
 			
 			
@@ -277,10 +306,52 @@ public class Percolation {
 			//Right Edge Case
 			System.out.println("Right Edge case  hit " + row + " " + col);
 			
-			System.out.println("North: " + uniqueValueList[((leng*(row - 2)) + col)]);
-			System.out.println("South: " + uniqueValueList[((leng*(row )) + col)]);
-			System.out.println("West: " + uniqueValueList[((leng*(row - 1)) + (col - 1))]);
-		}else {
+			if(isOpen(row - 1,col)) {
+				//System.out.println("North: " + uniqueValueList[((leng*(row - 2)) + col)]);
+				
+				this.union(row, col, row - 1, col , leng);
+			}
+			
+			if(isOpen(row + 1,col)) {
+				//System.out.println("South: " + uniqueValueList[((leng*(row )) + col)]);
+				
+				this.union(row, col, row + 1, col, leng);
+			}
+			
+			if(isOpen(row,col - 1)) {
+				//System.out.println("West: " + uniqueValueList[((leng*(row - 1)) + (col - 1))]);
+				
+				this.union(row, col, row, col - 1, leng);
+			}
+			
+		}else{
+			
+			
+			
+			if(isOpen(row - 1, col)) {
+				System.out.println("North: " + uniqueValueList[((leng*(row - 2)) + col)]);
+				
+				this.union(row, col, row - 1, col, leng);
+			}
+			
+			
+			if(isOpen(row + 1,col)) {
+				System.out.println("South: " + uniqueValueList[((leng*(row )) + col)]);
+				
+				this.union(row, col, row + 1, col , leng);
+			}
+			
+			if(isOpen(row,col + 1)) {
+				System.out.println("East: " + uniqueValueList[((leng*(row - 1)) + (col + 1))]);
+				
+				this.union(row, col, row , col + 1, leng);
+			}
+			
+			if(isOpen(row,col-1)) {
+				System.out.println("West: " + uniqueValueList[((leng*(row - 1)) + (col - 1))]);
+				
+				this.union(row, col, row , col - 1, leng);
+			}
 			
 		}
 		
@@ -317,9 +388,15 @@ public class Percolation {
 		int firstValue = rootWithList(uniqueValueList[((length * (x1 - 1)) + y1)]);
 		int secondValue = rootWithList(uniqueValueList[((length * (x2 - 1)) + y2)]);
 		
+		if(firstValue > secondValue) {
+			uniqueValueList[firstValue] = secondValue;
+		}else if(secondValue > firstValue) {
+			uniqueValueList[secondValue] = firstValue;
+		}else {
+			uniqueValueList[firstValue] = secondValue;
+		}
 		
 		
-		uniqueValueList[firstValue] = secondValue;
 		
 		
 		System.out.println("Joining Value: " + firstValue + " with " + secondValue);
@@ -418,6 +495,36 @@ public class Percolation {
 	
 		
 		//Top Edge case hit
+//		tester.openWithList(1, 2);
+//		tester.openWithList(1, 3);
+//		tester.openWithList(1, 4);
+		
+		//Bottom Edge case hit
+//		tester.openWithList(5, 2);
+//		tester.openWithList(5, 3);
+//		tester.openWithList(5, 4);
+		
+		//Left Edge Case Hit
+//		tester.openWithList(2, 1);
+//		tester.openWithList(3, 1);
+//		tester.openWithList(4, 1);
+		
+		
+//		//Right Edge Case Hit
+//		tester.openWithList(2, 5);
+//		tester.openWithList(3, 5);
+//		tester.openWithList(4, 5);
+		
+		//tester.union(5, 5, 1, 1, 5);
+		//tester.union(1,1,2,1,5);
+		
+		//Corner cases hit =========================================
+		tester.openWithList(1, 1);
+		tester.openWithList(5, 1);
+		tester.openWithList(1, 5);
+//		tester.openWithList(5, 5);
+		
+		//Top Edge case hit
 		tester.openWithList(1, 2);
 //		tester.openWithList(1, 3);
 		tester.openWithList(1, 4);
@@ -428,24 +535,19 @@ public class Percolation {
 		tester.openWithList(5, 4);
 		
 		//Left Edge Case Hit
-		tester.openWithList(2, 1);
-//		tester.openWithList(3, 1);
+//		tester.openWithList(2, 1);
+		tester.openWithList(3, 1);
 		tester.openWithList(4, 1);
 		
 		
 //		//Right Edge Case Hit
-		tester.openWithList(2, 5);
+//		tester.openWithList(2, 5);
 //		tester.openWithList(3, 5);
-		tester.openWithList(4, 5);
+//		tester.openWithList(4, 5);
 		
-		//tester.union(5, 5, 1, 1, 5);
-		//tester.union(1,1,2,1,5);
+		tester.openWithList(2, 2);
+		tester.openWithList(3, 2);
 		
-		//Corner cases hit
-		tester.openWithList(1, 1);
-		tester.openWithList(5, 1);
-		tester.openWithList(1, 5);
-		tester.openWithList(5, 5);
 		System.out.println();
 		
 		
