@@ -36,7 +36,9 @@ public class Queue_Array<Item> implements Iterable<Item> {
 	
 	public Item dequeue() {
 		
-		if(head > 0 && head == items.length/4) {
+		int indexesWithValues = (tail - head) + 1;
+		
+		if(head > tail && indexesWithValues ==  items.length/4) {
 			resize(items.length/2);
 		}
 		
@@ -48,7 +50,7 @@ public class Queue_Array<Item> implements Iterable<Item> {
 	private void resize(int capacity) {
 		Item[] copy = (Item[]) new Object[capacity];
 		
-		int indexesWithValues = (tail - head) + 1;
+		//int indexesWithValues = (tail - head) + 1;
 		int index = 0;
 		
 		
@@ -60,11 +62,14 @@ public class Queue_Array<Item> implements Iterable<Item> {
 		}
 		
 		items = copy;
-		
+		printOutQueue();
 	}
 	
 	public void printOutQueue() {
 		System.out.println("Queue Print Out");
+		System.out.println("Head Print out: " + head);
+		System.out.println("Tail Print out: " + tail);
+		System.out.println("Length: " + items.length);
 		for(int runner = 0; runner < items.length;runner++) {
 			System.out.println(items[runner]);
 		}

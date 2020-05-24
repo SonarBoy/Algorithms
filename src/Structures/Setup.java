@@ -150,7 +150,17 @@ public class Setup {
 		
 		x.printOutQueue();
 		
-		System.out.println(x.dequeue());
+		System.out.println("Dequeued: " + x.dequeue());
+		System.out.println("Dequeued: " + x.dequeue());
+		System.out.println("Dequeued: " + x.dequeue());
+		System.out.println("Dequeued: " + x.dequeue());
+		System.out.println("Dequeued: " + x.dequeue());
+		System.out.println("Dequeued: " + x.dequeue());
+		System.out.println("Dequeued: " + x.dequeue());
+		
+		
+		
+		
 		
 		x.printOutQueue();
 		
