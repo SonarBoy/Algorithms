@@ -1,4 +1,4 @@
-package StructuresTest;
+package Structures;
 
 public class BasicStack {
 	
@@ -63,8 +63,6 @@ public class BasicStack {
 		
 		finish = System.nanoTime();
         timeElapsed = finish - start;
-        
-       
         System.out.print("Pop: " + timeElapsed+ " ");
         
         return item;

@@ -1,4 +1,4 @@
-package StructuresTest;
+package Structures;
 
 public class ArrayStack {
 	
@@ -77,6 +77,25 @@ public class ArrayStack {
         
 		return array_Stack[Head--];
 	}
+	
+	
+	public String thrashing_pop() {
+		start = System.nanoTime();
+		
+		
+		if(Head > 0 && Head == array_Stack.length/4) {
+			resize(array_Stack.length/2);
+		}
+		
+		
+		
+		finish = System.nanoTime();
+        timeElapsed = finish - start;
+        System.out.println("Pop: " + timeElapsed);
+        
+		return array_Stack[Head--];
+	}
+	
 	
 	private void resize(int capacity) {
 		String[] copy = new String[capacity];

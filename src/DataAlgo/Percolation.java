@@ -33,14 +33,19 @@ public class Percolation {
 				
 				
 				if(counter != 0 && counter <= sides) {
-					uniqueValueList[counter] = counter;
+					
+					//Will put back later
+					//uniqueValueList[counter] = counter;
+					
+					uniqueValueList[counter] = 0;
 				}else if(counter > (sides * (sides - 1))) {
 					uniqueValueList[counter] = (sides * sides);
+				}else {
+				
+					uniqueValueList[counter] = counter;
 				}
 				
 				
-				
-				uniqueValueList[counter] = counter;
 				counter++;
 			}
 		}
@@ -554,10 +559,7 @@ public class Percolation {
 		
 		
 		
-		
-		
-		
-		
+	
 		
 		//tester.union(1, 1, 2, 1, 5);
 		//tester.union(3, 3, 2, 3, 4);
