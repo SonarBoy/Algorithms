@@ -1,24 +1,55 @@
 package dynamicConnectivity;
 
+
+/**
+ * Percolation: Simple simulation to emulate percolation.
+ * 
+ * @author Joshua
+ * @version 1.0
+ * @since 
+ */
 public class Percolation {
 
+	
+	/**
+	 * Main class variables
+	 * 
+	 * board = 2d array to simulate the medium
+	 * uniqueValuelist = array to hold and test for the ending percolation result.
+	 * openSites = number of open sites.
+	 */
 	int board[][];
 	int uniqueValueList[];
 	int openSites;
 	
 	
-	//Timing Methods:
+	
 	long start;
 	long finish;
 	long timeElapsed;
 	
+	
+	
+	
+	/**
+	 * Constructor:
+	 * Generates a new 2d array which acts as the medium.
+	 * Generates a unique value list that represents the index number of the sites.
+	 * Initializes the board to -1 and the unique value list to the number of elements on the board.
+	 * 
+	 * @param sides = the length of sides.
+	 */
+	
 	public Percolation(int sides) {
 		
+		//Start Timer.
 		start = System.nanoTime();
+		
 		
 		sides += 1;
 		openSites = 0;
 		
+		//Initialize board and unique value list.
 		board = new int[sides][sides];
 		uniqueValueList = new int[(sides - 1) * (sides - 1) + 2];
 		uniqueValueList[0] = 0;
@@ -26,22 +57,17 @@ public class Percolation {
 		int counter = 1;
 	
 		
-		
+		//Loop for assignment.
 		for(int runner = 1; runner < sides; runner++) {
 			for(int secondRunner = 1; secondRunner < sides; secondRunner++) {
 				board[runner][secondRunner] = -1;
 				
 				
 				if(counter != 0 && counter <= sides) {
-					
-					//Will put back later
-					//uniqueValueList[counter] = counter;
-					
 					uniqueValueList[counter] = 0;
 				}else if(counter > (sides * (sides - 1))) {
 					uniqueValueList[counter] = (sides * sides);
 				}else {
-				
 					uniqueValueList[counter] = counter;
 				}
 				
@@ -50,30 +76,56 @@ public class Percolation {
 			}
 		}
 		
-		
-		
-		
+		//Final value adding to the unique value list. 
 		uniqueValueList[counter] = counter ;
-	    
+	  
+		
+		//Stop timer and print out.
         finish = System.nanoTime();
         timeElapsed = finish - start;
         
-        
         System.out.println(sides);
         System.out.println(timeElapsed);
-		
-		
 	}
 	
-	//VISUAL SENSE
+	/**
+	 * openWithSection:
+	 * Opens an index of the grid and assigns it a unique value. 
+	 * This method was specifically designed to show the inefficiency of my visual thinking.
+	 * 
+	 * Unique value generation:
+	 * Multiply the row and column to get value X. We then take the row and column and subtract one from the row and and one to the column,
+	 * we then set up two loops to count to the end of the board. So the row counters loop condition will be row != 0 and the columns counter 
+	 * condition will be col != board.length - 1 we then take those two number that we get from counting to the edges of the board multiply them 
+	 * and add it back to X. 
+	 * 
+	 * Prior error 
+	 * First Mathematical instinct was right but did not work because the row and board did not represent unique values but indexes.
+	 * board[row][col] = (row * col) + ((col - 1)*(board.length - row - 1));
+	 * 
+	 * I Fear that you if i ask you for the help and you give it you will hold it over my head like my parents do when they do something.
+	 * 
+	 * @param row of the element to open
+	 * @param col of the element to open
+	 */
 	public void openWithSection(int row, int col) {
 		
+		//Start timer
 		start = System.nanoTime();
+		
 		
 		board[row][col] = 0;
 		int leng = board.length - 1;
 		
-		
+		/**Conditional to determine what to do with provided index.
+		 * 
+		 * if(the row is in the first column and the column number is not zero)
+		 * - simple multiplication
+		 * if(the row is in the last column and the row number is not zero)
+		 * - simple multiplication
+		 * else 
+		 * - do the visual processing of the index on the computer. 
+		 */
 		if(row == 1 && col != 0) {
 			board[row][col] = row * col;
 		}else if(col == leng && row != 0) {
@@ -86,8 +138,6 @@ public class Percolation {
 			int rowCount = 1;
 			int colCount = 1;
 		
-			
-			
 			while(adderRow > 1 || adderCol < leng) {
 				
 				if(adderRow > 1) {
@@ -100,30 +150,36 @@ public class Percolation {
 					colCount++;
 				}
 			}
-			
-			
-			
+		
 			
 			board[row][col] = (row * col) + (rowCount * colCount); 
-			
-			//First Mathematical instinct was right but did not work because the ro
-			//board[row][col] = (row * col) + ((col - 1)*(board.length - row - 1));
-			
 		}
 		
 		openSites++;
 		
 		
+		
+		//Stop timer.
 		finish = System.nanoTime();
-	    timeElapsed = finish - start;
-	       
+	    timeElapsed = finish - start;   
 	    System.out.println("With Section Elapsed Time: "+timeElapsed);
 		
 		return;
 	}
 	
 	
-	//FASTER
+	/**
+	 * openWithList
+	 * Opens an index of the grid and assigns it a unique value.
+	 * This method was designed to work with the computer.
+	 * 
+	 * It simply takes the number of rows - 1 then multiplies it by the number of columns in the board and finally adds the col variable 
+	 * to it to get the unique value. 
+	 * 
+	 * 
+	 * @param row of the element to open 
+	 * @param col of the element to open
+	 */
 	public void openWithList(int row, int col) {
 		
 		start = 0;
@@ -158,7 +214,7 @@ public class Percolation {
 				
 			}
 			
-			//Assingment to 0
+			
 			
 			
 		}else if((row == 1 && col == leng)) {
@@ -379,7 +435,13 @@ public class Percolation {
 	}
 	
 	
-	
+	/**
+	 * rootWithList:
+	 * Finds the root of the value given by going to the indexes associated with that value until the index and value match.
+	 * 
+	 * @param value 
+	 * @return value at index
+	 */
 	public int rootWithList(int value) {
 		
 		while(value != uniqueValueList[value]){
@@ -389,10 +451,33 @@ public class Percolation {
 		return value;
 	}
 	
+	
+	
+	/**
+	 * union:
+	 * takes in two sites on the board and finds each root of each site and  connects them
+	 * 
+	 *  if(the first sites root is greater than the second sites root)
+	 *  - assign the second value to the uniqueValueList with the root of the firstValue.
+	 *  
+	 *  if(the second sites root is greater than the first sites root)
+	 *  - assign the first value to the uniqueValueList with the root of the secondValue.
+	 *  
+	 *  This is done to insure that we are always pointing back to the lowest value. 
+	 *  
+	 * @param x1
+	 * @param y1
+	 * @param x2
+	 * @param y2
+	 * @param length
+	 */
+
 	public void union(int x1,int y1, int x2, int y2, int length) {
 		int firstValue = rootWithList(uniqueValueList[((length * (x1 - 1)) + y1)]);
 		int secondValue = rootWithList(uniqueValueList[((length * (x2 - 1)) + y2)]);
 		
+		
+		//Define why you did this please note the out put where it auto assigns to the lowest value.
 		if(firstValue > secondValue) {
 			uniqueValueList[firstValue] = secondValue;
 		}else if(secondValue > firstValue) {
@@ -407,33 +492,13 @@ public class Percolation {
 		System.out.println("Joining Value: " + firstValue + " with " + secondValue);
 	}
 	
-	/*
-	public void union(int first, int second) {
-		int rootP = root(first);
-		int rootQ = root(second);
-		
-		  if (rootP == rootQ) return;
-
-	       // Weighted portion of the union adding the shorter tree
-		   //below the taller one
-	        if (size[rootP] < size[rootQ]) {
-	        	
-	        	System.out.println(size[rootP] +" is less than "+size[rootQ]);
-	        	
-	            list[rootP] = rootQ;
-	            size[rootQ] += size[rootP];
-	        }
-	        else {
-	        	
-	        	System.out.println(size[rootP] +" is greater than "+size[rootQ]);
-	        	
-	            list[rootQ] = rootP;
-	            size[rootP] += size[rootQ];
-	        }
-	        count--;
-	}
-	
-	*/
+	/**
+	 * isFull:
+	 * checks to see if the site does not contain a -1 if it does returns a true.
+	 * @param row
+	 * @param col
+	 * @return
+	 */
 	
 	public boolean isFull(int row, int col) {
 		
@@ -455,10 +520,22 @@ public class Percolation {
 		
 	}
 	
+	
+	/**
+	 * numberOfOpenSites:
+	 * returns the number of open sites.
+	 * @return openSites.
+	 */
 	public int numberOfOpenSites() {
 		return openSites;
 	}
 	
+	
+	
+	/**
+	 * printOut:
+	 * prints out the values of the board.
+	 */
 	public void printOut() {
 		
 		int sides = board.length;
@@ -472,6 +549,11 @@ public class Percolation {
 		}
 	}
 	
+	
+	/**
+	 * printOutUniqueValueList
+	 * prints out the unique value list. 
+	 */
 	public void printOutUniqueValueList(){
 		for(int runner = 0;runner < uniqueValueList.length;runner++) {
 			System.out.println("Index: "+ runner+ " : "+uniqueValueList[runner] + " ");

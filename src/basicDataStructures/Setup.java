@@ -140,7 +140,7 @@ public class Setup {
 		*/
 		
 		
-		Queue_Array x = new Queue_Array();
+		Queue_Array<Integer> x = new Queue_Array<Integer>();
 		
 		x.printOutQueue();
 		
@@ -184,6 +184,8 @@ public class Setup {
 		System.out.println("Dequeued: " + x.dequeue());
 		
 		
+		
+
 		
 	}
 

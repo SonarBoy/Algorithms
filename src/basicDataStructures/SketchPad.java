@@ -3,11 +3,7 @@ package basicDataStructures;
 import java.util.Scanner;
 
 public class SketchPad {
-
-	
-	
-	
-	public static void main(String [] args) {
+	public static void main(String [] args){
 		
 		Scanner x = new Scanner(System.in);
 		
@@ -17,9 +13,7 @@ public class SketchPad {
 		int value = 0;
 		
 		
-		Queue tester = new Queue();
-		
-		
+		Queue<Integer> tester = new Queue<Integer>();
 		
 		
 		System.out.println("Enter any number to begin");
@@ -34,31 +28,20 @@ public class SketchPad {
 				System.out.println("Enter a number: ");
 				value = x.nextInt();
 				
-				
 				tester.enqueue(value);
-//				if(index == items.length) {
-//					
-//					items = resize(items,  2 * items.length,index);
-//				}
-//				
-//				
-//				items[index] = value;
-//				index++;
+
 			}
 			
 			if(number == 1) {
 				
-				System.out.println("Print Values" );
+				try {
+					System.out.println("Returned Values: " + tester.dequeue());
+				}
 				
-				
-				
-				tester.printValues();
-//				if(index == items.length/4) {
-//					items = resize(items,items.length/2,index);
-//				}
-//				
-//				
-//				index--;
+				catch(Exception ex) {
+					System.out.println(ex.getMessage());
+				}
+
 			}
 			
 			

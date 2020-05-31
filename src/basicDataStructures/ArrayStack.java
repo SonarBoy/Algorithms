@@ -13,8 +13,12 @@ public class ArrayStack {
 		
 		start = System.nanoTime();
 		
+		
+		
 		array_Stack = new String[1];
 		Head = 0;
+		
+		
 		
 		finish = System.nanoTime();
         timeElapsed = finish - start;
@@ -25,12 +29,15 @@ public class ArrayStack {
 		
 		start = System.nanoTime();
 		
+		
+		
 		if(Head == 0) {
 			
 			finish = System.nanoTime();
 	        timeElapsed = finish - start;
 	        System.out.println("Created: " + timeElapsed);
-			
+	        
+	 
 			return true;
 		}else {
 			
@@ -38,6 +45,7 @@ public class ArrayStack {
 	        timeElapsed = finish - start;
 	        System.out.println("Created: " + timeElapsed);
 	        
+	       
 			return false;
 		}
 		
@@ -49,16 +57,19 @@ public class ArrayStack {
 		
 		start = System.nanoTime();
 		
+		
+		
 		if(Head == array_Stack.length) {
 			resize(2 * array_Stack.length);
 		}
 
 		array_Stack[Head++] = item;
 		
+		
+	
 		finish = System.nanoTime();
         timeElapsed = finish - start;
         System.out.println("Push: " + timeElapsed);
-		
 	}
 	
 	public String pop() {
@@ -75,7 +86,7 @@ public class ArrayStack {
         timeElapsed = finish - start;
         System.out.println("Pop: " + timeElapsed);
         
-		return array_Stack[Head--];
+		return array_Stack[--Head];
 	}
 	
 	
@@ -105,5 +116,17 @@ public class ArrayStack {
 		}
 		
 		array_Stack = copy;
+	}
+	
+	private void startTime() {
+		start = System.nanoTime();
+	}
+	
+	private void endTime(String task) {
+		
+		finish = System.nanoTime();
+        timeElapsed = finish - start;
+        System.out.println(task+": " + timeElapsed);
+        
 	}
 }

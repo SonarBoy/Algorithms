@@ -47,8 +47,6 @@ public class BasicStack {
 		
 		finish = System.nanoTime();
         timeElapsed = finish - start;
-        
-       
         System.out.println("Push: " + timeElapsed + " "+ item);
 		
 	}

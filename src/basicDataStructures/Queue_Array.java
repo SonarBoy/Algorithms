@@ -10,6 +10,7 @@ public class Queue_Array<Item> implements Iterable<Item> {
 	private int tail = 0;
 	
 	
+	@SuppressWarnings("unchecked")
 	public Queue_Array() {
 		items = (Item[]) new Object[1];
 	}
@@ -64,6 +65,7 @@ public class Queue_Array<Item> implements Iterable<Item> {
 	
 	private void resize(int capacity) {
 		
+		@SuppressWarnings("unchecked")
 		Item[] copy = (Item[]) new Object[capacity];
 		int index = 0;
 		
