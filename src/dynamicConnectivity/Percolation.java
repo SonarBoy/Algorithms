@@ -63,7 +63,7 @@ public class Percolation {
 				board[runner][secondRunner] = -1;
 				
 				
-				if(counter != 0 && counter <= sides) {
+				if(counter != 0 && counter < sides) {
 					uniqueValueList[counter] = 0;
 				}else if(counter > (sides * (sides - 1))) {
 					uniqueValueList[counter] = (sides * sides);
@@ -560,6 +560,10 @@ public class Percolation {
 		}
 	}
 	
+	public boolean percolates() {
+		return false;
+	}
+	
 	
 	
 	public static void main(String []args) {
@@ -579,7 +583,7 @@ public class Percolation {
 		System.out.println();
 		
 	
-	
+	/*
 		
 		//Top Edge case hit
 //		tester.openWithList(1, 2);
@@ -635,23 +639,49 @@ public class Percolation {
 		tester.openWithList(2, 2);
 		tester.openWithList(3, 2);
 		
+		
+		*/
 		System.out.println();
 		
 		
 		
+		/* Top Left to bottom right testing
+		//tester.openWithList(1, 1);
+		tester.openWithList(2, 1);
+		tester.openWithList(2, 2);
+		//tester.openWithList(3, 2);
+		tester.openWithList(3, 3);
+		tester.openWithList(4, 3);
+		tester.openWithList(4, 4);
+		//tester.openWithList(5, 4);
+		//tester.openWithList(5, 5);
+		
+		
+		tester.openWithList(2, 5);
+		*/
+		
+		
+		/* Top right to bottom left testing.
+		tester.openWithList(1, 5);
+		tester.openWithList(2, 5);
+		tester.openWithList(2, 4);
+		tester.openWithList(3, 4);
+		tester.openWithList(3, 3);
+		tester.openWithList(4, 3);
+		tester.openWithList(4, 2);
+		tester.openWithList(5, 2);
+		*/
 		
 		
 	
-		
-		//tester.union(1, 1, 2, 1, 5);
-		//tester.union(3, 3, 2, 3, 4);
-		//tester.union(4, 1, 4, 2, 4);
 		
 		tester.printOutUniqueValueList();
 		tester.printOut();
 		
 	}
-	//public boolean percolates();
+	
+	
+	//
 	
 	
 }
