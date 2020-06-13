@@ -41,6 +41,8 @@ public class Deque_Linked_List<Item> implements Iterable<Item>{
 		first.next = head.next;
 		
 		head = first;
+		head.previous = first;
+		size++;
 		
 	}
 	
@@ -50,22 +52,68 @@ public class Deque_Linked_List<Item> implements Iterable<Item>{
 			head.item = item;
 			tail = new Node();
 			head.next = tail;
+			
+			
 		}else {
 			Node addingItem = new Node();
 			addingItem.item = item;
 			
 			tail.item = item;
 			tail.next = addingItem;
+			
 			tail = addingItem;
 		}
+		
+		size++;
 	}
 	
 	public Item removeFirst(){
-		return null;
+		
+		Node first = head;
+		
+		head = head.next;
+		
+		
+		size--;
+		
+		return first.item;
 	}
 	
 	public Item removeLast() {
-		return null;
+		
+		Node runnerNode = head;
+		
+		
+		for(int runner = 0; runner < size - 2; runner++) {
+			runnerNode = runnerNode.next;
+		}
+		
+		
+		
+		tail = runnerNode;
+		System.out.println("Final Item: " + tail.item);
+		tail.next = null;
+		
+		runnerNode = runnerNode.next;
+		
+		size--;
+		
+		
+		
+		return runnerNode.item;
+		
+	}
+	
+	public void printQueue() {
+		
+		Node runnerNode = head;
+		
+		while(runnerNode.next != null) {
+			System.out.println("Print Out: " + runnerNode.item);
+			
+			runnerNode = runnerNode.next;
+		}
+		
 	}
 	
 

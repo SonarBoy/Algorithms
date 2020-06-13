@@ -121,11 +121,7 @@ public class Setup {
 		System.out.println(linkedQueue.dequeue());
 		System.out.println(linkedQueue.dequeue());
 		
-		
-		8?
-		
-		
-		
+	
 		
 		
 		//TODO Testing for fixed capacity stack
@@ -140,6 +136,7 @@ public class Setup {
 		*/
 		
 		
+		/*
 		Queue_Array<Integer> x = new Queue_Array<Integer>();
 		
 		x.printOutQueue();
@@ -183,6 +180,29 @@ public class Setup {
 		System.out.println("Dequeued: " + x.dequeue());
 		System.out.println("Dequeued: " + x.dequeue());
 		
+		*/
+		
+		Deque_Array<Integer> tester = new Deque_Array<Integer>();
+		
+		/* TODO: Simple addititon to the tester.
+		tester.addLast(2);
+		tester.addFirst(1);
+		tester.addFirst(3);
+		*/
+		
+		/* TODO: Adding to the first.
+		tester.addFirst(0);
+		tester.addFirst(1);
+		tester.addFirst(2);
+		*/
+		
+		
+		tester.addLast(0);
+		tester.addLast(2);
+		tester.addLast(3);
+		
+		//tester.addLast(2);
+		tester.printOutItems();
 		
 		
 

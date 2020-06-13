@@ -13,14 +13,14 @@ public class SketchPad {
 		int value = 0;
 		
 		
-		Queue<Integer> tester = new Queue<Integer>();
+		Deque_Linked_List<Integer> tester = new Deque_Linked_List<Integer>();
 		
 		
 		System.out.println("Enter any number to begin");
 		int number = x.nextInt();
 		
 		while(number != -1) {
-			System.out.println("Enter a number 0 to add 1 to remove: ");
+			System.out.println("Enter a number 0 to add 1 to remove 3 to print out: ");
 			number = x.nextInt();
 			
 			
@@ -28,20 +28,27 @@ public class SketchPad {
 				System.out.println("Enter a number: ");
 				value = x.nextInt();
 				
-				tester.enqueue(value);
+				tester.addLast(value);
 
 			}
 			
 			if(number == 1) {
 				
 				try {
-					System.out.println("Returned Values: " + tester.dequeue());
+					//System.out.println("Returned Values: " + tester.removeFirst());
+					
+					//tester.printQueue();
+					System.out.println("Returned Value: " + tester.removeLast());
 				}
 				
 				catch(Exception ex) {
 					System.out.println(ex.getMessage());
 				}
 
+			}
+			
+			if(number == 3) {
+				tester.printQueue();
 			}
 			
 			
