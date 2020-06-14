@@ -12,7 +12,7 @@ public class Deque_Array <Item> implements Iterable<Item> {
 	
 	public Deque_Array() {
 		
-		head = 1;
+		head = 0;
 		tail = 1;
 		
 		items = (Item[]) new Object[3];
@@ -38,59 +38,62 @@ public class Deque_Array <Item> implements Iterable<Item> {
 		
 		int nextHead = head;
 		
-		if(nextHead-- < 0) {
+		if(nextHead-- <= 0) {
 			System.out.println("Array needs to be rezised");
 			
 			
 			resize(items.length * 2,'F');
-			return;
-		}
-		
-		
-		
-		if(head == tail) {
 			
-			System.out.println("Head and tail the same");
-			head--;
+			
 			items[head] = inputValue;
+			head--;
 			
 			return;
 		}
+		
+		
+	
 		
 		
 		items[head] = inputValue;
 		head--;
-
+		
 	}
 	
 	public void addLast(Item inputValue) {
 		
 		int nextTail = tail;
 		
-		if(nextTail++ > items.length - 1) {
+		if(nextTail++ >= items.length - 1) {
 			
 			System.out.println("Array needs to be rezised");
 			
-			resize(2,'B');
+			resize(items.length * 2,'B');
 			
-			return;
-		}
-		
-		if(head == tail) {
-			
-			System.out.println("Head and tail the same");
-			tail++;
 			items[tail] = inputValue;
+			tail++;
 			
 			return;
 		}
+	
 		
 		items[tail] = inputValue;
 		tail++;
-		
 	}
 	
-	public void printOutItems() {
+	
+	public Item removeFirst() {
+		System.out.println("Stub for first removal.");
+		return null;
+	}
+	
+	
+	public Item removeLast() {
+		System.out.println("Stub for last removal.");
+		return null;
+	}
+	
+	public void printQueue() {
 		
 		for(int runner = 0; runner < items.length;runner++) {
 			System.out.println("Item at index " + runner + " : " +items[runner]);
@@ -127,43 +130,49 @@ public class Deque_Array <Item> implements Iterable<Item> {
 		
 		if(side == 'F') {
 			
-			System.out.println("Add items in the front.");
+//			System.out.println("Add items in the front.");
 			
-			int currentHead = head - (items.length - 1);
-			int currentTail = tail - items.length;
 			
-			System.out.println("Head of new Array: " + currentHead);
-			System.out.println("Tail of new Array: " + currentTail);
+			
+			int currentHead = (copy.length) + (head - (items.length )); 
+			int currentTail = (copy.length) + (tail - items.length);
+			
+			int oldHead = head;
+			int oldTail = tail;
+			
+			head = currentHead;
+			tail = currentTail;
+		
+//			System.out.println("Head of new Array: " + currentHead);
+//			System.out.println("Tail of new Array: " + currentTail);
+			
+			for(int runner = currentHead; oldHead <= oldTail;runner++) {
+				copy[runner] = items[oldHead];
+				oldHead++;
+			}
+			
+			
 			
 		}
 		
 		if(side == 'B') {
 			
-			System.out.println("Add items in the back.");
+//			System.out.println("Add items in the back.");
 			
 			int currentHead = head;
 			int currentTail = items.length - 1;
 			
-			System.out.println("Head of new Array: " + currentHead);
-			System.out.println("Tail of new Array: " + currentTail);
+			int oldHead = head;
+			int oldTail = tail;
 			
+//			System.out.println("Head of new Array: " + currentHead);
+//			System.out.println("Tail of new Array: " + currentTail);
 			
+			for(int runner = currentHead; oldHead <= oldTail; runner++) {
+				copy[runner] = items[oldHead];
+				oldHead++;
+			}
 			
-		}
-		
-		
-		if(capacity > items.length) {
-			
-			items = copy;
-			return;
-			
-		}else if(capacity < items.length) {
-			
-			head = 0;
-			tail = copy.length;
-			
-			items = copy;
-			return;
 		}
 		
 		
@@ -191,6 +200,15 @@ public class Deque_Array <Item> implements Iterable<Item> {
 			return;
 		}
 		
+		*/
+		
+		items = copy;
+		
+		
+		/* Old print out of copy array keep until finailized
+		for(int runner = 0; runner < copy.length; runner++) {
+			System.out.println("Copy Array Index: "+ runner + " " + copy[runner]);
+		}
 		*/
 		
 	}

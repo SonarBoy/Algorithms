@@ -190,19 +190,28 @@ public class Setup {
 		tester.addFirst(3);
 		*/
 		
-		/* TODO: Adding to the first.
+		// TODO: Adding to the first.
+		
 		tester.addFirst(0);
 		tester.addFirst(1);
 		tester.addFirst(2);
-		*/
+	//	tester.addFirst(3);
 		
 		
-		tester.addLast(0);
-		tester.addLast(2);
-		tester.addLast(3);
 		
+		
+//		tester.addLast(0);
+//		tester.addLast(2);
+//		tester.addLast(3);
+//		tester.addLast(4);
+		
+//		
+//		tester.addFirst(0);
+//		tester.addLast(1);
+//		tester.addLast(2);
+//		tester.addLast(3);
 		//tester.addLast(2);
-		tester.printOutItems();
+		tester.printQueue();
 		
 		
 
