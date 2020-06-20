@@ -27,7 +27,12 @@ public class SketchPad {
 			System.out.println("Enter a number");
 			System.out.println("0 to Add a Value at the begining.");
 			System.out.println("1 to Add a Value at the end.");
-			System.out.println("9 to print out contents.");
+			System.out.println("3 to print out contents.");
+			System.out.println("7 to Remove from the front");
+			System.out.println("9 to Remove from the back");
+			
+			
+			System.out.println();
 			System.out.println();
 			
 			
@@ -36,6 +41,7 @@ public class SketchPad {
 			
 			if(number == 0) {
 				System.out.println("Enter a number FRONT: ");
+				System.out.println("Current Size: " + tester.size());
 				value = x.nextInt();
 				
 				tester.addFirst(value);
@@ -44,6 +50,7 @@ public class SketchPad {
 			
 			if(number == 1) {
 				System.out.println("Enter a number BACK: ");
+				System.out.println("Current Size: " + tester.size());
 				value = x.nextInt();
 				
 				tester.addLast(value);
@@ -67,6 +74,16 @@ public class SketchPad {
 			
 			if(number == 3) {
 				tester.printQueue();
+			}
+			
+			if(number == 7) {
+				
+				
+				System.out.println("Item Removed: "+ tester.removeFirst());
+			}
+			
+			if(number == 9) {
+				System.out.println("Item Removed: "+ tester.removeLast());
 			}
 			
 			

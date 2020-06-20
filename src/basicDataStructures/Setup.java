@@ -182,6 +182,8 @@ public class Setup {
 		
 		*/
 		
+		
+
 		Deque_Array<Integer> tester = new Deque_Array<Integer>();
 		
 		/* TODO: Simple addititon to the tester.
@@ -192,9 +194,9 @@ public class Setup {
 		
 		// TODO: Adding to the first.
 		
-		tester.addFirst(0);
-		tester.addFirst(1);
-		tester.addFirst(2);
+//		tester.addFirst(0);
+//		tester.addFirst(1);
+//		tester.addFirst(2);
 	//	tester.addFirst(3);
 		
 		
@@ -211,7 +213,17 @@ public class Setup {
 //		tester.addLast(2);
 //		tester.addLast(3);
 		//tester.addLast(2);
-		tester.printQueue();
+//		
+
+		RandomizedQueue<Integer> test = new RandomizedQueue<Integer>();
+		
+		test.enqueue(1);
+		test.enqueue(2);
+		test.enqueue(3);
+		test.enqueue(4);
+		
+		test.printOut();
+		
 		
 		
 

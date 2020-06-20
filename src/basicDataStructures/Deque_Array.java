@@ -47,6 +47,7 @@ public class Deque_Array <Item> implements Iterable<Item> {
 			
 			items[head] = inputValue;
 			head--;
+			size++;
 			
 			return;
 		}
@@ -58,6 +59,7 @@ public class Deque_Array <Item> implements Iterable<Item> {
 		items[head] = inputValue;
 		head--;
 		
+		size++;
 	}
 	
 	public void addLast(Item inputValue) {
@@ -72,6 +74,7 @@ public class Deque_Array <Item> implements Iterable<Item> {
 			
 			items[tail] = inputValue;
 			tail++;
+			size++;
 			
 			return;
 		}
@@ -79,18 +82,46 @@ public class Deque_Array <Item> implements Iterable<Item> {
 		
 		items[tail] = inputValue;
 		tail++;
+		
+		size++;
 	}
 	
 	
 	public Item removeFirst() {
-		System.out.println("Stub for first removal.");
-		return null;
+		
+		int nextHead = head;
+		
+		if(nextHead++ >= tail){
+			System.out.println("Last Item");
+			return null;
+		}
+		
+		
+		
+		
+		Item toReturn = items[head++];
+		items[head] = null;
+		size--;
+		
+		return toReturn;
 	}
 	
 	
 	public Item removeLast() {
-		System.out.println("Stub for last removal.");
-		return null;
+		
+		int nextTail = tail;
+		
+		if(nextTail-- <= head){
+			System.out.println("Last Item");
+			
+			return null;
+		}
+		
+		Item toReturn = items[tail--];
+		items[tail] = null;
+		size--;
+		
+		return toReturn;
 	}
 	
 	public void printQueue() {
