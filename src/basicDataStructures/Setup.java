@@ -221,6 +221,14 @@ public class Setup {
 		test.enqueue(2);
 		test.enqueue(3);
 		test.enqueue(4);
+		test.enqueue(5);
+		test.enqueue(6);
+		test.enqueue(7);
+		test.enqueue(8);
+		
+		//test.enqueueTieBack(0);
+		
+		test.dequeueRandom();
 		
 		test.printOut();
 		
