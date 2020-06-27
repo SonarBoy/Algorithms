@@ -41,7 +41,6 @@ public class Deque_Array <Item> implements Iterable<Item> {
 		if(nextHead-- <= 0) {
 			System.out.println("Array needs to be rezised");
 			
-			
 			resize(items.length * 2,'F');
 			
 			
@@ -51,9 +50,6 @@ public class Deque_Array <Item> implements Iterable<Item> {
 			
 			return;
 		}
-		
-		
-	
 		
 		
 		items[head] = inputValue;
@@ -90,11 +86,24 @@ public class Deque_Array <Item> implements Iterable<Item> {
 	public Item removeFirst() {
 		
 		int nextHead = head;
+		int nextSize = size;
 		
 		if(nextHead++ >= tail){
 			System.out.println("Last Item");
 			return null;
 		}
+		
+		
+		if(nextSize-- == items.length/4) {
+			System.out.println("Resize Necessary Current Size: " + nextSize);
+			resize((items.length / 2),'F');
+		}
+		
+		
+		
+		
+		int tester = head + 1;
+		System.out.println("Returned Item:" + items[tester]);
 		
 		
 		
@@ -110,12 +119,24 @@ public class Deque_Array <Item> implements Iterable<Item> {
 	public Item removeLast() {
 		
 		int nextTail = tail;
+		int nextSize = size;
+		
 		
 		if(nextTail-- <= head){
 			System.out.println("Last Item");
 			
 			return null;
 		}
+		
+		if(nextSize-- == items.length/4) {
+			System.out.println("Resize Necessary Current Size: " + nextSize);
+			resize((items.length / 2),'B');
+			
+		}
+		
+		int tester = tail - 1;
+		System.out.println("Returned Item:" + items[tester]);
+		
 		
 		Item toReturn = items[tail--];
 		items[tail] = null;
@@ -139,71 +160,162 @@ public class Deque_Array <Item> implements Iterable<Item> {
 		System.out.println("Length: " + items.length);
 		System.out.println("Head: " + head);
 		System.out.println("Tail: " + tail);
+		System.out.println("Size: " + size);
 		
 	}
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
 	private void resize(int capacity,char side) {
+		
+		if(capacity < items.length) {
+			
+			
+			
+			/*
+			 * - Determine the position of the values in the items queue
+			 * - Determine what side has more nulls weather it is before the head or
+			 * after the tail. 
+			 * - If the head is after the tail  
+			 *
+			 * 
+			 */
+			
+			Item[]copy = (Item[]) new Object[capacity];
+			
+			int index = 0;
+			
+			
+			//Meta Variables for Queue:
+			int currentHead = 0;
+			int currentTail = 0;
+			
+			int oldHead = 0;
+			int oldTail = 0;
+			
+			
+			
+			System.out.println("Array needs to be shrunk");
+			
+			System.out.println("Resized to: " + capacity);
+			
+			int leftSpace = head + 1;
+			int rightSpace = ((items.length - tail) + 1);
+			
+			if(leftSpace > rightSpace && leftSpace >= capacity) {
+				
+				System.out.println("Use Left space: " + (head + 1));
+				System.out.println("Size: " + size);
+				
+				
+				currentHead = (copy.length) + (head - (items.length )); 
+				currentTail = (copy.length) + (tail - items.length);
+				
+				head = currentHead;
+				tail = currentTail;
+				
+				
+				int metaReset = 0;
+				
+				for(int runner = 6; runner < items.length;runner++) {
+					copy[metaReset] = items[runner];
+					
+					metaReset++;
+				}
+				
+				items = copy;
+				return;
+				
+			}
+			
+			if(rightSpace > leftSpace && rightSpace >= capacity) {
+				
+				
+				copy = (Item[]) new Object[capacity + 1];
+				
+				System.out.println("Use Right space: " + ((items.length - tail)+1));
+				System.out.println("Size: " + size);
+				
+				//BREAKS EVERYTHING DO NOT DO!!
+				//tail = tail - 1;
+				
+				
+				for(int runner = 0; runner < capacity;runner++) {
+					copy[runner] = items[runner];
+				}
+				
+				items = copy;
+				return;
+				
+			}
+			
+			if(leftSpace == rightSpace && leftSpace < capacity) {
+				
+			}
+			
+			
+			
+			
+			
+//			System.out.println("Number of spaces to the left: "+ (head + 1));
+//			System.out.println("Number of spaces to the right: "+ ((items.length - tail)+1));
+			
+			
+			
+			return;
+		}
 		
 		Item[]copy = (Item[]) new Object[capacity];
 		
 		int index = 0;
 		
 		
+		//Meta Variables for Queue:
+		int currentHead = 0;
+		int currentTail = 0;
+		
+		int oldHead = 0;
+		int oldTail = 0;
+		
+		
+		
+		
 		if(side == 'F') {
+						
+			currentHead = (copy.length) + (head - (items.length )); 
+			currentTail = (copy.length) + (tail - items.length);
 			
-//			System.out.println("Add items in the front.");
-			
-			
-			
-			int currentHead = (copy.length) + (head - (items.length )); 
-			int currentTail = (copy.length) + (tail - items.length);
-			
-			int oldHead = head;
-			int oldTail = tail;
+			oldHead = head;
+			oldTail = tail;
 			
 			head = currentHead;
 			tail = currentTail;
 		
-//			System.out.println("Head of new Array: " + currentHead);
-//			System.out.println("Tail of new Array: " + currentTail);
-			
-			for(int runner = currentHead; oldHead <= oldTail;runner++) {
-				copy[runner] = items[oldHead];
-				oldHead++;
-			}
-			
-			
-			
 		}
 		
 		if(side == 'B') {
 			
-//			System.out.println("Add items in the back.");
+			currentHead = head;
+			currentTail = items.length - 1;
 			
-			int currentHead = head;
-			int currentTail = items.length - 1;
+			oldHead = head;
+			oldTail = tail;
+		
+		}
+		
+		for(int runner = currentHead; oldHead <= oldTail; runner++) {
+			copy[runner] = items[oldHead];
+			oldHead++;
+		}
+
+		
+		if(capacity > items.length) {
 			
-			int oldHead = head;
-			int oldTail = tail;
 			
-//			System.out.println("Head of new Array: " + currentHead);
-//			System.out.println("Tail of new Array: " + currentTail);
 			
-			for(int runner = currentHead; oldHead <= oldTail; runner++) {
-				copy[runner] = items[oldHead];
-				oldHead++;
-			}
+			items = copy;
 			
+			return;
 		}
 		
 		
@@ -233,14 +345,14 @@ public class Deque_Array <Item> implements Iterable<Item> {
 		
 		*/
 		
-		items = copy;
-		
 		
 		/* Old print out of copy array keep until finailized
 		for(int runner = 0; runner < copy.length; runner++) {
 			System.out.println("Copy Array Index: "+ runner + " " + copy[runner]);
 		}
 		*/
+		
+		
 		
 	}
 	

@@ -74,6 +74,7 @@ public class SketchPad {
 			
 			if(number == 3) {
 				tester.printQueue();
+				tester.objectVariables();
 			}
 			
 			if(number == 7) {
