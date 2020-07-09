@@ -6,33 +6,46 @@ public class ShellSort {
 	private static long finish;
 	private static long timeElapsed;
 	
+	
+	
 	public static void sort(Comparable[] array) {
 		
 		start = System.nanoTime();
 		
 		int leng = array.length;
 		
-		int h = 1;
+		int subArray = 1;
 		
-		while(h < leng/3) {
-			h = 3 * h + 1;
+		while(subArray < leng/3) {
+			subArray = 3 * subArray + 1;
 		}
 		
-		while(h >= 1) {
+		while(subArray >= 1) {
 			
 			
-			for(int runner = h ;runner < leng; runner++) {
-				for(int sortRunner = runner; sortRunner >= h && less(array[sortRunner],array[sortRunner - h]);sortRunner = h) {
-					exch(array,sortRunner,sortRunner-h);
+			for(int runner = subArray ;runner < leng; runner++) {
+				
+				
+				for(int sortRunner = runner; sortRunner >= subArray && less(array[sortRunner],array[sortRunner - subArray]);sortRunner -= subArray) {
+					exch(array,sortRunner,sortRunner-subArray);
 				}
 			}
 			
-			h = h/3;
+			assert isHsorted(array, subArray);
+			subArray = subArray/3;
 		}
+		
+		assert isSorted(array);
 		
 		finish = System.nanoTime();
         timeElapsed = finish - start;
         System.out.println("Shell Sorted Time: " + timeElapsed);
+        
+        
+        for(int runner=0; runner < array.length;runner++) {
+        	System.out.println(array[runner]);
+        }
+        System.out.println();
 	}
 	
 	
@@ -46,4 +59,20 @@ public class ShellSort {
 		a[i] = a[j];
 		a[j] = swap;	
 	}
+	
+	
+	  // is the array h-sorted?
+    private static boolean isHsorted(Comparable[] a, int h) {
+        for (int i = h; i < a.length; i++)
+            if (less(a[i], a[i-h])) return false;
+        return true;
+    }
+    
+    private static boolean isSorted(Comparable[] a) {
+        for (int i = 1; i < a.length; i++)
+            if (less(a[i], a[i-1])) return false;
+        return true;
+    }
+    
+    
 }

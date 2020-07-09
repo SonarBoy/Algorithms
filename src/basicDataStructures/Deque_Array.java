@@ -170,8 +170,6 @@ public class Deque_Array <Item> implements Iterable<Item> {
 		
 		if(capacity < items.length) {
 			
-			
-			
 			/*
 			 * - Determine the position of the values in the items queue
 			 * - Determine what side has more nulls weather it is before the head or
@@ -208,7 +206,7 @@ public class Deque_Array <Item> implements Iterable<Item> {
 				System.out.println("Size: " + size);
 				
 				
-				currentHead = (copy.length) + (head - (items.length )); 
+				currentHead = (copy.length) + (head - (items.length)); 
 				currentTail = (copy.length) + (tail - items.length);
 				
 				head = currentHead;
@@ -217,7 +215,7 @@ public class Deque_Array <Item> implements Iterable<Item> {
 				
 				int metaReset = 0;
 				
-				for(int runner = 6; runner < items.length;runner++) {
+				for(int runner = capacity; runner < items.length;runner++) {
 					copy[metaReset] = items[runner];
 					
 					metaReset++;
@@ -236,8 +234,7 @@ public class Deque_Array <Item> implements Iterable<Item> {
 				System.out.println("Use Right space: " + ((items.length - tail)+1));
 				System.out.println("Size: " + size);
 				
-				//BREAKS EVERYTHING DO NOT DO!!
-				//tail = tail - 1;
+	
 				
 				
 				for(int runner = 0; runner < capacity;runner++) {
@@ -251,15 +248,38 @@ public class Deque_Array <Item> implements Iterable<Item> {
 			
 			if(leftSpace == rightSpace && leftSpace < capacity) {
 				
+				copy = (Item[]) new Object[capacity + 1];
+				
+				System.out.println("Number of spaces to the left: "+ (head + 1));
+				System.out.println("Number of spaces to the right: "+ ((items.length - tail)+1));
+				System.out.println("Size: "+size);
+				System.out.println("Potential Size change: "+ (capacity - size)/ 2);
+				
+				int starterPosition = head - ((capacity - size)/ 2);
+				
+				for(int runner = 0; runner < capacity;runner++) {
+					
+					copy[runner] = items[starterPosition];
+					
+					
+					if(starterPosition == head) {
+						 head = runner;
+					}
+					
+					if(starterPosition == tail) {
+						tail = runner;
+					}
+					
+					starterPosition++;
+				}
+				
+				
+				
+				items = copy;
+				
+				return;
+				
 			}
-			
-			
-			
-			
-			
-//			System.out.println("Number of spaces to the left: "+ (head + 1));
-//			System.out.println("Number of spaces to the right: "+ ((items.length - tail)+1));
-			
 			
 			
 			return;
@@ -309,50 +329,11 @@ public class Deque_Array <Item> implements Iterable<Item> {
 		}
 
 		
-		if(capacity > items.length) {
+		
 			
-			
-			
-			items = copy;
-			
-			return;
-		}
-		
-		
-		
-		
-		/*
-		for(int runner = head; runner < tail; runner ++) {
-			copy[index] = items[runner];
-			index++;
-		}
-		
-		
-		
-		if(capacity > items.length) {
-			
-			items = copy;
-			return;
-			
-		}else if(capacity < items.length) {
-			
-			head = 0;
-			tail = copy.length;
-			
-			items = copy;
-			return;
-		}
-		
-		*/
-		
-		
-		/* Old print out of copy array keep until finailized
-		for(int runner = 0; runner < copy.length; runner++) {
-			System.out.println("Copy Array Index: "+ runner + " " + copy[runner]);
-		}
-		*/
-		
-		
+		items = copy;
+		return;
+
 		
 	}
 	
