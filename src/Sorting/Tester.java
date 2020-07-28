@@ -32,7 +32,7 @@ public class Tester {
 		
 		InsertionSort.sort(array);
 		
-		array = new Integer[9];
+		array = new Integer[10];
 		array[0] = 9;
 		array[1] = 8;
 		array[2] = 7;
@@ -42,26 +42,28 @@ public class Tester {
 		array[6] = 3;
 		array[7] = 2;
 		array[8] = 1;
-//		array[9] = 0;
+		array[9] = 0;
 		
 		ShellSort.sort(array);
 		
 		System.out.println("Merge Sort:");
 		String[] basic = new String[10];
-		basic[0] = 9 + "";
-		basic[1] = 8 + "";
-		basic[2] = 7 + "";
-		basic[3] = 6 + "";
-		basic[4] = 5 + "";
-		basic[5] = 4 + "";
-		basic[6] = 3 + "";
-		basic[7] = 2 + "";
-		basic[8] = 1 + "";
-		basic[9] = 0 + "";
+		basic[0] = "J" + "";
+		basic[1] = "O" + "";
+		basic[2] = "S" + "";
+		basic[3] = "H" + "";
+		basic[4] = "U" + "";
+		basic[5] = "A" + "";
+		basic[6] = "C" + "";
+		basic[7] = "O" + "";
+		basic[8] = "L" + "";
+		basic[9] = "L" + "";
 		
 		
 		Merge.sort(basic);
 		Merge.show(basic);
+		
+		
 	}
 
 }

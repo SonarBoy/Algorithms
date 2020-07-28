@@ -14,25 +14,25 @@ public class ShellSort {
 		
 		int leng = array.length;
 		
-		int subArray = 1;
+		int interLeave = 1;
 		
-		while(subArray < leng/3) {
-			subArray = 3 * subArray + 1;
+		while(interLeave < leng/3) {
+			interLeave = 3 * interLeave + 1;
 		}
 		
-		while(subArray >= 1) {
+		while(interLeave >= 1) {
 			
 			
-			for(int runner = subArray ;runner < leng; runner++) {
+			for(int frontRunner = interLeave ;frontRunner < leng; frontRunner++) {
 				
 				
-				for(int sortRunner = runner; sortRunner >= subArray && less(array[sortRunner],array[sortRunner - subArray]);sortRunner -= subArray) {
-					exch(array,sortRunner,sortRunner-subArray);
+				for(int sortRunner = frontRunner; sortRunner >= interLeave && less(array[sortRunner],array[sortRunner - interLeave]);sortRunner -= interLeave) {
+					exch(array,sortRunner,sortRunner-interLeave);
 				}
 			}
 			
-			assert isHsorted(array, subArray);
-			subArray = subArray/3;
+			assert isHsorted(array, interLeave);
+			interLeave = interLeave/3;
 		}
 		
 		assert isSorted(array);
