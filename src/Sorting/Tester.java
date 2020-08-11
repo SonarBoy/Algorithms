@@ -47,6 +47,18 @@ public class Tester {
 		ShellSort.sort(array);
 		
 		System.out.println("Merge Sort:");
+		array = new Integer[10];
+		array[0] = 9;
+		array[1] = 8;
+		array[2] = 7;
+		array[3] = 6;
+		array[4] = 5;
+		array[5] = 4;
+		array[6] = 3;
+		array[7] = 2;
+		array[8] = 1;
+		array[9] = 0;
+		/*
 		String[] basic = new String[10];
 		basic[0] = "J" + "";
 		basic[1] = "O" + "";
@@ -58,11 +70,15 @@ public class Tester {
 		basic[7] = "O" + "";
 		basic[8] = "L" + "";
 		basic[9] = "L" + "";
+		*/
+		
+		Merge.sort(array);
+		Merge.show(array);
 		
 		
-		Merge.sort(basic);
-		Merge.show(basic);
 		
+		System.out.println(39 / 10);
+		System.out.println(452 / 10);
 		
 	}
 

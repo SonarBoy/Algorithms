@@ -53,7 +53,9 @@ public class Merge {
 	private static long start;
 	private static long finish;
 	private static long timeElapsed;
-
+	
+	private static final int CUTOFF = 7;
+	
     // This class should not be instantiated.
     private Merge() { }
 
@@ -143,6 +145,9 @@ public class Merge {
       * @param array the array to be sorted
       */
      public static void sort(Comparable[] array) {
+    	 
+    	 start = System.nanoTime();
+    	 
          Comparable[] aux = new Comparable[array.length];
          sort(array, aux, 0, array.length-1);
          assert isSorted(array);
@@ -152,7 +157,16 @@ public class Merge {
     // mergesort a[lo..hi] using auxiliary array aux[lo..hi]
     private static void sort(Comparable[] array, Comparable[] aux, int lo, int hi) {
     	
-        if (hi <= lo) {
+    	
+    	/*Old way without improvements
+    	 * if (hi <= lo) { 
+        	return;
+        	}
+    	 */
+    	
+    	//With Improvements 
+        if (hi <= lo + CUTOFF - 1) {
+        	insertionSort(array,lo,hi);
         	return;
         }
         
@@ -161,6 +175,12 @@ public class Merge {
         
         sort(array, aux, lo, mid);
         sort(array, aux, mid + 1, hi);
+        
+        if (!less(array[mid+1], array[mid])) {
+            System.arraycopy(array, lo, aux, lo, hi - lo + 1);
+            return;
+        }
+        
         
         
         merge(array, aux, lo, mid, hi);
@@ -177,6 +197,8 @@ public class Merge {
         
         sort(array, index, aux, lo, mid);
         sort(array, index, aux, mid + 1, hi);
+        
+       
         
         merge(array, index, aux, lo, mid, hi);
     }
@@ -240,12 +262,29 @@ public class Merge {
     // print array to standard output
     static void show(Comparable[] a) {
     	
+    	finish = System.nanoTime();
+        timeElapsed = finish - start;
+        System.out.println("Merge Sort Time: " + timeElapsed);
+        
+    	
         for (int i = 0; i < a.length; i++) {
             StdOut.println(a[i]);
         }
     }
 
+    // sort from a[lo] to a[hi] using insertion sort
+    private static void insertionSort(Comparable[] a, int lo, int hi) {
+        for (int i = lo; i <= hi; i++)
+            for (int j = i; j > lo && less(a[j], a[j-1]); j--)
+                exch(a, j, j-1);
+    }
     
+    // exchange a[i] and a[j]
+    private static void exch(Object[] a, int i, int j) {
+        Object swap = a[i];
+        a[i] = a[j];
+        a[j] = swap;
+    }
     
     /**
      * Reads in a sequence of strings from standard input; mergesorts them; 
@@ -262,7 +301,7 @@ public class Merge {
     	
         //String[] a = {"J","O","S","H","U","A","C","O","L","L"};
     	//abcdefghijklmnopqrstuvwxyz
-        String[] a = {"Z","X","Y","W","V","U","T","S","R","Q"};
+        String[] a = {"Z","X","Y","W","V","U","T","S","R","Q","Z","X","Y","W","V","U","T","S","R","Q"};
         
         start = System.nanoTime();
         
