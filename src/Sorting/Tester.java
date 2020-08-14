@@ -77,8 +77,13 @@ public class Tester {
 		
 		
 		
-		System.out.println(39 / 10);
-		System.out.println(452 / 10);
+		//System.out.println(39 / 10);
+		//System.out.println(452 / 10);
+		
+		
+		System.out.println((9 / 2));
+		
+		
 		
 	}
 
