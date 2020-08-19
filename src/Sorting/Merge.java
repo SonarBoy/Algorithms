@@ -48,7 +48,7 @@ import basicDataStructures.StdOut;
  *  @author Robert Sedgewick
  *  @author Kevin Wayne
  */
-public class Merge {
+public class Merge  {
 	
 	private static long start;
 	private static long finish;

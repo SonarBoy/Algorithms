@@ -1,5 +1,10 @@
 package Sorting;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
+
+
 public class Tester {
 
 	public static void main(String[] args) {
@@ -46,7 +51,7 @@ public class Tester {
 		
 		ShellSort.sort(array);
 		
-		System.out.println("Merge Sort:");
+		
 		array = new Integer[10];
 		array[0] = 9;
 		array[1] = 8;
@@ -79,11 +84,47 @@ public class Tester {
 		
 		//System.out.println(39 / 10);
 		//System.out.println(452 / 10);
+		//System.out.println((9 / 2));
 		
 		
-		System.out.println((9 / 2));
+		//STEP 3.
+		Dog[] dogArray = new Dog[4];
+		dogArray[0] = new Dog("Jeff",5);
+		dogArray[1] = new Dog("Zack",2);
+		dogArray[2] = new Dog("Zacsk",3);
+		dogArray[3] = new Dog("Zacvk",4);
+		dogArray[3] = new Dog("Don",10);
 		
 		
+		
+		InsertionSort.sort(dogArray);
+		
+		
+		
+		
+		ArrayList<Student> studentList = new ArrayList<Student>(); 
+		
+		
+        studentList.add(new Student(111, "bbbb", "london")); 
+        studentList.add(new Student(131, "aaaa", "nyc")); 
+        studentList.add(new Student(121, "cccc", "jaipur")); 
+  
+        System.out.println("Unsorted"); 
+        
+        for (int runner=0; runner<studentList.size(); runner++) 
+            System.out.println(studentList.get(runner)); 
+  
+        Collections.sort(studentList, new SortByRoll()); 
+  
+        System.out.println("\nSorted by rollno"); 
+        for (int i=0; i<studentList.size(); i++) 
+            System.out.println(studentList.get(i)); 
+  
+        Collections.sort(studentList, new SortByName()); 
+  
+        System.out.println("\nSorted by name"); 
+        for (int i=0; i<studentList.size(); i++) 
+            System.out.println(studentList.get(i)); 
 		
 	}
 
