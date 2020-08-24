@@ -10,31 +10,109 @@ public class Point implements Comparable<Point> {
 	private int pointY;
 	
 	public Point(int x,int y) {
-		this.pointX = x;
-		this.pointY = y;
+		this.setPointX(x);
+		this.setPointY(y);
 	}
 	
 	
 	public void draw() {
-		StdDraw.point(this.pointX, this.pointY);
+		StdDraw.point(this.getPointX(), this.getPointY());
 	}
 	
-	public double slopeTo(Point that) {
+	
+	//TODO: Make sure slopeTo is correct handling the corner cases. 
+	public double slopeTo(Point that) {	
 		
-		return (double)((that.pointY - this.pointY)/(that.pointX - this.pointX));
-	}
-	
-	
-	
-	@Override
-	public int compareTo(Point o) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-	
-	public static void main() {
+		try {
+		return (double)((that.getPointY() - this.getPointY())/(that.getPointX() - this.getPointX()));
+		}
 		
+		catch(Exception x) {
+			System.out.println("Calculation threw :" + x.getMessage());
+			return 0;
+		}
 	}
 	
+	
+	
+	
+	
+	
+	
+	public String toString() {
+		return "X: " + this.getPointX() + " Y: " + this.getPointY();
+	}
+	
+	
+	/*	
+	The compareTo() method should compare points by their y-coordinates, 
+	breaking ties by their x-coordinates. Formally, 
+	the invoking point (x0, y0) is less than the argument point (x1, y1) 
+	if and only if either y0 < y1 or if y0 = y1 and x0 < x1.
+	*/ 
 
+	@Override
+	public int compareTo(Point comparePoint) {
+		
+		if(this.getPointY() < comparePoint.getPointY() 
+			|| (this.getPointY() == comparePoint.getPointY() && this.getPointX() < comparePoint.getPointX())) {
+				return -1;
+		}if(this.getPointX() > comparePoint.getPointX()) {
+				return 1;
+		}else {
+			return 0;
+		}
+	}
+
+
+	public int getPointX() {
+		return pointX;
+	}
+
+
+	public void setPointX(int pointX) {
+		this.pointX = pointX;
+	}
+
+
+	public int getPointY() {
+		return pointY;
+	}
+
+
+	public void setPointY(int pointY) {
+		this.pointY = pointY;
+	}
+	
+	
+	public Comparator<Point> slopeOrder(){
+		//Assign the current instances point to a method variable that 
+		//can be passed in. 
+		Point that = this;
+		
+		return  new Comparator<Point>() {
+			public int compare(Point first, Point second) {
+				return 0;
+			}
+		};
+		
+		
+	}
+	
+}
+
+//Comparators
+class SortByXCoordinate implements Comparator<Point>{
+
+	@Override
+	public int compare(Point o1, Point o2) {
+		return o1.getPointX() - o2.getPointX();
+	}
+	
+}
+
+class SortByYCoordinate implements Comparator<Point>{
+	public int compare(Point o1, Point o2) {
+		return o1.getPointY() - o2.getPointY();
+	}
 }

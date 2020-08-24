@@ -260,23 +260,28 @@ public class Merge  {
 
    
     // print array to standard output
-    static void show(Comparable[] a) {
+    static void show(Comparable[] array) {
     	
     	finish = System.nanoTime();
         timeElapsed = finish - start;
         System.out.println("Merge Sort Time: " + timeElapsed);
         
     	
-        for (int i = 0; i < a.length; i++) {
-            StdOut.println(a[i]);
+        for (int i = 0; i < array.length; i++) {
+            StdOut.println(array[i].toString());
         }
     }
 
     // sort from a[lo] to a[hi] using insertion sort
-    private static void insertionSort(Comparable[] a, int lo, int hi) {
-        for (int i = lo; i <= hi; i++)
-            for (int j = i; j > lo && less(a[j], a[j-1]); j--)
-                exch(a, j, j-1);
+    private static void insertionSort(Comparable[] array, int lo, int hi) {
+    	
+        for (int arrayRunner = lo; arrayRunner <= hi; arrayRunner++) {
+        	
+            for (int sortRunner = arrayRunner; sortRunner > lo && less(array[sortRunner], array[sortRunner-1]); sortRunner--) {
+            	exch(array, sortRunner, sortRunner-1);
+            }
+                
+        }
     }
     
     // exchange a[i] and a[j]

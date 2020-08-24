@@ -82,12 +82,10 @@ public class Tester {
 		
 		
 		
-		//System.out.println(39 / 10);
-		//System.out.println(452 / 10);
-		//System.out.println((9 / 2));
 		
 		
 		//STEP 3.
+		
 		Dog[] dogArray = new Dog[4];
 		dogArray[0] = new Dog("Jeff",5);
 		dogArray[1] = new Dog("Zack",2);
@@ -101,7 +99,7 @@ public class Tester {
 		
 		
 		
-		
+		/* Comparator Testing.
 		ArrayList<Student> studentList = new ArrayList<Student>(); 
 		
 		
@@ -117,15 +115,65 @@ public class Tester {
         Collections.sort(studentList, new SortByRoll()); 
   
         System.out.println("\nSorted by rollno"); 
-        for (int i=0; i<studentList.size(); i++) 
-            System.out.println(studentList.get(i)); 
+        for (int runner=0; runner<studentList.size(); runner++) 
+            System.out.println(studentList.get(runner)); 
   
         Collections.sort(studentList, new SortByName()); 
   
         System.out.println("\nSorted by name"); 
-        for (int i=0; i<studentList.size(); i++) 
-            System.out.println(studentList.get(i)); 
+        for (int runner=0; runner<studentList.size(); runner++) 
+            System.out.println(studentList.get(runner)); 
+		*/
+        
+		Point[] pointArray = new Point[5];
+		pointArray[0] = new Point(5,5);
+		pointArray[1] = new Point(4,5);
+		pointArray[2] = new Point(3,3);
+		pointArray[3] = new Point(1,-2);
+		pointArray[4] = new Point(1,1);
 		
+		
+		 
+//		Merge.sort(pointArray);
+//		Merge.show(pointArray);
+//		
+		ArrayList<Point> pointList = new ArrayList<Point>();
+		pointList.add(new Point(5,1));
+		pointList.add(new Point(4,2));
+		pointList.add(new Point(3,3));
+		pointList.add(new Point(2,4));
+		pointList.add(new Point(1,5));
+		
+		System.out.println("Unsorted");
+		for(int pointRunner = 0; pointRunner < pointList.size();pointRunner++) {
+			System.out.println(pointList.get(pointRunner));
+		}
+        
+        Collections.sort(pointList,new SortByXCoordinate());
+        System.out.println();
+        
+        System.out.println("X Sorted");
+        for(int pointRunner = 0; pointRunner < pointList.size();pointRunner++) {
+			System.out.println(pointList.get(pointRunner));
+		}
+        
+        System.out.println();
+        
+        
+        
+        Collections.sort(pointList,new SortByYCoordinate());
+        
+        System.out.println("Y Sorted");
+        for(int pointRunner = 0; pointRunner < pointList.size();pointRunner++) {
+			System.out.println(pointList.get(pointRunner));
+		}
+        
+        
+		System.out.println(pointArray[4].slopeTo(pointArray[3]));
+		
+		
+        
+        
 	}
 
 }
