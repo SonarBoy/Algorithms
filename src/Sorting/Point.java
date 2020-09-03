@@ -9,14 +9,24 @@ public class Point implements Comparable<Point> {
 	private int pointX;
 	private int pointY;
 	
+	
+	
 	public Point(int x,int y) {
+		
+		StdDraw.setScale(-50,50);
+		
 		this.setPointX(x);
 		this.setPointY(y);
 	}
 	
 	
 	public void draw() {
+		
+		StdDraw.setPenRadius(0.01);
+		StdDraw.setPenColor(StdDraw.BLACK);
 		StdDraw.point(this.getPointX(), this.getPointY());
+		
+		
 	}
 	
 	
@@ -24,7 +34,11 @@ public class Point implements Comparable<Point> {
 	public double slopeTo(Point that) {	
 		
 		try {
-		return (double)((that.getPointY() - this.getPointY())/(that.getPointX() - this.getPointX()));
+		
+//			System.out.println("Y Section: "+ that.getPointY() + " - " + this.getPointY() +  " = " + (that.getPointY() - this.getPointY()));
+//			System.out.println("X Section: "+ that.getPointX() + " - " + this.getPointX() +  " = " + (that.getPointX() - this.getPointX()));
+			
+		return ((double)(that.getPointY() - this.getPointY())/(that.getPointX() - this.getPointX()));
 		}
 		
 		catch(Exception x) {
@@ -33,10 +47,18 @@ public class Point implements Comparable<Point> {
 		}
 	}
 	
-	
-	
-	
-	
+	/**
+     * Draws the line segment between this point and the specified point
+     * to standard draw.
+     *
+     * @param that the other point
+     */
+    public void drawTo(Point that) {
+        /* DO NOT MODIFY */
+    	
+        StdDraw.line(this.pointX, this.pointY, that.pointX, that.pointY);
+        
+    }
 	
 	
 	public String toString() {
