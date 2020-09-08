@@ -16,12 +16,12 @@ public class InsertionSort {
 			
 			for(int sortRunner = arrayRunner; sortRunner > 0; sortRunner--) {
 				
-				
 				if(less(array[sortRunner],array[sortRunner - 1])) {
 					exch(array,sortRunner,sortRunner-1);
 				}else {
 					break;
 				}
+				
 			}
 		}
 		
@@ -32,10 +32,13 @@ public class InsertionSort {
 	}
 	
 	private static boolean less(Comparable v, Comparable w){
+		
 		return v.compareTo(w) < 0;
+		
 	}
 	
 	private static void exch(Comparable[] array, int i, int j) {
+		
 		Comparable swap = array[i];
 		array[i] = array[j];
 		array[j] = swap;

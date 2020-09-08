@@ -34,11 +34,7 @@ public class Point implements Comparable<Point> {
 	public double slopeTo(Point that) {	
 		
 		try {
-		
-//			System.out.println("Y Section: "+ that.getPointY() + " - " + this.getPointY() +  " = " + (that.getPointY() - this.getPointY()));
-//			System.out.println("X Section: "+ that.getPointX() + " - " + this.getPointX() +  " = " + (that.getPointX() - this.getPointX()));
-			
-		return ((double)(that.getPointY() - this.getPointY())/(that.getPointX() - this.getPointX()));
+			return ((double)(that.getPointY() - this.getPointY())/(that.getPointX() - this.getPointX()));
 		}
 		
 		catch(Exception x) {
@@ -123,18 +119,18 @@ public class Point implements Comparable<Point> {
 	
 }
 
-//Comparators
-class SortByXCoordinate implements Comparator<Point>{
-
-	@Override
-	public int compare(Point o1, Point o2) {
-		return o1.getPointX() - o2.getPointX();
+	//Comparators
+	class SortByXCoordinate implements Comparator<Point>{
+	
+		@Override
+		public int compare(Point o1, Point o2) {
+			return o1.getPointX() - o2.getPointX();
+		}
+		
 	}
 	
-}
-
-class SortByYCoordinate implements Comparator<Point>{
-	public int compare(Point o1, Point o2) {
-		return o1.getPointY() - o2.getPointY();
+	class SortByYCoordinate implements Comparator<Point>{
+		public int compare(Point o1, Point o2) {
+			return o1.getPointY() - o2.getPointY();
+		}
 	}
-}
