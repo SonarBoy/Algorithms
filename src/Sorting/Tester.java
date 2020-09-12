@@ -140,9 +140,10 @@ public class Tester {
 		ArrayList<Point> pointList = new ArrayList<Point>();
 		pointList.add(new Point(5,1));
 		pointList.add(new Point(4,2));
-		pointList.add(new Point(3,3));
+		pointList.add(new Point(6,10));
 		pointList.add(new Point(2,4));
 		pointList.add(new Point(1,5));
+		
 		
 		System.out.println("Unsorted");
 		for(int pointRunner = 0; pointRunner < pointList.size();pointRunner++) {
@@ -151,25 +152,35 @@ public class Tester {
         
         Collections.sort(pointList,new SortByXCoordinate());
         System.out.println();
-        
         System.out.println("X Sorted");
+        
+        
         for(int pointRunner = 0; pointRunner < pointList.size();pointRunner++) {
 			System.out.println(pointList.get(pointRunner));
 		}
         
         System.out.println();
-        
-        
-        
         Collections.sort(pointList,new SortByYCoordinate());
-        
         System.out.println("Y Sorted");
+        
+        
+        for(int pointRunner = 0; pointRunner < pointList.size();pointRunner++) {
+			System.out.println(pointList.get(pointRunner));
+		}
+        
+        System.out.println();
+        Collections.sort(pointList, pointList.get(3).slopeOrder());
+        System.out.println("Testing slope Order");
+        
         for(int pointRunner = 0; pointRunner < pointList.size();pointRunner++) {
 			System.out.println(pointList.get(pointRunner));
 		}
         
         
-		System.out.println(pointArray[4].slopeTo(pointArray[3]));
+        
+        
+        
+		//System.out.println(pointArray[4].slopeTo(pointArray[3]));
 		
 		
         

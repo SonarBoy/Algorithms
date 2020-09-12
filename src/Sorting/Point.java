@@ -108,9 +108,27 @@ public class Point implements Comparable<Point> {
 		//can be passed in. 
 		Point that = this;
 		
+		
+		
 		return  new Comparator<Point>() {
+			
+			double firstSlope;
+			double secondSlope;
+			
 			public int compare(Point first, Point second) {
-				return 0;
+				
+				 firstSlope = that.slopeTo(first);
+				 secondSlope = that.slopeTo(second);
+				
+				 if(firstSlope > secondSlope) {
+					 return -1;
+				 }else if(firstSlope < secondSlope) {
+					 return 1;
+				 }else {
+					 return 0;
+				 }
+				
+				
 			}
 		};
 		
