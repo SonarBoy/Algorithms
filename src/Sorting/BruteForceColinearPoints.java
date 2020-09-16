@@ -3,7 +3,9 @@ package Sorting;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class BruteForceColinearPoints {
 	
@@ -24,11 +26,8 @@ public class BruteForceColinearPoints {
 		
 		
 		Point starter = null;
-		Point ender = null;
 		
-		
-		
-		
+
 		//Nested loop to allow for the population of the slopeArray wich is a 2D array of all the slopes the 
 		//points make against each other.
 		for(int index = 0; index < pointArray.length ;index++) {
@@ -43,33 +42,7 @@ public class BruteForceColinearPoints {
 				
 				
 				pointArray[index].draw();
-				pointArray[arrayRunner].draw();
-				
-// OLD CODE MAY NEED TO BE TAKEN OUT ON NEXT PASS				
-//				if(arrayRunner == index + 1) {
-//					lines.add(new LineSegment(pointArray[index],pointArray[arrayRunner]));
-//				}
-				
-//				
-//				if(arrayRunner == index + 1) {
-//					lines.add(new LineSegment(pointArray[index],pointArray[arrayRunner]));
-//				}
-//				
-//				else {
-//					
-//				for(int checkerIndex = 0; checkerIndex < index;checkerIndex++) {
-//					for(int checkerRunner = checkerIndex + 1; checkerRunner < arrayRunner;checkerRunner++) {
-//					
-//						if(pointArray[checkerIndex].slopeTo(pointArray[checkerRunner]) == pointArray[index].slopeTo(pointArray[arrayRunner])) {
-//							lines.add(new LineSegment(pointArray[index],pointArray[arrayRunner]));
-//						}
-//					}
-//				}
-//					
-//				}
-// OLD CODE MAY NEED TO BE TAKEN OUT ON NEXT PASS					
-				
-						 
+				pointArray[arrayRunner].draw();						 
 			}
 			
 			System.out.println();
@@ -98,80 +71,123 @@ public class BruteForceColinearPoints {
 		 * */
 		
 		
+		double forwardSlope = 1;
 		double currentSlope = 0;
 		double priorSlope = -1;
 		int vector = 0;
+		int streakCounter = 0;
 		
 		// (1)(1)(1)(1)
-		for(int row = 0; row < slopeArray.length - 4;row++) {
+		for(int row = 0; row < slopeArray.length;row++) {
+			
 			
 			currentSlope = slopeArray[row][0];
 	
-			
 			// (2)(2)(2)(2)
 			for(int column = 0; column < slopeArray.length;column++) {
+				
 				
 				//System.out.println( slopeArray[index]+" "+slopeArray[arrayRunner]);
 				
 				
 				// (3)(3)(3)(3)
 				if(column == 0) {
-					
 					System.out.println("Starter Slope: " + currentSlope);
+					
+					
+					forwardSlope = slopeArray[row][column + 1];
 					
 				// (4)(4)(4)(4)	
 				}else if(column >= 1) {
 					
 					if(column == 1) {
 						
+						
+						forwardSlope = slopeArray[row][column + 1];
 						currentSlope = slopeArray[row][column];
-						priorSlope = slopeArray[row][column - 1];
+						priorSlope  = slopeArray[row][column - 1];
 						
 //						System.out.println("Starter Slope: " + currentSlope);
 //						System.out.println("Ender Slope: " + priorSlope);
 						
 					}
 					
-					vector = column;
+					
+					
+					vector = (column + 1);
+					
 					currentSlope = slopeArray[row][column];
+					
+					if(vector == slopeArray.length) {
+						break;
+					}else {
+						forwardSlope = slopeArray[row][vector];
+					}
+					
 					
 					
 					// (5)(5)(5)(5)
-					while(priorSlope == currentSlope) {
+//					while(priorSlope == currentSlope) {
+//						
+//						System.out.println("Same: " + currentSlope);
+//						
+//						if(vector < slopeArray.length) {
+//							if(Double.isNaN(slopeArray[row][vector])) {
+//								//System.out.println("Jump Here!");
+//								vector++;
+//								break;
+//							}
+//							
+//							currentSlope = slopeArray[row][vector];
+//							lines.add(new LineSegment(pointArray[row],pointArray[vector]));
+//							vector++;
+//							
+//						}else{
+//							break;
+//						}
+//						
+//					}
+					
+					for(int runner = column;currentSlope == forwardSlope;runner++) {
 						
-						System.out.println("Same: " + currentSlope);
+							streakCounter++;
 						
-						if(vector < slopeArray.length) {
-							if(Double.isNaN(slopeArray[row][vector])) {
-								//System.out.println("Jump Here!");
-								vector++;
+							//System.out.println("Same: " + currentSlope);
+						
+							if(runner < slopeArray.length) {
+								if(Double.isNaN(slopeArray[row][runner])) {
+									//vector++;
+									runner++;
+									break;
+								}
+							
+							
+							vector++;
+							if(vector == slopeArray.length) {
 								break;
+							}else {
+								forwardSlope = slopeArray[row][vector];
 							}
 							
-							currentSlope = slopeArray[row][vector];
-							lines.add(new LineSegment(pointArray[row],pointArray[vector]));
-							vector++;
-							
-						}else{
-							break;
-						}
+							currentSlope = slopeArray[row][runner];
+							lines.add(new LineSegment(pointArray[row],pointArray[runner]));
+								
+								
+							}else{
+								break;
+							}
 						
 					}
 					
-					//column = vector;
-					priorSlope = slopeArray[row][column - 1];
+					
+					
+					column += streakCounter;
+					streakCounter = 0;
 					
 				}
 				
 				
-				
 				System.out.println(slopeArray[row][column]);
-				
-				if(Double.isNaN(slopeArray[row][column])) {
-					System.out.println("Jump Here!");
-				}
-				
-				
 				
 			}
 			
@@ -179,11 +195,12 @@ public class BruteForceColinearPoints {
 			System.out.println();
 		}
 		
+	
 		
-		
-		
+		System.out.println();
 		
 		for(LineSegment run: lines) {
+			System.out.println(run);
 			run.draw();
 		}
 		
@@ -200,9 +217,6 @@ public class BruteForceColinearPoints {
 		
 		Point starter = null;
 		Point ender = null;
-		boolean found = false;
-		
-		
 		
 		
 		for(int index = 0; index < pointArray.length - 3; index++) {
@@ -328,11 +342,12 @@ public class BruteForceColinearPoints {
 		
 	}
 
+	
 	public static void main(String[] args) {
 		
 		Point[] pointsArray = new Point[10];
 		
-		ArrayList<Point> list = new ArrayList<Point>();
+//		ArrayList<Point> list = new ArrayList<Point>();
 		
 		//Basic Straight Line Testing.
 //		pointsArray[0] = new Point(0,0);
@@ -355,20 +370,20 @@ public class BruteForceColinearPoints {
 //		pointsArray[7] = new Point(4,12);
 //		pointsArray[8] = new Point(5,15);
 //		pointsArray[9] = new Point(6,18);
-//		
+
 		
 		
 		
-//		pointsArray[0] = new Point(2,2);
-//		pointsArray[1] = new Point(0,0);
-//		pointsArray[2] = new Point(3,6);
-//		pointsArray[3] = new Point(4,8);
-//		pointsArray[4] = new Point(5,10);
-//		pointsArray[5] = new Point(2,6);
-//		pointsArray[6] = new Point(3,9);
-//		pointsArray[7] = new Point(4,12);
-//		pointsArray[8] = new Point(5,15);
-//		pointsArray[9] = new Point(6,18);
+		pointsArray[0] = new Point(2,2);
+		pointsArray[1] = new Point(0,0);
+		pointsArray[2] = new Point(3,6);
+		pointsArray[3] = new Point(4,8);
+		pointsArray[4] = new Point(5,10);
+		pointsArray[5] = new Point(2,6);
+		pointsArray[6] = new Point(3,9);
+		pointsArray[7] = new Point(4,12);
+		pointsArray[8] = new Point(5,15);
+		pointsArray[9] = new Point(6,18);
 		
 		
 		//InsertionSort.sort(pointsArray);
@@ -386,13 +401,13 @@ public class BruteForceColinearPoints {
 		
 		
 		
-		list.add(new Point(1,2));
-		list.add(new Point(2,4));
-		list.add(new Point(3,6));
-		list.add(new Point(4,8));
-		list.add(new Point(5,10));
-		list.add(new Point(6,12));
-		list.add(new Point(7,14));
+//		list.add(new Point(1,2));
+//		list.add(new Point(2,4));
+//		list.add(new Point(3,6));
+//		list.add(new Point(4,8));
+//		list.add(new Point(5,10));
+//		list.add(new Point(6,12));
+//		list.add(new Point(7,14));
 		
 		//Point[] pointsList = (Point[]) list.toArray(); 
 		
