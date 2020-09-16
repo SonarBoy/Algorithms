@@ -359,16 +359,16 @@ public class BruteForceColinearPoints {
 		
 		
 		
-		pointsArray[0] = new Point(2,2);
-		pointsArray[1] = new Point(0,0);
-		pointsArray[2] = new Point(3,6);
-		pointsArray[3] = new Point(4,8);
-		pointsArray[4] = new Point(5,10);
-		pointsArray[5] = new Point(2,6);
-		pointsArray[6] = new Point(3,9);
-		pointsArray[7] = new Point(4,12);
-		pointsArray[8] = new Point(5,15);
-		pointsArray[9] = new Point(6,18);
+//		pointsArray[0] = new Point(2,2);
+//		pointsArray[1] = new Point(0,0);
+//		pointsArray[2] = new Point(3,6);
+//		pointsArray[3] = new Point(4,8);
+//		pointsArray[4] = new Point(5,10);
+//		pointsArray[5] = new Point(2,6);
+//		pointsArray[6] = new Point(3,9);
+//		pointsArray[7] = new Point(4,12);
+//		pointsArray[8] = new Point(5,15);
+//		pointsArray[9] = new Point(6,18);
 		
 		
 		//InsertionSort.sort(pointsArray);
