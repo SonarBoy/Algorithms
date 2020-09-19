@@ -29,19 +29,254 @@ public class BruteForceColinearPoints {
 
 		//Nested loop to allow for the population of the slopeArray wich is a 2D array of all the slopes the 
 		//points make against each other.
-		for(int index = 0; index < pointArray.length ;index++) {
+		for(int row = 0; row < pointArray.length ;row++) {
 			
-			starter = pointArray[index];
+			starter = pointArray[row];
+			System.out.println(starter.toString());
 			
-			for(int arrayRunner = 0; arrayRunner < pointArray.length;arrayRunner++) {
+			for(int column = 0; column < pointArray.length;column++) {
+				
+				if(row == column) {
+					System.out.println();
+					System.out.println();
+					System.out.println("Skipping: " + pointArray[column]);
+					
+					column++;
+				}else {
+				
+				System.out.print("S: "+ starter.slopeTo(pointArray[column]) + " ");
+				this.slopeArray[row][column] = starter.slopeTo(pointArray[column]);
 				
 				
-				System.out.print("S: "+ starter.slopeTo(pointArray[arrayRunner]) + " ");
-				this.slopeArray[index][arrayRunner] = starter.slopeTo(pointArray[arrayRunner]);
+				pointArray[row].draw();
+				}
+				//pointArray[column].draw();						 
+			}
+			
+			System.out.println();
+			System.out.println("****************");
+			
+		}
+		
+		
+		/*
+		 * We now search the slopeArray 2D array to find the colinear points in the array.
+		 * 
+		 * 1) The first for loop will run through the points as the main multiplier or row starting from
+		 * 	  the pointArray[0] --> pointArray[x]
+		 * 
+		 * 2) the second for loop will run through the points as the secondary multiplier or column starting form
+		 * 	  the pointArray[X] --> pointArray[y]
+		 * 
+		 * 3) If the current element in the column loop is equal to 0 print out the current Slope will be used for something
+		 *    later.
+		 * 
+		 * 4) If the current element in the column loop is equal to 1 make the prior slope equal to the slope at slopeArray[0].
+		 * 
+		 * 5) This is the internal loop that will check each row for similar slopes currently if the prior slope and current slope
+		 * 	  are equal then it will increment the loop
+		 * 	  
+		 * */
+		
+		
+		for(int row = 0; row < size;row++) {
+			
+			
+			for(int column = 0;column < size; column++) {
+				System.out.println("Row: " +this.pointArray[row].toString());
+				System.out.println("Slope: " +this.slopeArray[row][column]);
+			}
+			System.out.println();
+		}
+		
+		
+		
+		
+		
+//		double forwardSlope = 1;
+//		double currentSlope = 0;
+//		
+//		int vector = 0;
+//		int streakCounter = 0;
+//		
+//		//TODO Getting it down to just the minor and major points
+//		Point currentSmallestPoint;
+//		Point currentLargestPoint;
+//		
+//		
+//		try {
+//			// (1)(1)(1)(1)
+//			for(int row = 0; row < slopeArray.length;row++) {
+//	
+//				currentSlope = slopeArray[row][0];
+//			
+//				// (2)(2)(2)(2)
+//				for(int column = 0; column < slopeArray.length;column++) {
+//					
+//					// (3)(3)(3)(3)
+//					//if(column == 0) {		
+//						//forwardSlope = slopeArray[row][column + 1];
+//						
+//					// (4)(4)(4)(4)	
+//					//}else if(column >= 1) {
+//						
+//						if(column == 1) {
+//							forwardSlope = slopeArray[row][column + 1];
+//							currentSlope = slopeArray[row][column];
+//						}
+//							//Assign the current and forward slopes to be insepcted
+//							vector = (column + 1);
+//							currentSlope = slopeArray[row][column];
+//							
+//							
+//							if(vector == slopeArray.length) {
+//								break;
+//							}else {
+//								forwardSlope = slopeArray[row][vector];
+//							}
+//							//Assign the current and forward slopes to be insepcted
+//							
+//							if(Double.isNaN(currentSlope) && row ==  0 ) {
+//								System.out.println("Row: " + row);
+//								System.out.println("Column: " +column);
+//								System.out.println("AYeost");
+//							}else if(Double.isNaN(currentSlope) && column == 0) {
+//								
+//								System.out.println("Row: " + row);
+//								System.out.println("Column: " +column);
+//								System.out.println("AYeost");
+//							}
+//						
+//						
+//						
+//						// (5)(5)(5)(5)
+//						for(int runner = column;(currentSlope == forwardSlope &&  currentSlope != Double.POSITIVE_INFINITY)
+//								;runner++) {
+//							
+//							streakCounter++;
+//							
+//								
+//								if(runner < slopeArray.length) {
+//									if(Double.isNaN(slopeArray[row][runner])) {
+//										
+//										if(row == column) {
+//											arrayOfSegments.add(new LineSegment(pointArray[row],pointArray[runner]));
+//										}
+//										
+//										
+//										runner++;
+//										break;
+//									}
+//								
+//									
+//									
+//									if(streakCounter <= 3) {
+//										arrayOfSegments.add(new LineSegment(pointArray[row],pointArray[runner]));
+//									}else if(streakCounter == 4) {
+//										
+//										lines.add(new LineSegment(pointArray[row],pointArray[runner]));
+//										
+//										for(LineSegment x: arrayOfSegments) {
+//											lines.add(x);
+//										}
+//										
+//									
+//									}else if(streakCounter > 4){
+//										lines.add(new LineSegment(pointArray[row],pointArray[runner]));
+//									}
+//									
+//								//vector++;
+//								
+//									if(vector == slopeArray.length || (vector + 1) == slopeArray.length){
+//										break;
+//									}else {
+//										forwardSlope = slopeArray[row][vector];
+//										vector++;
+//									}
+//									
+//									//Compare along the x axis
+//									currentSmallestPoint = pointArray[row];
+//									currentLargestPoint = pointArray[runner];
+//									
+//									
+//									
+//									
+//									
+//									
+//									//lines.add(new LineSegment(pointArray[row],pointArray[runner]));
+//									
+//									
+//								}else{
+//									break;
+//								}
+//							
+//						}
+//						
+//	
+//						
+//						column += streakCounter;
+//						row += streakCounter;
+//						streakCounter = 0;
+//						
+//						
+//						arrayOfSegments.removeAll(arrayOfSegments);
+//						
+//					}
+//
+//					if(row >= slopeArray.length) {
+//						break;
+//					}
+//					
+//					
+//					
+//				}
+//	
+//			//}
+//		
+//		}
+//		
+//		catch(Exception x) {
+//			System.out.println(x);
+//		}
+//	
+//		System.out.println();
+		
+		
+		//Print out everything in the line segmentvariable
+		for(LineSegment run: lines) {
+			System.out.println(run);
+			run.draw();
+		}
+		
+	}
+	
+	
+	public void OldMethodTwo(Point[] array) {
+		
+		//Initialize Object variables to use for calculations.
+		this.pointArray = array;
+		int size = array.length;
+		this.slopeArray = new double[size][size];
+		
+		
+		Point starter = null;
+		
+
+		//Nested loop to allow for the population of the slopeArray wich is a 2D array of all the slopes the 
+		//points make against each other.
+		for(int row = 0; row < pointArray.length ;row++) {
+			
+			starter = pointArray[row];
+			
+			for(int column = 0; column < pointArray.length;column++) {
 				
 				
-				pointArray[index].draw();
-				pointArray[arrayRunner].draw();						 
+				System.out.print("S: "+ starter.slopeTo(pointArray[column]) + " ");
+				this.slopeArray[row][column] = starter.slopeTo(pointArray[column]);
+				
+				
+				pointArray[row].draw();
+				//pointArray[column].draw();						 
 			}
 			
 			System.out.println();
@@ -76,125 +311,141 @@ public class BruteForceColinearPoints {
 		int vector = 0;
 		int streakCounter = 0;
 		
-		int outerRow = 0;
-		int outerColumn = 0;
-		Point po;
+		// Getting it down to just the minor and major points
+//		Point currentSmallestPoint;
+//		Point currentLargestPoint;
 		
-//		try {
-		// (1)(1)(1)(1)
-		for(int row = 0; row < slopeArray.length;row++) {
-
-			currentSlope = slopeArray[row][0];
+		
+		try {
+			// (1)(1)(1)(1)
+			for(int row = 0; row < slopeArray.length;row++) {
+	
+				currentSlope = slopeArray[row][0];
 			
-			outerRow = row;
-			
-			// (2)(2)(2)(2)
-			for(int column = 0; column < slopeArray.length;column++) {
-				
-				
-				// (3)(3)(3)(3)
-				if(column == 0) {
-					//System.out.println("Starter Slope: " + currentSlope);
+				// (2)(2)(2)(2)
+				for(int column = 0; column < slopeArray.length;column++) {
 					
-					
-					forwardSlope = slopeArray[row][column + 1];
-					
-				// (4)(4)(4)(4)	
-				}else if(column >= 1) {
-					
-					if(column == 1) {
+					// (3)(3)(3)(3)
+					if(column == 0) {		
 						forwardSlope = slopeArray[row][column + 1];
-						currentSlope = slopeArray[row][column];
-
-					}
-					
-					
-					
-					vector = (column + 1);
-					
-					outerColumn = column;
-					currentSlope = slopeArray[row][column];
-					
-					if(vector == slopeArray.length) {
-						break;
-					}else {
-						forwardSlope = slopeArray[row][vector];
-					}
-					
-					
-					// (5)(5)(5)(5)
-					for(int runner = column;currentSlope == forwardSlope && currentSlope != 0 && currentSlope != Double.POSITIVE_INFINITY;runner++) {
 						
-							
+					// (4)(4)(4)(4)	
+					}else if(column >= 1) {
 						
-							//System.out.println("Same: " + currentSlope);
-						
-							if(runner < slopeArray.length) {
-								streakCounter++;
-								if(Double.isNaN(slopeArray[row][runner])) {
-									//vector++;
-									runner++;
-									break;
-								}
+						if(column == 1) {
+							forwardSlope = slopeArray[row][column + 1];
+							currentSlope = slopeArray[row][column];
+						}
+							//Assign the current and forward slopes to be insepcted
+							vector = (column + 1);
+							currentSlope = slopeArray[row][column];
 							
-							//if(runner != column)
-							vector++;
 							
-							if(vector == slopeArray.length){
+							if(vector == slopeArray.length) {
 								break;
 							}else {
 								forwardSlope = slopeArray[row][vector];
 							}
+							//Assign the current and forward slopes to be insepcted
+						
+						
+						
+						
+						// (5)(5)(5)(5)
+						for(int runner = column;(currentSlope == forwardSlope &&  currentSlope != Double.POSITIVE_INFINITY) || 
+								Double.isNaN(currentSlope)
+								;runner++) {
 							
-							//currentSlope = slopeArray[row][runner];
-//							System.out.println("First Point" + pointArray[row]);
-//							System.out.println("Second Point" + pointArray[runner]);
-//							System.out.println(currentSlope);
+							streakCounter++;
 							
-							lines.add(new LineSegment(pointArray[row],pointArray[runner]));
 								
+								if(runner < slopeArray.length) {
+									if(Double.isNaN(slopeArray[row][runner])) {
+										
+										if(row == column) {
+											arrayOfSegments.add(new LineSegment(pointArray[row],pointArray[runner]));
+										}
+										
+										
+										runner++;
+										break;
+									}
 								
-							}else{
-								break;
-							}
+									
+									
+									if(streakCounter <= 3) {
+										arrayOfSegments.add(new LineSegment(pointArray[row],pointArray[runner]));
+									}else if(streakCounter == 4) {
+										
+										lines.add(new LineSegment(pointArray[row],pointArray[runner]));
+										
+										for(LineSegment x: arrayOfSegments) {
+											lines.add(x);
+										}
+										
+									
+									}else if(streakCounter > 4){
+										lines.add(new LineSegment(pointArray[row],pointArray[runner]));
+									}
+									
+								//vector++;
+								
+									if(vector == slopeArray.length || (vector + 1) == slopeArray.length){
+										break;
+									}else {
+										forwardSlope = slopeArray[row][vector];
+										vector++;
+									}
+									
+									//Compare along the x axis
+//									currentSmallestPoint = pointArray[row];
+//									currentLargestPoint = pointArray[runner];
+//									
+									
+									
+									
+									
+									
+									//lines.add(new LineSegment(pointArray[row],pointArray[runner]));
+									
+									
+								}else{
+									break;
+								}
+							
+						}
+						
+	
+						
+						column += streakCounter;
+						row += streakCounter;
+						streakCounter = 0;
+						
+						
+						arrayOfSegments.removeAll(arrayOfSegments);
 						
 					}
-					
 
+					if(row >= slopeArray.length) {
+						break;
+					}
 					
-					column += streakCounter;
-					row += streakCounter;
 					
-					streakCounter = 0;
 					
 				}
-
-
-				if(row >= slopeArray.length) {
-					break;
-				}
-				
-				
-				//System.out.println(slopeArray[row][column]);
-				
+	
 			}
-			
-			//System.out.println("------");
-			//System.out.println();
+		
 		}
 		
-//		}
-//		
-//		catch(Exception x) {
-//			System.out.println("Row" + outerRow);
-//			System.out.println("Column" + outerColumn);
-//			System.out.println(x);
-//		}
-		
+		catch(Exception x) {
+			System.out.println(x);
+		}
 	
-		
 		System.out.println();
 		
+		
+		//Print out everything in the line segmentvariable
 		for(LineSegment run: lines) {
 			System.out.println(run);
 			run.draw();
@@ -339,6 +590,8 @@ public class BruteForceColinearPoints {
 	}
 
 	
+	
+	
 	public static void main(String[] args) {
 		
 		Point[] pointsArray = new Point[10];
@@ -394,16 +647,16 @@ public class BruteForceColinearPoints {
 //		pointsArray[9] = new Point(6,10);
 		
 		
-		pointsArray[0] = new Point(0,10);
-		pointsArray[1] = new Point(1,9);
-		pointsArray[2] = new Point(2,8);
-		pointsArray[3] = new Point(3,7);
-		pointsArray[4] = new Point(4,6);
-		pointsArray[5] = new Point(5,5);
-		pointsArray[6] = new Point(6,7);
-		pointsArray[7] = new Point(7,14);
-		pointsArray[8] = new Point(8,16);
-		pointsArray[9] = new Point(9,18);
+//		pointsArray[0] = new Point(0,10);
+//		pointsArray[1] = new Point(1,9);
+//		pointsArray[2] = new Point(2,8);
+//		pointsArray[3] = new Point(3,7);
+//		pointsArray[4] = new Point(4,6);
+//		pointsArray[5] = new Point(5,5);
+//		pointsArray[6] = new Point(6,7);
+//		pointsArray[7] = new Point(7,14);
+//		pointsArray[8] = new Point(8,16);
+//		pointsArray[9] = new Point(9,18);
 		
 		//Two Line Similar point testing.
 //		pointsArray[0] = new Point(1,2);
@@ -417,10 +670,7 @@ public class BruteForceColinearPoints {
 //		pointsArray[8] = new Point(5,15);
 //		pointsArray[9] = new Point(6,18);
 
-		
 
-		
-		
 		//One Line Unique point testing.
 //		pointsArray[0] = new Point(2,2);
 //		pointsArray[1] = new Point(1,1);
@@ -433,16 +683,16 @@ public class BruteForceColinearPoints {
 //		pointsArray[8] = new Point(7,9);
 //		pointsArray[9] = new Point(12,18);
 		
-//		pointsArray[0] = new Point(2,2);
-//		pointsArray[1] = new Point(1,1);
-//		pointsArray[2] = new Point(0,0);
-//		pointsArray[3] = new Point(7,3);
-//		pointsArray[4] = new Point(8,4);
-//		pointsArray[5] = new Point(9,0);
-//		pointsArray[6] = new Point(10,1);
-//		pointsArray[7] = new Point(11,2);
-//		pointsArray[8] = new Point(12,3);
-//		pointsArray[9] = new Point(10,2);
+		pointsArray[0] = new Point(2,2);
+		pointsArray[1] = new Point(1,1);
+		pointsArray[2] = new Point(0,0);
+		pointsArray[3] = new Point(7,3);
+		pointsArray[4] = new Point(8,4);
+		pointsArray[5] = new Point(9,0);
+		pointsArray[6] = new Point(10,1);
+		pointsArray[7] = new Point(11,2);
+		pointsArray[8] = new Point(12,3);
+		pointsArray[9] = new Point(10,2);
 //		
 		
 		//InsertionSort.sort(pointsArray);
@@ -456,19 +706,7 @@ public class BruteForceColinearPoints {
 //			//System.out.println(pointsArray[runner].toString());
 //		}
 		
-		
-		
-		
-		
-//		list.add(new Point(1,2));
-//		list.add(new Point(2,4));
-//		list.add(new Point(3,6));
-//		list.add(new Point(4,8));
-//		list.add(new Point(5,10));
-//		list.add(new Point(6,12));
-//		list.add(new Point(7,14));
-		
-		//Point[] pointsList = (Point[]) list.toArray(); 
+
 		
 		
 		//BruteForceColinearPoints x = new BruteForceColinearPoints(pointsArray);
