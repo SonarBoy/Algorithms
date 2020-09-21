@@ -33,28 +33,17 @@ public class BruteForceColinearPoints {
 			
 			starter = pointArray[row];
 			System.out.println(starter.toString());
+			pointArray[row].draw();
 			
 			for(int column = 0; column < pointArray.length;column++) {
 				
-				if(row == column) {
-					System.out.println();
-					System.out.println();
-					System.out.println("Skipping: " + pointArray[column]);
-					
-					column++;
-				}else {
-				
-				System.out.print("S: "+ starter.slopeTo(pointArray[column]) + " ");
+				//System.out.print("S: "+ starter.slopeTo(pointArray[column]) + " ");
 				this.slopeArray[row][column] = starter.slopeTo(pointArray[column]);
-				
-				
-				pointArray[row].draw();
-				}
-				//pointArray[column].draw();						 
+
 			}
 			
-			System.out.println();
-			System.out.println("****************");
+			//System.out.println();
+			//System.out.println("****************");
 			
 		}
 		
@@ -78,15 +67,213 @@ public class BruteForceColinearPoints {
 		 * 	  
 		 * */
 		
+		double currentSlope = 0;
+		double forwardSlope = 0;
+		
+		int forwardIndex = 0;
+		int streakCounter = 0;
+		Point anchorPoint = null;
+		
+		
 		
 		for(int row = 0; row < size;row++) {
 			
+			anchorPoint = this.pointArray[row];
+			currentSlope = slopeArray[row][0];
+			forwardSlope = slopeArray[row][1];
 			
 			for(int column = 0;column < size; column++) {
-				System.out.println("Row: " +this.pointArray[row].toString());
-				System.out.println("Slope: " +this.slopeArray[row][column]);
+				
+				if(column > 0) {
+					
+					currentSlope = slopeArray[row][column];
+					
+					forwardIndex = column + 1;
+					
+					if(forwardIndex > size - 1) {
+						break;
+					}else {
+						forwardSlope = slopeArray[row][forwardIndex];
+					}
+					
+				}
+				
+				//current or forward slope == NAN
+				if(Double.isNaN(currentSlope) || Double.isNaN(forwardSlope)) {
+					
+					
+					if(Double.isNaN(currentSlope)) {
+						
+						
+						System.out.println();
+						System.out.println("*****FAULT CURRENT SLOPE********");
+						
+						
+						if(column + 1 > size) {
+							break;
+						}else {
+							
+							column = column + 1;
+							currentSlope = slopeArray[row][column];
+							forwardIndex = column + 1;
+							
+							if(forwardIndex >= size) {
+								break;
+							}else {
+								forwardSlope = slopeArray[row][forwardIndex];
+							}
+							
+						}
+						
+						System.out.println("CurrentSlope: " + currentSlope + " Current Index: "+ column);
+						System.out.println("ForwardSlope: " + forwardSlope + " Forward Index: "+ forwardIndex);
+						System.out.println("*************");
+						System.out.println();
+					}
+					
+					if(Double.isNaN(forwardSlope)) {
+						
+						System.out.println();
+						System.out.println("*****FAULT FORWARD SLOPE********");
+												
+						if(forwardIndex + 1 > size) {
+							break;
+						}else {
+							
+							//column = forwardIndex;
+							forwardIndex = column + 1;
+							
+							if(forwardIndex >= size) {
+								break;
+							}else {
+								forwardSlope = slopeArray[row][forwardIndex];
+							}
+						}
+						
+						System.out.println("CurrentSlope: " + currentSlope + " Current Index: "+ column);
+						System.out.println("ForwardSlope: " + forwardSlope + " Current Index: "+ forwardIndex);
+						System.out.println("*************");
+						System.out.println();
+
+						
+					}
+					
+					//System.out.println(column);
+					
+					
+				}
+				
+				
+				for(int searchRunner = column; (currentSlope == forwardSlope) || Double.isNaN(currentSlope) || Double.isNaN(forwardSlope);
+						searchRunner++) {
+					
+					streakCounter++;
+					
+					
+					if(Double.isNaN(currentSlope) || Double.isNaN(forwardSlope)) {
+						
+						
+						if(Double.isNaN(currentSlope)) {
+							
+							
+							System.out.println();
+							System.out.println("*****FAULT CURRENT SLOPE********");
+							
+							
+							if(column + 1 > size) {
+								break;
+							}else {
+								
+								column = column + 1;
+								currentSlope = slopeArray[row][column];
+								forwardIndex = column + 1;
+								
+								if(forwardIndex >= size) {
+									break;
+								}else {
+									forwardSlope = slopeArray[row][forwardIndex];
+								}
+								
+								break;
+							}
+							
+//							System.out.println("CurrentSlope: " + currentSlope + " Current Index: "+ column);
+//							System.out.println("ForwardSlope: " + forwardSlope + " Forward Index: "+ forwardIndex);
+//							System.out.println("*************");
+//							System.out.println();
+						}
+						
+						if(Double.isNaN(forwardSlope)) {
+							
+							System.out.println();
+							System.out.println("*****FAULT FORWARD SLOPE********");
+													
+							if(forwardIndex + 1 > size) {
+								break;
+							}else {
+								
+								//column = forwardIndex;
+								forwardIndex = column + 1;
+								
+								if(forwardIndex >= size) {
+									break;
+								}else {
+									forwardSlope = slopeArray[row][forwardIndex];
+								}
+								
+								break;
+							}
+							
+//							System.out.println("CurrentSlope: " + currentSlope + " Current Index: "+ column);
+//							System.out.println("ForwardSlope: " + forwardSlope + " Current Index: "+ forwardIndex);
+//							System.out.println("*************");
+//							System.out.println();
+
+							
+						}
+					}
+					
+					
+					
+					
+					if(forwardIndex == slopeArray.length || (forwardIndex + 1) == slopeArray.length){
+						break;
+					}else {
+						forwardSlope = slopeArray[row][forwardIndex];
+						forwardIndex++;
+					}
+					
+					lines.add(new LineSegment(anchorPoint,pointArray[searchRunner]));
+				}
+				
+				column += streakCounter;
+				row += streakCounter;
+				streakCounter = 0;
+				
+				if(row >= slopeArray.length) {
+					break;
+				}
+				
+//				System.out.println();
+//				System.out.println("Row Point: " +this.pointArray[row].toString());
+//				System.out.println("Anchor Point: " +this.pointArray[column].toString());
+//				System.out.println("Comparing Point: " +this.pointArray[forwardIndex].toString());
+//				System.out.println("Slope: " +this.slopeArray[row][column]);
+				
+				
+				
+				
 			}
+			
+			
+			
+			if(row >= slopeArray.length) {
+				break;
+			}
+			
 			System.out.println();
+			
+			forwardIndex = row;
 		}
 		
 		
@@ -635,16 +822,16 @@ public class BruteForceColinearPoints {
 //		pointsArray[9] = new Point(9,18);
 
 		//Two Lines Positive Negative slope
-//		pointsArray[0] = new Point(0,0);
-//		pointsArray[1] = new Point(1,1);
-//		pointsArray[2] = new Point(2,2);
-//		pointsArray[3] = new Point(3,3);
-//		pointsArray[4] = new Point(4,4);
-//		pointsArray[5] = new Point(10,6);
-//		pointsArray[6] = new Point(9,7);
-//		pointsArray[7] = new Point(8,8);
-//		pointsArray[8] = new Point(7,9);
-//		pointsArray[9] = new Point(6,10);
+		pointsArray[0] = new Point(0,0);
+		pointsArray[1] = new Point(1,1);
+		pointsArray[2] = new Point(2,2);
+		pointsArray[3] = new Point(3,3);
+		pointsArray[4] = new Point(4,4);
+		pointsArray[5] = new Point(10,6);
+		pointsArray[6] = new Point(9,7);
+		pointsArray[7] = new Point(8,8);
+		pointsArray[8] = new Point(7,9);
+		pointsArray[9] = new Point(6,10);
 		
 		
 //		pointsArray[0] = new Point(0,10);
@@ -683,16 +870,16 @@ public class BruteForceColinearPoints {
 //		pointsArray[8] = new Point(7,9);
 //		pointsArray[9] = new Point(12,18);
 		
-		pointsArray[0] = new Point(2,2);
-		pointsArray[1] = new Point(1,1);
-		pointsArray[2] = new Point(0,0);
-		pointsArray[3] = new Point(7,3);
-		pointsArray[4] = new Point(8,4);
-		pointsArray[5] = new Point(9,0);
-		pointsArray[6] = new Point(10,1);
-		pointsArray[7] = new Point(11,2);
-		pointsArray[8] = new Point(12,3);
-		pointsArray[9] = new Point(10,2);
+//		pointsArray[0] = new Point(2,2);
+//		pointsArray[1] = new Point(1,1);
+//		pointsArray[2] = new Point(0,0);
+//		pointsArray[3] = new Point(7,3);
+//		pointsArray[4] = new Point(8,4);
+//		pointsArray[5] = new Point(9,0);
+//		pointsArray[6] = new Point(10,1);
+//		pointsArray[7] = new Point(11,2);
+//		pointsArray[8] = new Point(12,3);
+//		pointsArray[9] = new Point(10,2);
 //		
 		
 		//InsertionSort.sort(pointsArray);
