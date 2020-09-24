@@ -21,6 +21,143 @@ public class BruteForceColinearPoints {
 		//Initialize Object variables to use for calculations.
 		this.pointArray = array;
 		int size = array.length;
+		
+		
+		
+		Point starter = null;
+		
+		Point first = null;
+		Point second = null;
+		Point third = null;
+		Point fourth = null;
+		
+		double slopeA = 0;
+		double slopeB = 0;
+		double slopeC = 0;
+		
+		Point[] subber = new Point[4];
+		
+		for(int pointRunner = 0; (pointRunner + 4) <= pointArray.length;pointRunner++ ) {
+			
+			first = pointArray[pointRunner];
+			second = pointArray[pointRunner + 1];
+			third = pointArray[pointRunner + 2];
+			fourth = pointArray[pointRunner + 3];
+			
+			
+			slopeA = first.slopeTo(second);
+			slopeB = first.slopeTo(third);
+			slopeC = first.slopeTo(fourth);
+			
+			
+			subber[0] = first;
+			subber[1] = second;
+			subber[2] = third;
+			subber[3] = fourth;
+			
+			SelectionSort.sort(subber);
+			
+			first.draw();
+			
+			if((pointRunner + 4) == pointArray.length) {
+				second.draw();
+				third.draw();
+				fourth.draw();
+			}
+			
+			if(slopeA == slopeB && slopeA == slopeC && slopeB == slopeC) {
+//				System.out.println("First: "+ first.toString());
+//				System.out.println("Second: "+ second.toString());
+//				System.out.println("Third: "+ third.toString());
+//				System.out.println("Fourth: "+ fourth.toString());
+				
+				
+				System.out.println("Smallest: " + subber[0]);
+				System.out.println("Greatest: " + subber[3]);
+				
+				lines.add(new LineSegment(subber[0],subber[3]));
+//				lines.add(new LineSegment(first,third));
+//				lines.add(new LineSegment(first,fourth));
+			}
+			
+			
+		}
+		
+
+		//Nested loop to allow for the population of the slopeArray wich is a 2D array of all the slopes the 
+		//points make against each other.
+//		for(int row = 0; row < pointArray.length ;row++) {
+//			
+//			starter = pointArray[row];
+//			System.out.println(starter.toString());
+//			pointArray[row].draw();
+//			
+//			
+//			
+//			for(int column = 0; column < pointArray.length;column++) {
+//				
+//				//System.out.print("S: "+ starter.slopeTo(pointArray[column]) + " ");
+//				this.slopeArray[row][column] = starter.slopeTo(pointArray[column]);
+//
+//			}
+//			
+//			//System.out.println();
+//			//System.out.println("****************");
+//			
+//		}
+		
+		
+		/*
+		 * We now search the slopeArray 2D array to find the colinear points in the array.
+		 * 
+		 * 1) The first for loop will run through the points as the main multiplier or row starting from
+		 * 	  the pointArray[0] --> pointArray[x]
+		 * 
+		 * 2) the second for loop will run through the points as the secondary multiplier or column starting form
+		 * 	  the pointArray[X] --> pointArray[y]
+		 * 
+		 * 3) If the current element in the column loop is equal to 0 print out the current Slope will be used for something
+		 *    later.
+		 * 
+		 * 4) If the current element in the column loop is equal to 1 make the prior slope equal to the slope at slopeArray[0].
+		 * 
+		 * 5) This is the internal loop that will check each row for similar slopes currently if the prior slope and current slope
+		 * 	  are equal then it will increment the loop
+		 * 	  
+		 * */
+		
+		
+		
+		
+//		for(int row = 0; row < size;row++) {
+//			
+//
+//			
+//			for(int column = 0;column < size; column++) {
+//				
+//				
+//			}
+//			
+//			
+//			
+//			
+//		}
+		
+		
+		
+		//Print out everything in the line segmentvariable
+		for(LineSegment run: lines) {
+			System.out.println(run);
+			run.draw();
+		}
+		
+	}
+	
+	public void OldMethodThree(Point[] array) {
+		
+		//Initialize Object variables to use for calculations.
+		this.pointArray = array;
+		int size = array.length;
 		this.slopeArray = new double[size][size];
 		
 		
@@ -168,6 +305,7 @@ public class BruteForceColinearPoints {
 						searchRunner++) {
 					
 					streakCounter++;
+					//column++;
 					
 					
 					if(Double.isNaN(currentSlope) || Double.isNaN(forwardSlope)) {
@@ -207,6 +345,8 @@ public class BruteForceColinearPoints {
 							
 							System.out.println();
 							System.out.println("*****FAULT FORWARD SLOPE********");
+							
+							
 													
 							if(forwardIndex + 1 > size) {
 								break;
@@ -243,12 +383,39 @@ public class BruteForceColinearPoints {
 						forwardIndex++;
 					}
 					
-					lines.add(new LineSegment(anchorPoint,pointArray[searchRunner]));
+					
+					if(streakCounter <= 2) {
+						arrayOfSegments.add(new LineSegment(anchorPoint,pointArray[searchRunner]));
+					}else if(streakCounter == 3) {
+						
+						
+						
+						for(LineSegment x: arrayOfSegments) {
+							lines.add(x);
+						}
+						
+						lines.add(new LineSegment(anchorPoint,pointArray[searchRunner]));
+						
+					
+					}else if(streakCounter > 3){
+						lines.add(new LineSegment(anchorPoint,pointArray[searchRunner]));
+					}
+					
+					
+					
+					//lines.add(new LineSegment(anchorPoint,pointArray[searchRunner]));
+					
+					
 				}
 				
-				column += streakCounter;
-				row += streakCounter;
-				streakCounter = 0;
+				if(streakCounter > 2) {
+					
+					column += streakCounter;
+					row += streakCounter;
+					streakCounter = 0;
+					
+				}
+				arrayOfSegments.removeAll(arrayOfSegments);
 				
 				if(row >= slopeArray.length) {
 					break;
@@ -434,9 +601,7 @@ public class BruteForceColinearPoints {
 			System.out.println(run);
 			run.draw();
 		}
-		
 	}
-	
 	
 	public void OldMethodTwo(Point[] array) {
 		
@@ -822,16 +987,16 @@ public class BruteForceColinearPoints {
 //		pointsArray[9] = new Point(9,18);
 
 		//Two Lines Positive Negative slope
-		pointsArray[0] = new Point(0,0);
-		pointsArray[1] = new Point(1,1);
-		pointsArray[2] = new Point(2,2);
-		pointsArray[3] = new Point(3,3);
-		pointsArray[4] = new Point(4,4);
-		pointsArray[5] = new Point(10,6);
-		pointsArray[6] = new Point(9,7);
-		pointsArray[7] = new Point(8,8);
-		pointsArray[8] = new Point(7,9);
-		pointsArray[9] = new Point(6,10);
+//		pointsArray[0] = new Point(0,0);
+//		pointsArray[1] = new Point(1,1);
+//		pointsArray[2] = new Point(2,2);
+//		pointsArray[3] = new Point(3,3);
+//		pointsArray[4] = new Point(4,4);
+//		pointsArray[5] = new Point(10,6);
+//		pointsArray[6] = new Point(9,7);
+//		pointsArray[7] = new Point(8,8);
+//		pointsArray[8] = new Point(7,9);
+//		pointsArray[9] = new Point(6,10);
 		
 		
 //		pointsArray[0] = new Point(0,10);
@@ -870,16 +1035,16 @@ public class BruteForceColinearPoints {
 //		pointsArray[8] = new Point(7,9);
 //		pointsArray[9] = new Point(12,18);
 		
-//		pointsArray[0] = new Point(2,2);
-//		pointsArray[1] = new Point(1,1);
-//		pointsArray[2] = new Point(0,0);
-//		pointsArray[3] = new Point(7,3);
-//		pointsArray[4] = new Point(8,4);
-//		pointsArray[5] = new Point(9,0);
-//		pointsArray[6] = new Point(10,1);
-//		pointsArray[7] = new Point(11,2);
-//		pointsArray[8] = new Point(12,3);
-//		pointsArray[9] = new Point(10,2);
+		pointsArray[0] = new Point(2,2);
+		pointsArray[1] = new Point(1,1);
+		pointsArray[2] = new Point(0,0);
+		pointsArray[3] = new Point(7,3);
+		pointsArray[4] = new Point(8,4);
+		pointsArray[5] = new Point(9,0);
+		pointsArray[6] = new Point(10,1);
+		pointsArray[7] = new Point(11,2);
+		pointsArray[8] = new Point(12,3);
+		pointsArray[9] = new Point(10,2);
 //		
 		
 		//InsertionSort.sort(pointsArray);
