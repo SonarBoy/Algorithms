@@ -169,7 +169,7 @@ public class Tester {
 		}
         
         System.out.println();
-        Collections.sort(pointList, pointList.get(3).slopeOrder());
+        Collections.sort(pointList, pointList.get(1).slopeOrder());
         System.out.println("Testing slope Order");
         
         for(int pointRunner = 0; pointRunner < pointList.size();pointRunner++) {

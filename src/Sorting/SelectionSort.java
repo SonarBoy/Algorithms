@@ -33,14 +33,14 @@ public class SelectionSort {
 	}
 	
 	
-	private static boolean less(Comparable v, Comparable w){
-		return v.compareTo(w) < 0;
+	private static boolean less(Comparable firstItem, Comparable secondItem){
+		return firstItem.compareTo(secondItem) < 0;
 	}
 	
-	private static void exch(Comparable[] a, int i, int j) {
-		Comparable swap = a[i];
-		a[i] = a[j];
-		a[j] = swap;
+	private static void exch(Comparable[] array, int firstIndx, int secondIndx) {
+		Comparable swap = array[firstIndx];
+		array[firstIndx] = array[secondIndx];
+		array[secondIndx] = swap;
 		
 	}
 	
