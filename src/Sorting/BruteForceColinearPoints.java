@@ -35,6 +35,8 @@ public class BruteForceColinearPoints {
 
 		double previousTotal = 0;
 		
+		Point[] subber = new Point[4];
+		
 		for(int firstPoint = 0; firstPoint < size - 3;firstPoint++) {
 			for(int secondPoint = 1;secondPoint < size - 2;secondPoint++) {
 				for(int thirdPoint = 2;thirdPoint < size - 1;thirdPoint++) {
@@ -48,6 +50,10 @@ public class BruteForceColinearPoints {
 						slopeB = first.slopeTo(third);
 						slopeC = first.slopeTo(fourth);
 						
+						if(slopeA != slopeB) {
+							break;
+						}
+						
 						if(slopeA == slopeB && slopeA == slopeC && slopeB == slopeC && slopeA != Double.POSITIVE_INFINITY &&
 							first != second && first != third && first != fourth && second != third && second != fourth && third != fourth	
 								) {
@@ -57,21 +63,26 @@ public class BruteForceColinearPoints {
 //							System.out.println("Fourth Point: " + fourth.toString());
 							
 							
-							if(first.getPointX() + second.getPointX() + third.getPointX() + fourth.getPointX() == previousTotal)
-								break;
+//							if(first.getPointX() + second.getPointX() + third.getPointX() + fourth.getPointX() == previousTotal)
+//								break;
 							
+							subber[0] = first;
+							subber[1] = second;
+							subber[2] = third;		
+							subber[3] = fourth;
 							
 							arrayOfSegments.add(first);
 							arrayOfSegments.add(second);
 							arrayOfSegments.add(third);
 							arrayOfSegments.add(fourth);
 							
-							Collections.sort(arrayOfSegments);
+							//Collections.sort(arrayOfSegments);
+							SelectionSort.sort(subber);
 							
+							//lines.add(new LineSegment(arrayOfSegments.get(0),arrayOfSegments.get(arrayOfSegments.size() - 1)));
+							lines.add(new LineSegment(subber[0],subber[3]));
 							
-							lines.add(new LineSegment(arrayOfSegments.get(0),arrayOfSegments.get(arrayOfSegments.size() - 1)));
-							
-							previousTotal = first.getPointX() + second.getPointX() + third.getPointX() + fourth.getPointX();
+							//previousTotal = first.getPointX() + second.getPointX() + third.getPointX() + fourth.getPointX();
 	
 						}
 						

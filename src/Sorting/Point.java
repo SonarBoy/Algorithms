@@ -39,7 +39,7 @@ public class Point implements Comparable<Point> {
 		
 		catch(Exception x) {
 			System.out.println("Calculation threw :" + x.getMessage());
-			return 0;
+			return Double.NEGATIVE_INFINITY;
 		}
 	}
 	
@@ -106,7 +106,7 @@ public class Point implements Comparable<Point> {
 	public Comparator<Point> slopeOrder(){
 		//Assign the current instances point to a method variable that 
 		//can be passed in. 
-		Point that = this;
+		final Point that = this;
 		
 		
 		
@@ -119,15 +119,23 @@ public class Point implements Comparable<Point> {
 				
 				 firstSlope = that.slopeTo(first);
 				 secondSlope = that.slopeTo(second);
+				 
+//				 if(Double.isNaN(firstSlope)) {
+//					 
+//				 }else if(Double.isNaN(secondSlope)) {
+//					 
+//				 }
 				
-				 if(firstSlope > secondSlope) {
+				 if(firstSlope < secondSlope) {
 					 return -1;
-				 }else if(firstSlope < secondSlope) {
+				 }else if(firstSlope > secondSlope) {
 					 return 1;
 				 }else {
 					 return 0;
 				 }
 				
+				 
+				 
 				
 			}
 		};

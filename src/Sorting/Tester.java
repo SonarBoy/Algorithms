@@ -176,9 +176,10 @@ public class Tester {
 			System.out.println(pointList.get(pointRunner));
 		}
         
-        
-        
-        
+       
+        for(int pointRunner = 0; pointRunner < pointList.size();pointRunner++) {
+			System.out.println(pointList.get(pointRunner).slopeOrder());
+		}
         
 		//System.out.println(pointArray[4].slopeTo(pointArray[3]));
 		
