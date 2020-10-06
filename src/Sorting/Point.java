@@ -34,11 +34,37 @@ public class Point implements Comparable<Point> {
 	public double slopeTo(Point that) {	
 		
 		try {
+			
+			
+			if(that.getPointX() == this.getPointX()) {
+				return Double.POSITIVE_INFINITY;
+			}
+			
+			if(that.getPointY() == this.getPointY()) {
+				return 0;
+			}
+			
+			if(that.getPointX() == this.getPointX() && that.getPointY() == this.getPointY()) {
+				return Double.NEGATIVE_INFINITY;
+			}
+			
+			
+			
 			return ((double)(that.getPointY() - this.getPointY())/(that.getPointX() - this.getPointX()));
 		}
 		
 		catch(Exception x) {
+			
 			System.out.println("Calculation threw :" + x.getMessage());
+			
+//			if(that.getPointX() == this.getPointX()) {
+//				return 0;
+//			}
+//			
+//			if(that.getPointY() == this.getPointY()) {
+//				return Double.POSITIVE_INFINITY;
+//			}
+			
 			return Double.NEGATIVE_INFINITY;
 		}
 	}
@@ -72,10 +98,13 @@ public class Point implements Comparable<Point> {
 	@Override
 	public int compareTo(Point comparePoint) {
 		
-		if(this.getPointY() < comparePoint.getPointY() 
-			|| (this.getPointY() == comparePoint.getPointY() && this.getPointX() < comparePoint.getPointX())) {
+		if(this.getPointY() < comparePoint.getPointY()) {
+			return -1;
+		}else if(this.getPointY() == comparePoint.getPointY() && this.getPointX() < comparePoint.getPointX()) {
 				return -1;
-		}if(this.getPointX() > comparePoint.getPointX()) {
+		}else if(this.getPointY() > comparePoint.getPointY()){
+				return 1;
+		}else if(this.getPointY() == comparePoint.getPointY() && this.getPointX() > comparePoint.getPointX()) {
 				return 1;
 		}else {
 			return 0;
@@ -120,11 +149,11 @@ public class Point implements Comparable<Point> {
 				 firstSlope = that.slopeTo(first);
 				 secondSlope = that.slopeTo(second);
 				 
-//				 if(Double.isNaN(firstSlope)) {
-//					 
-//				 }else if(Double.isNaN(secondSlope)) {
-//					 
-//				 }
+				 if(Double.isNaN(firstSlope)) {
+					 firstSlope = Double.NEGATIVE_INFINITY;
+				 }else if(Double.isNaN(secondSlope)) {
+					 secondSlope = Double.NEGATIVE_INFINITY;
+				 }
 				
 				 if(firstSlope < secondSlope) {
 					 return -1;

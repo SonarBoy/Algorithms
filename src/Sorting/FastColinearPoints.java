@@ -10,10 +10,10 @@ import basicDataStructures.StdOut;
 public class FastColinearPoints {
 	
 	Point[] pointArray = null;
-	double[][] slopeArray;
+	ArrayList<Point> holder = new ArrayList<Point>();
 	
 	ArrayList<LineSegment> lines = new ArrayList<LineSegment>();
-	ArrayList<Point> arrayOfSegments = new ArrayList<Point>();
+	ArrayList<LineSegment> arrayOfSegments = new ArrayList<LineSegment>();
 	
 	public FastColinearPoints(Point[] array) {
 		
@@ -25,11 +25,17 @@ public class FastColinearPoints {
 		}
 		
 		
-		double slopeA = 0;
-		double slopeB = 0;
-		double slopeC = 0;
 		
-		Point[] lineSegmentToDraw = new Point[4];
+		
+		int streakCounter = 0;
+		
+		int currentIndx = 0;
+		int forwardIndx = 0;
+		
+		double forwardSlope = 0;
+		double currentSlope = 0;
+		
+		Point checkerPoint = null;
 		
 		
 		for(int rowRunner = 0; rowRunner < array.length;rowRunner++) {
@@ -38,376 +44,113 @@ public class FastColinearPoints {
 			System.out.println("For Point: " + array[rowRunner]);
 			System.out.println();
 			
-			SelectionSortWithComparator.sort(pointArray, array[rowRunner].slopeOrder());
+			InsertionSortWithComparator.sort(pointArray, array[rowRunner].slopeOrder());
+			//SelectionSortWithComparator.sort(pointArray, array[rowRunner].slopeOrder());
 			//Arrays.sort(pointArray, array[rowRunner].slopeOrder());
 			
 			
-			for(int columnRunner = 0; columnRunner < array.length;columnRunner++) {
+			currentIndx = 0;
+			forwardIndx = 1;
+			
+			for(int columnRunner = 0; columnRunner < array.length  &&  !(forwardIndx >= array.length);columnRunner++) {
 				
-				//System.out.println("Row Runner: " + array[rowRunner]);
-				//System.out.println("Column Runner: " + pointArray[columnRunner]);
-				//System.out.println(pointArray[columnRunner] + " Slope they make: " + array[rowRunner].slopeTo(pointArray[columnRunner]));
-				System.out.println(pointArray[columnRunner] + " Slope they make: " + pointArray[columnRunner].slopeTo(array[rowRunner]));
 				
+			//System.out.println(pointArray[columnRunner] + " Slope they make: " + pointArray[columnRunner].slopeTo(array[rowRunner]));
+				
+				currentIndx++;
+				
+				
+				//Slope stuff
+				currentSlope = pointArray[currentIndx].slopeTo(array[rowRunner]);
 				
 			
+				forwardIndx++;
+				if(forwardIndx >= array.length) {
+					break;
+				}else {
 				
-				if(pointArray[columnRunner] == array[rowRunner]) {
-					
-//					System.out.println();
-//					System.out.println("Similar Points Found at: " + columnRunner);
-//					System.out.println("pointArray Found at: " + pointArray[columnRunner]);
-//					System.out.println("array Found at: " + array[rowRunner]);
-//					System.out.println();
-					
-//					if(columnRunner == 0) {
-//						System.out.println("First");
-//						
-//						slopeA = pointArray[columnRunner + 1].slopeTo(array[rowRunner]);
-//						slopeB = pointArray[columnRunner + 2].slopeTo(array[rowRunner]);
-//						slopeC = pointArray[columnRunner + 3].slopeTo(array[rowRunner]);
-//						
-//						
-//						slopeA = array[rowRunner].slopeTo(pointArray[columnRunner + 1]);
-//						slopeB = array[rowRunner].slopeTo(pointArray[columnRunner + 2]);
-//						slopeC = array[rowRunner].slopeTo(pointArray[columnRunner + 3]);
-//						
-//						if(slopeA == slopeB && slopeA == slopeC && slopeB == slopeC) {
-//							System.out.println("LINE SEGMENT FOUND: " + columnRunner);
-//							
-//							lineSegmentToDraw[0] = pointArray[columnRunner];
-//							lineSegmentToDraw[1] = pointArray[columnRunner + 1];
-//							lineSegmentToDraw[2] = pointArray[columnRunner + 2];
-//							lineSegmentToDraw[3] = pointArray[columnRunner + 3];
-//							
-//							Arrays.sort(lineSegmentToDraw, new SortByXCoordinate());
-//							
-//							lines.add(new LineSegment(lineSegmentToDraw[0],lineSegmentToDraw[3]));
-//							
-//						}
-//						
-//						
-//					}else if(columnRunner == 1) {
-//						System.out.println("Second");
-//						
-//						slopeA = pointArray[columnRunner - 1].slopeTo(array[rowRunner]);
-//						slopeB = pointArray[columnRunner + 1].slopeTo(array[rowRunner]);
-//						slopeC = pointArray[columnRunner + 2].slopeTo(array[rowRunner]);
-//						
-//						slopeA = array[rowRunner].slopeTo(pointArray[columnRunner - 1]);
-//						slopeB = array[rowRunner].slopeTo(pointArray[columnRunner + 1]);
-//						slopeC = array[rowRunner].slopeTo(pointArray[columnRunner + 2]);
-//						
-//						
-//						if(slopeA == slopeB && slopeA == slopeC && slopeB == slopeC) {
-//							System.out.println("LINE SEGMENT FOUND: " + columnRunner);
-//							
-//							lineSegmentToDraw[0] = pointArray[columnRunner];
-//							lineSegmentToDraw[1] = pointArray[columnRunner - 1];
-//							lineSegmentToDraw[2] = pointArray[columnRunner + 1];
-//							lineSegmentToDraw[3] = pointArray[columnRunner + 2];
-//							
-//							Arrays.sort(lineSegmentToDraw, new SortByXCoordinate());
-//							
-//							lines.add(new LineSegment(lineSegmentToDraw[0],lineSegmentToDraw[3]));
-//						}
-//						
-//						
-//						//OR
-//						
-//						slopeA = pointArray[columnRunner + 1].slopeTo(array[rowRunner]);
-//						slopeB = pointArray[columnRunner + 2].slopeTo(array[rowRunner]);
-//						slopeC = pointArray[columnRunner + 3].slopeTo(array[rowRunner]);
-//						
-//						slopeA = array[rowRunner].slopeTo(pointArray[columnRunner + 1]);
-//						slopeB = array[rowRunner].slopeTo(pointArray[columnRunner + 2]);
-//						slopeC = array[rowRunner].slopeTo(pointArray[columnRunner + 3]);
-//						
-//						if(slopeA == slopeB && slopeA == slopeC && slopeB == slopeC) {
-//							System.out.println("LINE SEGMENT FOUND: " + columnRunner);
-//							
-//							lineSegmentToDraw[0] = pointArray[columnRunner];
-//							lineSegmentToDraw[1] = pointArray[columnRunner + 1];
-//							lineSegmentToDraw[2] = pointArray[columnRunner + 2];
-//							lineSegmentToDraw[3] = pointArray[columnRunner + 3];
-//							
-//							Arrays.sort(lineSegmentToDraw, new SortByXCoordinate());
-//							
-//							lines.add(new LineSegment(lineSegmentToDraw[0],lineSegmentToDraw[3]));
-//						}
-//						
-//						
-//					}else if(columnRunner == 2) {
-//						System.out.println("Third");
-//						
-//						slopeA = pointArray[columnRunner - 2].slopeTo(array[rowRunner]);
-//						slopeB = pointArray[columnRunner - 1].slopeTo(array[rowRunner]);
-//						slopeC = pointArray[columnRunner + 1].slopeTo(array[rowRunner]);
-//						
-//						slopeA = array[rowRunner].slopeTo(pointArray[columnRunner - 2]);
-//						slopeB = array[rowRunner].slopeTo(pointArray[columnRunner - 1]);
-//						slopeC = array[rowRunner].slopeTo(pointArray[columnRunner + 1]);
-//						
-//						if(slopeA == slopeB && slopeA == slopeC && slopeB == slopeC) {
-//							System.out.println("LINE SEGMENT FOUND: " + columnRunner);
-//							
-//							lineSegmentToDraw[0] = pointArray[columnRunner];
-//							lineSegmentToDraw[1] = pointArray[columnRunner - 2];
-//							lineSegmentToDraw[2] = pointArray[columnRunner - 1];
-//							lineSegmentToDraw[3] = pointArray[columnRunner + 1];
-//							
-//							Arrays.sort(lineSegmentToDraw, new SortByXCoordinate());
-//							
-//							lines.add(new LineSegment(lineSegmentToDraw[0],lineSegmentToDraw[3]));
-//						}
-//						
-//						//OR
-//						
-//						slopeA = pointArray[columnRunner - 1].slopeTo(array[rowRunner]);
-//						slopeB = pointArray[columnRunner + 1].slopeTo(array[rowRunner]);
-//						slopeC = pointArray[columnRunner + 2].slopeTo(array[rowRunner]);
-//						
-//						slopeA = array[rowRunner].slopeTo(pointArray[columnRunner - 1]);
-//						slopeB = array[rowRunner].slopeTo(pointArray[columnRunner + 1]);
-//						slopeC = array[rowRunner].slopeTo(pointArray[columnRunner + 2]);
-//						
-//						if(slopeA == slopeB && slopeA == slopeC && slopeB == slopeC) {
-//							System.out.println("LINE SEGMENT FOUND: " + columnRunner);
-//							
-//							lineSegmentToDraw[0] = pointArray[columnRunner];
-//							lineSegmentToDraw[1] = pointArray[columnRunner - 1];
-//							lineSegmentToDraw[2] = pointArray[columnRunner + 1];
-//							lineSegmentToDraw[3] = pointArray[columnRunner + 2];
-//							
-//							Arrays.sort(lineSegmentToDraw, new SortByXCoordinate());
-//							
-//							lines.add(new LineSegment(lineSegmentToDraw[0],lineSegmentToDraw[3]));
-//						}
-//						
-//						//OR
-//						
-//						slopeA = pointArray[columnRunner + 1].slopeTo(array[rowRunner]);
-//						slopeB = pointArray[columnRunner + 2].slopeTo(array[rowRunner]);
-//						slopeC = pointArray[columnRunner + 3].slopeTo(array[rowRunner]);
-//						
-//						slopeA = array[rowRunner].slopeTo(pointArray[columnRunner + 1]);
-//						slopeB = array[rowRunner].slopeTo(pointArray[columnRunner + 2]);
-//						slopeC = array[rowRunner].slopeTo(pointArray[columnRunner + 3]);
-//						
-//						if(slopeA == slopeB && slopeA == slopeC && slopeB == slopeC) {
-//							System.out.println("LINE SEGMENT FOUND: " + columnRunner);
-//							
-//							lineSegmentToDraw[0] = pointArray[columnRunner];
-//							lineSegmentToDraw[1] = pointArray[columnRunner + 1];
-//							lineSegmentToDraw[2] = pointArray[columnRunner + 2];
-//							lineSegmentToDraw[3] = pointArray[columnRunner + 3];
-//							
-//							Arrays.sort(lineSegmentToDraw, new SortByXCoordinate());
-//							
-//							lines.add(new LineSegment(lineSegmentToDraw[0],lineSegmentToDraw[3]));
-//						}
-//						
-//					}else if(columnRunner == array.length - 1) {
-//						System.out.println("Last");
-//						
-//						slopeA = pointArray[columnRunner - 1].slopeTo(array[rowRunner]);
-//						slopeB = pointArray[columnRunner - 2].slopeTo(array[rowRunner]);
-//						slopeC = pointArray[columnRunner - 3].slopeTo(array[rowRunner]);
-//						
-//						slopeA = array[rowRunner].slopeTo(pointArray[columnRunner - 1]);
-//						slopeB = array[rowRunner].slopeTo(pointArray[columnRunner - 2]);
-//						slopeC = array[rowRunner].slopeTo(pointArray[columnRunner - 3]);
-//						
-//						if(slopeA == slopeB && slopeA == slopeC && slopeB == slopeC) {
-//							System.out.println("LINE SEGMENT FOUND: " + columnRunner);
-//							
-//							lineSegmentToDraw[0] = pointArray[columnRunner];
-//							lineSegmentToDraw[1] = pointArray[columnRunner - 1];
-//							lineSegmentToDraw[2] = pointArray[columnRunner - 2];
-//							lineSegmentToDraw[3] = pointArray[columnRunner - 3];
-//							
-//							Arrays.sort(lineSegmentToDraw, new SortByXCoordinate());
-//							
-//							lines.add(new LineSegment(lineSegmentToDraw[0],lineSegmentToDraw[3]));
-//						}
-//						
-//						
-//					}else if(columnRunner == array.length - 2) {
-//						System.out.println("Second Last");
-//						
-//						slopeA = pointArray[columnRunner + 1].slopeTo(array[rowRunner]);
-//						slopeB = pointArray[columnRunner - 1].slopeTo(array[rowRunner]);
-//						slopeC = pointArray[columnRunner - 2].slopeTo(array[rowRunner]);
-//						
-//						slopeA = array[rowRunner].slopeTo(pointArray[columnRunner + 1]);
-//						slopeB = array[rowRunner].slopeTo(pointArray[columnRunner - 1]);
-//						slopeC = array[rowRunner].slopeTo(pointArray[columnRunner - 2]);
-//						
-//						if(slopeA == slopeB && slopeA == slopeC && slopeB == slopeC) {
-//							System.out.println("LINE SEGMENT FOUND: " + columnRunner);
-//							
-//							lineSegmentToDraw[0] = pointArray[columnRunner];
-//							lineSegmentToDraw[1] = pointArray[columnRunner + 1];
-//							lineSegmentToDraw[2] = pointArray[columnRunner - 1];
-//							lineSegmentToDraw[3] = pointArray[columnRunner - 2];
-//							
-//							Arrays.sort(lineSegmentToDraw, new SortByXCoordinate());
-//							
-//							lines.add(new LineSegment(lineSegmentToDraw[0],lineSegmentToDraw[3]));
-//						}
-//						
-//						
-//						//OR
-//						
-//						slopeA = pointArray[columnRunner - 1].slopeTo(array[rowRunner]);
-//						slopeB = pointArray[columnRunner - 2].slopeTo(array[rowRunner]);
-//						slopeC = pointArray[columnRunner - 3].slopeTo(array[rowRunner]);
-//						
-//						slopeA = array[rowRunner].slopeTo(pointArray[columnRunner - 1]);
-//						slopeB = array[rowRunner].slopeTo(pointArray[columnRunner - 2]);
-//						slopeC = array[rowRunner].slopeTo(pointArray[columnRunner - 3]);
-//						
-//						if(slopeA == slopeB && slopeA == slopeC && slopeB == slopeC) {
-//							System.out.println("LINE SEGMENT FOUND: " + columnRunner);
-//							
-//							lineSegmentToDraw[0] = pointArray[columnRunner];
-//							lineSegmentToDraw[1] = pointArray[columnRunner - 1];
-//							lineSegmentToDraw[2] = pointArray[columnRunner - 2];
-//							lineSegmentToDraw[3] = pointArray[columnRunner - 3];
-//							
-//							Arrays.sort(lineSegmentToDraw, new SortByXCoordinate());
-//							
-//							lines.add(new LineSegment(lineSegmentToDraw[0],lineSegmentToDraw[3]));
-//						}
-//						
-//						
-//					}else if(columnRunner == array.length - 3) {
-//						System.out.println("Third Last");
-//						
-//						slopeA = pointArray[columnRunner - 1].slopeTo(array[rowRunner]);
-//						slopeB = pointArray[columnRunner + 1].slopeTo(array[rowRunner]);
-//						slopeC = pointArray[columnRunner + 2].slopeTo(array[rowRunner]);
-//						
-//						
-//						slopeA = array[rowRunner].slopeTo(pointArray[columnRunner - 1]);
-//						slopeB = array[rowRunner].slopeTo(pointArray[columnRunner + 1]);
-//						slopeC = array[rowRunner].slopeTo(pointArray[columnRunner + 2]);
-//						
-//						if(slopeA == slopeB && slopeA == slopeC && slopeB == slopeC) {
-//							System.out.println("LINE SEGMENT FOUND: " + columnRunner);
-//							
-//							lineSegmentToDraw[0] = pointArray[columnRunner];
-//							lineSegmentToDraw[1] = pointArray[columnRunner - 1];
-//							lineSegmentToDraw[2] = pointArray[columnRunner + 1];
-//							lineSegmentToDraw[3] = pointArray[columnRunner + 2];
-//							
-//							Arrays.sort(lineSegmentToDraw, new SortByXCoordinate());
-//							
-//							lines.add(new LineSegment(lineSegmentToDraw[0],lineSegmentToDraw[3]));
-//							
-//						}
-//						
-//						//OR
-//						
-//						slopeA = pointArray[columnRunner + 1].slopeTo(array[rowRunner]);
-//						slopeB = pointArray[columnRunner - 1].slopeTo(array[rowRunner]);
-//						slopeC = pointArray[columnRunner - 2].slopeTo(array[rowRunner]);
-//						
-//						slopeA = array[rowRunner].slopeTo(pointArray[columnRunner + 1]);
-//						slopeB = array[rowRunner].slopeTo(pointArray[columnRunner - 1]);
-//						slopeC = array[rowRunner].slopeTo(pointArray[columnRunner - 2]);
-//						
-//						if(slopeA == slopeB && slopeA == slopeC && slopeB == slopeC) {
-//							System.out.println("LINE SEGMENT FOUND: " + columnRunner);
-//							
-//							lineSegmentToDraw[0] = pointArray[columnRunner];
-//							lineSegmentToDraw[1] = pointArray[columnRunner + 1];
-//							lineSegmentToDraw[2] = pointArray[columnRunner - 1];
-//							lineSegmentToDraw[3] = pointArray[columnRunner - 2];
-//							
-//							Arrays.sort(lineSegmentToDraw, new SortByXCoordinate());
-//							
-//							lines.add(new LineSegment(lineSegmentToDraw[0],lineSegmentToDraw[3]));
-//						}
-//						
-//						//OR
-//						
-//						slopeA = pointArray[columnRunner - 1].slopeTo(array[rowRunner]);
-//						slopeB = pointArray[columnRunner - 2].slopeTo(array[rowRunner]);
-//						slopeC = pointArray[columnRunner - 3].slopeTo(array[rowRunner]);
-//						
-//						slopeA = array[rowRunner].slopeTo(pointArray[columnRunner - 1]);
-//						slopeB = array[rowRunner].slopeTo(pointArray[columnRunner - 2]);
-//						slopeC = array[rowRunner].slopeTo(pointArray[columnRunner - 3]);
-//						
-//						if(slopeA == slopeB && slopeA == slopeC && slopeB == slopeC) {
-//							System.out.println("LINE SEGMENT FOUND: " + columnRunner);
-//							
-//							lineSegmentToDraw[0] = pointArray[columnRunner];
-//							lineSegmentToDraw[1] = pointArray[columnRunner - 1];
-//							lineSegmentToDraw[2] = pointArray[columnRunner - 2];
-//							lineSegmentToDraw[3] = pointArray[columnRunner - 3];
-//							
-//							Arrays.sort(lineSegmentToDraw, new SortByXCoordinate());
-//							
-//							lines.add(new LineSegment(lineSegmentToDraw[0],lineSegmentToDraw[3]));
-//						}
-//						
-//					}else{
-//						
-//						slopeA = pointArray[columnRunner - 1].slopeTo(array[rowRunner]);
-//						slopeB = pointArray[columnRunner - 2].slopeTo(array[rowRunner]);
-//						slopeC = pointArray[columnRunner - 3].slopeTo(array[rowRunner]);
-//						
-//						slopeA = array[rowRunner].slopeTo(pointArray[columnRunner - 1]);
-//						slopeB = array[rowRunner].slopeTo(pointArray[columnRunner - 2]);
-//						slopeC = array[rowRunner].slopeTo(pointArray[columnRunner - 3]);
-//						
-//						if(slopeA == slopeB && slopeA == slopeC && slopeB == slopeC) {
-//							System.out.println("LINE SEGMENT FOUND: " + columnRunner);
-//							
-//							lineSegmentToDraw[0] = pointArray[columnRunner];
-//							lineSegmentToDraw[1] = pointArray[columnRunner - 1];
-//							lineSegmentToDraw[2] = pointArray[columnRunner - 2];
-//							lineSegmentToDraw[3] = pointArray[columnRunner - 3];
-//							
-//							Arrays.sort(lineSegmentToDraw, new SortByXCoordinate());
-//							
-//							lines.add(new LineSegment(lineSegmentToDraw[0],lineSegmentToDraw[3]));
-//						}
-//						
-//						slopeA = pointArray[columnRunner + 1].slopeTo(array[rowRunner]);
-//						slopeB = pointArray[columnRunner + 2].slopeTo(array[rowRunner]);
-//						slopeC = pointArray[columnRunner + 3].slopeTo(array[rowRunner]);
-//						
-//						slopeA = array[rowRunner].slopeTo(pointArray[columnRunner + 1]);
-//						slopeB = array[rowRunner].slopeTo(pointArray[columnRunner + 2]);
-//						slopeC = array[rowRunner].slopeTo(pointArray[columnRunner + 3]);
-//						
-//						if(slopeA == slopeB && slopeA == slopeC && slopeB == slopeC) {
-//							System.out.println("LINE SEGMENT FOUND: " + columnRunner);
-//							
-//							lineSegmentToDraw[0] = pointArray[columnRunner];
-//							lineSegmentToDraw[1] = pointArray[columnRunner + 1];
-//							lineSegmentToDraw[2] = pointArray[columnRunner + 2];
-//							lineSegmentToDraw[3] = pointArray[columnRunner + 3];
-//							
-//							Arrays.sort(lineSegmentToDraw, new SortByXCoordinate());
-//							
-//							lines.add(new LineSegment(lineSegmentToDraw[0],lineSegmentToDraw[3]));
-//						}
-//					}
+					forwardSlope = pointArray[forwardIndx].slopeTo(array[rowRunner]);
+				}
+//				
+				
+
+				
+				checkerPoint = pointArray[currentIndx];
+				
+				
+				for(int slopeRunner = columnRunner; currentSlope == forwardSlope && forwardIndx != array.length 
+						; slopeRunner++) {
 					
 					
+					
+					streakCounter++;
+					forwardSlope = pointArray[forwardIndx].slopeTo(array[rowRunner]);
+					forwardIndx++;
+					
+					
+					
+					
+					if(streakCounter < 3) {
+						holder.add(pointArray[slopeRunner]);
+					}
+					
+					if(streakCounter == 3) {
+						holder.add(pointArray[slopeRunner]);
+						
+//						for(Point x: holder) {
+//							lines.add(new LineSegment(array[rowRunner],x));
+//						}
+						
+						
+						Collections.sort(holder);
+						
+						for(Point x: holder) {
+							//lines.add(new LineSegment(array[rowRunner],x));
+							//System.out.println(pointArray[columnRunner] + " Slope they make: " + pointArray[columnRunner].slopeTo(array[rowRunner]));
+							System.out.println(array[rowRunner] + " " +  x);
+						}
+						
+						
+					}
+					
+					
+					
+					if(streakCounter >= 3) {
+							
+						lines.add(new LineSegment(array[rowRunner],pointArray[slopeRunner]));
+						
+						
+						
+//						if(checkerPoint.compareTo(pointArray[slopeRunner]) == -1) {
+//							
+//							checkerPoint = pointArray[slopeRunner];
+//							lines.add(new LineSegment(array[rowRunner],checkerPoint));
+//							
+//						}else if(checkerPoint.compareTo(pointArray[slopeRunner]) == 1){
+//							
+//							lines.add(new LineSegment(array[rowRunner],checkerPoint));
+//						}
+						
+						
+						//lines.add(new LineSegment(array[rowRunner],checkerPoint));
+						//lines.add(new LineSegment(array[rowRunner],pointArray[slopeRunner]));
+						//lines.add(new LineSegment(array[rowRunner],holder.get(0)));
+					}
 					
 					
 				}
-				//System.out.println(pointArray[columnRunner] + " Slope they make: " + pointArray[columnRunner].slopeTo(pointArray[rowRunner]));
+				
+				
+				
+				holder.clear();
+				columnRunner += streakCounter;
+				currentIndx += streakCounter;
+				checkerPoint = null;
+				streakCounter = 0;
 				
 			}
 			
-//			pointArray = null;
-//			pointArray = array;
+			
 			System.out.println();
 		}
 		
@@ -420,7 +163,8 @@ public class FastColinearPoints {
 		
 		LineSegment[] lineList = null;
 		
-		 lineList = this.lines.toArray(new LineSegment[lines.size()]);
+		lineList = this.lines.toArray(new LineSegment[lines.size()]);
+		
 		return lineList;
 	}
 	
@@ -443,7 +187,7 @@ public class FastColinearPoints {
 	    }
 	    StdDraw.show();
 	    
-	    
+//	    Left In for testing
 	    System.out.println("Before Slope Order");
 	    for(Point runner: points) {
 	    	System.out.println(runner);

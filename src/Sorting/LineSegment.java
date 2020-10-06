@@ -13,7 +13,7 @@ package Sorting;
 
 import basicDataStructures.StdDraw;
 
-public class LineSegment {
+public class LineSegment{
     public Point getP() {
 		return p;
 	}
@@ -81,4 +81,6 @@ public class LineSegment {
         throw new UnsupportedOperationException();
     }
 
+    
+	
 }

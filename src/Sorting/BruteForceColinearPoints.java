@@ -2,6 +2,7 @@ package Sorting;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 
 import basicDataStructures.StdDraw;
@@ -71,10 +72,12 @@ public class BruteForceColinearPoints {
 							subber[2] = third;		
 							subber[3] = fourth;
 							
-							arrayOfSegments.add(first);
-							arrayOfSegments.add(second);
-							arrayOfSegments.add(third);
-							arrayOfSegments.add(fourth);
+							
+							
+//							arrayOfSegments.add(first);
+//							arrayOfSegments.add(second);
+//							arrayOfSegments.add(third);
+//							arrayOfSegments.add(fourth);
 							
 							//Collections.sort(arrayOfSegments);
 							SelectionSort.sort(subber);
@@ -145,7 +148,7 @@ public class BruteForceColinearPoints {
 					subber[2] = third;
 					subber[3] = fourth;
 					
-					SelectionSort.sort(subber);
+					Arrays.sort(subber);
 					
 					first.draw();
 					

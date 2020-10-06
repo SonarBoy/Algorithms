@@ -1,52 +1,78 @@
 Before Slope Order
-X: 29000 Y: 8000
-X: 5000 Y: 22000
-X: 3000 Y: 29000
-X: 18000 Y: 21000
-X: 22000 Y: 25000
+X: 10000 Y: 0
+X: 0 Y: 10000
+X: 3000 Y: 7000
+X: 7000 Y: 3000
+X: 20000 Y: 21000
+X: 3000 Y: 4000
+X: 14000 Y: 15000
+X: 6000 Y: 7000
 
 Row Runner: 0
-For Point: X: 29000 Y: 8000
+For Point: X: 10000 Y: 0
 
-X: 22000 Y: 25000 Slope they make: -2.4285714285714284
-X: 18000 Y: 21000 Slope they make: -1.1818181818181819
-X: 3000 Y: 29000 Slope they make: -0.8076923076923077
-X: 5000 Y: 22000 Slope they make: -0.5833333333333334
-X: 29000 Y: 8000 Slope they make: NaN
+Insertion Sorted Time: 35899
+X: 10000 Y: 0 X: 3000 Y: 7000
+X: 10000 Y: 0 X: 6000 Y: 7000
+X: 10000 Y: 0 X: 0 Y: 10000
 
 Row Runner: 1
-For Point: X: 5000 Y: 22000
+For Point: X: 0 Y: 10000
 
-X: 29000 Y: 8000 Slope they make: -0.5833333333333334
-X: 5000 Y: 22000 Slope they make: NaN
-X: 3000 Y: 29000 Slope they make: -3.5
-X: 18000 Y: 21000 Slope they make: -0.07692307692307693
-X: 22000 Y: 25000 Slope they make: 0.17647058823529413
+Insertion Sorted Time: 15500
+X: 0 Y: 10000 X: 7000 Y: 3000
+X: 0 Y: 10000 X: 3000 Y: 4000
+X: 0 Y: 10000 X: 3000 Y: 7000
 
 Row Runner: 2
-For Point: X: 3000 Y: 29000
+For Point: X: 3000 Y: 7000
 
-X: 22000 Y: 25000 Slope they make: -0.21052631578947367
-X: 18000 Y: 21000 Slope they make: -0.5333333333333333
-X: 3000 Y: 29000 Slope they make: NaN
-X: 5000 Y: 22000 Slope they make: -3.5
-X: 29000 Y: 8000 Slope they make: -0.8076923076923077
+Insertion Sorted Time: 14300
 
 Row Runner: 3
-For Point: X: 18000 Y: 21000
+For Point: X: 7000 Y: 3000
 
-X: 29000 Y: 8000 Slope they make: -1.1818181818181819
-X: 5000 Y: 22000 Slope they make: -0.07692307692307693
-X: 3000 Y: 29000 Slope they make: -0.5333333333333333
-X: 18000 Y: 21000 Slope they make: NaN
-X: 22000 Y: 25000 Slope they make: 1.0
+Insertion Sorted Time: 14000
+X: 7000 Y: 3000 X: 10000 Y: 0
+X: 7000 Y: 3000 X: 6000 Y: 7000
+X: 7000 Y: 3000 X: 0 Y: 10000
 
 Row Runner: 4
-For Point: X: 22000 Y: 25000
+For Point: X: 20000 Y: 21000
 
-X: 22000 Y: 25000 Slope they make: NaN
-X: 18000 Y: 21000 Slope they make: 1.0
-X: 3000 Y: 29000 Slope they make: -0.21052631578947367
-X: 5000 Y: 22000 Slope they make: 0.17647058823529413
-X: 29000 Y: 8000 Slope they make: -2.4285714285714284
+Insertion Sorted Time: 11599
+X: 20000 Y: 21000 X: 3000 Y: 4000
+X: 20000 Y: 21000 X: 3000 Y: 7000
+X: 20000 Y: 21000 X: 6000 Y: 7000
 
+Row Runner: 5
+For Point: X: 3000 Y: 4000
+
+Insertion Sorted Time: 14400
+X: 3000 Y: 4000 X: 7000 Y: 3000
+X: 3000 Y: 4000 X: 6000 Y: 7000
+X: 3000 Y: 4000 X: 14000 Y: 15000
+
+Row Runner: 6
+For Point: X: 14000 Y: 15000
+
+Insertion Sorted Time: 16400
+X: 14000 Y: 15000 X: 3000 Y: 7000
+X: 14000 Y: 15000 X: 6000 Y: 7000
+X: 14000 Y: 15000 X: 20000 Y: 21000
+
+Row Runner: 7
+For Point: X: 6000 Y: 7000
+
+Insertion Sorted Time: 12900
+X: 6000 Y: 7000 X: 3000 Y: 4000
+X: 6000 Y: 7000 X: 3000 Y: 7000
+X: 6000 Y: 7000 X: 20000 Y: 21000
+
+X: 10000 Y: 0 -> X: 3000 Y: 7000
+X: 0 Y: 10000 -> X: 7000 Y: 3000
+X: 7000 Y: 3000 -> X: 0 Y: 10000
+X: 20000 Y: 21000 -> X: 3000 Y: 4000
+X: 3000 Y: 4000 -> X: 14000 Y: 15000
+X: 14000 Y: 15000 -> X: 20000 Y: 21000
+X: 6000 Y: 7000 -> X: 3000 Y: 4000
