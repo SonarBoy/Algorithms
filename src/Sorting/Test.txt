@@ -1,78 +1,3334 @@
-Before Slope Order
-X: 10000 Y: 0
-X: 0 Y: 10000
-X: 3000 Y: 7000
-X: 7000 Y: 3000
-X: 20000 Y: 21000
-X: 3000 Y: 4000
-X: 14000 Y: 15000
-X: 6000 Y: 7000
+Before Fast Slope Order
+X: 29000 Y: 8000
+X: 5000 Y: 22000
+X: 3000 Y: 29000
+X: 18000 Y: 21000
+X: 22000 Y: 25000
+X: 3000 Y: 11000
+X: 2000 Y: 13000
+X: 19000 Y: 31000
+X: 19000 Y: 6000
+X: 21000 Y: 0
+X: 11000 Y: 26000
+X: 17000 Y: 0
+X: 9000 Y: 25000
+X: 5000 Y: 0
+X: 21000 Y: 5000
+X: 26000 Y: 10000
+X: 17000 Y: 27000
+X: 15000 Y: 3000
+X: 23000 Y: 30000
+X: 12000 Y: 29000
+X: 16000 Y: 16000
+X: 14000 Y: 29000
+X: 25000 Y: 20000
+X: 26000 Y: 5000
+X: 10000 Y: 31000
+X: 4000 Y: 12000
+X: 30000 Y: 21000
+X: 1000 Y: 0
+X: 8000 Y: 13000
+X: 9000 Y: 13000
+X: 1000 Y: 29000
+X: 21000 Y: 11000
+X: 1000 Y: 27000
+X: 13000 Y: 27000
+X: 30000 Y: 19000
+X: 23000 Y: 5000
+X: 12000 Y: 5000
+X: 12000 Y: 20000
+X: 10000 Y: 5000
+X: 12000 Y: 31000
+X: 0 Y: 8000
+X: 29000 Y: 16000
+X: 22000 Y: 29000
+X: 15000 Y: 16000
+X: 29000 Y: 10000
+X: 7000 Y: 25000
+X: 31000 Y: 11000
+X: 25000 Y: 24000
+X: 12000 Y: 4000
+X: 31000 Y: 26000
+X: 29000 Y: 29000
+X: 13000 Y: 2000
+X: 11000 Y: 7000
+X: 22000 Y: 20000
+X: 9000 Y: 9000
+X: 11000 Y: 11000
+X: 17000 Y: 14000
+X: 22000 Y: 9000
+X: 16000 Y: 19000
+X: 3000 Y: 1000
+X: 1000 Y: 1000
+X: 26000 Y: 14000
+X: 3000 Y: 2000
+X: 11000 Y: 12000
+X: 24000 Y: 29000
+X: 9000 Y: 3000
+X: 24000 Y: 23000
+X: 17000 Y: 1000
+X: 17000 Y: 20000
+X: 0 Y: 18000
+X: 6000 Y: 0
+X: 3000 Y: 23000
+X: 1000 Y: 16000
+X: 20000 Y: 30000
+X: 15000 Y: 5000
+X: 23000 Y: 31000
+X: 28000 Y: 31000
+X: 12000 Y: 18000
+X: 22000 Y: 21000
+X: 13000 Y: 7000
+X: 5000 Y: 18000
+X: 6000 Y: 8000
+X: 9000 Y: 11000
+X: 30000 Y: 8000
+X: 25000 Y: 9000
+X: 29000 Y: 25000
+X: 3000 Y: 26000
+X: 15000 Y: 2000
+X: 21000 Y: 14000
+X: 12000 Y: 24000
+X: 6000 Y: 22000
+X: 24000 Y: 5000
+X: 8000 Y: 24000
+X: 17000 Y: 31000
+X: 24000 Y: 10000
+X: 13000 Y: 9000
+X: 15000 Y: 18000
+X: 21000 Y: 15000
+X: 19000 Y: 10000
+X: 26000 Y: 6000
 
 Row Runner: 0
-For Point: X: 10000 Y: 0
+For Point: X: 29000 Y: 8000
 
-Insertion Sorted Time: 35899
-X: 10000 Y: 0 X: 3000 Y: 7000
-X: 10000 Y: 0 X: 6000 Y: 7000
-X: 10000 Y: 0 X: 0 Y: 10000
+Insertion Sorted Time: 1275100
+From Holder:
+X: 29000 Y: 8000 X: 25000 Y: 20000
+From Holder:
+X: 29000 Y: 8000 X: 22000 Y: 29000
+From Holder:
+X: 29000 Y: 8000 X: 23000 Y: 30000
+From Holder:
+X: 29000 Y: 8000 X: 0 Y: 8000
+From Holder:
+X: 29000 Y: 8000 X: 6000 Y: 8000
+From Holder:
+X: 29000 Y: 8000 X: 9000 Y: 9000
+From Holder:
+X: 29000 Y: 8000 X: 29000 Y: 8000
+From Holder:
+X: 29000 Y: 8000 X: 29000 Y: 16000
+From Holder:
+X: 29000 Y: 8000 X: 30000 Y: 21000
 
 Row Runner: 1
-For Point: X: 0 Y: 10000
+For Point: X: 5000 Y: 22000
 
-Insertion Sorted Time: 15500
-X: 0 Y: 10000 X: 7000 Y: 3000
-X: 0 Y: 10000 X: 3000 Y: 4000
-X: 0 Y: 10000 X: 3000 Y: 7000
+Insertion Sorted Time: 370800
+From Holder:
+X: 5000 Y: 22000 X: 21000 Y: 14000
+From Holder:
+X: 5000 Y: 22000 X: 16000 Y: 16000
+From Holder:
+X: 5000 Y: 22000 X: 3000 Y: 23000
 
 Row Runner: 2
-For Point: X: 3000 Y: 7000
+For Point: X: 3000 Y: 29000
 
-Insertion Sorted Time: 14300
+Insertion Sorted Time: 152100
+From Holder:
+X: 3000 Y: 29000 X: 17000 Y: 0
+From Holder:
+X: 3000 Y: 29000 X: 17000 Y: 1000
+From Holder:
+X: 3000 Y: 29000 X: 15000 Y: 5000
+From Holder:
+X: 3000 Y: 29000 X: 26000 Y: 5000
+From Holder:
+X: 3000 Y: 29000 X: 26000 Y: 6000
+From Holder:
+X: 3000 Y: 29000 X: 21000 Y: 11000
+From Holder:
+X: 3000 Y: 29000 X: 31000 Y: 26000
+From Holder:
+X: 3000 Y: 29000 X: 1000 Y: 29000
+From Holder:
+X: 3000 Y: 29000 X: 29000 Y: 29000
+From Holder:
+X: 3000 Y: 29000 X: 2000 Y: 13000
+From Holder:
+X: 3000 Y: 29000 X: 3000 Y: 26000
+From Holder:
+X: 3000 Y: 29000 X: 3000 Y: 29000
 
 Row Runner: 3
-For Point: X: 7000 Y: 3000
+For Point: X: 18000 Y: 21000
 
-Insertion Sorted Time: 14000
-X: 7000 Y: 3000 X: 10000 Y: 0
-X: 7000 Y: 3000 X: 6000 Y: 7000
-X: 7000 Y: 3000 X: 0 Y: 10000
+Insertion Sorted Time: 255600
+From Holder:
+X: 18000 Y: 21000 X: 26000 Y: 5000
+From Holder:
+X: 18000 Y: 21000 X: 21000 Y: 14000
+From Holder:
+X: 18000 Y: 21000 X: 21000 Y: 15000
+From Holder:
+X: 18000 Y: 21000 X: 9000 Y: 13000
+From Holder:
+X: 18000 Y: 21000 X: 15000 Y: 18000
+From Holder:
+X: 18000 Y: 21000 X: 16000 Y: 19000
+From Holder:
+X: 18000 Y: 21000 X: 9000 Y: 9000
+From Holder:
+X: 18000 Y: 21000 X: 11000 Y: 12000
+From Holder:
+X: 18000 Y: 21000 X: 24000 Y: 29000
+From Holder:
+X: 18000 Y: 21000 X: 9000 Y: 3000
+From Holder:
+X: 18000 Y: 21000 X: 10000 Y: 5000
+From Holder:
+X: 18000 Y: 21000 X: 23000 Y: 30000
 
 Row Runner: 4
-For Point: X: 20000 Y: 21000
+For Point: X: 22000 Y: 25000
 
-Insertion Sorted Time: 11599
-X: 20000 Y: 21000 X: 3000 Y: 4000
-X: 20000 Y: 21000 X: 3000 Y: 7000
-X: 20000 Y: 21000 X: 6000 Y: 7000
+Insertion Sorted Time: 129200
+From Holder:
+X: 22000 Y: 25000 X: 14000 Y: 29000
+From Holder:
+X: 22000 Y: 25000 X: 10000 Y: 31000
+From Holder:
+X: 22000 Y: 25000 X: 12000 Y: 31000
+From Holder:
+X: 22000 Y: 25000 X: 7000 Y: 25000
+From Holder:
+X: 22000 Y: 25000 X: 9000 Y: 25000
+From Holder:
+X: 22000 Y: 25000 X: 3000 Y: 26000
+From Holder:
+X: 22000 Y: 25000 X: 9000 Y: 13000
+From Holder:
+X: 22000 Y: 25000 X: 15000 Y: 18000
+From Holder:
+X: 22000 Y: 25000 X: 16000 Y: 19000
+From Holder:
+X: 22000 Y: 25000 X: 12000 Y: 5000
+From Holder:
+X: 22000 Y: 25000 X: 13000 Y: 9000
+From Holder:
+X: 22000 Y: 25000 X: 24000 Y: 29000
+From Holder:
+X: 22000 Y: 25000 X: 17000 Y: 1000
+From Holder:
+X: 22000 Y: 25000 X: 19000 Y: 10000
+From Holder:
+X: 22000 Y: 25000 X: 23000 Y: 30000
+From Holder:
+X: 22000 Y: 25000 X: 21000 Y: 0
+From Holder:
+X: 22000 Y: 25000 X: 22000 Y: 9000
+From Holder:
+X: 22000 Y: 25000 X: 22000 Y: 20000
 
 Row Runner: 5
-For Point: X: 3000 Y: 4000
+For Point: X: 3000 Y: 11000
 
-Insertion Sorted Time: 14400
-X: 3000 Y: 4000 X: 7000 Y: 3000
-X: 3000 Y: 4000 X: 6000 Y: 7000
-X: 3000 Y: 4000 X: 14000 Y: 15000
+Insertion Sorted Time: 216800
+From Holder:
+X: 3000 Y: 11000 X: 29000 Y: 10000
+From Holder:
+X: 3000 Y: 11000 X: 9000 Y: 11000
+From Holder:
+X: 3000 Y: 11000 X: 31000 Y: 11000
+From Holder:
+X: 3000 Y: 11000 X: 4000 Y: 12000
+From Holder:
+X: 3000 Y: 11000 X: 12000 Y: 20000
+From Holder:
+X: 3000 Y: 11000 X: 23000 Y: 30000
+From Holder:
+X: 3000 Y: 11000 X: 3000 Y: 23000
+From Holder:
+X: 3000 Y: 11000 X: 3000 Y: 26000
+From Holder:
+X: 3000 Y: 11000 X: 3000 Y: 29000
 
 Row Runner: 6
-For Point: X: 14000 Y: 15000
+For Point: X: 2000 Y: 13000
 
-Insertion Sorted Time: 16400
-X: 14000 Y: 15000 X: 3000 Y: 7000
-X: 14000 Y: 15000 X: 6000 Y: 7000
-X: 14000 Y: 15000 X: 20000 Y: 21000
+Insertion Sorted Time: 43200
 
 Row Runner: 7
-For Point: X: 6000 Y: 7000
+For Point: X: 19000 Y: 31000
 
-Insertion Sorted Time: 12900
-X: 6000 Y: 7000 X: 3000 Y: 4000
-X: 6000 Y: 7000 X: 3000 Y: 7000
-X: 6000 Y: 7000 X: 20000 Y: 21000
+Insertion Sorted Time: 191300
+From Holder:
+X: 19000 Y: 31000 X: 29000 Y: 29000
+From Holder:
+X: 19000 Y: 31000 X: 23000 Y: 31000
+From Holder:
+X: 19000 Y: 31000 X: 28000 Y: 31000
 
-X: 10000 Y: 0 -> X: 3000 Y: 7000
-X: 0 Y: 10000 -> X: 7000 Y: 3000
-X: 7000 Y: 3000 -> X: 0 Y: 10000
-X: 20000 Y: 21000 -> X: 3000 Y: 4000
-X: 3000 Y: 4000 -> X: 14000 Y: 15000
-X: 14000 Y: 15000 -> X: 20000 Y: 21000
-X: 6000 Y: 7000 -> X: 3000 Y: 4000
+Row Runner: 8
+For Point: X: 19000 Y: 6000
+
+Insertion Sorted Time: 192400
+From Holder:
+X: 19000 Y: 6000 X: 21000 Y: 5000
+From Holder:
+X: 19000 Y: 6000 X: 9000 Y: 11000
+From Holder:
+X: 19000 Y: 6000 X: 1000 Y: 16000
+From Holder:
+X: 19000 Y: 6000 X: 22000 Y: 9000
+From Holder:
+X: 19000 Y: 6000 X: 24000 Y: 10000
+From Holder:
+X: 19000 Y: 6000 X: 29000 Y: 16000
+
+Row Runner: 9
+For Point: X: 21000 Y: 0
+
+Insertion Sorted Time: 265300
+From Holder:
+X: 21000 Y: 0 X: 13000 Y: 2000
+From Holder:
+X: 21000 Y: 0 X: 15000 Y: 2000
+From Holder:
+X: 21000 Y: 0 X: 9000 Y: 3000
+From Holder:
+X: 21000 Y: 0 X: 1000 Y: 0
+From Holder:
+X: 21000 Y: 0 X: 5000 Y: 0
+From Holder:
+X: 21000 Y: 0 X: 1000 Y: 1000
+From Holder:
+X: 21000 Y: 0 X: 21000 Y: 0
+From Holder:
+X: 21000 Y: 0 X: 21000 Y: 5000
+From Holder:
+X: 21000 Y: 0 X: 22000 Y: 29000
+
+Row Runner: 10
+For Point: X: 11000 Y: 26000
+
+Insertion Sorted Time: 230400
+From Holder:
+X: 11000 Y: 26000 X: 21000 Y: 5000
+From Holder:
+X: 11000 Y: 26000 X: 19000 Y: 10000
+From Holder:
+X: 11000 Y: 26000 X: 17000 Y: 14000
+From Holder:
+X: 11000 Y: 26000 X: 10000 Y: 5000
+From Holder:
+X: 11000 Y: 26000 X: 11000 Y: 12000
+From Holder:
+X: 11000 Y: 26000 X: 11000 Y: 26000
+
+Row Runner: 11
+For Point: X: 17000 Y: 0
+
+Insertion Sorted Time: 228700
+From Holder:
+X: 17000 Y: 0 X: 15000 Y: 2000
+From Holder:
+X: 17000 Y: 0 X: 12000 Y: 5000
+From Holder:
+X: 17000 Y: 0 X: 0 Y: 18000
+From Holder:
+X: 17000 Y: 0 X: 1000 Y: 0
+From Holder:
+X: 17000 Y: 0 X: 21000 Y: 0
+From Holder:
+X: 17000 Y: 0 X: 1000 Y: 1000
+From Holder:
+X: 17000 Y: 0 X: 19000 Y: 10000
+From Holder:
+X: 17000 Y: 0 X: 22000 Y: 21000
+From Holder:
+X: 17000 Y: 0 X: 22000 Y: 25000
+From Holder:
+X: 17000 Y: 0 X: 17000 Y: 0
+From Holder:
+X: 17000 Y: 0 X: 17000 Y: 1000
+From Holder:
+X: 17000 Y: 0 X: 18000 Y: 21000
+
+Row Runner: 12
+For Point: X: 9000 Y: 25000
+
+Insertion Sorted Time: 221200
+From Holder:
+X: 9000 Y: 25000 X: 25000 Y: 24000
+From Holder:
+X: 9000 Y: 25000 X: 7000 Y: 25000
+From Holder:
+X: 9000 Y: 25000 X: 29000 Y: 25000
+From Holder:
+X: 9000 Y: 25000 X: 8000 Y: 13000
+From Holder:
+X: 9000 Y: 25000 X: 9000 Y: 13000
+From Holder:
+X: 9000 Y: 25000 X: 9000 Y: 25000
+
+Row Runner: 13
+For Point: X: 5000 Y: 0
+
+Insertion Sorted Time: 229200
+From Holder:
+X: 5000 Y: 0 X: 17000 Y: 0
+From Holder:
+X: 5000 Y: 0 X: 21000 Y: 0
+From Holder:
+X: 5000 Y: 0 X: 1000 Y: 1000
+From Holder:
+X: 5000 Y: 0 X: 10000 Y: 5000
+From Holder:
+X: 5000 Y: 0 X: 21000 Y: 15000
+From Holder:
+X: 5000 Y: 0 X: 25000 Y: 20000
+
+Row Runner: 14
+For Point: X: 21000 Y: 5000
+
+Insertion Sorted Time: 333900
+From Holder:
+X: 21000 Y: 5000 X: 19000 Y: 6000
+From Holder:
+X: 21000 Y: 5000 X: 13000 Y: 9000
+From Holder:
+X: 21000 Y: 5000 X: 1000 Y: 16000
+From Holder:
+X: 21000 Y: 5000 X: 24000 Y: 5000
+From Holder:
+X: 21000 Y: 5000 X: 26000 Y: 5000
+From Holder:
+X: 21000 Y: 5000 X: 0 Y: 8000
+From Holder:
+X: 21000 Y: 5000 X: 5000 Y: 0
+From Holder:
+X: 21000 Y: 5000 X: 6000 Y: 0
+From Holder:
+X: 21000 Y: 5000 X: 15000 Y: 3000
+From Holder:
+X: 21000 Y: 5000 X: 17000 Y: 1000
+From Holder:
+X: 21000 Y: 5000 X: 25000 Y: 9000
+From Holder:
+X: 21000 Y: 5000 X: 29000 Y: 10000
+From Holder:
+X: 21000 Y: 5000 X: 21000 Y: 0
+From Holder:
+X: 21000 Y: 5000 X: 21000 Y: 5000
+From Holder:
+X: 21000 Y: 5000 X: 22000 Y: 29000
+
+Row Runner: 15
+For Point: X: 26000 Y: 10000
+
+Insertion Sorted Time: 148900
+From Holder:
+X: 26000 Y: 10000 X: 19000 Y: 10000
+From Holder:
+X: 26000 Y: 10000 X: 29000 Y: 10000
+From Holder:
+X: 26000 Y: 10000 X: 3000 Y: 11000
+From Holder:
+X: 26000 Y: 10000 X: 17000 Y: 1000
+From Holder:
+X: 26000 Y: 10000 X: 15000 Y: 2000
+From Holder:
+X: 26000 Y: 10000 X: 25000 Y: 9000
+From Holder:
+X: 26000 Y: 10000 X: 26000 Y: 5000
+From Holder:
+X: 26000 Y: 10000 X: 26000 Y: 6000
+From Holder:
+X: 26000 Y: 10000 X: 28000 Y: 31000
+
+Row Runner: 16
+For Point: X: 17000 Y: 27000
+
+Insertion Sorted Time: 155400
+From Holder:
+X: 17000 Y: 27000 X: 15000 Y: 2000
+From Holder:
+X: 17000 Y: 27000 X: 17000 Y: 27000
+From Holder:
+X: 17000 Y: 27000 X: 17000 Y: 31000
+
+Row Runner: 17
+For Point: X: 15000 Y: 3000
+
+Insertion Sorted Time: 156100
+From Holder:
+X: 15000 Y: 3000 X: 9000 Y: 9000
+From Holder:
+X: 15000 Y: 3000 X: 9000 Y: 11000
+From Holder:
+X: 15000 Y: 3000 X: 0 Y: 18000
+From Holder:
+X: 15000 Y: 3000 X: 5000 Y: 0
+From Holder:
+X: 15000 Y: 3000 X: 21000 Y: 5000
+From Holder:
+X: 15000 Y: 3000 X: 30000 Y: 8000
+From Holder:
+X: 15000 Y: 3000 X: 29000 Y: 8000
+From Holder:
+X: 15000 Y: 3000 X: 29000 Y: 10000
+From Holder:
+X: 15000 Y: 3000 X: 31000 Y: 11000
+From Holder:
+X: 15000 Y: 3000 X: 15000 Y: 16000
+From Holder:
+X: 15000 Y: 3000 X: 15000 Y: 18000
+From Holder:
+X: 15000 Y: 3000 X: 16000 Y: 19000
+
+Row Runner: 18
+For Point: X: 23000 Y: 30000
+
+Insertion Sorted Time: 157400
+From Holder:
+X: 23000 Y: 30000 X: 3000 Y: 1000
+From Holder:
+X: 23000 Y: 30000 X: 9000 Y: 9000
+From Holder:
+X: 23000 Y: 30000 X: 11000 Y: 12000
+From Holder:
+X: 23000 Y: 30000 X: 17000 Y: 0
+From Holder:
+X: 23000 Y: 30000 X: 17000 Y: 1000
+From Holder:
+X: 23000 Y: 30000 X: 19000 Y: 10000
+
+Row Runner: 19
+For Point: X: 12000 Y: 29000
+
+Insertion Sorted Time: 157700
+From Holder:
+X: 12000 Y: 29000 X: 23000 Y: 5000
+From Holder:
+X: 12000 Y: 29000 X: 24000 Y: 5000
+From Holder:
+X: 12000 Y: 29000 X: 13000 Y: 27000
+From Holder:
+X: 12000 Y: 29000 X: 31000 Y: 26000
+From Holder:
+X: 12000 Y: 29000 X: 24000 Y: 29000
+From Holder:
+X: 12000 Y: 29000 X: 29000 Y: 29000
+From Holder:
+X: 12000 Y: 29000 X: 11000 Y: 7000
+From Holder:
+X: 12000 Y: 29000 X: 12000 Y: 29000
+From Holder:
+X: 12000 Y: 29000 X: 12000 Y: 31000
+
+Row Runner: 20
+For Point: X: 16000 Y: 16000
+
+Insertion Sorted Time: 139500
+From Holder:
+X: 16000 Y: 16000 X: 21000 Y: 5000
+From Holder:
+X: 16000 Y: 16000 X: 17000 Y: 14000
+From Holder:
+X: 16000 Y: 16000 X: 15000 Y: 18000
+From Holder:
+X: 16000 Y: 16000 X: 26000 Y: 5000
+From Holder:
+X: 16000 Y: 16000 X: 26000 Y: 6000
+From Holder:
+X: 16000 Y: 16000 X: 21000 Y: 11000
+From Holder:
+X: 16000 Y: 16000 X: 15000 Y: 16000
+From Holder:
+X: 16000 Y: 16000 X: 29000 Y: 16000
+From Holder:
+X: 16000 Y: 16000 X: 0 Y: 18000
+From Holder:
+X: 16000 Y: 16000 X: 1000 Y: 1000
+From Holder:
+X: 16000 Y: 16000 X: 25000 Y: 24000
+From Holder:
+X: 16000 Y: 16000 X: 29000 Y: 29000
+
+Row Runner: 21
+For Point: X: 14000 Y: 29000
+
+Insertion Sorted Time: 124100
+From Holder:
+X: 14000 Y: 29000 X: 26000 Y: 5000
+From Holder:
+X: 14000 Y: 29000 X: 21000 Y: 14000
+From Holder:
+X: 14000 Y: 29000 X: 21000 Y: 15000
+From Holder:
+X: 14000 Y: 29000 X: 30000 Y: 21000
+From Holder:
+X: 14000 Y: 29000 X: 24000 Y: 23000
+From Holder:
+X: 14000 Y: 29000 X: 10000 Y: 31000
+From Holder:
+X: 14000 Y: 29000 X: 31000 Y: 26000
+From Holder:
+X: 14000 Y: 29000 X: 3000 Y: 29000
+From Holder:
+X: 14000 Y: 29000 X: 12000 Y: 29000
+
+Row Runner: 22
+For Point: X: 25000 Y: 20000
+
+Insertion Sorted Time: 158200
+From Holder:
+X: 25000 Y: 20000 X: 29000 Y: 8000
+From Holder:
+X: 25000 Y: 20000 X: 24000 Y: 23000
+From Holder:
+X: 25000 Y: 20000 X: 23000 Y: 30000
+From Holder:
+X: 25000 Y: 20000 X: 17000 Y: 20000
+From Holder:
+X: 25000 Y: 20000 X: 22000 Y: 20000
+From Holder:
+X: 25000 Y: 20000 X: 5000 Y: 22000
+From Holder:
+X: 25000 Y: 20000 X: 5000 Y: 0
+From Holder:
+X: 25000 Y: 20000 X: 11000 Y: 7000
+From Holder:
+X: 25000 Y: 20000 X: 31000 Y: 26000
+
+Row Runner: 23
+For Point: X: 26000 Y: 5000
+
+Insertion Sorted Time: 121100
+From Holder:
+X: 26000 Y: 5000 X: 18000 Y: 21000
+From Holder:
+X: 26000 Y: 5000 X: 17000 Y: 27000
+From Holder:
+X: 26000 Y: 5000 X: 14000 Y: 29000
+From Holder:
+X: 26000 Y: 5000 X: 17000 Y: 14000
+From Holder:
+X: 26000 Y: 5000 X: 15000 Y: 16000
+From Holder:
+X: 26000 Y: 5000 X: 3000 Y: 29000
+From Holder:
+X: 26000 Y: 5000 X: 10000 Y: 5000
+From Holder:
+X: 26000 Y: 5000 X: 12000 Y: 5000
+From Holder:
+X: 26000 Y: 5000 X: 0 Y: 8000
+From Holder:
+X: 26000 Y: 5000 X: 26000 Y: 5000
+From Holder:
+X: 26000 Y: 5000 X: 26000 Y: 6000
+From Holder:
+X: 26000 Y: 5000 X: 28000 Y: 31000
+
+Row Runner: 24
+For Point: X: 10000 Y: 31000
+
+Insertion Sorted Time: 162600
+From Holder:
+X: 10000 Y: 31000 X: 23000 Y: 30000
+From Holder:
+X: 10000 Y: 31000 X: 19000 Y: 31000
+From Holder:
+X: 10000 Y: 31000 X: 23000 Y: 31000
+
+Row Runner: 25
+For Point: X: 4000 Y: 12000
+
+Insertion Sorted Time: 123300
+From Holder:
+X: 4000 Y: 12000 X: 12000 Y: 20000
+From Holder:
+X: 4000 Y: 12000 X: 23000 Y: 30000
+From Holder:
+X: 4000 Y: 12000 X: 23000 Y: 31000
+
+Row Runner: 26
+For Point: X: 30000 Y: 21000
+
+Insertion Sorted Time: 224700
+From Holder:
+X: 30000 Y: 21000 X: 22000 Y: 25000
+From Holder:
+X: 30000 Y: 21000 X: 14000 Y: 29000
+From Holder:
+X: 30000 Y: 21000 X: 12000 Y: 31000
+
+Row Runner: 27
+For Point: X: 1000 Y: 0
+
+Insertion Sorted Time: 229500
+From Holder:
+X: 1000 Y: 0 X: 5000 Y: 0
+From Holder:
+X: 1000 Y: 0 X: 6000 Y: 0
+From Holder:
+X: 1000 Y: 0 X: 0 Y: 8000
+From Holder:
+X: 1000 Y: 0 X: 22000 Y: 20000
+From Holder:
+X: 1000 Y: 0 X: 24000 Y: 23000
+From Holder:
+X: 1000 Y: 0 X: 25000 Y: 24000
+From Holder:
+X: 1000 Y: 0 X: 1000 Y: 27000
+From Holder:
+X: 1000 Y: 0 X: 1000 Y: 29000
+From Holder:
+X: 1000 Y: 0 X: 3000 Y: 29000
+
+Row Runner: 28
+For Point: X: 8000 Y: 13000
+
+Insertion Sorted Time: 116600
+From Holder:
+X: 8000 Y: 13000 X: 13000 Y: 2000
+From Holder:
+X: 8000 Y: 13000 X: 12000 Y: 5000
+From Holder:
+X: 8000 Y: 13000 X: 11000 Y: 7000
+
+Row Runner: 29
+For Point: X: 9000 Y: 13000
+
+Insertion Sorted Time: 39600
+From Holder:
+X: 9000 Y: 13000 X: 12000 Y: 4000
+From Holder:
+X: 9000 Y: 13000 X: 6000 Y: 22000
+From Holder:
+X: 9000 Y: 13000 X: 7000 Y: 25000
+From Holder:
+X: 9000 Y: 13000 X: 9000 Y: 3000
+From Holder:
+X: 9000 Y: 13000 X: 9000 Y: 9000
+From Holder:
+X: 9000 Y: 13000 X: 10000 Y: 31000
+
+Row Runner: 30
+For Point: X: 1000 Y: 29000
+
+Insertion Sorted Time: 120600
+From Holder:
+X: 1000 Y: 29000 X: 31000 Y: 26000
+From Holder:
+X: 1000 Y: 29000 X: 3000 Y: 29000
+From Holder:
+X: 1000 Y: 29000 X: 29000 Y: 29000
+From Holder:
+X: 1000 Y: 29000 X: 0 Y: 8000
+From Holder:
+X: 1000 Y: 29000 X: 1000 Y: 27000
+From Holder:
+X: 1000 Y: 29000 X: 1000 Y: 29000
+
+Row Runner: 31
+For Point: X: 21000 Y: 11000
+
+Insertion Sorted Time: 200600
+From Holder:
+X: 21000 Y: 11000 X: 24000 Y: 5000
+From Holder:
+X: 21000 Y: 11000 X: 22000 Y: 9000
+From Holder:
+X: 21000 Y: 11000 X: 12000 Y: 31000
+From Holder:
+X: 21000 Y: 11000 X: 26000 Y: 6000
+From Holder:
+X: 21000 Y: 11000 X: 16000 Y: 16000
+From Holder:
+X: 21000 Y: 11000 X: 12000 Y: 20000
+From Holder:
+X: 21000 Y: 11000 X: 29000 Y: 8000
+From Holder:
+X: 21000 Y: 11000 X: 30000 Y: 8000
+From Holder:
+X: 21000 Y: 11000 X: 24000 Y: 10000
+From Holder:
+X: 21000 Y: 11000 X: 3000 Y: 11000
+From Holder:
+X: 21000 Y: 11000 X: 9000 Y: 11000
+From Holder:
+X: 21000 Y: 11000 X: 4000 Y: 12000
+From Holder:
+X: 21000 Y: 11000 X: 3000 Y: 2000
+From Holder:
+X: 21000 Y: 11000 X: 11000 Y: 7000
+From Holder:
+X: 21000 Y: 11000 X: 13000 Y: 7000
+From Holder:
+X: 21000 Y: 11000 X: 21000 Y: 0
+From Holder:
+X: 21000 Y: 11000 X: 21000 Y: 5000
+From Holder:
+X: 21000 Y: 11000 X: 22000 Y: 29000
+
+Row Runner: 32
+For Point: X: 1000 Y: 27000
+
+Insertion Sorted Time: 184100
+From Holder:
+X: 1000 Y: 27000 X: 13000 Y: 2000
+From Holder:
+X: 1000 Y: 27000 X: 8000 Y: 13000
+From Holder:
+X: 1000 Y: 27000 X: 3000 Y: 23000
+From Holder:
+X: 1000 Y: 27000 X: 0 Y: 8000
+From Holder:
+X: 1000 Y: 27000 X: 1000 Y: 27000
+From Holder:
+X: 1000 Y: 27000 X: 1000 Y: 29000
+
+Row Runner: 33
+For Point: X: 13000 Y: 27000
+
+Insertion Sorted Time: 162300
+From Holder:
+X: 13000 Y: 27000 X: 23000 Y: 5000
+From Holder:
+X: 13000 Y: 27000 X: 24000 Y: 5000
+From Holder:
+X: 13000 Y: 27000 X: 22000 Y: 9000
+From Holder:
+X: 13000 Y: 27000 X: 13000 Y: 2000
+From Holder:
+X: 13000 Y: 27000 X: 12000 Y: 4000
+From Holder:
+X: 13000 Y: 27000 X: 13000 Y: 7000
+
+Row Runner: 34
+For Point: X: 30000 Y: 19000
+
+Insertion Sorted Time: 143600
+
+Row Runner: 35
+For Point: X: 23000 Y: 5000
+
+Insertion Sorted Time: 77600
+From Holder:
+X: 23000 Y: 5000 X: 10000 Y: 5000
+From Holder:
+X: 23000 Y: 5000 X: 12000 Y: 5000
+From Holder:
+X: 23000 Y: 5000 X: 0 Y: 8000
+
+Row Runner: 36
+For Point: X: 12000 Y: 5000
+
+Insertion Sorted Time: 114200
+From Holder:
+X: 12000 Y: 5000 X: 3000 Y: 23000
+From Holder:
+X: 12000 Y: 5000 X: 1000 Y: 27000
+From Holder:
+X: 12000 Y: 5000 X: 1000 Y: 29000
+From Holder:
+X: 12000 Y: 5000 X: 15000 Y: 2000
+From Holder:
+X: 12000 Y: 5000 X: 1000 Y: 16000
+From Holder:
+X: 12000 Y: 5000 X: 0 Y: 18000
+From Holder:
+X: 12000 Y: 5000 X: 10000 Y: 5000
+From Holder:
+X: 12000 Y: 5000 X: 15000 Y: 5000
+From Holder:
+X: 12000 Y: 5000 X: 0 Y: 8000
+From Holder:
+X: 12000 Y: 5000 X: 13000 Y: 7000
+From Holder:
+X: 12000 Y: 5000 X: 17000 Y: 14000
+From Holder:
+X: 12000 Y: 5000 X: 22000 Y: 25000
+From Holder:
+X: 12000 Y: 5000 X: 13000 Y: 27000
+From Holder:
+X: 12000 Y: 5000 X: 12000 Y: 29000
+From Holder:
+X: 12000 Y: 5000 X: 12000 Y: 31000
+
+Row Runner: 37
+For Point: X: 12000 Y: 20000
+
+Insertion Sorted Time: 74800
+From Holder:
+X: 12000 Y: 20000 X: 26000 Y: 5000
+From Holder:
+X: 12000 Y: 20000 X: 8000 Y: 24000
+From Holder:
+X: 12000 Y: 20000 X: 7000 Y: 25000
+From Holder:
+X: 12000 Y: 20000 X: 29000 Y: 8000
+From Holder:
+X: 12000 Y: 20000 X: 30000 Y: 8000
+From Holder:
+X: 12000 Y: 20000 X: 3000 Y: 26000
+From Holder:
+X: 12000 Y: 20000 X: 30000 Y: 19000
+From Holder:
+X: 12000 Y: 20000 X: 22000 Y: 20000
+From Holder:
+X: 12000 Y: 20000 X: 25000 Y: 20000
+From Holder:
+X: 12000 Y: 20000 X: 3000 Y: 11000
+From Holder:
+X: 12000 Y: 20000 X: 4000 Y: 12000
+From Holder:
+X: 12000 Y: 20000 X: 23000 Y: 30000
+From Holder:
+X: 12000 Y: 20000 X: 11000 Y: 7000
+From Holder:
+X: 12000 Y: 20000 X: 12000 Y: 29000
+From Holder:
+X: 12000 Y: 20000 X: 12000 Y: 31000
+
+Row Runner: 38
+For Point: X: 10000 Y: 5000
+
+Insertion Sorted Time: 104900
+From Holder:
+X: 10000 Y: 5000 X: 15000 Y: 5000
+From Holder:
+X: 10000 Y: 5000 X: 21000 Y: 5000
+From Holder:
+X: 10000 Y: 5000 X: 0 Y: 8000
+From Holder:
+X: 10000 Y: 5000 X: 21000 Y: 15000
+From Holder:
+X: 10000 Y: 5000 X: 25000 Y: 20000
+From Holder:
+X: 10000 Y: 5000 X: 31000 Y: 26000
+From Holder:
+X: 10000 Y: 5000 X: 18000 Y: 21000
+From Holder:
+X: 10000 Y: 5000 X: 22000 Y: 29000
+From Holder:
+X: 10000 Y: 5000 X: 23000 Y: 30000
+
+Row Runner: 39
+For Point: X: 12000 Y: 31000
+
+Insertion Sorted Time: 71400
+From Holder:
+X: 12000 Y: 31000 X: 23000 Y: 30000
+From Holder:
+X: 12000 Y: 31000 X: 23000 Y: 31000
+From Holder:
+X: 12000 Y: 31000 X: 28000 Y: 31000
+From Holder:
+X: 12000 Y: 31000 X: 12000 Y: 4000
+From Holder:
+X: 12000 Y: 31000 X: 12000 Y: 5000
+From Holder:
+X: 12000 Y: 31000 X: 11000 Y: 7000
+
+Row Runner: 40
+For Point: X: 0 Y: 8000
+
+Insertion Sorted Time: 49800
+From Holder:
+X: 0 Y: 8000 X: 3000 Y: 11000
+From Holder:
+X: 0 Y: 8000 X: 23000 Y: 30000
+From Holder:
+X: 0 Y: 8000 X: 23000 Y: 31000
+
+Row Runner: 41
+For Point: X: 29000 Y: 16000
+
+Insertion Sorted Time: 130300
+From Holder:
+X: 29000 Y: 16000 X: 15000 Y: 16000
+From Holder:
+X: 29000 Y: 16000 X: 16000 Y: 16000
+From Holder:
+X: 29000 Y: 16000 X: 0 Y: 18000
+From Holder:
+X: 29000 Y: 16000 X: 15000 Y: 2000
+From Holder:
+X: 29000 Y: 16000 X: 15000 Y: 3000
+From Holder:
+X: 29000 Y: 16000 X: 19000 Y: 6000
+From Holder:
+X: 29000 Y: 16000 X: 29000 Y: 8000
+From Holder:
+X: 29000 Y: 16000 X: 29000 Y: 10000
+From Holder:
+X: 29000 Y: 16000 X: 29000 Y: 16000
+
+Row Runner: 42
+For Point: X: 22000 Y: 29000
+
+Insertion Sorted Time: 103900
+From Holder:
+X: 22000 Y: 29000 X: 26000 Y: 14000
+From Holder:
+X: 22000 Y: 29000 X: 25000 Y: 20000
+From Holder:
+X: 22000 Y: 29000 X: 24000 Y: 23000
+From Holder:
+X: 22000 Y: 29000 X: 14000 Y: 29000
+From Holder:
+X: 22000 Y: 29000 X: 24000 Y: 29000
+From Holder:
+X: 22000 Y: 29000 X: 10000 Y: 31000
+From Holder:
+X: 22000 Y: 29000 X: 15000 Y: 16000
+From Holder:
+X: 22000 Y: 29000 X: 18000 Y: 21000
+From Holder:
+X: 22000 Y: 29000 X: 23000 Y: 31000
+From Holder:
+X: 22000 Y: 29000 X: 21000 Y: 0
+From Holder:
+X: 22000 Y: 29000 X: 22000 Y: 25000
+From Holder:
+X: 22000 Y: 29000 X: 22000 Y: 29000
+
+Row Runner: 43
+For Point: X: 15000 Y: 16000
+
+Insertion Sorted Time: 56400
+From Holder:
+X: 15000 Y: 16000 X: 26000 Y: 5000
+From Holder:
+X: 15000 Y: 16000 X: 17000 Y: 14000
+From Holder:
+X: 15000 Y: 16000 X: 3000 Y: 29000
+From Holder:
+X: 15000 Y: 16000 X: 25000 Y: 9000
+From Holder:
+X: 15000 Y: 16000 X: 24000 Y: 10000
+From Holder:
+X: 15000 Y: 16000 X: 6000 Y: 22000
+From Holder:
+X: 15000 Y: 16000 X: 1000 Y: 16000
+From Holder:
+X: 15000 Y: 16000 X: 29000 Y: 16000
+From Holder:
+X: 15000 Y: 16000 X: 0 Y: 18000
+From Holder:
+X: 15000 Y: 16000 X: 15000 Y: 16000
+From Holder:
+X: 15000 Y: 16000 X: 15000 Y: 18000
+From Holder:
+X: 15000 Y: 16000 X: 17000 Y: 31000
+
+Row Runner: 44
+For Point: X: 29000 Y: 10000
+
+Insertion Sorted Time: 68500
+From Holder:
+X: 29000 Y: 10000 X: 5000 Y: 22000
+From Holder:
+X: 29000 Y: 10000 X: 6000 Y: 22000
+From Holder:
+X: 29000 Y: 10000 X: 3000 Y: 23000
+From Holder:
+X: 29000 Y: 10000 X: 19000 Y: 10000
+From Holder:
+X: 29000 Y: 10000 X: 24000 Y: 10000
+From Holder:
+X: 29000 Y: 10000 X: 3000 Y: 11000
+From Holder:
+X: 29000 Y: 10000 X: 6000 Y: 0
+From Holder:
+X: 29000 Y: 10000 X: 13000 Y: 2000
+From Holder:
+X: 29000 Y: 10000 X: 31000 Y: 11000
+From Holder:
+X: 29000 Y: 10000 X: 29000 Y: 8000
+From Holder:
+X: 29000 Y: 10000 X: 29000 Y: 10000
+From Holder:
+X: 29000 Y: 10000 X: 30000 Y: 21000
+
+Row Runner: 45
+For Point: X: 7000 Y: 25000
+
+Insertion Sorted Time: 157500
+From Holder:
+X: 7000 Y: 25000 X: 26000 Y: 5000
+From Holder:
+X: 7000 Y: 25000 X: 8000 Y: 24000
+From Holder:
+X: 7000 Y: 25000 X: 3000 Y: 29000
+From Holder:
+X: 7000 Y: 25000 X: 25000 Y: 24000
+From Holder:
+X: 7000 Y: 25000 X: 9000 Y: 25000
+From Holder:
+X: 7000 Y: 25000 X: 22000 Y: 25000
+
+Row Runner: 46
+For Point: X: 31000 Y: 11000
+
+Insertion Sorted Time: 81600
+From Holder:
+X: 31000 Y: 11000 X: 9000 Y: 11000
+From Holder:
+X: 31000 Y: 11000 X: 11000 Y: 11000
+From Holder:
+X: 31000 Y: 11000 X: 4000 Y: 12000
+From Holder:
+X: 31000 Y: 11000 X: 6000 Y: 0
+From Holder:
+X: 31000 Y: 11000 X: 13000 Y: 2000
+From Holder:
+X: 31000 Y: 11000 X: 15000 Y: 3000
+
+Row Runner: 47
+For Point: X: 25000 Y: 24000
+
+Insertion Sorted Time: 42500
+From Holder:
+X: 25000 Y: 24000 X: 1000 Y: 1000
+From Holder:
+X: 25000 Y: 24000 X: 22000 Y: 21000
+From Holder:
+X: 25000 Y: 24000 X: 24000 Y: 23000
+From Holder:
+X: 25000 Y: 24000 X: 11000 Y: 7000
+From Holder:
+X: 25000 Y: 24000 X: 17000 Y: 14000
+From Holder:
+X: 25000 Y: 24000 X: 29000 Y: 29000
+
+Row Runner: 48
+For Point: X: 12000 Y: 4000
+
+Insertion Sorted Time: 139200
+From Holder:
+X: 12000 Y: 4000 X: 9000 Y: 13000
+From Holder:
+X: 12000 Y: 4000 X: 6000 Y: 22000
+From Holder:
+X: 12000 Y: 4000 X: 7000 Y: 25000
+From Holder:
+X: 12000 Y: 4000 X: 3000 Y: 1000
+From Holder:
+X: 12000 Y: 4000 X: 9000 Y: 3000
+From Holder:
+X: 12000 Y: 4000 X: 19000 Y: 6000
+From Holder:
+X: 12000 Y: 4000 X: 13000 Y: 27000
+From Holder:
+X: 12000 Y: 4000 X: 12000 Y: 29000
+From Holder:
+X: 12000 Y: 4000 X: 12000 Y: 31000
+
+Row Runner: 49
+For Point: X: 31000 Y: 26000
+
+Insertion Sorted Time: 68700
+From Holder:
+X: 31000 Y: 26000 X: 5000 Y: 0
+From Holder:
+X: 31000 Y: 26000 X: 10000 Y: 5000
+From Holder:
+X: 31000 Y: 26000 X: 11000 Y: 7000
+
+Row Runner: 50
+For Point: X: 29000 Y: 29000
+
+Insertion Sorted Time: 23300
+From Holder:
+X: 29000 Y: 29000 X: 22000 Y: 29000
+From Holder:
+X: 29000 Y: 29000 X: 24000 Y: 29000
+From Holder:
+X: 29000 Y: 29000 X: 10000 Y: 31000
+From Holder:
+X: 29000 Y: 29000 X: 11000 Y: 11000
+From Holder:
+X: 29000 Y: 29000 X: 11000 Y: 12000
+From Holder:
+X: 29000 Y: 29000 X: 16000 Y: 16000
+From Holder:
+X: 29000 Y: 29000 X: 11000 Y: 7000
+From Holder:
+X: 29000 Y: 29000 X: 17000 Y: 14000
+From Holder:
+X: 29000 Y: 29000 X: 25000 Y: 24000
+From Holder:
+X: 29000 Y: 29000 X: 26000 Y: 5000
+From Holder:
+X: 29000 Y: 29000 X: 29000 Y: 25000
+From Holder:
+X: 29000 Y: 29000 X: 29000 Y: 29000
+
+Row Runner: 51
+For Point: X: 13000 Y: 2000
+
+Insertion Sorted Time: 60300
+From Holder:
+X: 13000 Y: 2000 X: 17000 Y: 1000
+From Holder:
+X: 13000 Y: 2000 X: 9000 Y: 3000
+From Holder:
+X: 13000 Y: 2000 X: 0 Y: 8000
+From Holder:
+X: 13000 Y: 2000 X: 15000 Y: 5000
+From Holder:
+X: 13000 Y: 2000 X: 21000 Y: 14000
+From Holder:
+X: 13000 Y: 2000 X: 29000 Y: 25000
+From Holder:
+X: 13000 Y: 2000 X: 13000 Y: 9000
+From Holder:
+X: 13000 Y: 2000 X: 13000 Y: 27000
+From Holder:
+X: 13000 Y: 2000 X: 14000 Y: 29000
+
+Row Runner: 52
+For Point: X: 11000 Y: 7000
+
+Insertion Sorted Time: 99500
+From Holder:
+X: 11000 Y: 7000 X: 9000 Y: 13000
+From Holder:
+X: 11000 Y: 7000 X: 6000 Y: 22000
+From Holder:
+X: 11000 Y: 7000 X: 7000 Y: 25000
+From Holder:
+X: 11000 Y: 7000 X: 12000 Y: 5000
+From Holder:
+X: 11000 Y: 7000 X: 9000 Y: 11000
+From Holder:
+X: 11000 Y: 7000 X: 1000 Y: 29000
+From Holder:
+X: 11000 Y: 7000 X: 17000 Y: 0
+From Holder:
+X: 11000 Y: 7000 X: 9000 Y: 9000
+From Holder:
+X: 11000 Y: 7000 X: 0 Y: 18000
+From Holder:
+X: 11000 Y: 7000 X: 9000 Y: 3000
+From Holder:
+X: 11000 Y: 7000 X: 10000 Y: 5000
+From Holder:
+X: 11000 Y: 7000 X: 23000 Y: 30000
+From Holder:
+X: 11000 Y: 7000 X: 11000 Y: 12000
+From Holder:
+X: 11000 Y: 7000 X: 11000 Y: 26000
+From Holder:
+X: 11000 Y: 7000 X: 12000 Y: 31000
+
+Row Runner: 53
+For Point: X: 22000 Y: 20000
+
+Insertion Sorted Time: 69700
+From Holder:
+X: 22000 Y: 20000 X: 17000 Y: 20000
+From Holder:
+X: 22000 Y: 20000 X: 25000 Y: 20000
+From Holder:
+X: 22000 Y: 20000 X: 5000 Y: 22000
+From Holder:
+X: 22000 Y: 20000 X: 21000 Y: 0
+From Holder:
+X: 22000 Y: 20000 X: 22000 Y: 9000
+From Holder:
+X: 22000 Y: 20000 X: 22000 Y: 20000
+
+Row Runner: 54
+For Point: X: 9000 Y: 9000
+
+Insertion Sorted Time: 66500
+From Holder:
+X: 9000 Y: 9000 X: 17000 Y: 0
+From Holder:
+X: 9000 Y: 9000 X: 11000 Y: 7000
+From Holder:
+X: 9000 Y: 9000 X: 0 Y: 18000
+From Holder:
+X: 9000 Y: 9000 X: 30000 Y: 8000
+From Holder:
+X: 9000 Y: 9000 X: 13000 Y: 9000
+From Holder:
+X: 9000 Y: 9000 X: 25000 Y: 9000
+From Holder:
+X: 9000 Y: 9000 X: 11000 Y: 11000
+From Holder:
+X: 9000 Y: 9000 X: 16000 Y: 16000
+From Holder:
+X: 9000 Y: 9000 X: 25000 Y: 24000
+From Holder:
+X: 9000 Y: 9000 X: 3000 Y: 1000
+From Holder:
+X: 9000 Y: 9000 X: 18000 Y: 21000
+From Holder:
+X: 9000 Y: 9000 X: 22000 Y: 25000
+From Holder:
+X: 9000 Y: 9000 X: 11000 Y: 12000
+From Holder:
+X: 9000 Y: 9000 X: 15000 Y: 18000
+From Holder:
+X: 9000 Y: 9000 X: 16000 Y: 19000
+From Holder:
+X: 9000 Y: 9000 X: 9000 Y: 13000
+From Holder:
+X: 9000 Y: 9000 X: 9000 Y: 25000
+From Holder:
+X: 9000 Y: 9000 X: 10000 Y: 31000
+
+Row Runner: 55
+For Point: X: 11000 Y: 11000
+
+Insertion Sorted Time: 22600
+From Holder:
+X: 11000 Y: 11000 X: 29000 Y: 10000
+From Holder:
+X: 11000 Y: 11000 X: 3000 Y: 11000
+From Holder:
+X: 11000 Y: 11000 X: 31000 Y: 11000
+From Holder:
+X: 11000 Y: 11000 X: 1000 Y: 1000
+From Holder:
+X: 11000 Y: 11000 X: 16000 Y: 16000
+From Holder:
+X: 11000 Y: 11000 X: 25000 Y: 24000
+From Holder:
+X: 11000 Y: 11000 X: 11000 Y: 7000
+From Holder:
+X: 11000 Y: 11000 X: 11000 Y: 11000
+From Holder:
+X: 11000 Y: 11000 X: 12000 Y: 31000
+
+Row Runner: 56
+For Point: X: 17000 Y: 14000
+
+Insertion Sorted Time: 130200
+From Holder:
+X: 17000 Y: 14000 X: 21000 Y: 5000
+From Holder:
+X: 17000 Y: 14000 X: 19000 Y: 10000
+From Holder:
+X: 17000 Y: 14000 X: 16000 Y: 16000
+From Holder:
+X: 17000 Y: 14000 X: 26000 Y: 5000
+From Holder:
+X: 17000 Y: 14000 X: 22000 Y: 9000
+From Holder:
+X: 17000 Y: 14000 X: 3000 Y: 29000
+From Holder:
+X: 17000 Y: 14000 X: 13000 Y: 9000
+From Holder:
+X: 17000 Y: 14000 X: 22000 Y: 20000
+From Holder:
+X: 17000 Y: 14000 X: 25000 Y: 24000
+From Holder:
+X: 17000 Y: 14000 X: 17000 Y: 0
+From Holder:
+X: 17000 Y: 14000 X: 17000 Y: 1000
+From Holder:
+X: 17000 Y: 14000 X: 19000 Y: 31000
+
+Row Runner: 57
+For Point: X: 22000 Y: 9000
+
+Insertion Sorted Time: 42300
+From Holder:
+X: 22000 Y: 9000 X: 24000 Y: 5000
+From Holder:
+X: 22000 Y: 9000 X: 13000 Y: 27000
+From Holder:
+X: 22000 Y: 9000 X: 12000 Y: 29000
+From Holder:
+X: 22000 Y: 9000 X: 26000 Y: 5000
+From Holder:
+X: 22000 Y: 9000 X: 15000 Y: 16000
+From Holder:
+X: 22000 Y: 9000 X: 3000 Y: 29000
+From Holder:
+X: 22000 Y: 9000 X: 9000 Y: 9000
+From Holder:
+X: 22000 Y: 9000 X: 25000 Y: 9000
+From Holder:
+X: 22000 Y: 9000 X: 3000 Y: 11000
+From Holder:
+X: 22000 Y: 9000 X: 15000 Y: 3000
+From Holder:
+X: 22000 Y: 9000 X: 19000 Y: 6000
+From Holder:
+X: 22000 Y: 9000 X: 29000 Y: 16000
+From Holder:
+X: 22000 Y: 9000 X: 22000 Y: 9000
+From Holder:
+X: 22000 Y: 9000 X: 22000 Y: 20000
+From Holder:
+X: 22000 Y: 9000 X: 23000 Y: 31000
+
+Row Runner: 58
+For Point: X: 16000 Y: 19000
+
+Insertion Sorted Time: 55300
+From Holder:
+X: 16000 Y: 19000 X: 9000 Y: 13000
+From Holder:
+X: 16000 Y: 19000 X: 17000 Y: 20000
+From Holder:
+X: 16000 Y: 19000 X: 18000 Y: 21000
+
+Row Runner: 59
+For Point: X: 3000 Y: 1000
+
+Insertion Sorted Time: 62000
+From Holder:
+X: 3000 Y: 1000 X: 9000 Y: 3000
+From Holder:
+X: 3000 Y: 1000 X: 12000 Y: 4000
+From Holder:
+X: 3000 Y: 1000 X: 19000 Y: 6000
+From Holder:
+X: 3000 Y: 1000 X: 18000 Y: 21000
+From Holder:
+X: 3000 Y: 1000 X: 22000 Y: 25000
+From Holder:
+X: 3000 Y: 1000 X: 24000 Y: 29000
+From Holder:
+X: 3000 Y: 1000 X: 4000 Y: 12000
+From Holder:
+X: 3000 Y: 1000 X: 3000 Y: 26000
+From Holder:
+X: 3000 Y: 1000 X: 3000 Y: 29000
+
+Row Runner: 60
+For Point: X: 1000 Y: 1000
+
+Insertion Sorted Time: 61800
+From Holder:
+X: 1000 Y: 1000 X: 10000 Y: 5000
+From Holder:
+X: 1000 Y: 1000 X: 19000 Y: 10000
+From Holder:
+X: 1000 Y: 1000 X: 21000 Y: 11000
+From Holder:
+X: 1000 Y: 1000 X: 16000 Y: 16000
+From Holder:
+X: 1000 Y: 1000 X: 25000 Y: 24000
+From Holder:
+X: 1000 Y: 1000 X: 29000 Y: 29000
+From Holder:
+X: 1000 Y: 1000 X: 1000 Y: 27000
+From Holder:
+X: 1000 Y: 1000 X: 1000 Y: 29000
+From Holder:
+X: 1000 Y: 1000 X: 3000 Y: 29000
+
+Row Runner: 61
+For Point: X: 26000 Y: 14000
+
+Insertion Sorted Time: 86700
+From Holder:
+X: 26000 Y: 14000 X: 26000 Y: 5000
+From Holder:
+X: 26000 Y: 14000 X: 26000 Y: 6000
+From Holder:
+X: 26000 Y: 14000 X: 28000 Y: 31000
+
+Row Runner: 62
+For Point: X: 3000 Y: 2000
+
+Insertion Sorted Time: 83800
+From Holder:
+X: 3000 Y: 2000 X: 1000 Y: 1000
+From Holder:
+X: 3000 Y: 2000 X: 10000 Y: 5000
+From Holder:
+X: 3000 Y: 2000 X: 13000 Y: 7000
+From Holder:
+X: 3000 Y: 2000 X: 22000 Y: 20000
+From Holder:
+X: 3000 Y: 2000 X: 24000 Y: 23000
+From Holder:
+X: 3000 Y: 2000 X: 25000 Y: 24000
+From Holder:
+X: 3000 Y: 2000 X: 3000 Y: 23000
+From Holder:
+X: 3000 Y: 2000 X: 3000 Y: 26000
+From Holder:
+X: 3000 Y: 2000 X: 3000 Y: 29000
+
+Row Runner: 63
+For Point: X: 11000 Y: 12000
+
+Insertion Sorted Time: 103400
+From Holder:
+X: 11000 Y: 12000 X: 9000 Y: 9000
+From Holder:
+X: 11000 Y: 12000 X: 15000 Y: 18000
+From Holder:
+X: 11000 Y: 12000 X: 16000 Y: 19000
+From Holder:
+X: 11000 Y: 12000 X: 11000 Y: 7000
+From Holder:
+X: 11000 Y: 12000 X: 11000 Y: 11000
+From Holder:
+X: 11000 Y: 12000 X: 12000 Y: 31000
+
+Row Runner: 64
+For Point: X: 24000 Y: 29000
+
+Insertion Sorted Time: 69100
+From Holder:
+X: 24000 Y: 29000 X: 1000 Y: 29000
+From Holder:
+X: 24000 Y: 29000 X: 3000 Y: 29000
+From Holder:
+X: 24000 Y: 29000 X: 10000 Y: 31000
+From Holder:
+X: 24000 Y: 29000 X: 3000 Y: 1000
+From Holder:
+X: 24000 Y: 29000 X: 11000 Y: 12000
+From Holder:
+X: 24000 Y: 29000 X: 18000 Y: 21000
+From Holder:
+X: 24000 Y: 29000 X: 12000 Y: 5000
+From Holder:
+X: 24000 Y: 29000 X: 13000 Y: 7000
+From Holder:
+X: 24000 Y: 29000 X: 13000 Y: 9000
+From Holder:
+X: 24000 Y: 29000 X: 23000 Y: 5000
+From Holder:
+X: 24000 Y: 29000 X: 24000 Y: 5000
+From Holder:
+X: 24000 Y: 29000 X: 24000 Y: 10000
+
+Row Runner: 65
+For Point: X: 9000 Y: 3000
+
+Insertion Sorted Time: 66300
+From Holder:
+X: 9000 Y: 3000 X: 17000 Y: 0
+From Holder:
+X: 9000 Y: 3000 X: 17000 Y: 1000
+From Holder:
+X: 9000 Y: 3000 X: 13000 Y: 2000
+From Holder:
+X: 9000 Y: 3000 X: 3000 Y: 1000
+From Holder:
+X: 9000 Y: 3000 X: 12000 Y: 4000
+From Holder:
+X: 9000 Y: 3000 X: 19000 Y: 6000
+From Holder:
+X: 9000 Y: 3000 X: 6000 Y: 0
+From Holder:
+X: 9000 Y: 3000 X: 13000 Y: 7000
+From Holder:
+X: 9000 Y: 3000 X: 21000 Y: 14000
+From Holder:
+X: 9000 Y: 3000 X: 22000 Y: 29000
+From Holder:
+X: 9000 Y: 3000 X: 23000 Y: 30000
+From Holder:
+X: 9000 Y: 3000 X: 23000 Y: 31000
+From Holder:
+X: 9000 Y: 3000 X: 9000 Y: 13000
+From Holder:
+X: 9000 Y: 3000 X: 9000 Y: 25000
+From Holder:
+X: 9000 Y: 3000 X: 10000 Y: 31000
+
+Row Runner: 66
+For Point: X: 24000 Y: 23000
+
+Insertion Sorted Time: 123600
+From Holder:
+X: 24000 Y: 23000 X: 29000 Y: 8000
+From Holder:
+X: 24000 Y: 23000 X: 26000 Y: 14000
+From Holder:
+X: 24000 Y: 23000 X: 25000 Y: 20000
+From Holder:
+X: 24000 Y: 23000 X: 1000 Y: 0
+From Holder:
+X: 24000 Y: 23000 X: 1000 Y: 1000
+From Holder:
+X: 24000 Y: 23000 X: 3000 Y: 2000
+From Holder:
+X: 24000 Y: 23000 X: 23000 Y: 5000
+From Holder:
+X: 24000 Y: 23000 X: 24000 Y: 5000
+From Holder:
+X: 24000 Y: 23000 X: 24000 Y: 10000
+
+Row Runner: 67
+For Point: X: 17000 Y: 1000
+
+Insertion Sorted Time: 58200
+From Holder:
+X: 17000 Y: 1000 X: 13000 Y: 9000
+From Holder:
+X: 17000 Y: 1000 X: 7000 Y: 25000
+From Holder:
+X: 17000 Y: 1000 X: 3000 Y: 29000
+From Holder:
+X: 17000 Y: 1000 X: 9000 Y: 9000
+From Holder:
+X: 17000 Y: 1000 X: 9000 Y: 11000
+From Holder:
+X: 17000 Y: 1000 X: 0 Y: 18000
+From Holder:
+X: 17000 Y: 1000 X: 13000 Y: 2000
+From Holder:
+X: 17000 Y: 1000 X: 9000 Y: 3000
+From Holder:
+X: 17000 Y: 1000 X: 0 Y: 8000
+From Holder:
+X: 17000 Y: 1000 X: 25000 Y: 9000
+From Holder:
+X: 17000 Y: 1000 X: 26000 Y: 10000
+From Holder:
+X: 17000 Y: 1000 X: 29000 Y: 10000
+From Holder:
+X: 17000 Y: 1000 X: 18000 Y: 21000
+From Holder:
+X: 17000 Y: 1000 X: 17000 Y: 27000
+From Holder:
+X: 17000 Y: 1000 X: 17000 Y: 31000
+
+Row Runner: 68
+For Point: X: 17000 Y: 20000
+
+Insertion Sorted Time: 57100
+From Holder:
+X: 17000 Y: 20000 X: 30000 Y: 19000
+From Holder:
+X: 17000 Y: 20000 X: 12000 Y: 20000
+From Holder:
+X: 17000 Y: 20000 X: 25000 Y: 20000
+From Holder:
+X: 17000 Y: 20000 X: 9000 Y: 13000
+From Holder:
+X: 17000 Y: 20000 X: 15000 Y: 18000
+From Holder:
+X: 17000 Y: 20000 X: 16000 Y: 19000
+From Holder:
+X: 17000 Y: 20000 X: 15000 Y: 2000
+From Holder:
+X: 17000 Y: 20000 X: 17000 Y: 27000
+From Holder:
+X: 17000 Y: 20000 X: 17000 Y: 31000
+
+Row Runner: 69
+For Point: X: 0 Y: 18000
+
+Insertion Sorted Time: 116000
+From Holder:
+X: 0 Y: 18000 X: 17000 Y: 0
+From Holder:
+X: 0 Y: 18000 X: 11000 Y: 7000
+From Holder:
+X: 0 Y: 18000 X: 9000 Y: 9000
+From Holder:
+X: 0 Y: 18000 X: 29000 Y: 8000
+From Holder:
+X: 0 Y: 18000 X: 24000 Y: 10000
+From Holder:
+X: 0 Y: 18000 X: 21000 Y: 11000
+From Holder:
+X: 0 Y: 18000 X: 29000 Y: 16000
+From Holder:
+X: 0 Y: 18000 X: 5000 Y: 18000
+From Holder:
+X: 0 Y: 18000 X: 12000 Y: 18000
+
+Row Runner: 70
+For Point: X: 6000 Y: 0
+
+Insertion Sorted Time: 48500
+From Holder:
+X: 6000 Y: 0 X: 1000 Y: 0
+From Holder:
+X: 6000 Y: 0 X: 5000 Y: 0
+From Holder:
+X: 6000 Y: 0 X: 1000 Y: 1000
+From Holder:
+X: 6000 Y: 0 X: 15000 Y: 3000
+From Holder:
+X: 6000 Y: 0 X: 21000 Y: 5000
+From Holder:
+X: 6000 Y: 0 X: 26000 Y: 6000
+From Holder:
+X: 6000 Y: 0 X: 9000 Y: 3000
+From Holder:
+X: 6000 Y: 0 X: 13000 Y: 7000
+From Holder:
+X: 6000 Y: 0 X: 21000 Y: 14000
+
+Row Runner: 71
+For Point: X: 3000 Y: 23000
+
+Insertion Sorted Time: 59700
+From Holder:
+X: 3000 Y: 23000 X: 13000 Y: 2000
+From Holder:
+X: 3000 Y: 23000 X: 12000 Y: 5000
+From Holder:
+X: 3000 Y: 23000 X: 1000 Y: 27000
+From Holder:
+X: 3000 Y: 23000 X: 29000 Y: 10000
+From Holder:
+X: 3000 Y: 23000 X: 16000 Y: 16000
+From Holder:
+X: 3000 Y: 23000 X: 5000 Y: 22000
+From Holder:
+X: 3000 Y: 23000 X: 1000 Y: 0
+From Holder:
+X: 3000 Y: 23000 X: 3000 Y: 26000
+From Holder:
+X: 3000 Y: 23000 X: 3000 Y: 29000
+
+Row Runner: 72
+For Point: X: 1000 Y: 16000
+
+Insertion Sorted Time: 28500
+From Holder:
+X: 1000 Y: 16000 X: 15000 Y: 2000
+From Holder:
+X: 1000 Y: 16000 X: 12000 Y: 4000
+From Holder:
+X: 1000 Y: 16000 X: 12000 Y: 5000
+From Holder:
+X: 1000 Y: 16000 X: 21000 Y: 15000
+From Holder:
+X: 1000 Y: 16000 X: 15000 Y: 16000
+From Holder:
+X: 1000 Y: 16000 X: 16000 Y: 16000
+From Holder:
+X: 1000 Y: 16000 X: 0 Y: 8000
+From Holder:
+X: 1000 Y: 16000 X: 1000 Y: 27000
+From Holder:
+X: 1000 Y: 16000 X: 1000 Y: 29000
+
+Row Runner: 73
+For Point: X: 20000 Y: 30000
+
+Insertion Sorted Time: 117200
+
+Row Runner: 74
+For Point: X: 15000 Y: 5000
+
+Insertion Sorted Time: 63900
+From Holder:
+X: 15000 Y: 5000 X: 21000 Y: 5000
+From Holder:
+X: 15000 Y: 5000 X: 23000 Y: 5000
+From Holder:
+X: 15000 Y: 5000 X: 0 Y: 8000
+From Holder:
+X: 15000 Y: 5000 X: 1000 Y: 1000
+From Holder:
+X: 15000 Y: 5000 X: 3000 Y: 1000
+From Holder:
+X: 15000 Y: 5000 X: 9000 Y: 3000
+From Holder:
+X: 15000 Y: 5000 X: 21000 Y: 14000
+From Holder:
+X: 15000 Y: 5000 X: 25000 Y: 20000
+From Holder:
+X: 15000 Y: 5000 X: 29000 Y: 25000
+From Holder:
+X: 15000 Y: 5000 X: 15000 Y: 16000
+From Holder:
+X: 15000 Y: 5000 X: 15000 Y: 18000
+From Holder:
+X: 15000 Y: 5000 X: 16000 Y: 19000
+
+Row Runner: 75
+For Point: X: 23000 Y: 31000
+
+Insertion Sorted Time: 56700
+From Holder:
+X: 23000 Y: 31000 X: 29000 Y: 29000
+From Holder:
+X: 23000 Y: 31000 X: 10000 Y: 31000
+From Holder:
+X: 23000 Y: 31000 X: 12000 Y: 31000
+From Holder:
+X: 23000 Y: 31000 X: 4000 Y: 12000
+From Holder:
+X: 23000 Y: 31000 X: 2000 Y: 13000
+From Holder:
+X: 23000 Y: 31000 X: 12000 Y: 20000
+From Holder:
+X: 23000 Y: 31000 X: 10000 Y: 5000
+From Holder:
+X: 23000 Y: 31000 X: 11000 Y: 7000
+From Holder:
+X: 23000 Y: 31000 X: 15000 Y: 16000
+
+Row Runner: 76
+For Point: X: 28000 Y: 31000
+
+Insertion Sorted Time: 38400
+From Holder:
+X: 28000 Y: 31000 X: 31000 Y: 26000
+From Holder:
+X: 28000 Y: 31000 X: 10000 Y: 31000
+From Holder:
+X: 28000 Y: 31000 X: 12000 Y: 31000
+From Holder:
+X: 28000 Y: 31000 X: 9000 Y: 13000
+From Holder:
+X: 28000 Y: 31000 X: 15000 Y: 18000
+From Holder:
+X: 28000 Y: 31000 X: 16000 Y: 19000
+
+Row Runner: 77
+For Point: X: 12000 Y: 18000
+
+Insertion Sorted Time: 141600
+From Holder:
+X: 12000 Y: 18000 X: 25000 Y: 9000
+From Holder:
+X: 12000 Y: 18000 X: 15000 Y: 16000
+From Holder:
+X: 12000 Y: 18000 X: 6000 Y: 22000
+From Holder:
+X: 12000 Y: 18000 X: 29000 Y: 16000
+From Holder:
+X: 12000 Y: 18000 X: 0 Y: 18000
+From Holder:
+X: 12000 Y: 18000 X: 5000 Y: 18000
+From Holder:
+X: 12000 Y: 18000 X: 11000 Y: 7000
+From Holder:
+X: 12000 Y: 18000 X: 12000 Y: 29000
+From Holder:
+X: 12000 Y: 18000 X: 12000 Y: 31000
+
+Row Runner: 78
+For Point: X: 22000 Y: 21000
+
+Insertion Sorted Time: 61500
+From Holder:
+X: 22000 Y: 21000 X: 1000 Y: 1000
+From Holder:
+X: 22000 Y: 21000 X: 24000 Y: 23000
+From Holder:
+X: 22000 Y: 21000 X: 25000 Y: 24000
+From Holder:
+X: 22000 Y: 21000 X: 21000 Y: 0
+From Holder:
+X: 22000 Y: 21000 X: 22000 Y: 9000
+From Holder:
+X: 22000 Y: 21000 X: 22000 Y: 20000
+
+Row Runner: 79
+For Point: X: 13000 Y: 7000
+
+Insertion Sorted Time: 54600
+From Holder:
+X: 13000 Y: 7000 X: 1000 Y: 1000
+From Holder:
+X: 13000 Y: 7000 X: 3000 Y: 2000
+From Holder:
+X: 13000 Y: 7000 X: 24000 Y: 10000
+From Holder:
+X: 13000 Y: 7000 X: 12000 Y: 5000
+From Holder:
+X: 13000 Y: 7000 X: 17000 Y: 14000
+From Holder:
+X: 13000 Y: 7000 X: 24000 Y: 29000
+From Holder:
+X: 13000 Y: 7000 X: 13000 Y: 9000
+From Holder:
+X: 13000 Y: 7000 X: 13000 Y: 27000
+From Holder:
+X: 13000 Y: 7000 X: 14000 Y: 29000
+
+Row Runner: 80
+For Point: X: 5000 Y: 18000
+
+Insertion Sorted Time: 104900
+From Holder:
+X: 5000 Y: 18000 X: 29000 Y: 16000
+From Holder:
+X: 5000 Y: 18000 X: 0 Y: 18000
+From Holder:
+X: 5000 Y: 18000 X: 12000 Y: 18000
+
+Row Runner: 81
+For Point: X: 6000 Y: 8000
+
+Insertion Sorted Time: 35900
+From Holder:
+X: 6000 Y: 8000 X: 26000 Y: 6000
+From Holder:
+X: 6000 Y: 8000 X: 29000 Y: 8000
+From Holder:
+X: 6000 Y: 8000 X: 30000 Y: 8000
+
+Row Runner: 82
+For Point: X: 9000 Y: 11000
+
+Insertion Sorted Time: 23800
+From Holder:
+X: 9000 Y: 11000 X: 12000 Y: 5000
+From Holder:
+X: 9000 Y: 11000 X: 3000 Y: 23000
+From Holder:
+X: 9000 Y: 11000 X: 1000 Y: 27000
+From Holder:
+X: 9000 Y: 11000 X: 21000 Y: 5000
+From Holder:
+X: 9000 Y: 11000 X: 19000 Y: 6000
+From Holder:
+X: 9000 Y: 11000 X: 1000 Y: 16000
+From Holder:
+X: 9000 Y: 11000 X: 29000 Y: 10000
+From Holder:
+X: 9000 Y: 11000 X: 3000 Y: 11000
+From Holder:
+X: 9000 Y: 11000 X: 31000 Y: 11000
+From Holder:
+X: 9000 Y: 11000 X: 9000 Y: 3000
+From Holder:
+X: 9000 Y: 11000 X: 9000 Y: 9000
+From Holder:
+X: 9000 Y: 11000 X: 10000 Y: 31000
+
+Row Runner: 83
+For Point: X: 30000 Y: 8000
+
+Insertion Sorted Time: 79100
+From Holder:
+X: 30000 Y: 8000 X: 21000 Y: 14000
+From Holder:
+X: 30000 Y: 8000 X: 3000 Y: 26000
+From Holder:
+X: 30000 Y: 8000 X: 1000 Y: 29000
+From Holder:
+X: 30000 Y: 8000 X: 24000 Y: 10000
+From Holder:
+X: 30000 Y: 8000 X: 0 Y: 18000
+From Holder:
+X: 30000 Y: 8000 X: 5000 Y: 18000
+From Holder:
+X: 30000 Y: 8000 X: 0 Y: 8000
+From Holder:
+X: 30000 Y: 8000 X: 29000 Y: 8000
+From Holder:
+X: 30000 Y: 8000 X: 9000 Y: 9000
+From Holder:
+X: 30000 Y: 8000 X: 5000 Y: 0
+From Holder:
+X: 30000 Y: 8000 X: 15000 Y: 3000
+From Holder:
+X: 30000 Y: 8000 X: 21000 Y: 5000
+
+Row Runner: 84
+For Point: X: 25000 Y: 9000
+
+Insertion Sorted Time: 30900
+From Holder:
+X: 25000 Y: 9000 X: 13000 Y: 9000
+From Holder:
+X: 25000 Y: 9000 X: 22000 Y: 9000
+From Holder:
+X: 25000 Y: 9000 X: 3000 Y: 11000
+From Holder:
+X: 25000 Y: 9000 X: 15000 Y: 2000
+From Holder:
+X: 25000 Y: 9000 X: 21000 Y: 5000
+From Holder:
+X: 25000 Y: 9000 X: 26000 Y: 10000
+
+Row Runner: 85
+For Point: X: 29000 Y: 25000
+
+Insertion Sorted Time: 41100
+From Holder:
+X: 29000 Y: 25000 X: 9000 Y: 25000
+From Holder:
+X: 29000 Y: 25000 X: 22000 Y: 25000
+From Holder:
+X: 29000 Y: 25000 X: 3000 Y: 26000
+From Holder:
+X: 29000 Y: 25000 X: 26000 Y: 5000
+From Holder:
+X: 29000 Y: 25000 X: 29000 Y: 8000
+From Holder:
+X: 29000 Y: 25000 X: 29000 Y: 10000
+
+Row Runner: 86
+For Point: X: 3000 Y: 26000
+
+Insertion Sorted Time: 82700
+From Holder:
+X: 3000 Y: 26000 X: 29000 Y: 8000
+From Holder:
+X: 3000 Y: 26000 X: 30000 Y: 8000
+From Holder:
+X: 3000 Y: 26000 X: 12000 Y: 20000
+From Holder:
+X: 3000 Y: 26000 X: 3000 Y: 23000
+From Holder:
+X: 3000 Y: 26000 X: 3000 Y: 26000
+From Holder:
+X: 3000 Y: 26000 X: 3000 Y: 29000
+
+Row Runner: 87
+For Point: X: 15000 Y: 2000
+
+Insertion Sorted Time: 61000
+From Holder:
+X: 15000 Y: 2000 X: 17000 Y: 0
+From Holder:
+X: 15000 Y: 2000 X: 12000 Y: 5000
+From Holder:
+X: 15000 Y: 2000 X: 0 Y: 18000
+From Holder:
+X: 15000 Y: 2000 X: 19000 Y: 6000
+From Holder:
+X: 15000 Y: 2000 X: 22000 Y: 9000
+From Holder:
+X: 15000 Y: 2000 X: 24000 Y: 10000
+From Holder:
+X: 15000 Y: 2000 X: 15000 Y: 2000
+From Holder:
+X: 15000 Y: 2000 X: 15000 Y: 3000
+From Holder:
+X: 15000 Y: 2000 X: 16000 Y: 19000
+
+Row Runner: 88
+For Point: X: 21000 Y: 14000
+
+Insertion Sorted Time: 96500
+From Holder:
+X: 21000 Y: 14000 X: 30000 Y: 8000
+From Holder:
+X: 21000 Y: 14000 X: 12000 Y: 20000
+From Holder:
+X: 21000 Y: 14000 X: 3000 Y: 26000
+From Holder:
+X: 21000 Y: 14000 X: 5000 Y: 22000
+From Holder:
+X: 21000 Y: 14000 X: 6000 Y: 22000
+From Holder:
+X: 21000 Y: 14000 X: 3000 Y: 23000
+From Holder:
+X: 21000 Y: 14000 X: 13000 Y: 2000
+From Holder:
+X: 21000 Y: 14000 X: 25000 Y: 20000
+From Holder:
+X: 21000 Y: 14000 X: 29000 Y: 25000
+From Holder:
+X: 21000 Y: 14000 X: 21000 Y: 0
+From Holder:
+X: 21000 Y: 14000 X: 21000 Y: 5000
+From Holder:
+X: 21000 Y: 14000 X: 22000 Y: 29000
+
+Row Runner: 89
+For Point: X: 12000 Y: 24000
+
+Insertion Sorted Time: 68000
+From Holder:
+X: 12000 Y: 24000 X: 21000 Y: 5000
+From Holder:
+X: 12000 Y: 24000 X: 15000 Y: 18000
+From Holder:
+X: 12000 Y: 24000 X: 11000 Y: 26000
+From Holder:
+X: 12000 Y: 24000 X: 11000 Y: 7000
+From Holder:
+X: 12000 Y: 24000 X: 12000 Y: 29000
+From Holder:
+X: 12000 Y: 24000 X: 12000 Y: 31000
+
+Row Runner: 90
+For Point: X: 6000 Y: 22000
+
+Insertion Sorted Time: 43900
+From Holder:
+X: 6000 Y: 22000 X: 11000 Y: 7000
+From Holder:
+X: 6000 Y: 22000 X: 9000 Y: 11000
+From Holder:
+X: 6000 Y: 22000 X: 9000 Y: 13000
+From Holder:
+X: 6000 Y: 22000 X: 25000 Y: 9000
+From Holder:
+X: 6000 Y: 22000 X: 24000 Y: 10000
+From Holder:
+X: 6000 Y: 22000 X: 15000 Y: 16000
+
+Row Runner: 91
+For Point: X: 24000 Y: 5000
+
+Insertion Sorted Time: 128600
+From Holder:
+X: 24000 Y: 5000 X: 22000 Y: 9000
+From Holder:
+X: 24000 Y: 5000 X: 21000 Y: 11000
+From Holder:
+X: 24000 Y: 5000 X: 17000 Y: 20000
+From Holder:
+X: 24000 Y: 5000 X: 10000 Y: 5000
+From Holder:
+X: 24000 Y: 5000 X: 12000 Y: 5000
+From Holder:
+X: 24000 Y: 5000 X: 0 Y: 8000
+From Holder:
+X: 24000 Y: 5000 X: 24000 Y: 5000
+From Holder:
+X: 24000 Y: 5000 X: 24000 Y: 10000
+From Holder:
+X: 24000 Y: 5000 X: 25000 Y: 24000
+
+Row Runner: 92
+For Point: X: 8000 Y: 24000
+
+Insertion Sorted Time: 150900
+From Holder:
+X: 8000 Y: 24000 X: 26000 Y: 5000
+From Holder:
+X: 8000 Y: 24000 X: 21000 Y: 11000
+From Holder:
+X: 8000 Y: 24000 X: 16000 Y: 16000
+
+Row Runner: 93
+For Point: X: 17000 Y: 31000
+
+Insertion Sorted Time: 60400
+From Holder:
+X: 17000 Y: 31000 X: 19000 Y: 31000
+From Holder:
+X: 17000 Y: 31000 X: 23000 Y: 31000
+From Holder:
+X: 17000 Y: 31000 X: 28000 Y: 31000
+From Holder:
+X: 17000 Y: 31000 X: 17000 Y: 0
+From Holder:
+X: 17000 Y: 31000 X: 17000 Y: 1000
+From Holder:
+X: 17000 Y: 31000 X: 16000 Y: 16000
+
+Row Runner: 94
+For Point: X: 24000 Y: 10000
+
+Insertion Sorted Time: 74200
+From Holder:
+X: 24000 Y: 10000 X: 12000 Y: 18000
+From Holder:
+X: 24000 Y: 10000 X: 6000 Y: 22000
+From Holder:
+X: 24000 Y: 10000 X: 1000 Y: 27000
+From Holder:
+X: 24000 Y: 10000 X: 29000 Y: 8000
+From Holder:
+X: 24000 Y: 10000 X: 30000 Y: 8000
+From Holder:
+X: 24000 Y: 10000 X: 21000 Y: 11000
+From Holder:
+X: 24000 Y: 10000 X: 19000 Y: 10000
+From Holder:
+X: 24000 Y: 10000 X: 26000 Y: 10000
+From Holder:
+X: 24000 Y: 10000 X: 3000 Y: 11000
+From Holder:
+X: 24000 Y: 10000 X: 24000 Y: 5000
+From Holder:
+X: 24000 Y: 10000 X: 24000 Y: 10000
+From Holder:
+X: 24000 Y: 10000 X: 25000 Y: 24000
+
+Row Runner: 95
+For Point: X: 13000 Y: 9000
+
+Insertion Sorted Time: 143600
+From Holder:
+X: 13000 Y: 9000 X: 17000 Y: 0
+From Holder:
+X: 13000 Y: 9000 X: 15000 Y: 5000
+From Holder:
+X: 13000 Y: 9000 X: 3000 Y: 29000
+From Holder:
+X: 13000 Y: 9000 X: 19000 Y: 6000
+From Holder:
+X: 13000 Y: 9000 X: 9000 Y: 11000
+From Holder:
+X: 13000 Y: 9000 X: 1000 Y: 16000
+From Holder:
+X: 13000 Y: 9000 X: 30000 Y: 8000
+From Holder:
+X: 13000 Y: 9000 X: 9000 Y: 9000
+From Holder:
+X: 13000 Y: 9000 X: 25000 Y: 9000
+From Holder:
+X: 13000 Y: 9000 X: 17000 Y: 14000
+From Holder:
+X: 13000 Y: 9000 X: 22000 Y: 20000
+From Holder:
+X: 13000 Y: 9000 X: 29000 Y: 29000
+From Holder:
+X: 13000 Y: 9000 X: 13000 Y: 9000
+From Holder:
+X: 13000 Y: 9000 X: 13000 Y: 27000
+From Holder:
+X: 13000 Y: 9000 X: 14000 Y: 29000
+
+Row Runner: 96
+For Point: X: 15000 Y: 18000
+
+Insertion Sorted Time: 40600
+From Holder:
+X: 15000 Y: 18000 X: 21000 Y: 5000
+From Holder:
+X: 15000 Y: 18000 X: 12000 Y: 24000
+From Holder:
+X: 15000 Y: 18000 X: 11000 Y: 26000
+From Holder:
+X: 15000 Y: 18000 X: 29000 Y: 8000
+From Holder:
+X: 15000 Y: 18000 X: 12000 Y: 20000
+From Holder:
+X: 15000 Y: 18000 X: 3000 Y: 26000
+From Holder:
+X: 15000 Y: 18000 X: 29000 Y: 16000
+From Holder:
+X: 15000 Y: 18000 X: 5000 Y: 18000
+From Holder:
+X: 15000 Y: 18000 X: 12000 Y: 18000
+From Holder:
+X: 15000 Y: 18000 X: 9000 Y: 13000
+From Holder:
+X: 15000 Y: 18000 X: 22000 Y: 25000
+From Holder:
+X: 15000 Y: 18000 X: 28000 Y: 31000
+From Holder:
+X: 15000 Y: 18000 X: 3000 Y: 1000
+From Holder:
+X: 15000 Y: 18000 X: 9000 Y: 9000
+From Holder:
+X: 15000 Y: 18000 X: 11000 Y: 12000
+From Holder:
+X: 15000 Y: 18000 X: 13000 Y: 2000
+From Holder:
+X: 15000 Y: 18000 X: 15000 Y: 2000
+From Holder:
+X: 15000 Y: 18000 X: 15000 Y: 3000
+
+Row Runner: 97
+For Point: X: 21000 Y: 15000
+
+Insertion Sorted Time: 49300
+From Holder:
+X: 21000 Y: 15000 X: 26000 Y: 5000
+From Holder:
+X: 21000 Y: 15000 X: 17000 Y: 27000
+From Holder:
+X: 21000 Y: 15000 X: 14000 Y: 29000
+From Holder:
+X: 21000 Y: 15000 X: 5000 Y: 0
+From Holder:
+X: 21000 Y: 15000 X: 6000 Y: 0
+From Holder:
+X: 21000 Y: 15000 X: 9000 Y: 3000
+From Holder:
+X: 21000 Y: 15000 X: 21000 Y: 0
+From Holder:
+X: 21000 Y: 15000 X: 21000 Y: 5000
+From Holder:
+X: 21000 Y: 15000 X: 22000 Y: 29000
+
+Row Runner: 98
+For Point: X: 19000 Y: 10000
+
+Insertion Sorted Time: 28000
+From Holder:
+X: 19000 Y: 10000 X: 12000 Y: 24000
+From Holder:
+X: 19000 Y: 10000 X: 11000 Y: 26000
+From Holder:
+X: 19000 Y: 10000 X: 10000 Y: 31000
+From Holder:
+X: 19000 Y: 10000 X: 24000 Y: 10000
+From Holder:
+X: 19000 Y: 10000 X: 26000 Y: 10000
+From Holder:
+X: 19000 Y: 10000 X: 3000 Y: 11000
+From Holder:
+X: 19000 Y: 10000 X: 1000 Y: 1000
+From Holder:
+X: 19000 Y: 10000 X: 3000 Y: 2000
+From Holder:
+X: 19000 Y: 10000 X: 11000 Y: 7000
+From Holder:
+X: 19000 Y: 10000 X: 17000 Y: 0
+From Holder:
+X: 19000 Y: 10000 X: 17000 Y: 1000
+From Holder:
+X: 19000 Y: 10000 X: 23000 Y: 30000
+
+Row Runner: 99
+For Point: X: 26000 Y: 6000
+
+Insertion Sorted Time: 127500
+From Holder:
+X: 26000 Y: 6000 X: 16000 Y: 16000
+From Holder:
+X: 26000 Y: 6000 X: 15000 Y: 18000
+From Holder:
+X: 26000 Y: 6000 X: 12000 Y: 20000
+From Holder:
+X: 26000 Y: 6000 X: 26000 Y: 5000
+From Holder:
+X: 26000 Y: 6000 X: 26000 Y: 6000
+From Holder:
+X: 26000 Y: 6000 X: 28000 Y: 31000
+
+X: 29000 Y: 8000 -> X: 22000 Y: 29000
+-3.0
+X: 29000 Y: 8000 -> X: 6000 Y: 8000
+0.0
+X: 29000 Y: 8000 -> X: 29000 Y: 16000
+Infinity
+X: 29000 Y: 8000 -> X: 29000 Y: 10000
+Infinity
+X: 5000 Y: 22000 -> X: 3000 Y: 23000
+-0.5
+X: 3000 Y: 29000 -> X: 15000 Y: 5000
+-2.0
+X: 3000 Y: 29000 -> X: 21000 Y: 11000
+-1.0
+X: 3000 Y: 29000 -> X: 16000 Y: 16000
+-1.0
+X: 3000 Y: 29000 -> X: 12000 Y: 20000
+-1.0
+X: 3000 Y: 29000 -> X: 8000 Y: 24000
+-1.0
+X: 3000 Y: 29000 -> X: 29000 Y: 29000
+0.0
+X: 3000 Y: 29000 -> X: 24000 Y: 29000
+0.0
+X: 3000 Y: 29000 -> X: 22000 Y: 29000
+0.0
+X: 3000 Y: 29000 -> X: 14000 Y: 29000
+0.0
+X: 3000 Y: 29000 -> X: 3000 Y: 26000
+Infinity
+X: 3000 Y: 29000 -> X: 3000 Y: 23000
+Infinity
+X: 3000 Y: 29000 -> X: 3000 Y: 11000
+Infinity
+X: 18000 Y: 21000 -> X: 21000 Y: 15000
+-2.0
+X: 18000 Y: 21000 -> X: 16000 Y: 19000
+1.0
+X: 18000 Y: 21000 -> X: 17000 Y: 20000
+1.0
+X: 18000 Y: 21000 -> X: 22000 Y: 25000
+1.0
+X: 18000 Y: 21000 -> X: 24000 Y: 29000
+1.3333333333333333
+X: 18000 Y: 21000 -> X: 10000 Y: 5000
+2.0
+X: 18000 Y: 21000 -> X: 11000 Y: 7000
+2.0
+X: 18000 Y: 21000 -> X: 22000 Y: 29000
+2.0
+X: 22000 Y: 25000 -> X: 10000 Y: 31000
+-0.5
+X: 22000 Y: 25000 -> X: 7000 Y: 25000
+0.0
+X: 22000 Y: 25000 -> X: 16000 Y: 19000
+1.0
+X: 22000 Y: 25000 -> X: 17000 Y: 20000
+1.0
+X: 22000 Y: 25000 -> X: 28000 Y: 31000
+1.0
+X: 22000 Y: 25000 -> X: 12000 Y: 5000
+2.0
+X: 22000 Y: 25000 -> X: 23000 Y: 30000
+5.0
+X: 22000 Y: 25000 -> X: 22000 Y: 20000
+Infinity
+X: 22000 Y: 25000 -> X: 22000 Y: 21000
+Infinity
+X: 3000 Y: 11000 -> X: 9000 Y: 11000
+0.0
+X: 3000 Y: 11000 -> X: 11000 Y: 11000
+0.0
+X: 3000 Y: 11000 -> X: 4000 Y: 12000
+1.0
+X: 3000 Y: 11000 -> X: 0 Y: 8000
+1.0
+X: 3000 Y: 11000 -> X: 3000 Y: 23000
+Infinity
+X: 3000 Y: 11000 -> X: 3000 Y: 11000
+Infinity
+X: 19000 Y: 31000 -> X: 23000 Y: 31000
+0.0
+X: 19000 Y: 31000 -> X: 17000 Y: 31000
+0.0
+X: 19000 Y: 31000 -> X: 12000 Y: 31000
+0.0
+X: 19000 Y: 6000 -> X: 9000 Y: 11000
+-0.5
+X: 19000 Y: 6000 -> X: 29000 Y: 16000
+1.0
+X: 21000 Y: 0 -> X: 13000 Y: 2000
+-0.25
+X: 21000 Y: 0 -> X: 5000 Y: 0
+0.0
+X: 21000 Y: 0 -> X: 6000 Y: 0
+0.0
+X: 21000 Y: 0 -> X: 21000 Y: 5000
+Infinity
+X: 21000 Y: 0 -> X: 21000 Y: 11000
+Infinity
+X: 11000 Y: 26000 -> X: 17000 Y: 14000
+-2.0
+X: 11000 Y: 26000 -> X: 16000 Y: 16000
+-2.0
+X: 11000 Y: 26000 -> X: 15000 Y: 18000
+-2.0
+X: 11000 Y: 26000 -> X: 11000 Y: 12000
+Infinity
+X: 17000 Y: 0 -> X: 15000 Y: 2000
+-1.0
+X: 17000 Y: 0 -> X: 1000 Y: 0
+0.0
+X: 17000 Y: 0 -> X: 5000 Y: 0
+0.0
+X: 17000 Y: 0 -> X: 22000 Y: 25000
+5.0
+X: 17000 Y: 0 -> X: 17000 Y: 1000
+Infinity
+X: 17000 Y: 0 -> X: 17000 Y: 14000
+Infinity
+X: 17000 Y: 0 -> X: 17000 Y: 20000
+Infinity
+X: 9000 Y: 25000 -> X: 29000 Y: 25000
+0.0
+X: 9000 Y: 25000 -> X: 9000 Y: 13000
+Infinity
+X: 9000 Y: 25000 -> X: 9000 Y: 11000
+Infinity
+X: 5000 Y: 0 -> X: 21000 Y: 0
+0.0
+X: 5000 Y: 0 -> X: 1000 Y: 0
+0.0
+X: 5000 Y: 0 -> X: 25000 Y: 20000
+1.0
+X: 21000 Y: 5000 -> X: 13000 Y: 9000
+-0.5
+X: 21000 Y: 5000 -> X: 24000 Y: 5000
+0.0
+X: 21000 Y: 5000 -> X: 23000 Y: 5000
+0.0
+X: 21000 Y: 5000 -> X: 15000 Y: 5000
+0.0
+X: 21000 Y: 5000 -> X: 12000 Y: 5000
+0.0
+X: 21000 Y: 5000 -> X: 15000 Y: 3000
+0.3333333333333333
+X: 21000 Y: 5000 -> X: 25000 Y: 9000
+1.0
+X: 21000 Y: 5000 -> X: 21000 Y: 5000
+Infinity
+X: 21000 Y: 5000 -> X: 21000 Y: 11000
+Infinity
+X: 26000 Y: 10000 -> X: 29000 Y: 10000
+0.0
+X: 26000 Y: 10000 -> X: 25000 Y: 9000
+1.0
+X: 26000 Y: 10000 -> X: 26000 Y: 6000
+Infinity
+X: 17000 Y: 27000 -> X: 17000 Y: 27000
+Infinity
+X: 17000 Y: 27000 -> X: 17000 Y: 20000
+Infinity
+X: 17000 Y: 27000 -> X: 17000 Y: 14000
+Infinity
+X: 15000 Y: 3000 -> X: 9000 Y: 9000
+-1.0
+X: 15000 Y: 3000 -> X: 11000 Y: 7000
+-1.0
+X: 15000 Y: 3000 -> X: 30000 Y: 8000
+0.3333333333333333
+X: 15000 Y: 3000 -> X: 31000 Y: 11000
+0.5
+X: 15000 Y: 3000 -> X: 15000 Y: 16000
+Infinity
+X: 15000 Y: 3000 -> X: 15000 Y: 5000
+Infinity
+X: 23000 Y: 30000 -> X: 9000 Y: 9000
+1.5
+X: 23000 Y: 30000 -> X: 19000 Y: 10000
+5.0
+X: 12000 Y: 29000 -> X: 13000 Y: 27000
+-2.0
+X: 12000 Y: 29000 -> X: 21000 Y: 11000
+-2.0
+X: 12000 Y: 29000 -> X: 29000 Y: 29000
+0.0
+X: 12000 Y: 29000 -> X: 1000 Y: 29000
+0.0
+X: 12000 Y: 29000 -> X: 3000 Y: 29000
+0.0
+X: 12000 Y: 29000 -> X: 14000 Y: 29000
+0.0
+X: 12000 Y: 29000 -> X: 12000 Y: 29000
+Infinity
+X: 12000 Y: 29000 -> X: 12000 Y: 24000
+Infinity
+X: 12000 Y: 29000 -> X: 12000 Y: 20000
+Infinity
+X: 12000 Y: 29000 -> X: 12000 Y: 18000
+Infinity
+X: 16000 Y: 16000 -> X: 17000 Y: 14000
+-2.0
+X: 16000 Y: 16000 -> X: 19000 Y: 10000
+-2.0
+X: 16000 Y: 16000 -> X: 11000 Y: 26000
+-2.0
+X: 16000 Y: 16000 -> X: 26000 Y: 6000
+-1.0
+X: 16000 Y: 16000 -> X: 3000 Y: 29000
+-1.0
+X: 16000 Y: 16000 -> X: 7000 Y: 25000
+-1.0
+X: 16000 Y: 16000 -> X: 8000 Y: 24000
+-1.0
+X: 16000 Y: 16000 -> X: 29000 Y: 16000
+0.0
+X: 16000 Y: 16000 -> X: 1000 Y: 1000
+1.0
+X: 16000 Y: 16000 -> X: 9000 Y: 9000
+1.0
+X: 14000 Y: 29000 -> X: 21000 Y: 15000
+-2.0
+X: 14000 Y: 29000 -> X: 30000 Y: 21000
+-0.5
+X: 14000 Y: 29000 -> X: 3000 Y: 29000
+0.0
+X: 14000 Y: 29000 -> X: 1000 Y: 29000
+0.0
+X: 14000 Y: 29000 -> X: 29000 Y: 29000
+0.0
+X: 14000 Y: 29000 -> X: 24000 Y: 29000
+0.0
+X: 25000 Y: 20000 -> X: 24000 Y: 23000
+-3.0
+X: 25000 Y: 20000 -> X: 22000 Y: 20000
+0.0
+X: 25000 Y: 20000 -> X: 5000 Y: 0
+1.0
+X: 26000 Y: 5000 -> X: 18000 Y: 21000
+-2.0
+X: 26000 Y: 5000 -> X: 17000 Y: 14000
+-1.0
+X: 26000 Y: 5000 -> X: 12000 Y: 5000
+0.0
+X: 26000 Y: 5000 -> X: 15000 Y: 5000
+0.0
+X: 26000 Y: 5000 -> X: 21000 Y: 5000
+0.0
+X: 26000 Y: 5000 -> X: 23000 Y: 5000
+0.0
+X: 26000 Y: 5000 -> X: 26000 Y: 6000
+Infinity
+X: 10000 Y: 31000 -> X: 19000 Y: 31000
+0.0
+X: 10000 Y: 31000 -> X: 17000 Y: 31000
+0.0
+X: 10000 Y: 31000 -> X: 12000 Y: 31000
+0.0
+X: 4000 Y: 12000 -> X: 23000 Y: 31000
+1.0
+X: 4000 Y: 12000 -> X: 0 Y: 8000
+1.0
+X: 30000 Y: 21000 -> X: 14000 Y: 29000
+-0.5
+X: 1000 Y: 0 -> X: 6000 Y: 0
+0.0
+X: 1000 Y: 0 -> X: 17000 Y: 0
+0.0
+X: 1000 Y: 0 -> X: 24000 Y: 23000
+1.0
+X: 1000 Y: 0 -> X: 22000 Y: 21000
+1.0
+X: 1000 Y: 0 -> X: 1000 Y: 27000
+Infinity
+X: 1000 Y: 0 -> X: 1000 Y: 16000
+Infinity
+X: 8000 Y: 13000 -> X: 11000 Y: 7000
+-2.0
+X: 8000 Y: 13000 -> X: 9000 Y: 11000
+-2.0
+X: 8000 Y: 13000 -> X: 3000 Y: 23000
+-2.0
+X: 9000 Y: 13000 -> X: 12000 Y: 4000
+-3.0
+X: 9000 Y: 13000 -> X: 9000 Y: 9000
+Infinity
+X: 9000 Y: 13000 -> X: 9000 Y: 11000
+Infinity
+X: 1000 Y: 29000 -> X: 29000 Y: 29000
+0.0
+X: 1000 Y: 29000 -> X: 24000 Y: 29000
+0.0
+X: 1000 Y: 29000 -> X: 22000 Y: 29000
+0.0
+X: 1000 Y: 29000 -> X: 14000 Y: 29000
+0.0
+X: 1000 Y: 29000 -> X: 1000 Y: 27000
+Infinity
+X: 1000 Y: 29000 -> X: 1000 Y: 16000
+Infinity
+X: 21000 Y: 11000 -> X: 22000 Y: 9000
+-2.0
+X: 21000 Y: 11000 -> X: 13000 Y: 27000
+-2.0
+X: 21000 Y: 11000 -> X: 12000 Y: 20000
+-1.0
+X: 21000 Y: 11000 -> X: 8000 Y: 24000
+-1.0
+X: 21000 Y: 11000 -> X: 7000 Y: 25000
+-1.0
+X: 21000 Y: 11000 -> X: 30000 Y: 8000
+-0.3333333333333333
+X: 21000 Y: 11000 -> X: 9000 Y: 11000
+0.0
+X: 21000 Y: 11000 -> X: 11000 Y: 11000
+0.0
+X: 21000 Y: 11000 -> X: 13000 Y: 7000
+0.5
+X: 21000 Y: 11000 -> X: 19000 Y: 10000
+0.5
+X: 21000 Y: 11000 -> X: 21000 Y: 5000
+Infinity
+X: 21000 Y: 11000 -> X: 21000 Y: 11000
+Infinity
+X: 1000 Y: 27000 -> X: 8000 Y: 13000
+-2.0
+X: 1000 Y: 27000 -> X: 9000 Y: 11000
+-2.0
+X: 1000 Y: 27000 -> X: 11000 Y: 7000
+-2.0
+X: 1000 Y: 27000 -> X: 1000 Y: 27000
+Infinity
+X: 1000 Y: 27000 -> X: 1000 Y: 16000
+Infinity
+X: 13000 Y: 27000 -> X: 22000 Y: 9000
+-2.0
+X: 13000 Y: 27000 -> X: 21000 Y: 11000
+-2.0
+X: 13000 Y: 27000 -> X: 13000 Y: 7000
+Infinity
+X: 23000 Y: 5000 -> X: 12000 Y: 5000
+0.0
+X: 23000 Y: 5000 -> X: 15000 Y: 5000
+0.0
+X: 23000 Y: 5000 -> X: 21000 Y: 5000
+0.0
+X: 23000 Y: 5000 -> X: 24000 Y: 5000
+0.0
+X: 12000 Y: 5000 -> X: 3000 Y: 23000
+-2.0
+X: 12000 Y: 5000 -> X: 8000 Y: 13000
+-2.0
+X: 12000 Y: 5000 -> X: 9000 Y: 11000
+-2.0
+X: 12000 Y: 5000 -> X: 15000 Y: 2000
+-1.0
+X: 12000 Y: 5000 -> X: 15000 Y: 5000
+0.0
+X: 12000 Y: 5000 -> X: 21000 Y: 5000
+0.0
+X: 12000 Y: 5000 -> X: 24000 Y: 5000
+0.0
+X: 12000 Y: 5000 -> X: 26000 Y: 5000
+0.0
+X: 12000 Y: 5000 -> X: 13000 Y: 7000
+2.0
+X: 12000 Y: 5000 -> X: 12000 Y: 29000
+Infinity
+X: 12000 Y: 5000 -> X: 12000 Y: 24000
+Infinity
+X: 12000 Y: 5000 -> X: 12000 Y: 20000
+Infinity
+X: 12000 Y: 5000 -> X: 12000 Y: 18000
+Infinity
+X: 12000 Y: 20000 -> X: 7000 Y: 25000
+-1.0
+X: 12000 Y: 20000 -> X: 3000 Y: 29000
+-1.0
+X: 12000 Y: 20000 -> X: 26000 Y: 6000
+-1.0
+X: 12000 Y: 20000 -> X: 21000 Y: 11000
+-1.0
+X: 12000 Y: 20000 -> X: 30000 Y: 8000
+-0.6666666666666666
+X: 12000 Y: 20000 -> X: 21000 Y: 14000
+-0.6666666666666666
+X: 12000 Y: 20000 -> X: 22000 Y: 20000
+0.0
+X: 12000 Y: 20000 -> X: 3000 Y: 11000
+1.0
+X: 12000 Y: 20000 -> X: 0 Y: 8000
+1.0
+X: 12000 Y: 20000 -> X: 12000 Y: 29000
+Infinity
+X: 12000 Y: 20000 -> X: 12000 Y: 24000
+Infinity
+X: 12000 Y: 20000 -> X: 12000 Y: 20000
+Infinity
+X: 12000 Y: 20000 -> X: 12000 Y: 18000
+Infinity
+X: 10000 Y: 5000 -> X: 21000 Y: 5000
+0.0
+X: 10000 Y: 5000 -> X: 23000 Y: 5000
+0.0
+X: 10000 Y: 5000 -> X: 24000 Y: 5000
+0.0
+X: 10000 Y: 5000 -> X: 26000 Y: 5000
+0.0
+X: 10000 Y: 5000 -> X: 31000 Y: 26000
+1.0
+X: 10000 Y: 5000 -> X: 22000 Y: 29000
+2.0
+X: 10000 Y: 5000 -> X: 23000 Y: 31000
+2.0
+X: 10000 Y: 5000 -> X: 9000 Y: 3000
+2.0
+X: 12000 Y: 31000 -> X: 23000 Y: 31000
+0.0
+X: 12000 Y: 31000 -> X: 19000 Y: 31000
+0.0
+X: 12000 Y: 31000 -> X: 17000 Y: 31000
+0.0
+X: 12000 Y: 31000 -> X: 12000 Y: 5000
+Infinity
+X: 12000 Y: 31000 -> X: 12000 Y: 18000
+Infinity
+X: 12000 Y: 31000 -> X: 12000 Y: 20000
+Infinity
+X: 12000 Y: 31000 -> X: 12000 Y: 24000
+Infinity
+X: 0 Y: 8000 -> X: 3000 Y: 11000
+1.0
+X: 0 Y: 8000 -> X: 4000 Y: 12000
+1.0
+X: 29000 Y: 16000 -> X: 15000 Y: 16000
+0.0
+X: 29000 Y: 16000 -> X: 19000 Y: 6000
+1.0
+X: 29000 Y: 16000 -> X: 29000 Y: 16000
+Infinity
+X: 22000 Y: 29000 -> X: 25000 Y: 20000
+-3.0
+X: 22000 Y: 29000 -> X: 14000 Y: 29000
+0.0
+X: 22000 Y: 29000 -> X: 12000 Y: 29000
+0.0
+X: 22000 Y: 29000 -> X: 3000 Y: 29000
+0.0
+X: 22000 Y: 29000 -> X: 1000 Y: 29000
+0.0
+X: 22000 Y: 29000 -> X: 18000 Y: 21000
+2.0
+X: 22000 Y: 29000 -> X: 11000 Y: 7000
+2.0
+X: 22000 Y: 29000 -> X: 10000 Y: 5000
+2.0
+X: 22000 Y: 29000 -> X: 22000 Y: 25000
+Infinity
+X: 22000 Y: 29000 -> X: 22000 Y: 21000
+Infinity
+X: 15000 Y: 16000 -> X: 17000 Y: 14000
+-1.0
+X: 15000 Y: 16000 -> X: 6000 Y: 22000
+-0.6666666666666666
+X: 15000 Y: 16000 -> X: 1000 Y: 16000
+0.0
+X: 15000 Y: 16000 -> X: 15000 Y: 16000
+Infinity
+X: 15000 Y: 16000 -> X: 15000 Y: 5000
+Infinity
+X: 29000 Y: 10000 -> X: 3000 Y: 23000
+-0.5
+X: 29000 Y: 10000 -> X: 24000 Y: 10000
+0.0
+X: 29000 Y: 10000 -> X: 13000 Y: 2000
+0.5
+X: 29000 Y: 10000 -> X: 29000 Y: 10000
+Infinity
+X: 29000 Y: 10000 -> X: 29000 Y: 16000
+Infinity
+X: 7000 Y: 25000 -> X: 8000 Y: 24000
+-1.0
+X: 7000 Y: 25000 -> X: 12000 Y: 20000
+-1.0
+X: 7000 Y: 25000 -> X: 16000 Y: 16000
+-1.0
+X: 7000 Y: 25000 -> X: 21000 Y: 11000
+-1.0
+X: 7000 Y: 25000 -> X: 9000 Y: 25000
+0.0
+X: 31000 Y: 11000 -> X: 11000 Y: 11000
+0.0
+X: 31000 Y: 11000 -> X: 21000 Y: 11000
+0.0
+X: 31000 Y: 11000 -> X: 15000 Y: 3000
+0.5
+X: 25000 Y: 24000 -> X: 22000 Y: 21000
+1.0
+X: 25000 Y: 24000 -> X: 3000 Y: 2000
+1.0
+X: 25000 Y: 24000 -> X: 17000 Y: 14000
+1.25
+X: 12000 Y: 4000 -> X: 9000 Y: 13000
+-3.0
+X: 12000 Y: 4000 -> X: 9000 Y: 3000
+0.3333333333333333
+X: 12000 Y: 4000 -> X: 12000 Y: 29000
+Infinity
+X: 12000 Y: 4000 -> X: 12000 Y: 24000
+Infinity
+X: 12000 Y: 4000 -> X: 12000 Y: 20000
+Infinity
+X: 12000 Y: 4000 -> X: 12000 Y: 18000
+Infinity
+X: 31000 Y: 26000 -> X: 5000 Y: 0
+1.0
+X: 29000 Y: 29000 -> X: 22000 Y: 29000
+0.0
+X: 29000 Y: 29000 -> X: 14000 Y: 29000
+0.0
+X: 29000 Y: 29000 -> X: 12000 Y: 29000
+0.0
+X: 29000 Y: 29000 -> X: 3000 Y: 29000
+0.0
+X: 29000 Y: 29000 -> X: 11000 Y: 11000
+1.0
+X: 29000 Y: 29000 -> X: 9000 Y: 9000
+1.0
+X: 29000 Y: 29000 -> X: 17000 Y: 14000
+1.25
+X: 29000 Y: 29000 -> X: 29000 Y: 25000
+Infinity
+X: 29000 Y: 29000 -> X: 29000 Y: 16000
+Infinity
+X: 13000 Y: 2000 -> X: 17000 Y: 1000
+-0.25
+X: 13000 Y: 2000 -> X: 21000 Y: 14000
+1.5
+X: 13000 Y: 2000 -> X: 13000 Y: 9000
+Infinity
+X: 11000 Y: 7000 -> X: 9000 Y: 13000
+-3.0
+X: 11000 Y: 7000 -> X: 9000 Y: 11000
+-2.0
+X: 11000 Y: 7000 -> X: 8000 Y: 13000
+-2.0
+X: 11000 Y: 7000 -> X: 3000 Y: 23000
+-2.0
+X: 11000 Y: 7000 -> X: 0 Y: 18000
+-1.0
+X: 11000 Y: 7000 -> X: 17000 Y: 1000
+-1.0
+X: 11000 Y: 7000 -> X: 9000 Y: 3000
+2.0
+X: 11000 Y: 7000 -> X: 23000 Y: 31000
+2.0
+X: 11000 Y: 7000 -> X: 22000 Y: 29000
+2.0
+X: 11000 Y: 7000 -> X: 11000 Y: 12000
+Infinity
+X: 22000 Y: 20000 -> X: 17000 Y: 20000
+0.0
+X: 22000 Y: 20000 -> X: 22000 Y: 20000
+Infinity
+X: 22000 Y: 20000 -> X: 22000 Y: 21000
+Infinity
+X: 9000 Y: 9000 -> X: 11000 Y: 7000
+-1.0
+X: 9000 Y: 9000 -> X: 15000 Y: 3000
+-1.0
+X: 9000 Y: 9000 -> X: 13000 Y: 9000
+0.0
+X: 9000 Y: 9000 -> X: 11000 Y: 11000
+1.0
+X: 9000 Y: 9000 -> X: 1000 Y: 1000
+1.0
+X: 9000 Y: 9000 -> X: 3000 Y: 1000
+1.3333333333333333
+X: 9000 Y: 9000 -> X: 11000 Y: 12000
+1.5
+X: 9000 Y: 9000 -> X: 9000 Y: 13000
+Infinity
+X: 9000 Y: 9000 -> X: 9000 Y: 11000
+Infinity
+X: 11000 Y: 11000 -> X: 31000 Y: 11000
+0.0
+X: 11000 Y: 11000 -> X: 21000 Y: 11000
+0.0
+X: 11000 Y: 11000 -> X: 1000 Y: 1000
+1.0
+X: 11000 Y: 11000 -> X: 29000 Y: 29000
+1.0
+X: 11000 Y: 11000 -> X: 11000 Y: 11000
+Infinity
+X: 17000 Y: 14000 -> X: 16000 Y: 16000
+-2.0
+X: 17000 Y: 14000 -> X: 15000 Y: 18000
+-2.0
+X: 17000 Y: 14000 -> X: 12000 Y: 24000
+-2.0
+X: 17000 Y: 14000 -> X: 22000 Y: 9000
+-1.0
+X: 17000 Y: 14000 -> X: 25000 Y: 24000
+1.25
+X: 17000 Y: 14000 -> X: 17000 Y: 1000
+Infinity
+X: 17000 Y: 14000 -> X: 17000 Y: 14000
+Infinity
+X: 17000 Y: 14000 -> X: 17000 Y: 20000
+Infinity
+X: 22000 Y: 9000 -> X: 24000 Y: 5000
+-2.0
+X: 22000 Y: 9000 -> X: 15000 Y: 16000
+-1.0
+X: 22000 Y: 9000 -> X: 9000 Y: 9000
+0.0
+X: 22000 Y: 9000 -> X: 29000 Y: 16000
+1.0
+X: 22000 Y: 9000 -> X: 22000 Y: 20000
+Infinity
+X: 22000 Y: 9000 -> X: 22000 Y: 21000
+Infinity
+X: 16000 Y: 19000 -> X: 17000 Y: 20000
+1.0
+X: 16000 Y: 19000 -> X: 15000 Y: 18000
+1.0
+X: 16000 Y: 19000 -> X: 28000 Y: 31000
+1.0
+X: 3000 Y: 1000 -> X: 12000 Y: 4000
+0.3333333333333333
+X: 3000 Y: 1000 -> X: 24000 Y: 29000
+1.3333333333333333
+X: 3000 Y: 1000 -> X: 3000 Y: 26000
+Infinity
+X: 3000 Y: 1000 -> X: 3000 Y: 23000
+Infinity
+X: 3000 Y: 1000 -> X: 3000 Y: 11000
+Infinity
+X: 1000 Y: 1000 -> X: 19000 Y: 10000
+0.5
+X: 1000 Y: 1000 -> X: 13000 Y: 7000
+0.5
+X: 1000 Y: 1000 -> X: 16000 Y: 16000
+1.0
+X: 1000 Y: 1000 -> X: 11000 Y: 11000
+1.0
+X: 1000 Y: 1000 -> X: 1000 Y: 27000
+Infinity
+X: 1000 Y: 1000 -> X: 1000 Y: 16000
+Infinity
+X: 26000 Y: 14000 -> X: 26000 Y: 6000
+Infinity
+X: 3000 Y: 2000 -> X: 13000 Y: 7000
+0.5
+X: 3000 Y: 2000 -> X: 19000 Y: 10000
+0.5
+X: 3000 Y: 2000 -> X: 24000 Y: 23000
+1.0
+X: 3000 Y: 2000 -> X: 22000 Y: 21000
+1.0
+X: 3000 Y: 2000 -> X: 3000 Y: 23000
+Infinity
+X: 3000 Y: 2000 -> X: 3000 Y: 11000
+Infinity
+X: 11000 Y: 12000 -> X: 15000 Y: 18000
+1.5
+X: 11000 Y: 12000 -> X: 11000 Y: 11000
+Infinity
+X: 24000 Y: 29000 -> X: 1000 Y: 29000
+0.0
+X: 24000 Y: 29000 -> X: 29000 Y: 29000
+0.0
+X: 24000 Y: 29000 -> X: 22000 Y: 29000
+0.0
+X: 24000 Y: 29000 -> X: 14000 Y: 29000
+0.0
+X: 24000 Y: 29000 -> X: 3000 Y: 1000
+1.3333333333333333
+X: 24000 Y: 29000 -> X: 13000 Y: 7000
+2.0
+X: 24000 Y: 29000 -> X: 24000 Y: 10000
+Infinity
+X: 9000 Y: 3000 -> X: 17000 Y: 1000
+-0.25
+X: 9000 Y: 3000 -> X: 12000 Y: 4000
+0.3333333333333333
+X: 9000 Y: 3000 -> X: 13000 Y: 7000
+1.0
+X: 9000 Y: 3000 -> X: 22000 Y: 29000
+2.0
+X: 9000 Y: 3000 -> X: 18000 Y: 21000
+2.0
+X: 9000 Y: 3000 -> X: 11000 Y: 7000
+2.0
+X: 9000 Y: 3000 -> X: 9000 Y: 13000
+Infinity
+X: 9000 Y: 3000 -> X: 9000 Y: 11000
+Infinity
+X: 24000 Y: 23000 -> X: 25000 Y: 20000
+-3.0
+X: 24000 Y: 23000 -> X: 1000 Y: 0
+1.0
+X: 24000 Y: 23000 -> X: 25000 Y: 24000
+1.0
+X: 24000 Y: 23000 -> X: 24000 Y: 10000
+Infinity
+X: 17000 Y: 1000 -> X: 13000 Y: 9000
+-2.0
+X: 17000 Y: 1000 -> X: 9000 Y: 9000
+-1.0
+X: 17000 Y: 1000 -> X: 11000 Y: 7000
+-1.0
+X: 17000 Y: 1000 -> X: 13000 Y: 2000
+-0.25
+X: 17000 Y: 1000 -> X: 26000 Y: 10000
+1.0
+X: 17000 Y: 1000 -> X: 17000 Y: 27000
+Infinity
+X: 17000 Y: 1000 -> X: 17000 Y: 20000
+Infinity
+X: 17000 Y: 1000 -> X: 17000 Y: 14000
+Infinity
+X: 17000 Y: 20000 -> X: 25000 Y: 20000
+0.0
+X: 17000 Y: 20000 -> X: 15000 Y: 18000
+1.0
+X: 17000 Y: 20000 -> X: 28000 Y: 31000
+1.0
+X: 17000 Y: 20000 -> X: 22000 Y: 25000
+1.0
+X: 17000 Y: 20000 -> X: 17000 Y: 27000
+Infinity
+X: 17000 Y: 20000 -> X: 17000 Y: 20000
+Infinity
+X: 17000 Y: 20000 -> X: 17000 Y: 14000
+Infinity
+X: 0 Y: 18000 -> X: 11000 Y: 7000
+-1.0
+X: 0 Y: 18000 -> X: 15000 Y: 3000
+-1.0
+X: 0 Y: 18000 -> X: 24000 Y: 10000
+-0.3333333333333333
+X: 0 Y: 18000 -> X: 12000 Y: 18000
+0.0
+X: 6000 Y: 0 -> X: 5000 Y: 0
+0.0
+X: 6000 Y: 0 -> X: 17000 Y: 0
+0.0
+X: 6000 Y: 0 -> X: 21000 Y: 5000
+0.3333333333333333
+X: 6000 Y: 0 -> X: 13000 Y: 7000
+1.0
+X: 3000 Y: 23000 -> X: 12000 Y: 5000
+-2.0
+X: 3000 Y: 23000 -> X: 11000 Y: 7000
+-2.0
+X: 3000 Y: 23000 -> X: 9000 Y: 11000
+-2.0
+X: 3000 Y: 23000 -> X: 29000 Y: 10000
+-0.5
+X: 3000 Y: 23000 -> X: 3000 Y: 26000
+Infinity
+X: 3000 Y: 23000 -> X: 3000 Y: 23000
+Infinity
+X: 3000 Y: 23000 -> X: 3000 Y: 11000
+Infinity
+X: 1000 Y: 16000 -> X: 15000 Y: 2000
+-1.0
+X: 1000 Y: 16000 -> X: 16000 Y: 16000
+0.0
+X: 1000 Y: 16000 -> X: 1000 Y: 27000
+Infinity
+X: 1000 Y: 16000 -> X: 1000 Y: 16000
+Infinity
+X: 15000 Y: 5000 -> X: 23000 Y: 5000
+0.0
+X: 15000 Y: 5000 -> X: 24000 Y: 5000
+0.0
+X: 15000 Y: 5000 -> X: 26000 Y: 5000
+0.0
+X: 15000 Y: 5000 -> X: 10000 Y: 5000
+0.0
+X: 15000 Y: 5000 -> X: 9000 Y: 3000
+0.3333333333333333
+X: 15000 Y: 5000 -> X: 25000 Y: 20000
+1.5
+X: 15000 Y: 5000 -> X: 15000 Y: 16000
+Infinity
+X: 15000 Y: 5000 -> X: 15000 Y: 5000
+Infinity
+X: 23000 Y: 31000 -> X: 10000 Y: 31000
+0.0
+X: 23000 Y: 31000 -> X: 28000 Y: 31000
+0.0
+X: 23000 Y: 31000 -> X: 19000 Y: 31000
+0.0
+X: 23000 Y: 31000 -> X: 4000 Y: 12000
+1.0
+X: 23000 Y: 31000 -> X: 3000 Y: 11000
+1.0
+X: 23000 Y: 31000 -> X: 10000 Y: 5000
+2.0
+X: 23000 Y: 31000 -> X: 9000 Y: 3000
+2.0
+X: 23000 Y: 31000 -> X: 22000 Y: 29000
+2.0
+X: 28000 Y: 31000 -> X: 10000 Y: 31000
+0.0
+X: 28000 Y: 31000 -> X: 19000 Y: 31000
+0.0
+X: 28000 Y: 31000 -> X: 17000 Y: 31000
+0.0
+X: 28000 Y: 31000 -> X: 16000 Y: 19000
+1.0
+X: 28000 Y: 31000 -> X: 17000 Y: 20000
+1.0
+X: 28000 Y: 31000 -> X: 18000 Y: 21000
+1.0
+X: 12000 Y: 18000 -> X: 15000 Y: 16000
+-0.6666666666666666
+X: 12000 Y: 18000 -> X: 5000 Y: 18000
+0.0
+X: 12000 Y: 18000 -> X: 12000 Y: 29000
+Infinity
+X: 12000 Y: 18000 -> X: 12000 Y: 24000
+Infinity
+X: 12000 Y: 18000 -> X: 12000 Y: 20000
+Infinity
+X: 12000 Y: 18000 -> X: 12000 Y: 18000
+Infinity
+X: 22000 Y: 21000 -> X: 25000 Y: 24000
+1.0
+X: 22000 Y: 21000 -> X: 1000 Y: 0
+1.0
+X: 22000 Y: 21000 -> X: 22000 Y: 20000
+Infinity
+X: 22000 Y: 21000 -> X: 22000 Y: 21000
+Infinity
+X: 13000 Y: 7000 -> X: 3000 Y: 2000
+0.5
+X: 13000 Y: 7000 -> X: 19000 Y: 10000
+0.5
+X: 13000 Y: 7000 -> X: 24000 Y: 29000
+2.0
+X: 13000 Y: 7000 -> X: 13000 Y: 9000
+Infinity
+X: 5000 Y: 18000 -> X: 0 Y: 18000
+0.0
+X: 6000 Y: 8000 -> X: 30000 Y: 8000
+0.0
+X: 9000 Y: 11000 -> X: 12000 Y: 5000
+-2.0
+X: 9000 Y: 11000 -> X: 11000 Y: 7000
+-2.0
+X: 9000 Y: 11000 -> X: 19000 Y: 6000
+-0.5
+X: 9000 Y: 11000 -> X: 31000 Y: 11000
+0.0
+X: 9000 Y: 11000 -> X: 21000 Y: 11000
+0.0
+X: 9000 Y: 11000 -> X: 9000 Y: 9000
+Infinity
+X: 9000 Y: 11000 -> X: 9000 Y: 11000
+Infinity
+X: 30000 Y: 8000 -> X: 21000 Y: 14000
+-0.6666666666666666
+X: 30000 Y: 8000 -> X: 15000 Y: 18000
+-0.6666666666666666
+X: 30000 Y: 8000 -> X: 24000 Y: 10000
+-0.3333333333333333
+X: 30000 Y: 8000 -> X: 0 Y: 8000
+0.0
+X: 30000 Y: 8000 -> X: 21000 Y: 5000
+0.3333333333333333
+X: 25000 Y: 9000 -> X: 13000 Y: 9000
+0.0
+X: 25000 Y: 9000 -> X: 21000 Y: 5000
+1.0
+X: 29000 Y: 25000 -> X: 9000 Y: 25000
+0.0
+X: 29000 Y: 25000 -> X: 29000 Y: 10000
+Infinity
+X: 29000 Y: 25000 -> X: 29000 Y: 16000
+Infinity
+X: 3000 Y: 26000 -> X: 12000 Y: 20000
+-0.6666666666666666
+X: 3000 Y: 26000 -> X: 15000 Y: 18000
+-0.6666666666666666
+X: 3000 Y: 26000 -> X: 3000 Y: 23000
+Infinity
+X: 3000 Y: 26000 -> X: 3000 Y: 11000
+Infinity
+X: 15000 Y: 2000 -> X: 17000 Y: 0
+-1.0
+X: 15000 Y: 2000 -> X: 22000 Y: 9000
+1.0
+X: 15000 Y: 2000 -> X: 15000 Y: 3000
+Infinity
+X: 15000 Y: 2000 -> X: 15000 Y: 5000
+Infinity
+X: 21000 Y: 14000 -> X: 30000 Y: 8000
+-0.6666666666666666
+X: 21000 Y: 14000 -> X: 3000 Y: 23000
+-0.5
+X: 21000 Y: 14000 -> X: 25000 Y: 20000
+1.5
+X: 21000 Y: 14000 -> X: 21000 Y: 5000
+Infinity
+X: 21000 Y: 14000 -> X: 21000 Y: 11000
+Infinity
+X: 12000 Y: 24000 -> X: 15000 Y: 18000
+-2.0
+X: 12000 Y: 24000 -> X: 16000 Y: 16000
+-2.0
+X: 12000 Y: 24000 -> X: 17000 Y: 14000
+-2.0
+X: 12000 Y: 24000 -> X: 12000 Y: 29000
+Infinity
+X: 12000 Y: 24000 -> X: 12000 Y: 24000
+Infinity
+X: 12000 Y: 24000 -> X: 12000 Y: 20000
+Infinity
+X: 12000 Y: 24000 -> X: 12000 Y: 18000
+Infinity
+X: 6000 Y: 22000 -> X: 11000 Y: 7000
+-3.0
+X: 6000 Y: 22000 -> X: 24000 Y: 10000
+-0.6666666666666666
+X: 24000 Y: 5000 -> X: 21000 Y: 11000
+-2.0
+X: 24000 Y: 5000 -> X: 13000 Y: 27000
+-2.0
+X: 24000 Y: 5000 -> X: 12000 Y: 5000
+0.0
+X: 24000 Y: 5000 -> X: 15000 Y: 5000
+0.0
+X: 24000 Y: 5000 -> X: 21000 Y: 5000
+0.0
+X: 24000 Y: 5000 -> X: 23000 Y: 5000
+0.0
+X: 24000 Y: 5000 -> X: 24000 Y: 10000
+Infinity
+X: 8000 Y: 24000 -> X: 16000 Y: 16000
+-1.0
+X: 8000 Y: 24000 -> X: 12000 Y: 20000
+-1.0
+X: 8000 Y: 24000 -> X: 7000 Y: 25000
+-1.0
+X: 8000 Y: 24000 -> X: 3000 Y: 29000
+-1.0
+X: 17000 Y: 31000 -> X: 19000 Y: 31000
+0.0
+X: 17000 Y: 31000 -> X: 12000 Y: 31000
+0.0
+X: 17000 Y: 31000 -> X: 17000 Y: 1000
+Infinity
+X: 17000 Y: 31000 -> X: 17000 Y: 14000
+Infinity
+X: 17000 Y: 31000 -> X: 17000 Y: 20000
+Infinity
+X: 24000 Y: 10000 -> X: 12000 Y: 18000
+-0.6666666666666666
+X: 24000 Y: 10000 -> X: 30000 Y: 8000
+-0.3333333333333333
+X: 24000 Y: 10000 -> X: 26000 Y: 10000
+0.0
+X: 24000 Y: 10000 -> X: 24000 Y: 10000
+Infinity
+X: 13000 Y: 9000 -> X: 15000 Y: 5000
+-2.0
+X: 13000 Y: 9000 -> X: 19000 Y: 6000
+-0.5
+X: 13000 Y: 9000 -> X: 9000 Y: 9000
+0.0
+X: 13000 Y: 9000 -> X: 29000 Y: 29000
+1.25
+X: 13000 Y: 9000 -> X: 13000 Y: 9000
+Infinity
+X: 15000 Y: 18000 -> X: 11000 Y: 26000
+-2.0
+X: 15000 Y: 18000 -> X: 19000 Y: 10000
+-2.0
+X: 15000 Y: 18000 -> X: 17000 Y: 14000
+-2.0
+X: 15000 Y: 18000 -> X: 3000 Y: 26000
+-0.6666666666666666
+X: 15000 Y: 18000 -> X: 30000 Y: 8000
+-0.6666666666666666
+X: 15000 Y: 18000 -> X: 5000 Y: 18000
+0.0
+X: 15000 Y: 18000 -> X: 22000 Y: 25000
+1.0
+X: 15000 Y: 18000 -> X: 18000 Y: 21000
+1.0
+X: 15000 Y: 18000 -> X: 17000 Y: 20000
+1.0
+X: 15000 Y: 18000 -> X: 9000 Y: 9000
+1.5
+X: 15000 Y: 18000 -> X: 15000 Y: 3000
+Infinity
+X: 15000 Y: 18000 -> X: 15000 Y: 5000
+Infinity
+X: 21000 Y: 15000 -> X: 26000 Y: 5000
+-2.0
+X: 21000 Y: 15000 -> X: 9000 Y: 3000
+1.0
+X: 21000 Y: 15000 -> X: 21000 Y: 5000
+Infinity
+X: 21000 Y: 15000 -> X: 21000 Y: 11000
+Infinity
+X: 19000 Y: 10000 -> X: 12000 Y: 24000
+-2.0
+X: 19000 Y: 10000 -> X: 15000 Y: 18000
+-2.0
+X: 19000 Y: 10000 -> X: 16000 Y: 16000
+-2.0
+X: 19000 Y: 10000 -> X: 26000 Y: 10000
+0.0
+X: 19000 Y: 10000 -> X: 3000 Y: 2000
+0.5
+X: 19000 Y: 10000 -> X: 13000 Y: 7000
+0.5
+X: 19000 Y: 10000 -> X: 23000 Y: 30000
+5.0
+X: 26000 Y: 6000 -> X: 12000 Y: 20000
+-1.0
+X: 26000 Y: 6000 -> X: 8000 Y: 24000
+-1.0
+X: 26000 Y: 6000 -> X: 7000 Y: 25000
+-1.0
+X: 26000 Y: 6000 -> X: 3000 Y: 29000
+-1.0
+X: 26000 Y: 6000 -> X: 26000 Y: 6000
+Infinity

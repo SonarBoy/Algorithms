@@ -50,20 +50,12 @@ public class Point implements Comparable<Point> {
 			
 			
 			
-			return ((double)(that.getPointY() - this.getPointY())/(that.getPointX() - this.getPointX()));
+			return ((double)(((double)that.getPointY()) - ((double)this.getPointY()))/(((double)that.getPointX()) - ((double)this.getPointX())));
 		}
 		
 		catch(Exception x) {
 			
 			System.out.println("Calculation threw :" + x.getMessage());
-			
-//			if(that.getPointX() == this.getPointX()) {
-//				return 0;
-//			}
-//			
-//			if(that.getPointY() == this.getPointY()) {
-//				return Double.POSITIVE_INFINITY;
-//			}
 			
 			return Double.NEGATIVE_INFINITY;
 		}

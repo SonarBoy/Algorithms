@@ -30,7 +30,7 @@ public class InsertionSortWithComparator {
 		
 		finish = System.nanoTime();
         timeElapsed = finish - start;
-        System.out.println("Insertion Sorted Time: " + timeElapsed);
+        //System.out.println("Insertion Sorted Time: " + timeElapsed);
 	}
 	
 	private static boolean less(Comparator myComparator,Object firstObject, Object secondObject){

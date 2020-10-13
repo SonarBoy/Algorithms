@@ -55,7 +55,7 @@ public class BruteForceColinearPoints {
 							break;
 						}
 						
-						if(slopeA == slopeB && slopeA == slopeC && slopeB == slopeC && slopeA != Double.POSITIVE_INFINITY &&
+						if(slopeA == slopeB && slopeA == slopeC && slopeB == slopeC && 
 							first != second && first != third && first != fourth && second != third && second != fourth && third != fourth	
 								) {
 //							System.out.println("First Point: " + first.toString());
@@ -80,7 +80,7 @@ public class BruteForceColinearPoints {
 //							arrayOfSegments.add(fourth);
 							
 							//Collections.sort(arrayOfSegments);
-							SelectionSort.sort(subber);
+							InsertionSort.sort(subber);
 							
 							//lines.add(new LineSegment(arrayOfSegments.get(0),arrayOfSegments.get(arrayOfSegments.size() - 1)));
 							lines.add(new LineSegment(subber[0],subber[3]));
@@ -89,7 +89,6 @@ public class BruteForceColinearPoints {
 	
 						}
 						
-						arrayOfSegments.clear();
 						
 					}
 				}
@@ -1110,19 +1109,26 @@ public class BruteForceColinearPoints {
 		    StdDraw.enableDoubleBuffering();
 		    StdDraw.setXscale(0, 32768);
 		    StdDraw.setYscale(0, 32768);
+		    
+		    StdOut.println("Before Brute Slope Order");
 		    for (Point p : points) {
 		        p.draw();
+		        System.out.println(p);
 		    }
 		    StdDraw.show();
 
-		BruteForceColinearPoints x = new BruteForceColinearPoints(points);
+		    
+		    
+		    BruteForceColinearPoints x = new BruteForceColinearPoints(points);
 		
-		for (LineSegment segment : x.segments()) {
-	        StdOut.println(segment);
-	        segment.draw();
-	    }
+		    for (LineSegment segment : x.segments()) {
+		    	StdOut.println(segment);
+		    	StdOut.println(segment.getP().slopeTo(segment.getQ()));
+		    	
+		    	segment.draw();
+		    }
 		
-		StdDraw.show();
+		    StdDraw.show();
 	}
 
 }

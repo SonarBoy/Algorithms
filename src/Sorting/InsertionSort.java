@@ -28,12 +28,12 @@ public class InsertionSort {
 		
 		finish = System.nanoTime();
         timeElapsed = finish - start;
-        System.out.println("Insertion Sorted Time: " + timeElapsed);
+        //System.out.println("Insertion Sorted Time: " + timeElapsed);
 	}
 	
-	private static boolean less(Comparable v, Comparable w){
+	private static boolean less(Comparable firstItem, Comparable w){
 		
-		return v.compareTo(w) < 0;
+		return firstItem.compareTo(w) < 0;
 		
 	}
 	
