@@ -10,17 +10,156 @@ import basicDataStructures.StdOut;
 public class FastColinearPoints {
 	
 	Point[] pointArray = null;
-	ArrayList<Point> pointsToSort = new ArrayList<Point>();
-	
 	Point[] pointsToDraw = null;
 	
+	ArrayList<Point> pointsToSort = new ArrayList<Point>();
 	ArrayList<LineSegment> lines = new ArrayList<LineSegment>();
-	ArrayList<LineSegment> arrayOfSegments = new ArrayList<LineSegment>();
+	
 	
 	public FastColinearPoints(Point[] array) {
 		
-
+		pointArray = array.clone();
+		pointsToDraw = array.clone();
 		
+		InsertionSort.sort(pointsToDraw);
+		int arrayLength = pointArray.length;
+		
+		
+		
+//		System.out.println("AFTER SORT");
+//		
+//		for(Point x: pointsToDraw) {
+//			System.out.println(x);
+//		}
+//		
+//		System.out.println();
+//		System.out.println();
+		
+		
+		int streakCounter = 0;
+		
+		int currentIndx = 0;
+		int forwardIndx = 0;
+		
+		double currentSlope = 0;
+		double forwardSlope = 0;
+		
+		
+		Point origin = null;
+		Point highestPoint = null;
+		
+		
+		for(int rowRunner = 0; rowRunner < arrayLength; rowRunner++) {
+			
+			origin = pointsToDraw[rowRunner];
+			
+			InsertionSortWithComparator.sort(pointArray, origin.slopeOrder());
+			
+			//WHEN STARTING THE TRAVERSAL OF A LOOP WITH TWO POINTERS MAKE SURE YOU START FROM -1 IF YOU ARE GOING TO INCREMENT THROUGH
+			currentIndx = -1;
+			forwardIndx = 0;
+			
+//			System.out.println("Current Origin: " + origin);
+//			System.out.println();
+						
+			
+			
+			for(int columnRunner = 0; columnRunner < arrayLength && !(forwardIndx >= arrayLength); columnRunner++) {
+				
+//				System.out.println("Outer: " + pointArray[columnRunner] + " slope it makes with " + origin + " " +
+//						origin.slopeTo(pointArray[columnRunner]));
+				
+				
+				
+				currentIndx++;
+				currentSlope = pointArray[currentIndx].slopeTo(origin);
+				
+				
+				
+				forwardIndx++;
+				if(forwardIndx >= arrayLength) {
+					break;
+				}else {
+					forwardSlope = pointArray[forwardIndx].slopeTo(origin);
+				}
+				
+				
+			
+				
+				for(int slopeRunner = columnRunner ; currentSlope == forwardSlope && forwardIndx <= arrayLength + 1 ; slopeRunner++) {
+							
+					
+//					if(slopeRunner == columnRunner) {
+//						System.out.println("------------------START----------------------");
+//					}
+//					
+//						
+//					System.out.println("Inner: " + pointArray[slopeRunner] + " slope it makes with " + origin + " " +
+//					origin.slopeTo(pointArray[slopeRunner]));
+						
+
+					if(slopeRunner == columnRunner) {
+						highestPoint = pointArray[columnRunner];
+					}else{
+						
+						if(highestPoint.compareTo(pointArray[slopeRunner]) == -1) {
+							highestPoint = pointArray[slopeRunner];
+						}
+						
+					}
+					
+
+
+					if(origin.compareTo(pointArray[slopeRunner]) != -1) {
+						
+						if(origin.compareTo(pointArray[slopeRunner]) == 1) {
+							highestPoint = null;
+							break;
+						}
+					
+					}
+					
+					if(highestPoint.compareTo(origin) == -1) {
+						highestPoint = null;
+						break;
+					}
+					
+					
+					if(forwardIndx >= arrayLength) {
+						break;
+					}
+					
+					
+					streakCounter++;
+					forwardSlope = pointArray[forwardIndx].slopeTo(origin);
+					forwardIndx++;
+
+				}
+
+
+				if((highestPoint != null && streakCounter >= 3) ) {
+					
+//					System.out.println("------------------END----------------------");
+//					System.out.println();
+//					System.out.println("Origin: " + origin);
+//					System.out.println("Highest: " + highestPoint);
+//					System.out.println();
+					
+					
+					
+					lines.add(new LineSegment(origin,highestPoint));
+					highestPoint = null;
+				}
+				
+
+				columnRunner += streakCounter;
+				currentIndx += streakCounter;
+				streakCounter = 0;
+			}
+			
+			System.out.println();
+			
+		}
 		
 		
 	}

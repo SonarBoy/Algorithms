@@ -25,6 +25,9 @@ public class BruteForceColinearPoints {
 		this.pointArray = array;
 		int size = array.length;
 		
+		Arrays.sort(pointArray);
+		
+		
 		Point first = null;
 		Point second = null;
 		Point third = null;
@@ -80,11 +83,18 @@ public class BruteForceColinearPoints {
 //							arrayOfSegments.add(fourth);
 							
 							//Collections.sort(arrayOfSegments);
-							InsertionSort.sort(subber);
+							//InsertionSort.sort(subber);
+							
+							
+							if(subber[0].compareTo(subber[1]) == 1 ||subber[0].compareTo(subber[2]) == 1 ||subber[0].compareTo(subber[3]) == 1 ) {
+								break;
+							}else{
+								lines.add(new LineSegment(subber[0],subber[3]));
+							}
+							
+							
 							
 							//lines.add(new LineSegment(arrayOfSegments.get(0),arrayOfSegments.get(arrayOfSegments.size() - 1)));
-							lines.add(new LineSegment(subber[0],subber[3]));
-							
 							//previousTotal = first.getPointX() + second.getPointX() + third.getPointX() + fourth.getPointX();
 	
 						}
@@ -1123,7 +1133,7 @@ public class BruteForceColinearPoints {
 		
 		    for (LineSegment segment : x.segments()) {
 		    	StdOut.println(segment);
-		    	StdOut.println(segment.getP().slopeTo(segment.getQ()));
+		    	//StdOut.println(segment.getP().slopeTo(segment.getQ()));
 		    	
 		    	segment.draw();
 		    }
