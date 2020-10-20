@@ -1,6 +1,5 @@
 package Sorting;
 import basicDataStructures.StdDraw;
-import basicDataStructures.StdIn;
 
 public class SimplePointDraw {
 	

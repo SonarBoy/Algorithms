@@ -15,12 +15,9 @@ public class DoublyLinkedList<AnyType> {
 	private ListNode<AnyType> front;
 	
 	private int size;
-	private int modificationCount;
-	
 	
 	public DoublyLinkedList() {
 		front = null;
-		modificationCount = 0;
 		size = 0;
 	}
 

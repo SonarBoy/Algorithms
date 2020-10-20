@@ -1,7 +1,7 @@
 package Sorting;
 
 
-import basicDataStructures.StdIn;
+
 import basicDataStructures.StdOut;
 /******************************************************************************
  *  Compilation:  javac MergeX.java

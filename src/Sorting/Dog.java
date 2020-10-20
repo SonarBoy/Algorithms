@@ -1,7 +1,5 @@
 package Sorting;
 
-import java.util.Comparator;
-
 /*
  * Comparable example:
  * 	Here we will implement a Comparable example.
@@ -24,7 +22,8 @@ import java.util.Comparator;
 //Step 1.
 public class Dog implements Comparable{
 	
-	private String name;
+	private String firstName;
+	private String lastName;
 	private int age;
 	
 	
@@ -32,14 +31,18 @@ public class Dog implements Comparable{
 		
 	}
 	
-	Dog(String n,int a){
-		this.name = n;
+	Dog(String fName,String lName,int a){
+		this.firstName = fName;
+		this.lastName = lName;
 		this.age = a;
 	}
 	
+	public String getDogFirstName() {
+		return this.lastName;
+	}
 	
-	public String getDogName() {
-		return this.name;
+	public String getDogLastName() {
+		return this.firstName;
 	}
 	
 	public int getDogAge() {

@@ -45,6 +45,7 @@ public class Tester {
 		System.out.println();
 		
 		sample.printOutSizes();
+		x.close();
 	
 	}
 }

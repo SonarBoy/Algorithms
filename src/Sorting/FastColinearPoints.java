@@ -15,7 +15,11 @@ public class FastColinearPoints {
 	ArrayList<Point> pointsToSort = new ArrayList<Point>();
 	ArrayList<LineSegment> lines = new ArrayList<LineSegment>();
 	
-	
+	/**
+	 * 
+	 * @param array
+	 * @return
+	 */
 	public FastColinearPoints(Point[] array) {
 		
 		pointArray = array.clone();
@@ -157,7 +161,8 @@ public class FastColinearPoints {
 				streakCounter = 0;
 			}
 			
-			System.out.println();
+			//
+			//System.out.println();
 			
 		}
 		
@@ -191,8 +196,8 @@ public class FastColinearPoints {
 		Point holder = null;
 		
 		
-		Point prevHighestPoint = null;
-		Point prevLowestPoint = null;
+//		Point prevHighestPoint = null;
+//		Point prevLowestPoint = null;
 		
 		
 		for(int rowRunner = 0; rowRunner < array.length;rowRunner++) {
@@ -240,8 +245,8 @@ public class FastColinearPoints {
 					
 					
 					
-					prevHighestPoint = highestPoint;
-					prevLowestPoint = lowestPoint;
+//					prevHighestPoint = highestPoint;
+//					prevLowestPoint = lowestPoint;
 					
 					
 					streakCounter++;
@@ -437,8 +442,6 @@ public class FastColinearPoints {
 	    
 	    FastColinearPoints x = new FastColinearPoints(points);
 	    
-	    
-	   
 	
 		for (LineSegment segment : x.segments()) {
 	        StdOut.println(segment + " SLOPE: " + segment.getP().slopeTo(segment.getQ()));

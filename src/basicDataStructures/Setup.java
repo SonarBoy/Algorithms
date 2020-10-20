@@ -183,8 +183,8 @@ public class Setup {
 		*/
 		
 		
-
-		Deque_Array<Integer> tester = new Deque_Array<Integer>();
+		//Taken out because of warning
+		//Deque_Array<Integer> tester = new Deque_Array<Integer>();
 		
 		/* TODO: Simple addititon to the tester.
 		tester.addLast(2);

@@ -181,15 +181,13 @@ public class Deque_Array <Item> implements Iterable<Item> {
 			
 			Item[]copy = (Item[]) new Object[capacity];
 			
-			int index = 0;
+			
 			
 			
 			//Meta Variables for Queue:
 			int currentHead = 0;
 			int currentTail = 0;
 			
-			int oldHead = 0;
-			int oldTail = 0;
 			
 			
 			
@@ -287,7 +285,7 @@ public class Deque_Array <Item> implements Iterable<Item> {
 		
 		Item[]copy = (Item[]) new Object[capacity];
 		
-		int index = 0;
+		
 		
 		
 		//Meta Variables for Queue:

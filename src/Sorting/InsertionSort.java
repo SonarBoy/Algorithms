@@ -28,7 +28,7 @@ public class InsertionSort {
 		
 		finish = System.nanoTime();
         timeElapsed = finish - start;
-        //System.out.println("Insertion Sorted Time: " + timeElapsed);
+        System.out.println("Insertion Sorted Time: " + timeElapsed);
 	}
 	
 	private static boolean less(Comparable firstItem, Comparable w){

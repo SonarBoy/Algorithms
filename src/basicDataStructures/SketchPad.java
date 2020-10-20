@@ -5,11 +5,10 @@ import java.util.Scanner;
 public class SketchPad {
 	public static void main(String [] args){
 		
-		Scanner x = new Scanner(System.in);
+		Scanner sketchPadInput = new Scanner(System.in);
 		
-		int[] items = new int[1];
+		//int[] items = new int[1];
 		
-		int index= 0;
 		int value = 0;
 		
 		
@@ -19,7 +18,7 @@ public class SketchPad {
 		
 		//Kick off the testing.
 		System.out.println("Enter any number to begin");
-		int number = x.nextInt();
+		int number = sketchPadInput.nextInt();
 		
 		
 		while(number != -1) {
@@ -36,13 +35,13 @@ public class SketchPad {
 			System.out.println();
 			
 			
-			number = x.nextInt();
+			number = sketchPadInput.nextInt();
 			
 			
 			if(number == 0) {
 				System.out.println("Enter a number FRONT: ");
 				System.out.println("Current Size: " + tester.size());
-				value = x.nextInt();
+				value = sketchPadInput.nextInt();
 				
 				tester.addFirst(value);
 
@@ -51,7 +50,7 @@ public class SketchPad {
 			if(number == 1) {
 				System.out.println("Enter a number BACK: ");
 				System.out.println("Current Size: " + tester.size());
-				value = x.nextInt();
+				value = sketchPadInput.nextInt();
 				
 				tester.addLast(value);
 
@@ -93,6 +92,7 @@ public class SketchPad {
 			
 		}
 		
+		sketchPadInput.close();
 		
 		
 		

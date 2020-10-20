@@ -87,11 +87,11 @@ public class Tester {
 		//STEP 3.
 		
 		Dog[] dogArray = new Dog[4];
-		dogArray[0] = new Dog("Jeff",5);
-		dogArray[1] = new Dog("Zack",2);
-		dogArray[2] = new Dog("Zacsk",3);
-		dogArray[3] = new Dog("Zacvk",4);
-		dogArray[3] = new Dog("Don",10);
+		dogArray[0] = new Dog("Jeff","Sessions",5);
+		dogArray[1] = new Dog("Zack","Effron",2);
+		dogArray[2] = new Dog("Zacsk","Effron",3);
+		dogArray[3] = new Dog("Zacvk","Effron",4);
+		dogArray[3] = new Dog("Don","Lemon",10);
 		
 		
 		
