@@ -1,0 +1,15 @@
+The idea is sort the list using the natural order, save the first point in a temporary variable and then sort again the array using the slope order with respect the point we stored and repeat this process with the next point in the Array an so on. 
+
+Doing that makes possible discover all the line segments built with at least four points that used the stored point as an origin (or pivot).
+
+Because we are doing this for each point in the array, each has a chance to be the origin of a line segment, sometimes the origin of a new line sometimes not . 
+
+One thing that helps me to understand and solves the duplicates problems was recall that the point I saved as origin, comes from the same array of points that I will sort after by slope (yeah pretty obvious but that helped me). 
+
+So if I found a line segment of the form A->B->C->D where A is the smallest, then in the next loop when I picked B as the origin I will see the same segment but this time as B -> A -> C -> D, why? because the system sort (Arrays.sort) is stable (it used merge sort to sort objects, watch the second part of videos of this week to learn more), 
+
+so it will preserve the natural order we placed at the beginning of each iteration and rearrange only when is necessary by slope, (but for equal slopes our second sort will always preserve the natural order). 
+
+We can use the above fact and"compare to" method to avoid storing duplicates because you know that the next point of a line segment must always be greatest than the current origin. 
+
+For that reason the line segment B -> A - > C -> D must be avoided. Another thing which may help you is print the following information in your main loop: the current origin (the stored point), the array after sorting by slope with respect the current origin and the numerical values of these slopes for small input files like input6.txt, input9.txt, input10.txt and input20.txt. I know, yet there are some subtleties that you must resolve but I expect you find this information useful or as a good place to start. Good luck.

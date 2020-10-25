@@ -1,0 +1,778 @@
+------------------START----------------------
+Inner: X: 5000 Y: 0 slope it makes with X: 1000 Y: 0 0.0
+Inner: X: 6000 Y: 0 slope it makes with X: 1000 Y: 0 0.0
+Inner: X: 17000 Y: 0 slope it makes with X: 1000 Y: 0 0.0
+Inner: X: 21000 Y: 0 slope it makes with X: 1000 Y: 0 0.0
+------------------END----------------------
+
+Origin: X: 1000 Y: 0
+Highest: X: 21000 Y: 0
+
+------------------START----------------------
+Inner: X: 3000 Y: 2000 slope it makes with X: 1000 Y: 0 1.0
+Inner: X: 22000 Y: 21000 slope it makes with X: 1000 Y: 0 1.0
+Inner: X: 24000 Y: 23000 slope it makes with X: 1000 Y: 0 1.0
+Inner: X: 25000 Y: 24000 slope it makes with X: 1000 Y: 0 1.0
+------------------END----------------------
+
+Origin: X: 1000 Y: 0
+Highest: X: 25000 Y: 24000
+
+------------------START----------------------
+Inner: X: 1000 Y: 29000 slope it makes with X: 1000 Y: 0 Infinity
+Inner: X: 1000 Y: 27000 slope it makes with X: 1000 Y: 0 Infinity
+Inner: X: 1000 Y: 16000 slope it makes with X: 1000 Y: 0 Infinity
+Inner: X: 1000 Y: 1000 slope it makes with X: 1000 Y: 0 Infinity
+------------------END----------------------
+
+Origin: X: 1000 Y: 0
+Highest: X: 1000 Y: 29000
+
+------------------START----------------------
+Inner: X: 10000 Y: 5000 slope it makes with X: 5000 Y: 0 1.0
+Inner: X: 25000 Y: 20000 slope it makes with X: 5000 Y: 0 1.0
+Inner: X: 31000 Y: 26000 slope it makes with X: 5000 Y: 0 1.0
+------------------END----------------------
+
+Origin: X: 5000 Y: 0
+Highest: X: 31000 Y: 26000
+
+------------------START----------------------
+Inner: X: 15000 Y: 3000 slope it makes with X: 6000 Y: 0 0.3333333333333333
+Inner: X: 21000 Y: 5000 slope it makes with X: 6000 Y: 0 0.3333333333333333
+Inner: X: 30000 Y: 8000 slope it makes with X: 6000 Y: 0 0.3333333333333333
+------------------END----------------------
+
+Origin: X: 6000 Y: 0
+Highest: X: 30000 Y: 8000
+
+------------------START----------------------
+Inner: X: 9000 Y: 3000 slope it makes with X: 6000 Y: 0 1.0
+Inner: X: 13000 Y: 7000 slope it makes with X: 6000 Y: 0 1.0
+Inner: X: 21000 Y: 15000 slope it makes with X: 6000 Y: 0 1.0
+------------------END----------------------
+
+Origin: X: 6000 Y: 0
+Highest: X: 21000 Y: 15000
+
+------------------START----------------------
+Inner: X: 1000 Y: 16000 slope it makes with X: 17000 Y: 0 -1.0
+Inner: X: 15000 Y: 2000 slope it makes with X: 17000 Y: 0 -1.0
+Inner: X: 12000 Y: 5000 slope it makes with X: 17000 Y: 0 -1.0
+------------------END----------------------
+
+Origin: X: 17000 Y: 0
+Highest: X: 1000 Y: 16000
+
+------------------START----------------------
+Inner: X: 19000 Y: 10000 slope it makes with X: 17000 Y: 0 5.0
+Inner: X: 22000 Y: 25000 slope it makes with X: 17000 Y: 0 5.0
+Inner: X: 23000 Y: 30000 slope it makes with X: 17000 Y: 0 5.0
+------------------END----------------------
+
+Origin: X: 17000 Y: 0
+Highest: X: 23000 Y: 30000
+
+------------------START----------------------
+Inner: X: 17000 Y: 0 slope it makes with X: 17000 Y: 0 Infinity
+Inner: X: 17000 Y: 1000 slope it makes with X: 17000 Y: 0 Infinity
+Inner: X: 17000 Y: 14000 slope it makes with X: 17000 Y: 0 Infinity
+Inner: X: 17000 Y: 20000 slope it makes with X: 17000 Y: 0 Infinity
+Inner: X: 17000 Y: 27000 slope it makes with X: 17000 Y: 0 Infinity
+------------------END----------------------
+
+Origin: X: 17000 Y: 0
+Highest: X: 17000 Y: 27000
+
+------------------START----------------------
+Inner: X: 13000 Y: 2000 slope it makes with X: 21000 Y: 0 -0.25
+Inner: X: 9000 Y: 3000 slope it makes with X: 21000 Y: 0 -0.25
+Inner: X: 17000 Y: 1000 slope it makes with X: 21000 Y: 0 -0.25
+------------------END----------------------
+
+Origin: X: 21000 Y: 0
+Highest: X: 9000 Y: 3000
+
+
+------------------START----------------------
+Inner: X: 21000 Y: 0 slope it makes with X: 21000 Y: 0 Infinity
+Inner: X: 21000 Y: 5000 slope it makes with X: 21000 Y: 0 Infinity
+Inner: X: 21000 Y: 11000 slope it makes with X: 21000 Y: 0 Infinity
+Inner: X: 21000 Y: 14000 slope it makes with X: 21000 Y: 0 Infinity
+------------------END----------------------
+
+Origin: X: 21000 Y: 0
+Highest: X: 21000 Y: 14000
+
+
+------------------START----------------------
+Inner: X: 19000 Y: 10000 slope it makes with X: 1000 Y: 1000 0.5
+Inner: X: 13000 Y: 7000 slope it makes with X: 1000 Y: 1000 0.5
+Inner: X: 3000 Y: 2000 slope it makes with X: 1000 Y: 1000 0.5
+Inner: X: 21000 Y: 11000 slope it makes with X: 1000 Y: 1000 0.5
+------------------END----------------------
+
+Origin: X: 1000 Y: 1000
+Highest: X: 21000 Y: 11000
+
+------------------START----------------------
+Inner: X: 16000 Y: 16000 slope it makes with X: 1000 Y: 1000 1.0
+Inner: X: 11000 Y: 11000 slope it makes with X: 1000 Y: 1000 1.0
+Inner: X: 9000 Y: 9000 slope it makes with X: 1000 Y: 1000 1.0
+Inner: X: 29000 Y: 29000 slope it makes with X: 1000 Y: 1000 1.0
+------------------END----------------------
+
+Origin: X: 1000 Y: 1000
+Highest: X: 29000 Y: 29000
+
+------------------START----------------------
+Inner: X: 1000 Y: 29000 slope it makes with X: 1000 Y: 1000 Infinity
+Inner: X: 1000 Y: 27000 slope it makes with X: 1000 Y: 1000 Infinity
+Inner: X: 1000 Y: 16000 slope it makes with X: 1000 Y: 1000 Infinity
+Inner: X: 1000 Y: 1000 slope it makes with X: 1000 Y: 1000 Infinity
+------------------END----------------------
+
+Origin: X: 1000 Y: 1000
+Highest: X: 1000 Y: 29000
+
+------------------START----------------------
+Inner: X: 9000 Y: 3000 slope it makes with X: 3000 Y: 1000 0.3333333333333333
+Inner: X: 12000 Y: 4000 slope it makes with X: 3000 Y: 1000 0.3333333333333333
+Inner: X: 15000 Y: 5000 slope it makes with X: 3000 Y: 1000 0.3333333333333333
+------------------END----------------------
+
+Origin: X: 3000 Y: 1000
+Highest: X: 15000 Y: 5000
+
+
+------------------START----------------------
+Inner: X: 9000 Y: 9000 slope it makes with X: 3000 Y: 1000 1.3333333333333333
+Inner: X: 18000 Y: 21000 slope it makes with X: 3000 Y: 1000 1.3333333333333333
+Inner: X: 24000 Y: 29000 slope it makes with X: 3000 Y: 1000 1.3333333333333333
+------------------END----------------------
+
+Origin: X: 3000 Y: 1000
+Highest: X: 24000 Y: 29000
+
+
+------------------START----------------------
+Inner: X: 3000 Y: 1000 slope it makes with X: 3000 Y: 1000 Infinity
+Inner: X: 3000 Y: 2000 slope it makes with X: 3000 Y: 1000 Infinity
+Inner: X: 3000 Y: 11000 slope it makes with X: 3000 Y: 1000 Infinity
+Inner: X: 3000 Y: 23000 slope it makes with X: 3000 Y: 1000 Infinity
+Inner: X: 3000 Y: 26000 slope it makes with X: 3000 Y: 1000 Infinity
+------------------END----------------------
+
+Origin: X: 3000 Y: 1000
+Highest: X: 3000 Y: 26000
+
+
+------------------START----------------------
+Inner: X: 15000 Y: 5000 slope it makes with X: 17000 Y: 1000 -2.0
+Inner: X: 13000 Y: 9000 slope it makes with X: 17000 Y: 1000 -2.0
+Inner: X: 3000 Y: 29000 slope it makes with X: 17000 Y: 1000 -2.0
+------------------END----------------------
+
+Origin: X: 17000 Y: 1000
+Highest: X: 3000 Y: 29000
+
+
+------------------START----------------------
+Inner: X: 0 Y: 18000 slope it makes with X: 17000 Y: 1000 -1.0
+Inner: X: 15000 Y: 3000 slope it makes with X: 17000 Y: 1000 -1.0
+Inner: X: 11000 Y: 7000 slope it makes with X: 17000 Y: 1000 -1.0
+Inner: X: 9000 Y: 9000 slope it makes with X: 17000 Y: 1000 -1.0
+------------------END----------------------
+
+Origin: X: 17000 Y: 1000
+Highest: X: 0 Y: 18000
+
+
+------------------START----------------------
+Inner: X: 21000 Y: 5000 slope it makes with X: 17000 Y: 1000 1.0
+Inner: X: 25000 Y: 9000 slope it makes with X: 17000 Y: 1000 1.0
+Inner: X: 26000 Y: 10000 slope it makes with X: 17000 Y: 1000 1.0
+------------------END----------------------
+
+Origin: X: 17000 Y: 1000
+Highest: X: 26000 Y: 10000
+
+
+------------------START----------------------
+Inner: X: 17000 Y: 1000 slope it makes with X: 17000 Y: 1000 Infinity
+Inner: X: 17000 Y: 14000 slope it makes with X: 17000 Y: 1000 Infinity
+Inner: X: 17000 Y: 20000 slope it makes with X: 17000 Y: 1000 Infinity
+Inner: X: 17000 Y: 27000 slope it makes with X: 17000 Y: 1000 Infinity
+------------------END----------------------
+
+Origin: X: 17000 Y: 1000
+Highest: X: 17000 Y: 27000
+
+
+------------------START----------------------
+Inner: X: 25000 Y: 24000 slope it makes with X: 3000 Y: 2000 1.0
+Inner: X: 24000 Y: 23000 slope it makes with X: 3000 Y: 2000 1.0
+Inner: X: 22000 Y: 21000 slope it makes with X: 3000 Y: 2000 1.0
+------------------END----------------------
+
+Origin: X: 3000 Y: 2000
+Highest: X: 25000 Y: 24000
+
+
+------------------START----------------------
+Inner: X: 3000 Y: 26000 slope it makes with X: 3000 Y: 2000 Infinity
+Inner: X: 3000 Y: 23000 slope it makes with X: 3000 Y: 2000 Infinity
+Inner: X: 3000 Y: 11000 slope it makes with X: 3000 Y: 2000 Infinity
+Inner: X: 3000 Y: 2000 slope it makes with X: 3000 Y: 2000 Infinity
+------------------END----------------------
+
+Origin: X: 3000 Y: 2000
+Highest: X: 3000 Y: 26000
+
+------------------START----------------------
+Inner: X: 15000 Y: 5000 slope it makes with X: 13000 Y: 2000 1.5
+Inner: X: 21000 Y: 14000 slope it makes with X: 13000 Y: 2000 1.5
+Inner: X: 25000 Y: 20000 slope it makes with X: 13000 Y: 2000 1.5
+------------------END----------------------
+
+Origin: X: 13000 Y: 2000
+Highest: X: 25000 Y: 20000
+
+
+------------------START----------------------
+Inner: X: 13000 Y: 2000 slope it makes with X: 13000 Y: 2000 Infinity
+Inner: X: 13000 Y: 7000 slope it makes with X: 13000 Y: 2000 Infinity
+Inner: X: 13000 Y: 9000 slope it makes with X: 13000 Y: 2000 Infinity
+------------------END----------------------
+
+Origin: X: 13000 Y: 2000
+Highest: X: 13000 Y: 9000
+
+
+------------------START----------------------
+Inner: X: 19000 Y: 6000 slope it makes with X: 15000 Y: 2000 1.0
+Inner: X: 22000 Y: 9000 slope it makes with X: 15000 Y: 2000 1.0
+Inner: X: 29000 Y: 16000 slope it makes with X: 15000 Y: 2000 1.0
+------------------END----------------------
+
+Origin: X: 15000 Y: 2000
+Highest: X: 29000 Y: 16000
+
+------------------START----------------------
+Inner: X: 15000 Y: 2000 slope it makes with X: 15000 Y: 2000 Infinity
+Inner: X: 15000 Y: 3000 slope it makes with X: 15000 Y: 2000 Infinity
+Inner: X: 15000 Y: 5000 slope it makes with X: 15000 Y: 2000 Infinity
+Inner: X: 15000 Y: 16000 slope it makes with X: 15000 Y: 2000 Infinity
+------------------END----------------------
+
+Origin: X: 15000 Y: 2000
+Highest: X: 15000 Y: 16000
+
+
+------------------START----------------------
+Inner: X: 11000 Y: 7000 slope it makes with X: 9000 Y: 3000 2.0
+Inner: X: 10000 Y: 5000 slope it makes with X: 9000 Y: 3000 2.0
+Inner: X: 23000 Y: 31000 slope it makes with X: 9000 Y: 3000 2.0
+Inner: X: 22000 Y: 29000 slope it makes with X: 9000 Y: 3000 2.0
+Inner: X: 18000 Y: 21000 slope it makes with X: 9000 Y: 3000 2.0
+------------------END----------------------
+
+Origin: X: 9000 Y: 3000
+Highest: X: 23000 Y: 31000
+
+
+------------------START----------------------
+Inner: X: 9000 Y: 25000 slope it makes with X: 9000 Y: 3000 Infinity
+Inner: X: 9000 Y: 13000 slope it makes with X: 9000 Y: 3000 Infinity
+Inner: X: 9000 Y: 11000 slope it makes with X: 9000 Y: 3000 Infinity
+Inner: X: 9000 Y: 9000 slope it makes with X: 9000 Y: 3000 Infinity
+------------------END----------------------
+
+Origin: X: 9000 Y: 3000
+Highest: X: 9000 Y: 25000
+
+------------------START----------------------
+Inner: X: 15000 Y: 3000 slope it makes with X: 15000 Y: 3000 Infinity
+Inner: X: 15000 Y: 5000 slope it makes with X: 15000 Y: 3000 Infinity
+Inner: X: 15000 Y: 16000 slope it makes with X: 15000 Y: 3000 Infinity
+------------------END----------------------
+
+Origin: X: 15000 Y: 3000
+Highest: X: 15000 Y: 16000
+
+------------------START----------------------
+Inner: X: 6000 Y: 22000 slope it makes with X: 12000 Y: 4000 -3.0
+Inner: X: 9000 Y: 13000 slope it makes with X: 12000 Y: 4000 -3.0
+Inner: X: 11000 Y: 7000 slope it makes with X: 12000 Y: 4000 -3.0
+------------------END----------------------
+
+Origin: X: 12000 Y: 4000
+Highest: X: 6000 Y: 22000
+
+------------------START----------------------
+Inner: X: 12000 Y: 31000 slope it makes with X: 12000 Y: 4000 Infinity
+Inner: X: 12000 Y: 29000 slope it makes with X: 12000 Y: 4000 Infinity
+Inner: X: 12000 Y: 24000 slope it makes with X: 12000 Y: 4000 Infinity
+Inner: X: 12000 Y: 20000 slope it makes with X: 12000 Y: 4000 Infinity
+Inner: X: 12000 Y: 18000 slope it makes with X: 12000 Y: 4000 Infinity
+Inner: X: 12000 Y: 5000 slope it makes with X: 12000 Y: 4000 Infinity
+------------------END----------------------
+
+Origin: X: 12000 Y: 4000
+Highest: X: 12000 Y: 31000
+
+
+------------------START----------------------
+Inner: X: 26000 Y: 5000 slope it makes with X: 10000 Y: 5000 0.0
+Inner: X: 24000 Y: 5000 slope it makes with X: 10000 Y: 5000 0.0
+Inner: X: 23000 Y: 5000 slope it makes with X: 10000 Y: 5000 0.0
+Inner: X: 21000 Y: 5000 slope it makes with X: 10000 Y: 5000 0.0
+Inner: X: 15000 Y: 5000 slope it makes with X: 10000 Y: 5000 0.0
+Inner: X: 12000 Y: 5000 slope it makes with X: 10000 Y: 5000 0.0
+------------------END----------------------
+
+Origin: X: 10000 Y: 5000
+Highest: X: 26000 Y: 5000
+
+------------------START----------------------
+Inner: X: 23000 Y: 31000 slope it makes with X: 10000 Y: 5000 2.0
+Inner: X: 22000 Y: 29000 slope it makes with X: 10000 Y: 5000 2.0
+Inner: X: 18000 Y: 21000 slope it makes with X: 10000 Y: 5000 2.0
+------------------END----------------------
+
+Origin: X: 10000 Y: 5000
+Highest: X: 23000 Y: 31000
+
+
+------------------START----------------------
+Inner: X: 9000 Y: 11000 slope it makes with X: 12000 Y: 5000 -2.0
+Inner: X: 8000 Y: 13000 slope it makes with X: 12000 Y: 5000 -2.0
+Inner: X: 3000 Y: 23000 slope it makes with X: 12000 Y: 5000 -2.0
+Inner: X: 1000 Y: 27000 slope it makes with X: 12000 Y: 5000 -2.0
+Inner: X: 11000 Y: 7000 slope it makes with X: 12000 Y: 5000 -2.0
+------------------END----------------------
+
+Origin: X: 12000 Y: 5000
+Highest: X: 1000 Y: 27000
+
+
+------------------START----------------------
+Inner: X: 13000 Y: 7000 slope it makes with X: 12000 Y: 5000 2.0
+Inner: X: 22000 Y: 25000 slope it makes with X: 12000 Y: 5000 2.0
+Inner: X: 24000 Y: 29000 slope it makes with X: 12000 Y: 5000 2.0
+------------------END----------------------
+
+Origin: X: 12000 Y: 5000
+Highest: X: 24000 Y: 29000
+
+
+------------------START----------------------
+Inner: X: 12000 Y: 5000 slope it makes with X: 12000 Y: 5000 Infinity
+Inner: X: 12000 Y: 18000 slope it makes with X: 12000 Y: 5000 Infinity
+Inner: X: 12000 Y: 20000 slope it makes with X: 12000 Y: 5000 Infinity
+Inner: X: 12000 Y: 24000 slope it makes with X: 12000 Y: 5000 Infinity
+Inner: X: 12000 Y: 29000 slope it makes with X: 12000 Y: 5000 Infinity
+------------------END----------------------
+
+Origin: X: 12000 Y: 5000
+Highest: X: 12000 Y: 29000
+
+
+------------------START----------------------
+Inner: X: 13000 Y: 9000 slope it makes with X: 21000 Y: 5000 -0.5
+Inner: X: 9000 Y: 11000 slope it makes with X: 21000 Y: 5000 -0.5
+Inner: X: 19000 Y: 6000 slope it makes with X: 21000 Y: 5000 -0.5
+------------------END----------------------
+
+Origin: X: 21000 Y: 5000
+Highest: X: 9000 Y: 11000
+
+
+------------------START----------------------
+Inner: X: 21000 Y: 5000 slope it makes with X: 21000 Y: 5000 Infinity
+Inner: X: 21000 Y: 11000 slope it makes with X: 21000 Y: 5000 Infinity
+Inner: X: 21000 Y: 14000 slope it makes with X: 21000 Y: 5000 Infinity
+------------------END----------------------
+
+Origin: X: 21000 Y: 5000
+Highest: X: 21000 Y: 14000
+
+
+------------------START----------------------
+Inner: X: 22000 Y: 9000 slope it makes with X: 24000 Y: 5000 -2.0
+Inner: X: 21000 Y: 11000 slope it makes with X: 24000 Y: 5000 -2.0
+Inner: X: 13000 Y: 27000 slope it makes with X: 24000 Y: 5000 -2.0
+Inner: X: 12000 Y: 29000 slope it makes with X: 24000 Y: 5000 -2.0
+------------------END----------------------
+
+Origin: X: 24000 Y: 5000
+Highest: X: 12000 Y: 29000
+
+
+
+------------------START----------------------
+Inner: X: 24000 Y: 5000 slope it makes with X: 24000 Y: 5000 Infinity
+Inner: X: 24000 Y: 10000 slope it makes with X: 24000 Y: 5000 Infinity
+Inner: X: 24000 Y: 23000 slope it makes with X: 24000 Y: 5000 Infinity
+------------------END----------------------
+
+Origin: X: 24000 Y: 5000
+Highest: X: 24000 Y: 23000
+
+
+------------------START----------------------
+Inner: X: 21000 Y: 15000 slope it makes with X: 26000 Y: 5000 -2.0
+Inner: X: 18000 Y: 21000 slope it makes with X: 26000 Y: 5000 -2.0
+Inner: X: 14000 Y: 29000 slope it makes with X: 26000 Y: 5000 -2.0
+------------------END----------------------
+
+Origin: X: 26000 Y: 5000
+Highest: X: 14000 Y: 29000
+
+
+------------------START----------------------
+Inner: X: 22000 Y: 9000 slope it makes with X: 26000 Y: 5000 -1.0
+Inner: X: 17000 Y: 14000 slope it makes with X: 26000 Y: 5000 -1.0
+Inner: X: 15000 Y: 16000 slope it makes with X: 26000 Y: 5000 -1.0
+------------------END----------------------
+
+Origin: X: 26000 Y: 5000
+Highest: X: 15000 Y: 16000
+
+
+------------------START----------------------
+Inner: X: 26000 Y: 5000 slope it makes with X: 26000 Y: 5000 Infinity
+Inner: X: 26000 Y: 6000 slope it makes with X: 26000 Y: 5000 Infinity
+Inner: X: 26000 Y: 10000 slope it makes with X: 26000 Y: 5000 Infinity
+------------------END----------------------
+
+Origin: X: 26000 Y: 5000
+Highest: X: 26000 Y: 10000
+
+
+
+------------------START----------------------
+Inner: X: 16000 Y: 16000 slope it makes with X: 26000 Y: 6000 -1.0
+Inner: X: 12000 Y: 20000 slope it makes with X: 26000 Y: 6000 -1.0
+Inner: X: 8000 Y: 24000 slope it makes with X: 26000 Y: 6000 -1.0
+Inner: X: 7000 Y: 25000 slope it makes with X: 26000 Y: 6000 -1.0
+Inner: X: 3000 Y: 29000 slope it makes with X: 26000 Y: 6000 -1.0
+Inner: X: 21000 Y: 11000 slope it makes with X: 26000 Y: 6000 -1.0
+------------------END----------------------
+
+Origin: X: 26000 Y: 6000
+Highest: X: 3000 Y: 29000
+
+------------------START----------------------
+Inner: X: 11000 Y: 26000 slope it makes with X: 11000 Y: 7000 Infinity
+Inner: X: 11000 Y: 12000 slope it makes with X: 11000 Y: 7000 Infinity
+Inner: X: 11000 Y: 11000 slope it makes with X: 11000 Y: 7000 Infinity
+------------------END----------------------
+
+Origin: X: 11000 Y: 7000
+Highest: X: 11000 Y: 26000
+
+
+------------------START----------------------
+Inner: X: 6000 Y: 8000 slope it makes with X: 0 Y: 8000 0.0
+Inner: X: 30000 Y: 8000 slope it makes with X: 0 Y: 8000 0.0
+Inner: X: 29000 Y: 8000 slope it makes with X: 0 Y: 8000 0.0
+------------------END----------------------
+
+Origin: X: 0 Y: 8000
+Highest: X: 30000 Y: 8000
+
+
+------------------START----------------------
+Inner: X: 12000 Y: 20000 slope it makes with X: 0 Y: 8000 1.0
+Inner: X: 4000 Y: 12000 slope it makes with X: 0 Y: 8000 1.0
+Inner: X: 3000 Y: 11000 slope it makes with X: 0 Y: 8000 1.0
+Inner: X: 23000 Y: 31000 slope it makes with X: 0 Y: 8000 1.0
+------------------END----------------------
+
+Origin: X: 0 Y: 8000
+Highest: X: 23000 Y: 31000
+
+
+------------------START----------------------
+Inner: X: 25000 Y: 20000 slope it makes with X: 29000 Y: 8000 -3.0
+Inner: X: 24000 Y: 23000 slope it makes with X: 29000 Y: 8000 -3.0
+Inner: X: 22000 Y: 29000 slope it makes with X: 29000 Y: 8000 -3.0
+------------------END----------------------
+
+Origin: X: 29000 Y: 8000
+Highest: X: 22000 Y: 29000
+
+
+
+------------------START----------------------
+Inner: X: 29000 Y: 8000 slope it makes with X: 29000 Y: 8000 Infinity
+Inner: X: 29000 Y: 10000 slope it makes with X: 29000 Y: 8000 Infinity
+Inner: X: 29000 Y: 16000 slope it makes with X: 29000 Y: 8000 Infinity
+Inner: X: 29000 Y: 25000 slope it makes with X: 29000 Y: 8000 Infinity
+------------------END----------------------
+
+Origin: X: 29000 Y: 8000
+Highest: X: 29000 Y: 25000
+
+
+------------------START----------------------
+Inner: X: 21000 Y: 14000 slope it makes with X: 30000 Y: 8000 -0.6666666666666666
+Inner: X: 15000 Y: 18000 slope it makes with X: 30000 Y: 8000 -0.6666666666666666
+Inner: X: 12000 Y: 20000 slope it makes with X: 30000 Y: 8000 -0.6666666666666666
+Inner: X: 3000 Y: 26000 slope it makes with X: 30000 Y: 8000 -0.6666666666666666
+------------------END----------------------
+
+Origin: X: 30000 Y: 8000
+Highest: X: 3000 Y: 26000
+
+
+------------------START----------------------
+Inner: X: 24000 Y: 10000 slope it makes with X: 30000 Y: 8000 -0.3333333333333333
+Inner: X: 21000 Y: 11000 slope it makes with X: 30000 Y: 8000 -0.3333333333333333
+Inner: X: 0 Y: 18000 slope it makes with X: 30000 Y: 8000 -0.3333333333333333
+------------------END----------------------
+
+Origin: X: 30000 Y: 8000
+Highest: X: 0 Y: 18000
+
+
+------------------START----------------------
+Inner: X: 25000 Y: 9000 slope it makes with X: 9000 Y: 9000 0.0
+Inner: X: 22000 Y: 9000 slope it makes with X: 9000 Y: 9000 0.0
+Inner: X: 13000 Y: 9000 slope it makes with X: 9000 Y: 9000 0.0
+------------------END----------------------
+
+Origin: X: 9000 Y: 9000
+Highest: X: 25000 Y: 9000
+
+
+------------------START----------------------
+Inner: X: 23000 Y: 30000 slope it makes with X: 9000 Y: 9000 1.5
+Inner: X: 15000 Y: 18000 slope it makes with X: 9000 Y: 9000 1.5
+Inner: X: 11000 Y: 12000 slope it makes with X: 9000 Y: 9000 1.5
+------------------END----------------------
+
+Origin: X: 9000 Y: 9000
+Highest: X: 23000 Y: 30000
+
+
+------------------START----------------------
+Inner: X: 9000 Y: 25000 slope it makes with X: 9000 Y: 9000 Infinity
+Inner: X: 9000 Y: 13000 slope it makes with X: 9000 Y: 9000 Infinity
+Inner: X: 9000 Y: 11000 slope it makes with X: 9000 Y: 9000 Infinity
+Inner: X: 9000 Y: 9000 slope it makes with X: 9000 Y: 9000 Infinity
+------------------END----------------------
+
+Origin: X: 9000 Y: 9000
+Highest: X: 9000 Y: 25000
+
+
+------------------START----------------------
+Inner: X: 17000 Y: 14000 slope it makes with X: 13000 Y: 9000 1.25
+Inner: X: 25000 Y: 24000 slope it makes with X: 13000 Y: 9000 1.25
+Inner: X: 29000 Y: 29000 slope it makes with X: 13000 Y: 9000 1.25
+------------------END----------------------
+
+Origin: X: 13000 Y: 9000
+Highest: X: 29000 Y: 29000
+
+
+------------------START----------------------
+Inner: X: 22000 Y: 9000 slope it makes with X: 22000 Y: 9000 Infinity
+Inner: X: 22000 Y: 20000 slope it makes with X: 22000 Y: 9000 Infinity
+Inner: X: 22000 Y: 21000 slope it makes with X: 22000 Y: 9000 Infinity
+Inner: X: 22000 Y: 25000 slope it makes with X: 22000 Y: 9000 Infinity
+------------------END----------------------
+
+Origin: X: 22000 Y: 9000
+Highest: X: 22000 Y: 25000
+
+
+------------------START----------------------
+Inner: X: 11000 Y: 26000 slope it makes with X: 19000 Y: 10000 -2.0
+Inner: X: 12000 Y: 24000 slope it makes with X: 19000 Y: 10000 -2.0
+Inner: X: 15000 Y: 18000 slope it makes with X: 19000 Y: 10000 -2.0
+Inner: X: 16000 Y: 16000 slope it makes with X: 19000 Y: 10000 -2.0
+Inner: X: 17000 Y: 14000 slope it makes with X: 19000 Y: 10000 -2.0
+------------------END----------------------
+
+Origin: X: 19000 Y: 10000
+Highest: X: 11000 Y: 26000
+
+
+------------------START----------------------
+Inner: X: 24000 Y: 10000 slope it makes with X: 19000 Y: 10000 0.0
+Inner: X: 29000 Y: 10000 slope it makes with X: 19000 Y: 10000 0.0
+Inner: X: 26000 Y: 10000 slope it makes with X: 19000 Y: 10000 0.0
+------------------END----------------------
+
+Origin: X: 19000 Y: 10000
+Highest: X: 29000 Y: 10000
+
+
+------------------START----------------------
+Inner: X: 15000 Y: 16000 slope it makes with X: 24000 Y: 10000 -0.6666666666666666
+Inner: X: 12000 Y: 18000 slope it makes with X: 24000 Y: 10000 -0.6666666666666666
+Inner: X: 6000 Y: 22000 slope it makes with X: 24000 Y: 10000 -0.6666666666666666
+------------------END----------------------
+
+Origin: X: 24000 Y: 10000
+Highest: X: 6000 Y: 22000
+
+
+------------------START----------------------
+Inner: X: 21000 Y: 14000 slope it makes with X: 29000 Y: 10000 -0.5
+Inner: X: 5000 Y: 22000 slope it makes with X: 29000 Y: 10000 -0.5
+Inner: X: 3000 Y: 23000 slope it makes with X: 29000 Y: 10000 -0.5
+------------------END----------------------
+
+Origin: X: 29000 Y: 10000
+Highest: X: 3000 Y: 23000
+
+
+------------------START----------------------
+Inner: X: 29000 Y: 10000 slope it makes with X: 29000 Y: 10000 Infinity
+Inner: X: 29000 Y: 16000 slope it makes with X: 29000 Y: 10000 Infinity
+Inner: X: 29000 Y: 25000 slope it makes with X: 29000 Y: 10000 Infinity
+------------------END----------------------
+
+Origin: X: 29000 Y: 10000
+Highest: X: 29000 Y: 25000
+
+
+------------------START----------------------
+Inner: X: 21000 Y: 11000 slope it makes with X: 3000 Y: 11000 0.0
+Inner: X: 11000 Y: 11000 slope it makes with X: 3000 Y: 11000 0.0
+Inner: X: 9000 Y: 11000 slope it makes with X: 3000 Y: 11000 0.0
+Inner: X: 31000 Y: 11000 slope it makes with X: 3000 Y: 11000 0.0
+------------------END----------------------
+
+Origin: X: 3000 Y: 11000
+Highest: X: 31000 Y: 11000
+
+
+------------------START----------------------
+Inner: X: 16000 Y: 16000 slope it makes with X: 17000 Y: 14000 -2.0
+Inner: X: 15000 Y: 18000 slope it makes with X: 17000 Y: 14000 -2.0
+Inner: X: 12000 Y: 24000 slope it makes with X: 17000 Y: 14000 -2.0
+Inner: X: 11000 Y: 26000 slope it makes with X: 17000 Y: 14000 -2.0
+------------------END----------------------
+
+Origin: X: 17000 Y: 14000
+Highest: X: 11000 Y: 26000
+
+
+------------------START----------------------
+Inner: X: 17000 Y: 14000 slope it makes with X: 17000 Y: 14000 Infinity
+Inner: X: 17000 Y: 20000 slope it makes with X: 17000 Y: 14000 Infinity
+Inner: X: 17000 Y: 27000 slope it makes with X: 17000 Y: 14000 Infinity
+------------------END----------------------
+
+Origin: X: 17000 Y: 14000
+Highest: X: 17000 Y: 27000
+
+
+------------------START----------------------
+Inner: X: 16000 Y: 16000 slope it makes with X: 1000 Y: 16000 0.0
+Inner: X: 15000 Y: 16000 slope it makes with X: 1000 Y: 16000 0.0
+Inner: X: 29000 Y: 16000 slope it makes with X: 1000 Y: 16000 0.0
+------------------END----------------------
+
+Origin: X: 1000 Y: 16000
+Highest: X: 29000 Y: 16000
+
+
+------------------START----------------------
+Inner: X: 15000 Y: 18000 slope it makes with X: 0 Y: 18000 0.0
+Inner: X: 12000 Y: 18000 slope it makes with X: 0 Y: 18000 0.0
+Inner: X: 5000 Y: 18000 slope it makes with X: 0 Y: 18000 0.0
+------------------END----------------------
+
+Origin: X: 0 Y: 18000
+Highest: X: 15000 Y: 18000
+
+
+------------------START----------------------
+Inner: X: 16000 Y: 19000 slope it makes with X: 15000 Y: 18000 1.0
+Inner: X: 17000 Y: 20000 slope it makes with X: 15000 Y: 18000 1.0
+Inner: X: 18000 Y: 21000 slope it makes with X: 15000 Y: 18000 1.0
+Inner: X: 22000 Y: 25000 slope it makes with X: 15000 Y: 18000 1.0
+Inner: X: 28000 Y: 31000 slope it makes with X: 15000 Y: 18000 1.0
+------------------END----------------------
+
+Origin: X: 15000 Y: 18000
+Highest: X: 28000 Y: 31000
+
+
+------------------START----------------------
+Inner: X: 25000 Y: 20000 slope it makes with X: 12000 Y: 20000 0.0
+Inner: X: 22000 Y: 20000 slope it makes with X: 12000 Y: 20000 0.0
+Inner: X: 17000 Y: 20000 slope it makes with X: 12000 Y: 20000 0.0
+------------------END----------------------
+
+Origin: X: 12000 Y: 20000
+Highest: X: 25000 Y: 20000
+
+
+------------------START----------------------
+Inner: X: 18000 Y: 21000 slope it makes with X: 17000 Y: 20000 1.0
+Inner: X: 22000 Y: 25000 slope it makes with X: 17000 Y: 20000 1.0
+Inner: X: 28000 Y: 31000 slope it makes with X: 17000 Y: 20000 1.0
+------------------END----------------------
+
+Origin: X: 17000 Y: 20000
+Highest: X: 28000 Y: 31000
+
+------------------START----------------------
+Inner: X: 22000 Y: 20000 slope it makes with X: 22000 Y: 20000 Infinity
+Inner: X: 22000 Y: 21000 slope it makes with X: 22000 Y: 20000 Infinity
+Inner: X: 22000 Y: 25000 slope it makes with X: 22000 Y: 20000 Infinity
+------------------END----------------------
+
+Origin: X: 22000 Y: 20000
+Highest: X: 22000 Y: 25000
+
+
+------------------START----------------------
+Inner: X: 14000 Y: 29000 slope it makes with X: 30000 Y: 21000 -0.5
+Inner: X: 10000 Y: 31000 slope it makes with X: 30000 Y: 21000 -0.5
+Inner: X: 22000 Y: 25000 slope it makes with X: 30000 Y: 21000 -0.5
+------------------END----------------------
+
+Origin: X: 30000 Y: 21000
+Highest: X: 10000 Y: 31000
+
+
+------------------START----------------------
+Inner: X: 22000 Y: 25000 slope it makes with X: 7000 Y: 25000 0.0
+Inner: X: 9000 Y: 25000 slope it makes with X: 7000 Y: 25000 0.0
+Inner: X: 29000 Y: 25000 slope it makes with X: 7000 Y: 25000 0.0
+------------------END----------------------
+
+Origin: X: 7000 Y: 25000
+Highest: X: 29000 Y: 25000
+
+
+------------------START----------------------
+Inner: X: 14000 Y: 29000 slope it makes with X: 1000 Y: 29000 0.0
+Inner: X: 12000 Y: 29000 slope it makes with X: 1000 Y: 29000 0.0
+Inner: X: 3000 Y: 29000 slope it makes with X: 1000 Y: 29000 0.0
+Inner: X: 29000 Y: 29000 slope it makes with X: 1000 Y: 29000 0.0
+Inner: X: 24000 Y: 29000 slope it makes with X: 1000 Y: 29000 0.0
+Inner: X: 22000 Y: 29000 slope it makes with X: 1000 Y: 29000 0.0
+------------------END----------------------
+
+Origin: X: 1000 Y: 29000
+Highest: X: 29000 Y: 29000
+
+------------------START----------------------
+Inner: X: 19000 Y: 31000 slope it makes with X: 10000 Y: 31000 0.0
+Inner: X: 17000 Y: 31000 slope it makes with X: 10000 Y: 31000 0.0
+Inner: X: 12000 Y: 31000 slope it makes with X: 10000 Y: 31000 0.0
+Inner: X: 28000 Y: 31000 slope it makes with X: 10000 Y: 31000 0.0
+Inner: X: 23000 Y: 31000 slope it makes with X: 10000 Y: 31000 0.0
+------------------END----------------------
+
+Origin: X: 10000 Y: 31000
+Highest: X: 28000 Y: 31000

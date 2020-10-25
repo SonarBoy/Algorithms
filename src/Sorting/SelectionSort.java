@@ -27,6 +27,11 @@ public class SelectionSort {
 		}
 		
 		
+		for(int runner=0; runner < array.length;runner++) {
+        	System.out.println(array[runner]);
+        }
+        System.out.println();
+		
 		finish = System.nanoTime();
         timeElapsed = finish - start;
         System.out.println("Selection Sorted Time: " + timeElapsed);

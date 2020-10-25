@@ -1,5 +1,8 @@
 package Sorting;
 
+import java.util.Comparator;
+import java.util.Iterator;
+
 /*
  * Comparable example:
  * 	Here we will implement a Comparable example.
@@ -20,7 +23,7 @@ package Sorting;
 
 
 //Step 1.
-public class Dog implements Comparable{
+public class Dog<Item> implements Comparable,Iterable{
 	
 	private String firstName;
 	private String lastName;
@@ -56,4 +59,35 @@ public class Dog implements Comparable{
 		return this.age - dogInQuestion.age;
 	}
 	
+	public String toString() {
+		return this.firstName + " " + this.lastName + " " + this.age;
+	}
+
+	@Override
+	public Iterator iterator() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}
+
+class SortByFirstName implements Comparator<Dog>{
+	
+	public int compare(Dog first, Dog second) {
+		return first.getDogFirstName().compareTo(second.getDogFirstName()) ;
+	}
+}
+
+class SortByLastName implements Comparator<Dog>{
+	
+	public int compare(Dog first, Dog second) {
+		return first.getDogLastName().compareTo(second.getDogLastName()) ;
+	}
+}
+
+class SortByAge implements Comparator<Dog>{
+	
+	public int compare(Dog first, Dog second) {
+		return  first.getDogAge() - second.getDogAge() ;
+	}
 }
