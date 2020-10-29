@@ -27,7 +27,7 @@ public class FastColinearPoints {
 		
 		InsertionSort.sort(pointsToDraw);
 		int arrayLength = pointArray.length;
-		
+		System.out.println(arrayLength);
 		
 		
 //		System.out.println("AFTER SORT");
@@ -89,7 +89,8 @@ public class FastColinearPoints {
 				
 				
 			
-				
+				//THE SECOND PART OF THIS STATEMENT forwardIndx <= arrayLength + 1 makes sure that it gets into the last element and 
+				//no farther
 				for(int slopeRunner = columnRunner ; currentSlope == forwardSlope && forwardIndx <= arrayLength + 1 ; slopeRunner++) {
 							
 					
@@ -128,7 +129,7 @@ public class FastColinearPoints {
 						break;
 					}
 					
-					
+					//THIS IS THE BREAK POINT TO CHECK THE LAST ELEMENT AND NOT GO OVER
 					if(forwardIndx >= arrayLength) {
 						break;
 					}

@@ -42,10 +42,11 @@ public class StockBuySell {
 	
 	         
 	         
-	         
+	         // Store the index of minima 	         
 	         Interval intervals = new Interval(); 
 	         intervals.buy = counter++; 
-	         // Store the index of minima 
+	         
+
 	
 	         // Find Local Maxima.  Note that the limit is (n-1) as we are 
 	         // comparing to previous element 
@@ -79,7 +80,52 @@ public class StockBuySell {
 	
 	
 	     return; 
-	} 
+	}
+	
+	public void localMaxima(int price[], int leng) {
+		
+		ArrayList<Integer> solutions = new ArrayList<Integer>();
+		
+		
+		
+		for(int runner = 0; runner < leng; runner++) {
+			
+			if(runner == 0) {
+				if(price[runner] > price[runner + 1]) {
+					solutions.add(price[runner]);
+				}
+			}else {
+				
+				if(runner == leng - 1) {
+					if(price[runner - 1] < price[runner]) {
+						solutions.add(price[runner]);
+					}
+				}else {
+					
+					if(price[runner - 1] < price[runner] && (price[runner] > price[runner + 1]) ) {
+						solutions.add(price[runner]);
+					}
+					
+				}
+			}
+			
+			
+			
+			
+		}
+		
+		System.out.println();
+		System.out.println();
+		System.out.println("Solutions: ");
+		System.out.println();
+		
+		for(Integer x: solutions) {
+			System.out.println(x);
+		}
+		
+	}
+	
+	
 
  public static void main(String args[]) 
  { 
@@ -94,5 +140,7 @@ public class StockBuySell {
 
      // fucntion call 
      stock.stockBuySell(price, n); 
+     
+     stock.localMaxima(price, n);
  } 
 } 
