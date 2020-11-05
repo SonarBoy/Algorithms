@@ -1,5 +1,8 @@
 package dynamicConnectivity;
 
+import edu.princeton.cs.algs4.StdRandom;
+import edu.princeton.cs.algs4.StdStats;
+import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 
 /**
  * Percolation: Simple simulation to emulate percolation.
@@ -9,7 +12,9 @@ package dynamicConnectivity;
  * @since 
  */
 public class Percolation {
-
+	
+	
+			
 	
 	/**
 	 * Main class variables
@@ -27,7 +32,7 @@ public class Percolation {
 	long start;
 	long finish;
 	long timeElapsed;
-	
+	WeightedQuickUnionUF unionObject;
 	
 	
 	
@@ -41,7 +46,7 @@ public class Percolation {
 	 */
 	
 	public Percolation(int sides) {
-		
+	
 		//Start Timer.
 		start = System.nanoTime();
 		
@@ -80,6 +85,8 @@ public class Percolation {
 		uniqueValueList[counter] = counter ;
 	  
 		
+		this.unionObject = new WeightedQuickUnionUF(uniqueValueList.length);
+		
 		//Stop timer and print out.
         finish = System.nanoTime();
         timeElapsed = finish - start;
@@ -103,7 +110,7 @@ public class Percolation {
 	 * First Mathematical instinct was right but did not work because the row and board did not represent unique values but indexes.
 	 * board[row][col] = (row * col) + ((col - 1)*(board.length - row - 1));
 	 * 
-	 * I Fear that you if i ask you for the help and you give it you will hold it over my head like my parents do when they do something.
+	 *
 	 * 
 	 * @param row of the element to open
 	 * @param col of the element to open
@@ -204,7 +211,7 @@ public class Percolation {
 				
 				//System.out.println("South: " + uniqueValueList[((leng*(row )) + col)]);
 				this.union(row,col,row+1,col,leng);
-				
+				this.unionObject.union(row, col);
 			}
 			
 			if(isOpen(row ,col +1)) {
@@ -445,6 +452,7 @@ public class Percolation {
 	public int rootWithList(int value) {
 		
 		while(value != uniqueValueList[value]){
+			uniqueValueList[value] = uniqueValueList[uniqueValueList[value]];
 			value = uniqueValueList[value];
 		}
 		
@@ -547,6 +555,10 @@ public class Percolation {
 			
 			System.out.println();
 		}
+		
+		
+//		System.out.println("Count: " + this.unionObject.count());
+//		System.out.println("Find: " + this.unionObject.find(0));
 	}
 	
 	
@@ -571,10 +583,6 @@ public class Percolation {
 		Percolation tester = new Percolation(5);
 		
 		tester.printOut();
-		
-	
-	
-		
 		
 		System.out.println();
 		
@@ -661,7 +669,7 @@ public class Percolation {
 		*/
 		
 		
-		/* Top right to bottom left testing.
+		// Top right to bottom left testing.
 		tester.openWithList(1, 5);
 		tester.openWithList(2, 5);
 		tester.openWithList(2, 4);
@@ -670,14 +678,42 @@ public class Percolation {
 		tester.openWithList(4, 3);
 		tester.openWithList(4, 2);
 		tester.openWithList(5, 2);
-		*/
 		
 		
-	
 		
+		System.out.println("Opened with List:");
 		tester.printOutUniqueValueList();
+		
+		System.out.println("Opened with List:");
 		tester.printOut();
 		
+		
+		tester = null;
+		tester = new Percolation(5);
+		
+		
+		tester.printOut();
+		
+		System.out.println();
+		
+		tester.printOut();
+		
+		System.out.println();
+		
+		tester.openWithSection(1, 5);
+		tester.openWithSection(2, 5);
+		tester.openWithSection(2, 4);
+		tester.openWithSection(3, 4);
+		tester.openWithSection(3, 3);
+		tester.openWithSection(4, 3);
+		tester.openWithSection(4, 2);
+		tester.openWithSection(5, 2);
+		
+		System.out.println("Opened with Section:");
+		tester.printOutUniqueValueList();
+		
+		System.out.println("Opened with Section:");
+		tester.printOut();
 	}
 	
 	
