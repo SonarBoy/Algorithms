@@ -10,7 +10,7 @@ X: 28000 Y: 13500
 X: 28000 Y: 5000
 X: 28000 Y: 1000
 
-Insertion Sorted Time: 17300
+Insertion Sorted Time: 22100
 10
 X: 28000 Y: 13500 -> X: 3000 Y: 26000 SLOPE: -0.5
 X: 1000 Y: 18000 -> X: 4000 Y: 30000 SLOPE: 4.0
