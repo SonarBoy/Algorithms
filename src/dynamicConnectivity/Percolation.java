@@ -5,44 +5,38 @@ public class Percolation {
 	
 	private int[] list;
 	private int[][] board;
+	private int side;
 	
 	private int openSites;
 	
     // creates n-by-n grid, with all sites initially blocked
-    public Percolation(int n) {
+    public Percolation(int inputSide) {
     	
     	
-    	try {
     		
-    		
-    		if(n < 0)
+    		if(inputSide < 0)
     			throw new IllegalArgumentException();
-    			
-	    	this.list = new int[(n*n) + 2];
+    		
+    		//inputSide += 1;
+    		this.side = inputSide + 1;
+    		
 	    	
-	    	this.openSites = 0;
+	    	this.board = new int[this.side][this.side];
 	    	
-	    	
-	    	System.out.println(this.list.length);
-	    	System.out.println(""+n*n);
-	    	
-	    	for(int runner = 0; runner < this.list.length;runner++) {
-	    		this.list[runner] = -1;
-	    	}
-	    	
-	    	this.board = new int[n][n];
-	    	
-	    	for(int runner = 0; runner < n;runner++) {
-	    		for(int runnerTwo = 0; runnerTwo < n;runnerTwo++) {
+	    	for(int runner = 0; runner < this.side;runner++) {
+	    		for(int runnerTwo = 0; runnerTwo < this.side;runnerTwo++) {
+	    			
 	        		this.board[runner][runnerTwo] = -1;
 	        	}
 	    	}
-    	}
     	
-    	catch(Exception ex) {
-    		
-    	}
+	    	
+	    	
     	
+    }
+    
+    private int gridToNumber(int row,int col) {
+    	 return ((this.side - 1)*(row - 1) + col) ;
     }
 
     // opens the site (row, col) if it is not open already
@@ -53,12 +47,67 @@ public class Percolation {
     	this.board[row][col] = 0;
     	
     	
+//    	if((row == 1 && col == 1) || 
+//    	   (row == 1 && col == (this.side - 1)) || 
+//    	   (row == (this.side - 1) && col == 1) || 
+//    	   (row == (this.side - 1) && col == (this.side - 1))) {
+//    		
+//    		System.out.println(this.side);
+//    		System.out.println("Corner Case Hit");
+//    	}
+    	
+    	
+    	if(row == 1 && col == 1) {
+    		System.out.println("Top Left");
+    	}
+    	
+    	if((row == 1 && col == (this.side - 1))) {
+    		System.out.println("Top Right");
+    	}
+    	
+    	if((row == (this.side - 1) && col == 1) ) {
+    		System.out.println("Bottom Left");
+    	}
+    	
+    	if((row == (this.side - 1) && col == (this.side - 1))) {
+    		System.out.println("Bottom Right");
+    	}
+    	
+    	
+    	
+    	
+    	if(row == 1 && (col > 1 && col < this.side - 1)){
+    		System.out.println("Top Row");
+    		
+    	}
+    	
+    	if(row == this.side - 1 && (col > 1 && col < this.side - 1)) {
+    		System.out.println("Bottom Row");
+    	}
+    	   
+    	
+    	if(col == 1 && (row > 1 && row < this.side - 1)) {
+    		System.out.println("Left Column");
+    	}
+    	
+    	if(col == this.side - 1 && (row > 1 && row < this.side - 1)) {
+    		System.out.println("Right Column");
+    	}
+    	
+    	
+    	
+    	
+//    	System.out.println("Value: " + (((this.side - 1)*(row - 1)) + col));
+//    	System.out.println("Value Grid: " + gridToNumber(row, col));
+    	
+    	openSites++;
+    	
     }
 
     // is the site (row, col) open?
     public boolean isOpen(int row, int col) {
     	
-    	return (this.board[row - 1][col - 1] == 0);
+    	return (this.board[row][col] == 0);
     }
 
     // is the site (row, col) full?
@@ -79,6 +128,6 @@ public class Percolation {
 
     // test client (optional)
     public static void main(String[] args) {
-    	Percolation x = new Percolation(5);
+    	//Percolation x = new Percolation(5);
     }
 }

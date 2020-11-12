@@ -20,7 +20,7 @@ public class InteractivePercolationVisualizer {
 
     public static void main(String[] args) {
         // n-by-n percolation system (read from command-line, default = 10)
-        int n = 10;          
+        int n = 15;          
         if (args.length == 1) n = Integer.parseInt(args[0]);
 
         // repeatedly open site specified my mouse click and draw resulting system
@@ -37,19 +37,19 @@ public class InteractivePercolationVisualizer {
             if (StdDraw.isMousePressed()) {
 
                 // screen coordinates
-                double x = StdDraw.mouseX();
-                double y = StdDraw.mouseY();
+                double x = StdDraw.mouseX() ;
+                double y = StdDraw.mouseY() ;
 
                 // convert to row i, column j
-                int i = (int) (n - Math.floor(y));
-                int j = (int) (1 + Math.floor(x));
+                int row = (int) (n - Math.floor(y));
+                int column = (int) (1 + Math.floor(x));
 
                 // open site (i, j) provided it's in bounds
-                if (i >= 1 && i <= n && j >= 1 && j <= n) {
-                    if (!perc.isOpen(i, j)) { 
-                        StdOut.println(i + " " + j);
+                if (row >= 1 && row <= n && column >= 1 && column <= n) {
+                    if (!perc.isOpen(row, column)) { 
+                        StdOut.println("Interactive Visualizer: " + row + " " + column);
                     }
-                    perc.open(i, j);
+                    perc.open(row, column);
                     
 //                    perc.openWithSection(i, j);
                 }
