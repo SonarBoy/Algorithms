@@ -34,13 +34,9 @@ public class Percolation {
 	        	}
 	    	}
     	
+	    	int weightedQuickUnion = (this.side - 1) * (this.side - 1) + 2;
 	    	
-	    	//System.out.println("Board Length:" + this.board.length);
-	    	
-	    	
-	    	this.unionObject = new WeightedQuickUnionUF(((this.side - 1) * (this.side - 1) + 1));
-	    	
-	    	System.out.println(this.unionObject.count());
+	    	this.unionObject = new WeightedQuickUnionUF((weightedQuickUnion));
     	
     }
     
@@ -52,13 +48,11 @@ public class Percolation {
     public void open(int row, int col) {
     	
     	this.board[row][col] = 0;
-    	int connectionA = gridToNumber(row,col);
-    	int connectionB = -1;
-    	
+    	int connectionA = this.unionObject.find(gridToNumber(row,col));
+    	int connectionB = this.unionObject.find(0);
+    	//connectionB = this.unionObject.find(gridToNumber(row - 1,col));
     	
 
-    	
-    	
     	/**
     	 * Corner Cases on the board
     	 */
@@ -70,23 +64,44 @@ public class Percolation {
     		
     		if(isOpen(row,(col + 1))) {
     			System.out.println("Right of Top Left");
+    			connectionB = this.unionObject.find(gridToNumber(row, col + 1));
     			
-    			connectionB = gridToNumber(row,(col + 1));
-    			this.unionObject.union(connectionA,this.unionObject.find(connectionB));
-    			this.board[row][col + 1] = this.unionObject.find(connectionB);
-    			System.out.println("ConnectionB From top: " + connectionB);
+    			if(isFull(row,col + 1)) {
+    				//Take the gridNumber and assign it to the newly open space.  
+    				
+    				
+    				this.unionObject.union(connectionB, connectionA);
+				    this.board[row][col] = this.unionObject.find(connectionA);
+    				
+    			}
+    			
+    			if(!isFull(row,col + 1)) {
+    				this.unionObject.union(connectionB, connectionA);
+    				
+    			}
+    			
+    			
     		}
     		
     		if(isOpen((row + 1), col)) {
     			System.out.println("Bottom of Top Left");
+    			connectionB = this.unionObject.find(gridToNumber(row + 1, col));
     			
-    			connectionB = gridToNumber((row + 1),col);
-    			this.unionObject.union(connectionA,this.unionObject.find(connectionB));
-    			this.board[row + 1][col] = this.unionObject.find(connectionA);
-    			System.out.println("ConnectionB From top: " + connectionB);
+    			
+    			if(isFull(row + 1,col)) {
+    				
+    				this.unionObject.union(connectionB, connectionA);
+				    this.board[row][col] = this.unionObject.find(connectionB);
+    			}
+    			
+    			if(!isFull(row + 1,col)) {
+    				
+    				this.unionObject.union(connectionB, connectionA);
+    			}
+    		
     		}
     		
-    		this.board[row][col] = this.unionObject.find(connectionA);
+    		
     		
     	}
     	
@@ -100,18 +115,35 @@ public class Percolation {
     		
     		if(isOpen(row,col - 1)) {
     			System.out.println("Left of Top Right");
+    			connectionB = this.unionObject.find(gridToNumber(row, col - 1));
     			
-    			connectionB = gridToNumber(row,col - 1);
-    			this.unionObject.union(connectionA,this.unionObject.find(connectionB));
-    			this.board[row][col - 1] = this.unionObject.find(connectionB);
+    			if(isFull(row,col - 1)) {
+    				//Take the gridNumber and assign it to the newly open space
+    				
+    				this.unionObject.union(connectionB, connectionA);
+				    this.board[row][col] = this.unionObject.find(connectionB);
+    			}
+    			
+    			if(!isFull(row,col - 1)) {
+    				this.unionObject.union(connectionB, connectionA);
+    			}
     		}
     		
     		if(isOpen(row + 1,col)) {
     			System.out.println("Bottom of Top Right");
+    			connectionB = this.unionObject.find(gridToNumber(row + 1, col));
     			
-    			connectionB = gridToNumber(row + 1,col);
-    			this.unionObject.union(connectionA,this.unionObject.find(connectionB));
-    			this.board[row + 1][col] = this.unionObject.find(connectionA);
+    			if(isFull(row + 1,col)) {
+    				//Take the girdNumber of the square above it and assign it to itself. 
+    				
+    				this.unionObject.union(connectionB, connectionA);
+				    this.board[row][col] = this.unionObject.find(connectionB);
+    			}
+    			
+    			if(!isFull(row + 1,col)) {
+    				this.unionObject.union(connectionB, connectionA);
+    			}
+    			
     			
     		}
     		
@@ -126,16 +158,44 @@ public class Percolation {
     		
     		if(isOpen(row - 1, col)) {
     			System.out.println("Top of Bottom Right");
+    			connectionB = this.unionObject.find(gridToNumber(row - 1,col));
     			
-    			connectionB = gridToNumber(row - 1,col);
+    			if(isFull(row - 1,col)) {
+    				//Take the gridNumber and assing it to the newly open space.
+    				
+    				/*
+    				 * unionObj.union(board[row - 1][col],board[row][col])
+    				 * board[row][col] = unionObj.find(board[row - 1][col]) 
+    				 */
+    				
+    				this.unionObject.union(connectionB, connectionA);
+				    this.board[row][col] = this.unionObject.find(connectionB);
+    			}
+    			
+    			if(!isFull(row - 1,col)) {
+    				//Take the newly opened grid number and assing it to this space
+    				
+    				/*
+    				 * unionObj.union(board[row - 1][col],board[row][col])
+    				 */
+    				this.unionObject.union(connectionB, connectionA);
+    			}
     			
     		}
     		
     		if(isOpen(row,col + 1)) {
     			System.out.println("Right of Bottom Left");
+    			connectionB = this.unionObject.find(gridToNumber(row,col + 1));
     			
-    			connectionB = gridToNumber(row,col + 1);
-    			;
+    			if(isFull(row,col + 1)) {
+
+    				this.unionObject.union(connectionB, connectionA);
+				    this.board[row][col] = this.unionObject.find(connectionB);
+    			}
+    			
+    			if(!isFull(row,col + 1)) {
+    				this.unionObject.union(connectionB, connectionA);
+    			}
     		}
     		
     		
@@ -150,16 +210,32 @@ public class Percolation {
     		
     		if(isOpen(row - 1,col)) {
     			System.out.println("Top of Bottom Right");
+    			connectionB = this.unionObject.find(gridToNumber(row - 1,col));
     			
-    			connectionB = gridToNumber(row - 1,col);
+    			if(isFull(row - 1,col)) {
+    		
+    				this.unionObject.union(connectionB, connectionA);
+				    this.board[row][col] = this.unionObject.find(connectionB);
+    			}
     			
+    			if(!isFull(row -1 ,col)) {
+    				this.unionObject.union(connectionB, connectionA);
+    			}
     		}
     		
     		if(isOpen(row,col - 1)) {
     			System.out.println("Left of Bottom Right");
+    			connectionB = this.unionObject.find(gridToNumber(row,col - 1));
     			
-    			connectionB = gridToNumber(row,col - 1);
+    			if(isFull(row,col - 1)) {
+    				this.unionObject.union(connectionB, connectionA);
+				    this.board[row][col] = this.unionObject.find(connectionB);
+    				
+    			}
     			
+    			if(!isFull(row,col - 1)) {
+    				this.unionObject.union(connectionB, connectionA);
+    			}
     		}
     		
     	}
@@ -175,37 +251,59 @@ public class Percolation {
     		// * * * 
     		//   *
     		
-    		
-    		
     		if(isOpen(row,col - 1)) {
     			System.out.println("Left");
     			
-    			connectionB = gridToNumber(row,col - 1);
-    			this.unionObject.union(connectionA,this.unionObject.find(connectionB));
-    			this.board[row][col - 1] = this.unionObject.find(connectionB);
+    			connectionB = this.unionObject.find(gridToNumber(row, col - 1));
+    			
+    			if(isFull(row,col - 1)) {
+    				
+    				
+    				this.unionObject.union(connectionB, connectionA);
+				    this.board[row][col] = this.unionObject.find(connectionB);
+    			}
+    			
+    			if(!isFull(row,col - 1)) {
+    				this.unionObject.union(connectionB, connectionA);
+    			}
     			
     		}
     		
 			if(isOpen(row,col + 1)) {
 			    System.out.println("Right");
+			   
+			    connectionB = this.unionObject.find(gridToNumber(row, col + 1));
 			    
-			    connectionB = gridToNumber(row,col + 1);
-			    this.unionObject.union(connectionA,this.unionObject.find(connectionB));
-    			this.board[row][col + 1] = this.unionObject.find(connectionB);
 			    
+			    if(isFull(row,col + 1)) {
+			    	this.unionObject.union(connectionB, connectionA);
+				    this.board[row][col] = this.unionObject.find(connectionB);
+			    }
+			    
+			    
+			    if(!isFull(row,col + 1)) {
+			    	this.unionObject.union(connectionB,connectionA);
+    			}
 			}
 			
 			if(isOpen(row + 1,col)) {
 				System.out.println("Bottom");
 				
-				connectionB = gridToNumber(row + 1,col);
-				this.unionObject.union(connectionA,this.unionObject.find(connectionB));
-    			this.board[row + 1][col] = this.unionObject.find(connectionB);
+				connectionB = this.unionObject.find(gridToNumber(row + 1, col));
+				
+				 if(isFull(row + 1,col)) {
+					this.unionObject.union(connectionB, connectionA);
+				    this.board[row][col] = this.unionObject.find(connectionB);
+				 }
+				 
+				 if(!isFull(row + 1,col)) {
+					 this.unionObject.union(connectionB,connectionA);
+				 }
 				
 			}
     		
 			
-			this.board[row][col] = this.unionObject.find(connectionA);
+			
     	}
     	
     	if(row == this.side - 1 && (col > 1 && col < this.side - 1)) {
@@ -218,21 +316,46 @@ public class Percolation {
     		if(isOpen(row,col - 1)) {
     			System.out.println("Left");
     			
-    			connectionB = gridToNumber(row,col - 1);
+    			connectionB = this.unionObject.find(gridToNumber(row,col - 1));
+    			
+    			if(isFull(row,col - 1)) {
+    				this.unionObject.union(connectionB, connectionA);
+			    	this.board[row][col] = this.unionObject.find(connectionB);
+				}
+    			
+    			if(!isFull(row,col - 1)) {
+    				this.unionObject.union(connectionB,connectionA);
+				}
     			
     		}
     		
 			if(isOpen(row,col + 1)) {
 			    System.out.println("Right");
+			    connectionB = this.unionObject.find(gridToNumber(row,col + 1));
 			    
-			    connectionB = gridToNumber(row,col + 1);
+    			if(isFull(row,col + 1)) {
+			    	this.unionObject.union(connectionB, connectionA);
+			    	this.board[row][col] = this.unionObject.find(connectionB);
+				}
+    			
+    			if(!isFull(row,col + 1)) {
+    				this.unionObject.union(connectionB,connectionA);
+				}
 			   
 			}
 			
 			if(isOpen(row - 1,col)) {
 				System.out.println("Top");
+				connectionB = this.unionObject.find(gridToNumber(row - 1,col));
 				
-				connectionB = gridToNumber(row - 1,col);
+    			if(isFull(row - 1,col)) {
+    				this.unionObject.union(connectionB, connectionA);
+			    	this.board[row][col] = this.unionObject.find(connectionB);
+				}
+    			
+    			if(!isFull(row - 1,col)) {
+    				this.unionObject.union(connectionB,connectionA);
+				}
 				
 			}
     		
@@ -249,23 +372,61 @@ public class Percolation {
     		if(isOpen(row - 1,col)) {
     			System.out.println("Top");
     			
-    			connectionB = gridToNumber(row - 1,col);
+    			connectionB = this.unionObject.find(gridToNumber(row - 1, col));
+    			
+    			if(isFull(row - 1,col)) {
+    				this.unionObject.union(connectionB, connectionA);
+    				this.board[row][col] = this.unionObject.find(connectionB);
+    			}
+    			
+    			if(!isFull(row - 1,col)) {
+    				this.unionObject.union(connectionB,connectionA);
+
+    			}
     			
     		}
     		
     		if(isOpen(row,col + 1)) {
     			System.out.println("Right");
     			
-    			connectionB = gridToNumber(row,col + 1);
-    			;
+    			connectionB = this.unionObject.find(gridToNumber(row,col + 1));
+    			
+    			
+    			if(isFull(row,col + 1)) {
+    				this.unionObject.union(connectionB, connectionA);
+    				this.board[row][col] = this.unionObject.find(connectionB);
+    			}
+    			
+    			if(!isFull(row,col + 1)) {
+    				this.unionObject.union(connectionB,connectionA);
+    			}
+    			
+    			
+    			
     		}
     		
     		if(isOpen(row + 1,col)) {
     			System.out.println("Bottom");
     			
-    			connectionB = gridToNumber(row + 1,col);
+    			connectionB = this.unionObject.find(gridToNumber(row + 1,col));
+    			
+    			if(isFull(row + 1,col)) {
+    				this.unionObject.union(connectionB, connectionA);
+    				this.board[row][col] = this.unionObject.find(connectionB);
+    			}
+    			
+    			if(!isFull(row + 1,col)) {
+    				this.unionObject.union(connectionB,connectionA);
+    			}
+    			
+    			
+    			
+    			
+    			
     			
     		}
+    		
+    		
     	}
     	
     	if(col == this.side - 1 && (row > 1 && row < this.side - 1)) {
@@ -277,23 +438,48 @@ public class Percolation {
     		
     		if(isOpen(row - 1,col)) {
     			System.out.println("Top");
+    			connectionB = this.unionObject.find(gridToNumber(row - 1,col));
     			
-    			connectionB = gridToNumber(row - 1,col);
+    			
+    			if(isFull(row - 1,col)) {
+    				this.unionObject.union(connectionB, connectionA);
+    				this.board[row][col] = this.unionObject.find(connectionB);
+				}
+    			
+    			if(!isFull(row - 1,col)) {
+    				this.unionObject.union(connectionB,connectionA);
+				}
+    			
     			
     		}
     		
     		if(isOpen(row,col - 1)) {
     			System.out.println("Left");
+    			connectionB = this.unionObject.find(gridToNumber(row,col - 1));
     			
-    			connectionB = gridToNumber(row,col - 1);
+    			if(isFull(row ,col - 1)) {
+    				this.unionObject.union(connectionB, connectionA);
+    				this.board[row][col] = this.unionObject.find(connectionB);
+				}
+    			
+    			if(!isFull(row,col - 1)) {
+    				this.unionObject.union(connectionB, connectionA);
+				}
     			
     		}
     		
     		if(isOpen(row + 1,col)) {
     			System.out.println("Bottom");
+    			connectionB = this.unionObject.find(gridToNumber(row + 1,col));
     			
-    			connectionB = gridToNumber(row + 1,col);
+    			if(isFull(row + 1,col)) {
+    				this.unionObject.union(connectionB, connectionA);
+    				this.board[row][col] = this.unionObject.find(connectionB);
+				}
     			
+    			if(!isFull(row + 1,col)) {
+			    	this.unionObject.union(connectionB,connectionA);
+				}
     			
     		}
     	}
@@ -314,31 +500,131 @@ public class Percolation {
     		if(isOpen(row - 1,col)) {
     			System.out.println("Top");
     			
-    			connectionB = gridToNumber(row - 1,col);
+    			connectionB = this.unionObject.find(gridToNumber(row - 1, col));
+    			
+    			
+    			if(isFull(row - 1,col)) {
+    				
+    				/**
+    				 * Get the value of the top box and assign it to the newly opened space
+    				 * 
+    				 * unionObj.union(board[row - 1][col],board[row][col])
+    				 * board[row][col] = board[row - 1][col]
+    				 */
+    	
+    				this.unionObject.union(connectionB, connectionA);
+    				this.board[row][col] = this.unionObject.find(connectionB);
+    			}
+    			
+    			if(!isFull(row - 1,col)) {
+    				
+    				/**
+    				 * Get the value of the top box and connect the objects.
+    				 * unionObj.union(board[row - 1][col],board[row][col])
+    				 */
+    				
+    				this.unionObject.union(connectionB, connectionA);
+    			}
     			
     		}
     		
     		if(isOpen(row + 1,col)) {
     			System.out.println("Bottom");
     			
+    			connectionB = this.unionObject.find(gridToNumber(row + 1,col));
     			
-    			connectionB = gridToNumber(row + 1,col);
+    			if(isFull(row + 1,col)) {
+    				
+    				/**
+    				 * Get the value of the top box and assign it to the newly opened space. 
+    				 * 
+    				 * unionObj.union(board[row + 1][col],board[row][col])
+    				 * board[row][col] = board[row + 1][col]
+    				 */
+    				this.unionObject.union(connectionB, connectionA);
+    				this.board[row][col] = this.unionObject.find(connectionB);
+    				
+    			}
     			
+    			if(!isFull(row + 1,col)) {
+    				/**
+    				 * get the value of the top box and connect the two.
+    				 * 
+    				 * unionObj.union(board[row + 1][col],board[row][col])
+    				 * 
+    				 */
+    				
+    				this.unionObject.union(connectionB, connectionA);
+    	
+    			}
     			
     		}
     		
     		if(isOpen(row,col - 1)) {
     			System.out.println("Left");
+    			connectionB = this.unionObject.find(gridToNumber(row,col - 1));
     			
-    			connectionB = gridToNumber(row,col - 1);
+    			if(isFull(row,col - 1)) {
+    				
+    				/**
+    				 * get the value of the left box and assign it to the newly opened box.
+    				 * 
+    				 * 
+    				 * unionObj.union(board[row][col - 1],board[row][col])
+    				 * board[row][col] = board[row][col - 1]
+    				 * 
+    				 */
+    				
+    				
+    				this.unionObject.union(connectionB, connectionA);
+    				this.board[row][col] = this.unionObject.find(connectionB);
+    				
+    			}
+    			
+    			if(!isFull(row,col - 1)) {
+    				
+    				
+    				/**
+    				 * get the value of the left box and connect it to the newly opened box.
+    				 * 
+    				 * unionObj.union(board[row][col - 1],board[row][col])
+    				 */
+    				
+    				this.unionObject.union(connectionB, connectionA);
+    			
+    			}
     			
     		}
     		
     		if(isOpen(row,col + 1)) {
     			System.out.println("Right");
     			
-    			connectionB = gridToNumber(row,col + 1);
+    			connectionB = this.unionObject.find(gridToNumber(row,col + 1));
     			
+    			if(isFull(row,col + 1)) {
+    				
+    				/**
+    				 * get the value of the right box and assign to the newly opened box.
+    				 * 
+    				 * unionObj.union(board[row][col + 1],board[row][col])
+    				 * board[row][col] = board[row][col + 1]  
+    				 * 
+    				 */
+    				this.unionObject.union(connectionB, connectionA);
+    				this.board[row][col] = this.unionObject.find(connectionA);
+    				
+    			}
+    			
+    			if(!isFull(row,col + 1)) {
+    				
+    				/**
+    				 * get the value of the left box and connect it to the newly opened box. 
+    				 * 
+    				 * unionObj.union(board[row][col + 1],board[row][col])
+    				 */
+    				this.unionObject.union(connectionB, connectionA);
+    				
+    			}
     			
     		}
     		
@@ -348,15 +634,34 @@ public class Percolation {
     	
 
     	
-    	System.out.println("Connection A: " + connectionA);
-    	System.out.println("Connection B: " + connectionB);
+//    	System.out.println("Connection A: " + connectionA);
+//    	System.out.println("Connection B: " + connectionB);
+    	
+    	
+    	
+    	//Final Assingment
+    	
+    	
+    	
+    	
+    	
+    	
+    	
     	
     	
     	System.out.println("Count: " + this.unionObject.count());
     	
-    	
+    	susOut();
     	openSites++;
     	
+    }
+    
+    private void susOut() {
+    	
+    	int top = (this.side - 1) * (this.side - 1);
+    	for(int runner = 0; runner < top; runner++) {
+    		System.out.println("Value of " + runner + " : " + this.unionObject.find(runner));
+    	}
     }
 
     // is the site (row, col) open?
@@ -368,7 +673,8 @@ public class Percolation {
     // is the site (row, col) full?
     public boolean isFull(int row, int col) {
     	
-    	return !(this.board[row][col] == 0 || this.board[row][col] == -1);
+    	//&& this.unionObject.find(gridToNumber(row, col)) != gridToNumber(row, col)
+    	return (this.board[row][col] != 0 && this.board[row][col] != -1 );
     }
 
     // returns the number of open sites
