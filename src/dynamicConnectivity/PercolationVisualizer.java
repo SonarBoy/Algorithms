@@ -63,6 +63,9 @@ public class PercolationVisualizer {
     }
 
     public static void main(String[] args) {
+    	
+    	System.out.println("Test: " + args[0]);
+    	
         In in = new In(args[0]);      // input file
         int n = in.readInt();         // n-by-n percolation system
 
