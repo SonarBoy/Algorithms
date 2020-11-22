@@ -40,7 +40,7 @@ public class PercolationVisualizer {
         for (int row = 1; row <= n; row++) {
             for (int col = 1; col <= n; col++) {
                 if (perc.isFull(row, col)) {
-                    StdDraw.setPenColor(StdDraw.BOOK_RED);
+                    StdDraw.setPenColor(StdDraw.PRINCETON_ORANGE);
                     opened++;
                 }
                 else if (perc.isOpen(row, col)) {
