@@ -32,7 +32,7 @@ public class Percolation {
 	        	}
 	    	}
     	
-	    	this.weightedQuickUnionLength = (this.side - 1) * (this.side - 1) + 3;
+	    	this.weightedQuickUnionLength = (this.side - 1) * (this.side - 1) + 2;
 	    	this.unionObject = new WeightedQuickUnionUF((weightedQuickUnionLength));
 	    	System.out.println(this.weightedQuickUnionLength);
     	
@@ -59,7 +59,7 @@ public class Percolation {
     		// * *
     		// *
     		
-    		this.unionObject.union(weightedQuickUnionLength - 2, connectionA);
+    		this.unionObject.union(0, connectionA);
     		this.board[row][col] = this.unionObject.find(connectionA);
     		
     		
@@ -76,7 +76,7 @@ public class Percolation {
     		// * *
     		//   *
     		
-    		this.unionObject.union(weightedQuickUnionLength - 2, connectionA);
+    		this.unionObject.union(0, connectionA);
     		this.board[row][col] = this.unionObject.find(connectionA);
     		
 
@@ -93,16 +93,12 @@ public class Percolation {
     		// * *
     		
     		
+    		
     		spotCheck(row - 1, col, row, col, connectionA);
 
     		spotCheck(row, col + 1, row, col, connectionA);
     		
-    		
-    		if(this.unionObject.find(connectionA) == this.unionObject.find(weightedQuickUnionLength - 2)) {
-    			System.out.println("Bam");
-    		}
-    		
-    		
+
     		this.unionObject.union(weightedQuickUnionLength - 1, connectionA);
     		this.board[row][col] = this.unionObject.find(connectionA);
     		
@@ -133,7 +129,7 @@ public class Percolation {
     		
     		// * * * 
     		//   *
-    		this.unionObject.union(weightedQuickUnionLength - 2, connectionA);
+    		this.unionObject.union(0, connectionA);
     		this.board[row][col] = this.unionObject.find(connectionA);
     		
 
@@ -227,9 +223,8 @@ public class Percolation {
     	
     	
     	
-    	susOut();
-    	System.out.println("- 2: " + this.unionObject.find(weightedQuickUnionLength - 2));
-    	System.out.println("- 1: "+ this.unionObject.find(weightedQuickUnionLength - 1));
+    	//susOut();
+
     	openSites++;
     	
     }
@@ -248,9 +243,6 @@ public class Percolation {
     	
     	if(isOpen(checkRow,checkCol)) {
 			System.out.println("Top");
-			
-			//connectionB = this.unionObject.find(gridToNumber(checkRow, checkCol));
-			
 			
 			if(isFull(checkRow,checkCol)) {
 				
@@ -278,22 +270,47 @@ public class Percolation {
 		}
     	
     	
-    	//End to check if percolates
     	
-    	if( (boardRow == (this.side - 1) && boardCol == 1) ||
-    		(boardRow == (this.side - 1) && boardCol == (this.side - 1)) ||
-    		boardRow == this.side - 1 && (boardCol > 1 && boardCol < this.side - 1)) {
-    		
-    		System.out.println("At the Edge");
-    		
-    		if(this.unionObject.find(weightedQuickUnionLength - 1) == this.unionObject.find(connectionB)) {
-    			System.out.println("This should percolate");
-    		}
-    	}
+		/**
+		 * row == this.side - 1 && (col > 1 && col < this.side - 1)
+		 * 
+		 * (row == (this.side - 1) && col == (this.side - 1))
+    		(row == (this.side - 1) && col == 1) 
+		 */
+//    	if(boardRow == this.side - 1 && (boardCol > 1 && boardCol < this.side - 1)) {
+//    		System.out.println("Bottom Row for Perc check");
+//
+//    		
+//    		if(isOpen(boardRow - 1, boardCol) ) {
+//    			if(this.unionObject.find(gridToNumber(boardRow - 1, boardCol)) != this.unionObject.find(0)) {
+//    				
+//    				
+//    			}
+//    			this.unionObject.union(weightedQuickUnionLength - 1, connectionA);
+//    		}
+//    		
+//    	}
 //    	
-		
+//    	if((boardRow == (this.side - 1) && boardCol == 1) ) {
+//    		System.out.println("Bottom left for Perc check");
+//    		
+//    		if(isOpen(boardRow - 1, boardCol) ) {
+//    			this.unionObject.union(weightedQuickUnionLength - 1, connectionA);
+//    		}
+//    	}
+//    	
+//    	if((boardRow == (this.side - 1) && boardCol == (this.side - 1))) {
+//    		System.out.println("Bottom Right for Perc check");
+//    		
+//    		if(isOpen(boardRow - 1, boardCol)) {
+//    			this.unionObject.union(weightedQuickUnionLength - 1, connectionA);
+//    		}
+//    	}
     	
     }
+    	
+    	
+    
 
     // is the site (row, col) open?
     public boolean isOpen(int row, int col) {
@@ -308,7 +325,7 @@ public class Percolation {
 //    	return (this.board[row][col] != 0 && this.board[row][col] != -1) ||
 //    			this.unionObject.find(gridToNumber(row, col)) == (weightedQuickUnionLength - 2);
     	
-    	return (this.unionObject.find(gridToNumber(row, col)) == this.unionObject.find((weightedQuickUnionLength - 2)));
+    	return (this.unionObject.find(gridToNumber(row, col)) == this.unionObject.find((0)));
     }
 
     // returns the number of open sites
@@ -320,13 +337,14 @@ public class Percolation {
     public boolean percolates() {
     	
     	//Potential Change
-    	//return (this.unionObject.find(0) == this.unionObject.find(weightedQuickUnionLength - 2));
-    	return (this.unionObject.find(weightedQuickUnionLength - 1) == this.unionObject.find(weightedQuickUnionLength - 2));
+    	//return (this.unionObject.find(weightedQuickUnionLength - 1) == this.unionObject.find(weightedQuickUnionLength - 2));
+    	return (this.unionObject.find(0) == this.unionObject.find(weightedQuickUnionLength - 1));
+
     	
     }
 
     // test client (optional)
     public static void main(String[] args) {
-    	//Percolation x = new Percolation(5);
+ 
     }
 }

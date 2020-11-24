@@ -22,6 +22,12 @@ public class PercolationStats {
 	 // perform independent trials on an n-by-n grid
     public PercolationStats(int n, int trials) {
     	
+    	
+    	Percolation[] units = new Percolation[trials];
+    	for(Percolation x: units) {
+    		x = new Percolation(n);
+    	}
+    	
     }
 
     // sample mean of percolation threshold
@@ -46,6 +52,19 @@ public class PercolationStats {
 
    // test client (see below)
    public static void main(String[] args) {
+	   PercolationStats x = new PercolationStats(5, 10);
+	   
+	   System.out.println(37 & 23);
+	   System.out.println(37 & 4);
+	   
+	   if((52 & 1) == 1){
+		   System.out.println("The number is odd");
+	   }else {
+		   System.out.println("The number is even");
+	   }
+	   
+	   
+	   System.out.println(11 ^ 12);
 	   
    }
 }
