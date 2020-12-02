@@ -1,0 +1,11 @@
+Lessons Learned (Simple Mistake Documentation Sheet):
+
+DEC 01 2020:
+1) When including programming arguments in Eclipse use the whole file name and think like this moving forward.
+Because IDE's dont recognize the "." when formatting arguments.  
+
+2) Have a way to test before you start putting keys to the IDE otherwise you are just spinning your wheels.
+
+3) Its better to go over a razor blade at a snails pace.
+
+4) Dont push yourself needlessly and always ask yourself "HOW AM I GOING TO TEST THIS THING?"   
