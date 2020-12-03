@@ -2,10 +2,33 @@ Lessons Learned (Simple Mistake Documentation Sheet):
 
 DEC 01 2020:
 1) When including programming arguments in Eclipse use the whole file name and think like this moving forward.
-Because IDE's dont recognize the "." when formatting arguments.  
+Because IDE's don't recognize the "." when formatting arguments.  
 
 2) Have a way to test before you start putting keys to the IDE otherwise you are just spinning your wheels.
 
 3) Its better to go over a razor blade at a snails pace.
 
-4) Dont push yourself needlessly and always ask yourself "HOW AM I GOING TO TEST THIS THING?"   
+4) Don't push yourself needlessly and always ask yourself "HOW AM I GOING TO TEST THIS THING?"
+
+5) I know this is hard for you because you like to run before you can walk but you must learn to think about your edge cases first
+otherwise you are doomed to waste time needlessly.
+
+DEC 02 2020:
+1) Feel free do describe the surrounding facts of the problem you are having to yourself to step out of your head. 
+In this case please describe the problem of "backwash" when it comes to the percolation problem. 
+
+2) Don't think you are stupid for not understanding something. Think and call yourself prideful and stupid when you don't read and 
+make assumptions about the problem. This refers to to Percolation Stats it gave you everything that you needed to do it correctly but you didnt read
+(Monte Carlo simulation. To estimate the percolation threshold, consider the following computational experiment:
+
+    Initialize all sites to be blocked.
+
+    Repeat the following until the system percolates:
+
+        Choose a site uniformly at random among all blocked sites.
+
+        Open the site. 
+
+    The fraction of sites that are opened when the system percolates provides an estimate of the percolation threshold. )
+    
+3) Worry about understanding the entire problem faster rather than just implementing a solution that doesn't work fast. 
