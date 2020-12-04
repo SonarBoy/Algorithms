@@ -31,4 +31,16 @@ make assumptions about the problem. This refers to to Percolation Stats it gave 
 
     The fraction of sites that are opened when the system percolates provides an estimate of the percolation threshold. )
     
-3) Worry about understanding the entire problem faster rather than just implementing a solution that doesn't work fast. 
+3) Worry about understanding the entire problem faster rather than just implementing a solution that doesn't work fast.
+
+DEC 04 2020:
+1) Test to see if your assumptions are actually putting out what you assume. 
+In this case it was in regards to the row and col never moved passed 1 and 1 when opening a site at random.
+
+			while(!pad.percolates()) {
+    			row = StdRandom.uniform(1, size + 1);
+    			col = StdRandom.uniform(1, size + 1);
+    			
+    			//System.out.println("Row: " +row + " Col: "+col);
+    			pad.open(row, col);
+    		} 
