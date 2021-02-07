@@ -16,7 +16,7 @@ public class ListNode<AnyType> {
      * @param data node data
      */
 	ListNode(ListNode<AnyType> prev, AnyType Data, ListNode<AnyType> next){
-		this.data = data;
+		this.data = Data;
 		this.next = next;
 		this.prev = prev;
 	}

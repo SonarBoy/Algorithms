@@ -228,7 +228,7 @@ public class Setup {
 		
 		//test.enqueueTieBack(0);
 		
-		test.dequeueRandom();
+		test.dequeue();
 		
 		test.printOut();
 		

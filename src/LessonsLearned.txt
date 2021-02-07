@@ -44,3 +44,42 @@ In this case it was in regards to the row and col never moved passed 1 and 1 whe
     			//System.out.println("Row: " +row + " Col: "+col);
     			pad.open(row, col);
     		} 
+    		
+DEC 05 2020:
+1) Start making your variable names verbose because you thought this.size = 25 when in actuality it equaled 5 and messed up a calculation.
+
+//    	for (int runner = 0; runner < this.openSiteList.length; runner++) {
+//    		
+//    		
+//    		System.out.println(((double)this.openSiteList[runner]/((double)this.size * (double)this.size)));
+//    		this.simMean += ((double)this.openSiteList[runner]/(double)this.size * (double)this.size);
+//    	}
+//
+//    	System.out.println("Sim Mean After Loop: " + this.simMean);
+//    	
+//    	
+//    	this.simMean = (this.simMean/((double)this.size * (double)this.size));
+//    	this.simMean = this.simMean/ this.tries;
+//    	System.out.println("Sim Mean After / tires: " + this.simMean);
+
+
+DEC 08 2020:
+1) Why when checking for primes you only need to go to the sqare root
+https://stackoverflow.com/questions/5811151/why-do-we-check-up-to-the-square-root-of-a-prime-number-to-determine-if-it-is-pr
+
+2) How to break down numbers
+
+
+
+JAN 01 2021:
+
+1) How to format code in eclipse:
+Go to Source | Format Document or press Ctrl+Shift+F.
+
+JAN 05 2021:
+Inheritance: has an object relationship of i Is - A (A Dolphin is a mamal, A cat is a mamal they can both inherit from a super mamal class).
+Composition: has an object relationship of Has - A. (A lawn mower has an engine, A car has an engine they both are composed of an engine).
+
+JAN 15 2021:
+Encapsulation: Keeping the functionality in the object rather than spreading it out. 
+
