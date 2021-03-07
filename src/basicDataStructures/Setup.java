@@ -230,7 +230,7 @@ public class Setup {
 		
 		test.dequeue();
 		
-		test.printOut();
+		//test.printOut();
 		
 		
 		

@@ -1,9 +1,8 @@
 package basicDataStructures;
-
 import java.util.Iterator;
 import java.util.NoSuchElementException;
-
 import edu.princeton.cs.algs4.StdRandom;
+
 
 public class RandomizedQueue <Item> implements Iterable<Item> {
 	
@@ -107,7 +106,7 @@ public class RandomizedQueue <Item> implements Iterable<Item> {
 		
 	}
 	
-	public Item dequeueBad() {
+	private Item dequeueBad() {
 			
 			if(size == 0) {
 				throw new NoSuchElementException();
@@ -181,7 +180,7 @@ public class RandomizedQueue <Item> implements Iterable<Item> {
 	
 	
 	public Item dequeue() {
-		System.out.println();
+		//System.out.println();
 		
 		if(size == 0) {
 			throw new NoSuchElementException();
@@ -193,7 +192,7 @@ public class RandomizedQueue <Item> implements Iterable<Item> {
 		
 		if(size == 1) {
 			
-			System.out.println("Size: "  + size);
+			//System.out.println("Size: "  + size);
 			
 			runner = head;
 			head = null;
@@ -201,7 +200,7 @@ public class RandomizedQueue <Item> implements Iterable<Item> {
 			size--;
 			
 			
-			System.out.println("ITR: " + runner.item);
+			//System.out.println("ITR: " + runner.item);
 			
 			return runner.item;
 		}
@@ -225,8 +224,8 @@ public class RandomizedQueue <Item> implements Iterable<Item> {
 				counter++;
 			}
 			
-			System.out.println("Size: "  + size);
-			System.out.println("ITR: " + runner.item);
+			//System.out.println("Size: "  + size);
+			//System.out.println("ITR: " + runner.item);
 			
 			if(runner.next != null) {
 				
@@ -269,8 +268,8 @@ public class RandomizedQueue <Item> implements Iterable<Item> {
 				counter++;
 			}
 			
-			System.out.println("Size: "  + size);
-			System.out.println("ITR: " + runner.item);
+			//System.out.println("Size: "  + size);
+			//System.out.println("ITR: " + runner.item);
 			
 			
 			if(runner == head) {
@@ -305,7 +304,7 @@ public class RandomizedQueue <Item> implements Iterable<Item> {
 			//System.out.println();
 		}
 		
-		System.out.println();
+		//System.out.println();
 		
 		return null;
 		
@@ -317,48 +316,7 @@ public class RandomizedQueue <Item> implements Iterable<Item> {
 	
 	
 	
-//	private void tieBack(){
-//		
-//		
-//			//Set up two pointers to run through the links 
-//			Node runner = head;
-//			Node nextRunner = head.next;
-//			
-//			//When the headder pointer hits a null stop
-//			while(nextRunner.next != null) {
-//				
-//				//If the runner is the head pointer tie the nextRunner back to the head.
-//				if(runner == head) {
-//					nextRunner.previous = head;
-//				}
-//				
-//				//If the runner is not equal to the head assign the nextRunners prior value to the new 
-//				//runner
-//				if(runner != head) {
-//					nextRunner.previous = runner;
-//				}
-//				
-//				//Iterate the two pointers to the next value
-//				nextRunner = nextRunner.next;
-//				runner = runner.next;
-//			}
-//			
-//			//tieBack the nextRunners previous pointer to the runner.
-//			nextRunner.previous = runner;
-//	}
-	
-	
-	
-	
-//	public Item dequeue() {
-//		
-//		
-//		System.out.println("Dequeued: "+head.item);
-//		head = head.next;
-//		
-//		
-//		return head.item;
-//	}
+
 	
 	
 	public Item sample() {
@@ -376,14 +334,14 @@ public class RandomizedQueue <Item> implements Iterable<Item> {
         int rand = StdRandom.uniform(max);
         
         
-        System.out.println("Sample Random: " + rand);
+        //System.out.println("Sample Random: " + rand);
         
         while(counter < rand){
         	runner = runner.next;
         	counter++;
         }
         
-        System.out.println("Sample End Counter: " + counter);
+        //System.out.println("Sample End Counter: " + counter);
 		
         
         //System.out.println("Sample: "+runner.item);
@@ -394,7 +352,8 @@ public class RandomizedQueue <Item> implements Iterable<Item> {
         return runner.item;
 	}
 	
-	public void printOut() {
+	
+	private void printOut() {
 		
 		Node runner = head;
 		
@@ -494,36 +453,233 @@ public class RandomizedQueue <Item> implements Iterable<Item> {
 		
 		randomQueue.printOut();
 		
+		
+		randomQueue = null;
+		
+		randomQueue = new RandomizedQueue<String>();
+		randomQueue.enqueue("1111");
+		randomQueue.enqueue("1112");
+		randomQueue.enqueue("1113");
+		randomQueue.enqueue("1114");
+		
+		
+		Iterator<String> x = randomQueue.iterator();
+		String item;
+		
+		while(x.hasNext()) {
+			item = x.next();
+			System.out.println(item);
+		}
+		
 	}
 	
 	
 	@Override
 	public Iterator<Item> iterator() {
 		// TODO Auto-generated method stub
-		return new QueueIterator();
+		return new RandomizedQueueIterator();
 	}
 	
-	private class QueueIterator implements Iterator<Item>{
+	private class RandomizedQueueIterator implements Iterator<Item>{
 		
-		private Node current = head;
+		private Node iteratorHead = head;
+		private boolean[] numberHit = new boolean[size];
+		private int counter = 0;
+
 		
 		@Override
 		public boolean hasNext() {
-			return current.next != null;
+			
+			boolean foundSpace = false;
+			
+			for(int idx = 0; idx < numberHit.length;idx++) {
+				if(numberHit[idx] != true) {
+//					foundSpace = true;
+//					break;
+					
+					return true;
+				}
+			}
+			
+			return false;
+			
+//			return foundSpace;
+			
+//			if(iteratorSize == 0) {
+//				return false;
+//			}else {
+//				return true;
+//			}
+			
 		}
 
 		@Override
 		public Item next() {
-			Item holder = current.item;
+			iteratorHead = head;
 			
-			if(hasNext()) {
-				current = current.next;
+			
+			
+			boolean newValue = false;
+			int rand = 0;
+			
+			while(!newValue) {
+				rand = StdRandom.uniform(size);
+				
+				if(numberHit[rand] != true) {
+					break;
+				}
+				
 			}
 			
-			return holder;
 			
-		}
+			numberHit[rand] = true;
+			
+			int counter = 0;
+			
+			while(counter < rand && iteratorHead.next != null) {
+				iteratorHead = iteratorHead.next;
+				counter++;
+			}
+			
+			if(iteratorHead == null) {
+				throw new NoSuchElementException();
+			}
+			
+			
+//			System.out.println(rand);
+			Item toReturn = iteratorHead.item;
+			iteratorHead = null;
+			
+			return toReturn;
+			
+//			Node runner;
+//			int counter = 0;
+//			int rand;
+//			
+//			iteratorHead = head;
+//			iteratorTail = tail;
+//
+//			if(iteratorSize == 0) {
+//				throw new NoSuchElementException();
+//			}else if(iteratorSize == 1) {
+//				
+//				//System.out.println("Size: "  + iteratorSize);
+//				
+//				runner = iteratorHead;
+//				iteratorHead = null;
+//				iteratorTail = null;
+//				iteratorSize--;
+//				
+//				
+//				//System.out.println("ITR: " + runner.item);
+//				
+//				return runner.item;
+//			}else if(iteratorSize == 2) {
+//				runner = iteratorHead;
+////				System.out.println("Head: " + iteratorHead.item);
+////				System.out.println("Tail: " + iteratorTail.item);
+////				System.out.println("Size "  + iteratorSize);
+//				
+//				
+//				
+//				rand = StdRandom.uniform(iteratorSize); 
+//				
+////				System.out.println("Random: " + rand);
+//				
+//				
+//				while(counter < rand) {
+////					System.out.println("Counter: " + counter);
+//					runner = runner.next;
+//					counter++;
+//				}
+//				
+//				//System.out.println("Size: "  + iteratorSize);
+//				//System.out.println("ITR: " + runner.item);
+//				
+//				if(runner.next != null) {
+//					
+//					Node itr = runner;
+//					iteratorHead = runner.next;
+//					iteratorHead.previous = null;
+////					System.out.println("Runner.next != null");
+//					iteratorSize--;
+//
+//					return itr.item;
+//				}
+//				
+//				
+//				if(runner.next == null) {
+//					Node itr = runner;
+//					
+//					iteratorHead = runner.previous;
+//					iteratorHead.next = null;
+//					iteratorTail = iteratorHead;
+//					iteratorSize--;
+//
+//					return itr.item;
+//				}
+//				
+//			}else if(iteratorSize > 2) {
+//				runner = iteratorHead;
+////				System.out.println("Size > 2");
+////				System.out.println("Head: " + iteratorHead.item);
+////				System.out.println("Tail: " + iteratorTail.item);
+//				
+//				
+//				rand = StdRandom.uniform(iteratorSize); 
+//				
+//				while(counter < rand) {
+////					System.out.println("Counter: " + counter);
+//					runner = runner.next;
+//					counter++;
+//				}
+//				
+//				//System.out.println("Size: "  + iteratorSize);
+//				//System.out.println("ITR: " + runner.item);
+//				
+//				
+//				if(runner == iteratorHead) {
+////					System.out.println("Head element");
+//					iteratorHead = null;
+//					iteratorHead = runner.next;
+//					iteratorHead.previous = null;
+//					iteratorSize--;
+//					return runner.item;
+//				}
+//				
+//				if(runner == iteratorTail) {
+////					System.out.println("Tail Element");
+//					iteratorTail = null;
+//					iteratorTail = runner.previous;
+//					iteratorTail.next = null;
+//					iteratorSize--;
+//					return runner.item;
+//				}
+//				
+//				if(runner != iteratorHead && runner != iteratorTail) {
+////					System.out.println("Center element");
+//					
+//		        	Node holder = runner.next;
+//					runner.previous.next = holder;
+//					runner.next.previous = runner.previous;
+//					iteratorSize--;
+//					return runner.item;
+//					
+//				}
+//				
+//				//System.out.println();
+//			}
+//			
+//			//System.out.println();
+//			
+//			return null;
 		
+		}		
+		
+		
+		public void remove() {
+			throw new UnsupportedOperationException();
+		}
 	}
 	
 	
