@@ -1,4 +1,4 @@
-package Sorting;
+package OddsAndEnds;
 import java.io.*; 
 
 public class LocalMin {

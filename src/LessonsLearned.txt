@@ -81,5 +81,105 @@ Inheritance: has an object relationship of i Is - A (A Dolphin is a mamal, A cat
 Composition: has an object relationship of Has - A. (A lawn mower has an engine, A car has an engine they both are composed of an engine).
 
 JAN 15 2021:
-Encapsulation: Keeping the functionality in the object rather than spreading it out. 
+Encapsulation: Keeping the functionality in the object rather than spreading it out.
+
+
+APRIL 18 2021:
+
+Interfaces: A contract with classes that says that the specified method signatures and vairables will not change.
+Any class that implements an interface must also implement the methods of that interface to work. 
+You can implement several interfaces. 
+
+Where to create an interface? What can all your final objects do?
+Not all animals can walk but we can create a walk interface.
+Birds can walk and they can also fly!
+So we can create a fly interface. 
+
+ 
+4 Types of nested Classes 
+- Static nested classes
+- Non Static nested class or Inner class
+- Local class defined inside a scope block like a method
+- Anonymous class which is a class with out a class name.
+
+
+Inheritance: has an object relationship of i Is - A (A Dolphin is a mamal, A cat is a mamal they can both inherit from a super mamal class).
+Composition: has an object relationship of Has - A. (A lawn mower has an engine, A car has an engine they both are composed of an engine).
+
+Inheritance = a dog is an animal
+Can (Interface) = a parrot and bird can fly
+Abstraction = all animals can eat
+
+Abstract Class
+
+- Abstract Classes are similar to interfaces. You cannot instantiate them 
+and they may contain a mix of methods deckared with or without an implementation
+
+- You can declare fields that are not static and final and define public 
+protect and private concrete methods.
+
+- Can extend only one parent class but it can implement multiple interfaces.
+
+- When an abstract class is subclassed the sub class usually provides implementations
+for all of the abstract methods in its parent class.
+
+- However if it does not then the subclass must also be declared abstract. 
+
+
+Use an Abstract class when
+
+- You want to share code among several closely related classes
+
+- You expect classes that extend your abstract class to have many common
+methods or fields or required access modifiers other than public. 
+
+- You want to declare non staic or non final fields (for example name, age)
+this enables you to define methods that can access and modify the state of an object
+(getName setName).
+
+
+Interface Class
+
+- An interface is jsut the declaration of methods of a Class its not the implementation
+
+- In an interface we deine what kind of operation an object can perform. These operations
+are defined by the classes that implement the Interface.
+
+- Interfaces form a contact between the class and the outside world and this 
+contract is enforced at build time by the compiler.
+
+- Interfaces are more flexible and can deal with a lot more stress on the design of your 
+program than the implementation.
+
+- By introducing interfaces into your program you are really introduce points of variation
+at which you can plug in different implementations for that interface. An interfaces primary 
+purpose is abstraction, decoupling the what form the how. 
+
+- Since Java 8 Interfaces can contain default methods. The keyword default is used mostly 
+for backwards compatibility and static methods as well before Java 8 that was not possible. 
+
+
+When do you want to use an Interface
+
+- You expect that unrelated classes will implement your interface. For example
+the interfaces Comparable and Cloneable are implemented by many unrelated classes. 
+
+- You want to specify the behaviour of a particular data type but you are not concerned about 
+who implments its behaviour. 
+
+- You want to sperate different behaviour.
+
+- The collections API is an excellent example we have the List interface and implementations
+ArrayList and LinkedLIst
+
+
+May 02 2021:
+- You can extend from only one class but you can implement multiple interfaces. 
+- Class first then the interfaces. 
+- Using multiple bounds for creating when making a class a generic
+<T extends Player & Coach & Manager>
+
+
+
+
 

@@ -1,11 +1,14 @@
 package Sorting;
 
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
-import basicDataStructures.StdDraw;
-import basicDataStructures.StdOut;
+import edu.princeton.cs.algs4.StdDraw;
+import edu.princeton.cs.algs4.StdOut;
+
+
 
 public class FastColinearPoints {
 	
