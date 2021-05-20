@@ -35,6 +35,20 @@ public class DemoUMPQ {
 		
 		y.printOut();
 		
+		y.delMax();
+		
+		y.printOut();
+		
+		y.delMax();
+		
+		y.printOut();
+		
+		y.insert("S");
+		
+		y.printOut();
+		
+		
+		
 //		while(!y.isEmpty()) {
 //			System.out.println(y.delMax());
 //		}

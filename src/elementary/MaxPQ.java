@@ -29,32 +29,32 @@ public class MaxPQ <Key extends Comparable<Key>> {
 		
 	}
 	
-	private void swim(int k) {
+	private void swim(int index) {
 		
-		while(k > 1 && less(k/2, k)) {
+		while(index > 1 && less(index/2, index)) {
 			
-			exch(k, k/2);
-			k = k/2;
+			exch(index, index/2);
+			index = index/2;
 			
 		}
 		
 	}
 	
-	private void sink(int k) {
-        while (2*k <= N) {
+	private void sink(int index) {
+        while (2*index <= N) {
         	
-            int j = 2*k;
+            int j = 2*index;
             
             if (j < N && less(j, j+1)){ 
             	j++;
             }
             
-            if (!less(k, j)) {
+            if (!less(index, j)) {
             	break;
             }
             
-            exch(k, j);
-            k = j;
+            exch(index, j);
+            index = j;
             
         }
     }
