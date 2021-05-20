@@ -1,3 +1,4 @@
+package Sorting;
 /* ************************************************************************
  *  Compilation:  javac LineSegment.java
  *  Execution:    none
@@ -9,9 +10,9 @@
  *  DO NOT MODIFY THIS CODE.
  *
  *************************************************************************/
-package Sorting;
 
-import basicDataStructures.StdDraw;
+import edu.princeton.cs.algs4.StdDraw;
+
 
 public class LineSegment{
     public Point getP() {

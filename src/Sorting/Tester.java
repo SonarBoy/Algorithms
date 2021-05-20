@@ -3,6 +3,11 @@ package Sorting;
 import java.util.ArrayList;
 import java.util.Collections;
 
+//import Point;
+//import SortByXCoordinate;
+//import SortByYCoordinate;
+import OddsAndEnds.Dog;
+
 
 
 public class Tester {
@@ -86,17 +91,17 @@ public class Tester {
 		
 		//STEP 3.
 		
-		Dog[] dogArray = new Dog[4];
-		dogArray[0] = new Dog("Jeff","Sessions",5);
-		dogArray[1] = new Dog("Zack","Effron",2);
-		dogArray[2] = new Dog("Zacsk","Effron",3);
-		dogArray[3] = new Dog("Zacvk","Effron",4);
-		dogArray[3] = new Dog("Don","Lemon",10);
-		
-		
-		
-		InsertionSort.sort(dogArray);
-		
+//		Dog[] dogArray = new Dog[4];
+//		dogArray[0] = new Dog("Jeff","Sessions",5);
+//		dogArray[1] = new Dog("Zack","Effron",2);
+//		dogArray[2] = new Dog("Zacsk","Effron",3);
+//		dogArray[3] = new Dog("Zacvk","Effron",4);
+//		dogArray[3] = new Dog("Don","Lemon",10);
+//		
+//		
+//		
+//		InsertionSort.sort(dogArray);
+//		
 		
 		
 		/* Comparator Testing.

@@ -1,7 +1,8 @@
 package Sorting;
 
+
 import java.util.Comparator;
-import basicDataStructures.StdDraw;
+import edu.princeton.cs.algs4.StdDraw;
 
 public class Point implements Comparable<Point> {
 

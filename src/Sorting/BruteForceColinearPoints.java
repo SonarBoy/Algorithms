@@ -1,10 +1,13 @@
 package Sorting;
 
 
+
 import java.util.ArrayList;
 import java.util.Arrays;
-import basicDataStructures.StdDraw;
-import basicDataStructures.StdOut;
+
+import edu.princeton.cs.algs4.StdOut;
+import edu.princeton.cs.algs4.In;
+import edu.princeton.cs.algs4.StdDraw;
 
 public class BruteForceColinearPoints {
 	
