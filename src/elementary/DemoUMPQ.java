@@ -29,23 +29,30 @@ public class DemoUMPQ {
 		y.insert("I");
 		y.insert("G");
 		
+		
+		
 		y.printOut();
+		System.out.println();
 		
 		y.insert("S");
 		
 		y.printOut();
+		System.out.println();
 		
 		y.delMax();
 		
 		y.printOut();
+		System.out.println();
 		
 		y.delMax();
 		
 		y.printOut();
+		System.out.println();
 		
 		y.insert("S");
 		
 		y.printOut();
+		System.out.println();
 		
 		
 		
