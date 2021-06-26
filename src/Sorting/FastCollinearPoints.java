@@ -11,7 +11,7 @@ import edu.princeton.cs.algs4.StdOut;
 
 
 
-public class FastColinearPoints {
+public class FastCollinearPoints {
 	
 	private Point[] pointArray = null;
 	private Point[] pointsToDraw = null;
@@ -23,7 +23,9 @@ public class FastColinearPoints {
 	 * @param array
 	 * @return
 	 */
-	public FastColinearPoints(Point[] array) {
+	
+	
+	public FastCollinearPoints(Point[] array) {
 		
 		
 		if(array == null) {
@@ -31,18 +33,14 @@ public class FastColinearPoints {
 		}
 		
 		
-		pointArray = array.clone();
 		pointsToDraw = array.clone();
-		
 		Arrays.sort(pointsToDraw);
+		
+		
+		pointArray = pointsToDraw.clone();
 		int arrayLength = pointArray.length;
 		
-		
-		
 		for(int backRunner = 0, frontRunner = 1; frontRunner < pointsToDraw.length ; frontRunner++, backRunner++) {
-			if(pointsToDraw[frontRunner].compareTo(pointsToDraw[backRunner]) == 0) {
-				throw new IllegalArgumentException(); 
-			}
 			
 			if(pointsToDraw[frontRunner] == null) {
 				throw new IllegalArgumentException();
@@ -50,6 +48,10 @@ public class FastColinearPoints {
 			
 			if(pointsToDraw[backRunner] == null) {
 				throw new IllegalArgumentException();
+			}
+			
+			if(pointsToDraw[frontRunner].compareTo(pointsToDraw[backRunner]) == 0) {
+				throw new IllegalArgumentException(); 
 			}
 
 		}
@@ -74,9 +76,13 @@ public class FastColinearPoints {
 		double currentSlope = 0;
 		double forwardSlope = 0;
 		
+//		boolean toAdd = true;
+		
+		Arrays.sort(pointArray);
 		
 		Point origin = null;
 		Point highestPoint = null;
+		
 		
 		
 		for(int rowRunner = 0; rowRunner < arrayLength; rowRunner++) {
@@ -89,22 +95,23 @@ public class FastColinearPoints {
 			currentIndx = -1;
 			forwardIndx = 0;
 			
+//			toAdd = true;
+			
 //			System.out.println("Current Origin: " + origin);
 //			System.out.println();
 						
 			
-			
-			for(int columnRunner = 0; columnRunner < arrayLength && !(forwardIndx >= arrayLength); columnRunner++) {
+			//!(forwardIndx >= arrayLength) equals forwardIndx <= arrayLength + 1
+			for(int columnRunner = 0; columnRunner < arrayLength && forwardIndx <= arrayLength + 1; columnRunner++) {
 				
 //				System.out.println("Outer: " + pointArray[columnRunner] + " slope it makes with " + origin + " " +
 //						origin.slopeTo(pointArray[columnRunner]));
 				
 				
-				
+			
 				currentIndx++;
 				currentSlope = pointArray[currentIndx].slopeTo(origin);
-				
-				
+			
 				
 				forwardIndx++;
 				if(forwardIndx >= arrayLength) {
@@ -113,7 +120,7 @@ public class FastColinearPoints {
 					forwardSlope = pointArray[forwardIndx].slopeTo(origin);
 				}
 				
-				
+//				toAdd = true;
 			
 				//THE SECOND PART OF THIS STATEMENT forwardIndx <= arrayLength + 1 makes sure that it gets into the last element and 
 				//no farther
@@ -130,7 +137,7 @@ public class FastColinearPoints {
 						
 
 					if(slopeRunner == columnRunner) {
-						highestPoint = pointArray[columnRunner];
+						highestPoint = pointArray[slopeRunner];
 					}else{
 						
 						if(highestPoint.compareTo(pointArray[slopeRunner]) == -1) {
@@ -139,19 +146,27 @@ public class FastColinearPoints {
 						
 					}
 					
-
+//					if(origin.slopeTo(pointArray[slopeRunner]) == currentSlope) {
+//						if(origin.compareTo(pointArray[slopeRunner]) == 1) {
+//							toAdd = false;
+//							break;	
+//						}
+//					}
 					
-					
-					if(origin.compareTo(pointArray[slopeRunner]) != -1) {
+					//origin.compareTo(pointArray[slopeRunner]) != -1
+					//if(origin.compareTo(highestPoint) != -1) {
 						
-						if(origin.compareTo(pointArray[slopeRunner]) == 1) {
-							highestPoint = null;
-							break;
-						}
+						//origin.compareTo(pointArray[slopeRunner]) == 1
+//						if(origin.compareTo(highestPoint) == 1) {
+//							
+//							highestPoint = null;
+//							break;
+//						}
 					
-					}
+					//}
 					
 					if(highestPoint.compareTo(origin) == -1) {
+						//streakCounter =0;
 						highestPoint = null;
 						break;
 					}
@@ -164,15 +179,15 @@ public class FastColinearPoints {
 					
 					
 					
-					
-					forwardSlope = pointArray[forwardIndx].slopeTo(origin);
 					streakCounter++;
+					forwardSlope = pointArray[forwardIndx].slopeTo(origin);
 					forwardIndx++;
-
 				}
+				
+			
 
 
-				if((highestPoint != null && streakCounter >= 3) ) {
+				if(highestPoint != null && streakCounter >= 3) {
 					
 //					System.out.println("------------------END----------------------");
 //					System.out.println();
@@ -180,50 +195,37 @@ public class FastColinearPoints {
 //					System.out.println("Highest: " + highestPoint);
 //					System.out.println();
 					
-					//doesnt hit for the first value because there are no lines to speak of 
-//					for(LineSegment indexLine: this.lines) {
-//						
-//						String line = indexLine.toString();
-//						
-////						String firstPartNumber = line.substring(1, line.indexOf('-') - 2);
-////						String secondPartNumber = line.substring(line.indexOf('-') + 4, line.length() - 1);
-////						
-////						System.out.println("First Part Number : " +firstPartNumber);
-////						System.out.println("Second Part Number : " +secondPartNumber);
-//						
-//						
-//					}
-					
-					
-					
-					
+
+					boolean toAdd = true;
 					//System.out.println();
-					
-					lines.add(new LineSegment(origin,highestPoint));
+					for(int runner = 1; runner < pointArray.length; runner++) {
+						
+						if(origin.slopeTo(pointArray[runner]) == currentSlope) {
+							if(origin.compareTo(pointArray[runner]) == 1) {
+								toAdd = false;
+								break;	
+							}
+						}
+					}
+
+					if(toAdd) {
+						lines.add(new LineSegment(origin,highestPoint));
+					}
 					
 					highestPoint = null;
 					
-					
+				}else {
+//					System.out.println("------------------END----------------------");
+//					System.out.println();
+//					System.out.println();
 				}
 				
 
 				columnRunner += streakCounter;
 				currentIndx += streakCounter;
-				
 				streakCounter = 0;
 			}
 			
-
-//			Arrays.sort(lines.toArray(),new Comparator<LineSegment>() {
-//
-//				@Override
-//				public int compare(LineSegment o1, LineSegment o2) {
-//					// TODO Auto-generated method stub
-//					return 0;
-//				}
-//				
-//			});
-//			
 			
 		}
 		
@@ -251,7 +253,9 @@ public class FastColinearPoints {
 
 	public static void main(String[] args) {
 	 	In in = new In(args[0]);
+	 	
 	    int n = in.readInt();
+	    
 	    Point[] points = new Point[n];
 	    for (int i = 0; i < n; i++) {
 	        int x = in.readInt();
@@ -269,7 +273,8 @@ public class FastColinearPoints {
 	    StdDraw.show();
 	    
 	    
-	    FastColinearPoints x = new FastColinearPoints(points);
+	    FastCollinearPoints x = new FastCollinearPoints(points);
+	    
 	    
 
 		for (LineSegment segment : x.segments()) {
