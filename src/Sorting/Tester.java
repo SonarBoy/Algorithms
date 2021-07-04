@@ -155,7 +155,7 @@ public class Tester {
 			System.out.println(pointList.get(pointRunner));
 		}
         
-        Collections.sort(pointList,new SortByXCoordinate());
+        //Collections.sort(pointList,new SortByXCoordinate());
         System.out.println();
         System.out.println("X Sorted");
         
@@ -165,7 +165,7 @@ public class Tester {
 		}
         
         System.out.println();
-        Collections.sort(pointList,new SortByYCoordinate());
+        //Collections.sort(pointList,new SortByYCoordinate());
         System.out.println("Y Sorted");
         
         

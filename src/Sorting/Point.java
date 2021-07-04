@@ -1,7 +1,7 @@
 package Sorting;
 
-
 import java.util.Comparator;
+import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdDraw;
 
 public class Point implements Comparable<Point> {
@@ -16,6 +16,8 @@ public class Point implements Comparable<Point> {
 		
 		StdDraw.setScale(-50,50);
 		
+		
+		
 		this.setPointX(x);
 		this.setPointY(y);
 	}
@@ -23,43 +25,42 @@ public class Point implements Comparable<Point> {
 	
 	public void draw() {
 		
-		StdDraw.setPenRadius(0.01);
-		StdDraw.setPenColor(StdDraw.BLACK);
+		StdDraw.setPenRadius(0.003);
+		StdDraw.setPenColor(StdDraw.RED);
 		StdDraw.point(this.getPointX(), this.getPointY());
 		
 		
 	}
 	
+
+	
 	
 	//TODO: Make sure slopeTo is correct handling the corner cases. 
 	public double slopeTo(Point that) {	
-		
-		try {
 			
-			
-			if(that.getPointX() == this.getPointX()) {
-				return Double.POSITIVE_INFINITY;
-			}
-			
-			if(that.getPointY() == this.getPointY()) {
-				return 0;
-			}
 			
 			if(that.getPointX() == this.getPointX() && that.getPointY() == this.getPointY()) {
 				return Double.NEGATIVE_INFINITY;
 			}
-			
-			
-			
-			return ((double)(((double)that.getPointY()) - ((double)this.getPointY()))/(((double)that.getPointX()) - ((double)this.getPointX())));
-		}
 		
-		catch(Exception x) {
+			if(that.getPointX() == this.getPointX() && that.getPointY() != this.getPointY()) {
+				return Double.POSITIVE_INFINITY;
+			}
 			
-			System.out.println("Calculation threw :" + x.getMessage());
+			if(that.getPointY() == this.getPointY() && that.getPointX() != this.getPointX()) {
+				return 0;
+			}
 			
-			return Double.NEGATIVE_INFINITY;
-		}
+			
+			
+			
+			
+			return (((double)that.getPointY()) - ((double)this.getPointY()))/(((double)that.getPointX()) - ((double)this.getPointX()));
+		
+		
+		
+		
+		
 	}
 	
 	/**
@@ -77,7 +78,7 @@ public class Point implements Comparable<Point> {
 	
 	
 	public String toString() {
-		return "X: " + this.getPointX() + " Y: " + this.getPointY();
+		return "(" + this.pointX + ", " + this.pointY + ")";
 	}
 	
 	
@@ -96,31 +97,33 @@ public class Point implements Comparable<Point> {
 		}else if(this.getPointY() == comparePoint.getPointY() && this.getPointX() < comparePoint.getPointX()) {
 				return -1;
 		}else if(this.getPointY() > comparePoint.getPointY()){
-				return 1;
+				return +1;
 		}else if(this.getPointY() == comparePoint.getPointY() && this.getPointX() > comparePoint.getPointX()) {
-				return 1;
-		}else {
+				return +1;
+		}else if(this.getPointY() == comparePoint.getPointY() && this.getPointX() == comparePoint.getPointX()){
 			return 0;
+		}else {
+			return 2;
 		}
 	}
 
-
-	public int getPointX() {
+    
+	private int getPointX() {
 		return pointX;
 	}
 
 
-	public void setPointX(int pointX) {
+	private void setPointX(int pointX) {
 		this.pointX = pointX;
 	}
 
 
-	public int getPointY() {
+	private int getPointY() {
 		return pointY;
 	}
 
 
-	public void setPointY(int pointY) {
+	private void setPointY(int pointY) {
 		this.pointY = pointY;
 	}
 	
@@ -142,18 +145,15 @@ public class Point implements Comparable<Point> {
 				 firstSlope = that.slopeTo(first);
 				 secondSlope = that.slopeTo(second);
 				 
-				 if(Double.isNaN(firstSlope)) {
-					 firstSlope = Double.NEGATIVE_INFINITY;
-				 }else if(Double.isNaN(secondSlope)) {
-					 secondSlope = Double.NEGATIVE_INFINITY;
-				 }
-				
+
 				 if(firstSlope < secondSlope) {
 					 return -1;
 				 }else if(firstSlope > secondSlope) {
-					 return 1;
-				 }else {
+					 return +1;
+				 }else if(firstSlope == secondSlope){
 					 return 0;
+				 }else {
+					 return -2;
 				 }
 				
 				 
@@ -165,20 +165,94 @@ public class Point implements Comparable<Point> {
 		
 	}
 	
+	public static void main(String [] args) {
+		
+		/*
+		 * 10000 0
+8000 2000
+2000 8000
+0  10000
+
+20000 0
+18000 2000
+2000 18000
+
+10000 20000
+30000 0
+0 30000
+20000 10000
+
+13000 0
+11000 3000
+5000 12000
+9000 6000
+		 */
+//	 	In in = new In(args[0]);
+//	    int n = in.readInt();
+//	    Point[] points = new Point[n];
+//	    for (int i = 0; i < n; i++) {
+//	        int x = in.readInt();
+//	        int y = in.readInt();
+//	        points[i] = new Point(x, y);
+//	    }
+//		
+		//Array.sort(points);
+	    
+	    
+		
+		//System.out.println(x.slopeOrder(y));
+		
+		Point p1 = new Point(1, 1);
+        Point p2 = new Point(2, 8);
+        Point p3 = new Point(1, 4);
+        Point p4 = new Point(-3, 1);
+        Point p5 = new Point(2, 2);
+        Point p6 = new Point(1, 1);
+        double slope2 = p1.slopeTo(p2);
+        double slope3 = p1.slopeTo(p3);
+        double slope4 = p1.slopeTo(p4);
+        double slope5 = p1.slopeTo(p5);
+        double slope6 = p1.slopeTo(p6);
+        System.out.println("slope2 = " + slope2);
+        System.out.println("slope3 = " + slope3);
+        System.out.println("slope4 = " + slope4);
+        System.out.println("slope5 = " + slope5);
+        System.out.println("slope5 = " + slope5);
+        System.out.println("slope6 = " + slope6);
+        
+        
+
+    	
+        p1 = new Point(1000,1000);
+        p2 = new Point(2000,2000);
+        p3 = new Point(1000,2000);
+        p4 = new Point(500,500);
+        p5 = new Point(1000,500);
+        p6 = new Point(1000,1000);
+        
+        System.out.println(p1.compareTo(p2));
+        System.out.println(p1.compareTo(p3));
+        System.out.println(p1.compareTo(p4));
+        System.out.println(p1.compareTo(p5));
+        System.out.println(p1.compareTo(p6));
+        
+        
+	}
+	
 }
 
 	//Comparators
-	class SortByXCoordinate implements Comparator<Point>{
-	
-		@Override
-		public int compare(Point o1, Point o2) {
-			return o1.getPointX() - o2.getPointX();
-		}
-		
-	}
-	
-	class SortByYCoordinate implements Comparator<Point>{
-		public int compare(Point o1, Point o2) {
-			return o1.getPointY() - o2.getPointY();
-		}
-	}
+//	class SortByXCoordinate implements Comparator<Point>{
+//	
+//		@Override
+//		public int compare(Point o1, Point o2) {
+//			return o1.getPointX() - o2.getPointX();
+//		}
+//		
+//	}
+//	
+//	class SortByYCoordinate implements Comparator<Point>{
+//		public int compare(Point o1, Point o2) {
+//			return o1.getPointY() - o2.getPointY();
+//		}
+//	}
