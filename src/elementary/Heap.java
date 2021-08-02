@@ -120,7 +120,7 @@ public class Heap {
      */
     public static void main(String[] args) {
         //String[] a = StdIn.readAllStrings();
-        String[] a = {"S","O","R","T","E","X","A","M","P","L","E"};
+        String[] a = {"E","D","C","B","A"};
         Heap.sort(a);
         show(a);
     }

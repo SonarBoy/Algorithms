@@ -27,7 +27,8 @@ public class LocalMinima {
 		
 		LocalMinima x = new LocalMinima();
 		
-		int [] array = {10, 5, 21, 20, 13, 16, 7};
+		//int [] array = {10, 5, 21, 20, 13, 16, 7};
+		int [] array = {1, 2, 3, 4, 5, 6, 7};
 		System.out.println(x.findLocalMinima(array, 0, array.length));
 		
 

@@ -108,7 +108,7 @@ public class Point implements Comparable<Point> {
 	}
 
     
-	private int getPointX() {
+	public int getPointX() {
 		return pointX;
 	}
 
@@ -118,7 +118,7 @@ public class Point implements Comparable<Point> {
 	}
 
 
-	private int getPointY() {
+	public int getPointY() {
 		return pointY;
 	}
 
@@ -145,7 +145,18 @@ public class Point implements Comparable<Point> {
 				 firstSlope = that.slopeTo(first);
 				 secondSlope = that.slopeTo(second);
 				 
-
+				 
+				 /* Standard Recipe for user-defined types
+				  * 
+				  * - Optimization for reference equality (if param is this)
+				  * - Check against null
+				  * - Check that two objects are of the same type and cast.
+				  * - Compare each significant field:
+				  *    Primitives ==
+				  *    Objects .equals()
+				  *    Array  loop through each entry
+				  */
+				 
 				 if(firstSlope < secondSlope) {
 					 return -1;
 				 }else if(firstSlope > secondSlope) {
@@ -242,17 +253,17 @@ public class Point implements Comparable<Point> {
 }
 
 	//Comparators
-//	class SortByXCoordinate implements Comparator<Point>{
-//	
-//		@Override
-//		public int compare(Point o1, Point o2) {
-//			return o1.getPointX() - o2.getPointX();
-//		}
-//		
-//	}
-//	
-//	class SortByYCoordinate implements Comparator<Point>{
-//		public int compare(Point o1, Point o2) {
-//			return o1.getPointY() - o2.getPointY();
-//		}
-//	}
+	class SortByXCoordinate implements Comparator<Point>{
+	
+		@Override
+		public int compare(Point o1, Point o2) {
+			return o1.getPointX() - o2.getPointX();
+		}
+		
+	}
+	
+	class SortByYCoordinate implements Comparator<Point>{
+		public int compare(Point o1, Point o2) {
+			return o1.getPointY() - o2.getPointY();
+		}
+	}
