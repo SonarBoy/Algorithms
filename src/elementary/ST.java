@@ -6,6 +6,7 @@ import java.util.NoSuchElementException;
 import java.util.TreeMap;
 
 import basicDataStructures.StdOut;
+import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdIn;
 
 /**
@@ -226,11 +227,32 @@ public class ST<Key extends Comparable<Key>, Value> implements Iterable<Key> {
      */
     public static void main(String[] args) {
         ST<String, Integer> st = new ST<String, Integer>();
-        for (int i = 0; !StdIn.isEmpty(); i++) {
-            String key = StdIn.readString();
-            st.put(key, i);
-        }
-        for (String s : st.keys())
-            StdOut.println(s + " " + st.get(s));
+        
+//        
+//        In in = new In(args[0]);
+//	 	
+//	    int n = in.readInt();
+//	    
+        
+        
+        
+//        for(int runner = 0; runner < 10; runner++) {
+//        	st.put("w", n);
+//        }
+//        
+//        
+//      for (String s : st.keys())
+//      StdOut.println(s + " " + st.get(s));
+//        
+        
+        
+//        for (int i = 0; !StdIn.isEmpty(); i++) {
+//            String key = StdIn.readString();
+//            st.put(key, i);
+//        }
+//        for (String s : st.keys())
+//            StdOut.println(s + " " + st.get(s));
+        
+        
     }
 }
