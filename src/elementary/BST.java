@@ -118,9 +118,14 @@ public class BST<Key extends Comparable<Key>,Value> {
         return (Key) min(root).key;
     } 
 
-    private Node min(Node x) { 
-        if (x.left == null) return x; 
-        else                return min(x.left); 
+    private Node min(Node x) {
+    	
+        if (x.left == null) {
+        	return x; 
+        }else {
+        	return min(x.left); 
+        }
+        
     } 
 
     /**
