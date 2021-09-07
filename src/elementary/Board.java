@@ -6,13 +6,16 @@ public class Board {
 	int[][] goalBoard;
 	int[][] gameBoard; 
 	int side;
+	int sideForCalc;
     // create a board from an n-by-n array of tiles,
     // where tiles[row][col] = tile at (row, col)
     public Board(int[][] tiles) {
     	
     	gameBoard = tiles;
     	side = tiles[0].length;
-    	System.out.println(side);
+    	sideForCalc = side - 1;
+    	System.out.println("Regular Side Length: " + side);
+    	System.out.println("Calc Side Length: " + sideForCalc);
     	
     	goalBoard = new int[side][side];
     	
@@ -47,6 +50,42 @@ public class Board {
     	
     	
     	return printOut;
+    	
+    }
+    
+    public void numberToCoordinates(int number) {
+    	
+    	int column;
+    	int row;
+    	
+    	if(number == 0) {
+    		column = this.sideForCalc;
+    		row = this.sideForCalc;
+    		
+    		System.out.println("Row: " + row + " Column: "+ column);
+    		
+    		
+    		return;
+    	}
+    	
+    	
+    	
+    	if(number % this.sideForCalc == 0) {
+    		
+    		column = this.sideForCalc;
+    		row = number/this.sideForCalc;
+    		
+    		System.out.println("Row: " + row + " Column: "+ column);
+    		
+    		return;
+    		
+    	}else {
+    		column = number % this.sideForCalc; 
+    	}
+    	
+    	row = number/this.sideForCalc + 1;
+    	
+    	System.out.println("Row: " + row + " Column: "+ column);
     	
     }
 
@@ -88,7 +127,7 @@ public class Board {
     // unit testing (not graded)
     public static void main(String[] args) {
     	
-    	int leng = 5;
+    	int leng = 4;
     	
     	int[][] board = new int[leng][leng];
     	
@@ -125,6 +164,10 @@ public class Board {
     	
     	System.out.println(x.toString());
     	//x.toString();
+    	
+//    	x.numberToCoordinates(0);
+//    	x.numberToCoordinates(77);
+//    	x.numberToCoordinates(15);
     	
     }
 
