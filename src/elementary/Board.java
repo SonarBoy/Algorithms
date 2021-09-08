@@ -1,5 +1,9 @@
 package elementary;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 public class Board {
 	
 	
@@ -127,23 +131,58 @@ public class Board {
     // unit testing (not graded)
     public static void main(String[] args) {
     	
-    	int leng = 4;
-    	
-    	int[][] board = new int[leng][leng];
     	
     	
-    	for(int runner = 1; runner < leng; runner++) {
-    		for(int runnerTwo = 1; runnerTwo < leng; runnerTwo++) {
-    			
-    			if(runner == (leng - 1) && runnerTwo == (leng - 1)) {
-    				board[runner][runnerTwo] = 0;
-    			}else {
-    				board[runner][runnerTwo] = ((leng - 1) * (runner - 1) + runnerTwo);
-    			}
-    			
-        		
-        	}
-    	}
+    	int leng;
+    	
+    	try {
+    		
+    		File f = new File("C:\\Users\\Reginald\\eclipse-workspace\\DataAlgo\\src\\elementary\\gameBoard3x3.txt");
+			Scanner scan = new Scanner(f);
+			
+			int charater = 0;
+			
+			leng = scan.nextInt() + 1;
+			
+//			while(scan.hasNext()) {
+//				
+//				charater = scan.nextInt();
+//				
+//				
+//				//if(charater)
+//				
+//				System.out.print(charater);
+//			}
+			
+			
+			
+			int[][] board = new int[leng][leng];
+	    	
+	    	for(int runner = 1; runner < leng; runner++) {
+	    		for(int runnerTwo = 1; runnerTwo < leng; runnerTwo++) {
+	    			
+	    			if(runner == (leng - 1) && runnerTwo == (leng - 1)) {
+	    				board[runner][runnerTwo] = 0;
+	    			}else {
+	    				board[runner][runnerTwo] = scan.nextInt();
+	    			}
+	    			
+	        		
+	        	}
+	    	}
+	    	
+	    	
+	    	Board x = new Board(board);
+	    	
+	    	System.out.println(x.toString());
+			
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	
+    	
     	
 //    	for(int runner = 1; runner < 10; runner++) {
 //    		System.out.println("Runner: " + runner);
@@ -160,9 +199,7 @@ public class Board {
     	*/
     	
     	
-    	Board x = new Board(board);
     	
-    	System.out.println(x.toString());
     	//x.toString();
     	
 //    	x.numberToCoordinates(0);
