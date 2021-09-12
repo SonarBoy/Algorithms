@@ -6,15 +6,17 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Scanner;
 
+
+
 import edu.princeton.cs.algs4.Queue;
 
 
 public class Board {
 
-	int[][] goalBoard;
-	int[][] gameBoard;
-	int side;
-	int sideForCalc;
+	private int[][] goalBoard;
+	private int[][] gameBoard;
+	private int side;
+	private int sideForCalc;
 
 	// create a board from an n-by-n array of tiles,
 	// where tiles[row][col] = tile at (row, col)
@@ -23,22 +25,6 @@ public class Board {
 		gameBoard = tiles;
 		side = tiles[0].length;
 		sideForCalc = side - 1;
-//    	System.out.println("Regular Side Length: " + side);
-//    	System.out.println("Calc Side Length: " + sideForCalc);
-
-//		goalBoard = new int[side][side];
-//
-//		for (int runner = 1; runner < side; runner++) {
-//			for (int runnerTwo = 1; runnerTwo < side; runnerTwo++) {
-//
-//				if (runner == (side - 1) && runnerTwo == (side - 1)) {
-//					goalBoard[runner][runnerTwo] = 0;
-//				} else {
-//					goalBoard[runner][runnerTwo] = ((side - 1) * (runner - 1) + runnerTwo);
-//				}
-//
-//			}
-//		}
 
 	}
 
@@ -49,49 +35,51 @@ public class Board {
 
 		int[] coordinates = new int[2];
 
-		if (number == 0) {
+		
+		if(number == 0) {
 			column = this.sideForCalc;
 			row = this.sideForCalc;
+			
+			
+//			System.out.println("Row: " + row + " Column: "+ column);
+//			return;
+			
 			coordinates[0] = row;
 			coordinates[1] = column;
-
-			// System.out.println("Row: " + row + " Column: "+ column);
-
 			return coordinates;
 		}
-
-		if (number % this.sideForCalc == 0) {
-
+		
+		if(number % this.side == 0) {
+			row = (number/this.side) - 1;
 			column = this.sideForCalc;
-			row = number / this.sideForCalc;
-
+			
+//			System.out.println("Row: " + row + " Column: "+ column);
+//			return;
+			
 			coordinates[0] = row;
 			coordinates[1] = column;
-
-			// System.out.println("Row: " + row + " Column: "+ column);
-
 			return coordinates;
-
-		} else {
-
-			column = number % this.sideForCalc;
+		}else {
+			
+			
+			row = (number/this.side);
+			column = (number % this.side) - 1;
+			
+//			System.out.println("Row: " + row + " Column: "+ column);
+//			return;
+			
+			coordinates[0] = row;
 			coordinates[1] = column;
-
+			return coordinates;
 		}
-
-		row = number / this.sideForCalc + 1;
-		coordinates[0] = row;
-
-		// System.out.println("Row: " + coordinates[0] + " Column: "+ coordinates[1]);
-
-		return coordinates;
+		
 	}
 
 	private int[][] copy(int[][] board) {
 
 		int[][] copyOfBoard = new int[side][side];
-		for (int runner = 1; runner < side; runner++) {
-			for (int runnerTwo = 1; runnerTwo < side; runnerTwo++) {
+		for (int runner = 0; runner < side; runner++) {
+			for (int runnerTwo = 0; runnerTwo < side; runnerTwo++) {
 
 				copyOfBoard[runner][runnerTwo] = gameBoard[runner][runnerTwo];
 
@@ -112,9 +100,9 @@ public class Board {
 	public String toString() {
 
 		StringBuilder s = new StringBuilder();
-		s.append(this.side - 1 + "\n");
-		for (int runner = 1; runner < side; runner++) {
-			for (int runnerTwo = 1; runnerTwo < side; runnerTwo++) {
+		s.append(this.side+ "\n");
+		for (int runner = 0; runner < side; runner++) {
+			for (int runnerTwo = 0; runnerTwo < side; runnerTwo++) {
 				s.append(String.format("%2d ", gameBoard[runner][runnerTwo]));
 			}
 			s.append("\n");
@@ -126,7 +114,7 @@ public class Board {
 
 	// board dimension n
 	public int dimension() {
-		return this.sideForCalc;
+		return this.side;
 	}
 
 	// number of tiles out of place
@@ -135,8 +123,8 @@ public class Board {
 		int[] coordinates = null;
 		int totalOutPlace = 0;
 
-		for (int runner = 1; runner < side; runner++) {
-			for (int runnerTwo = 1; runnerTwo < side; runnerTwo++) {
+		for (int runner = 0; runner < side; runner++) {
+			for (int runnerTwo = 0; runnerTwo < side; runnerTwo++) {
 
 				if (gameBoard[runner][runnerTwo] != 0) {
 
@@ -158,6 +146,8 @@ public class Board {
 		// System.out.println("Total Out of place: " + totalOutPlace);
 
 		return totalOutPlace;
+		
+		//return -1;
 	}
 
 	// sum of Manhattan distances between tiles and goal
@@ -166,8 +156,8 @@ public class Board {
 		int[] coordinates = null;
 		int totalDistance = 0;
 
-		for (int runner = 1; runner < side; runner++) {
-			for (int runnerTwo = 1; runnerTwo < side; runnerTwo++) {
+		for (int runner = 0; runner < side; runner++) {
+			for (int runnerTwo = 0; runnerTwo < side; runnerTwo++) {
 				// System.out.println(gameBoard[runner][runnerTwo] + " \n" + "Coordnates: " );
 				if (gameBoard[runner][runnerTwo] != 0) {
 					coordinates = numberToCoordinates(gameBoard[runner][runnerTwo]);
@@ -181,6 +171,8 @@ public class Board {
 		}
 
 		return totalDistance;
+		
+		//return -1;
 	}
 
 	// is this board the goal board?
@@ -205,8 +197,8 @@ public class Board {
 		int col = 0;
 		int totalDistance = 0;
 
-		for (int runner = 1; runner < side; runner++) {
-			for (int runnerTwo = 1; runnerTwo < side; runnerTwo++) {
+		for (int runner = 0; runner < side; runner++) {
+			for (int runnerTwo = 0; runnerTwo < side; runnerTwo++) {
 
 				if (gameBoard[runner][runnerTwo] == 0) {
 
@@ -229,7 +221,7 @@ public class Board {
 		
 		// * *
 		// *
-		if (row == 1 && col == 1) {
+		if (row == 0 && col == 0) {
 			
 			int[][] test1 = copy(this.gameBoard);
 			swap(row, col, row, col + 1, test1);
@@ -246,13 +238,13 @@ public class Board {
 		
 		// * *
 		// 	 * 
-		if (row == 1 && col == this.sideForCalc) {
+		if (row == 0 && col == this.sideForCalc) {
 			
 			int[][] test1 = copy(this.gameBoard);
 			swap(row, col, row, col - 1, test1);
 			
 			int[][] test2 = copy(this.gameBoard);
-			swap(row, col, row + 1, col, test1);
+			swap(row, col, row + 1, col, test2);
 			
 			
 			neighbours.enqueue(new Board(test1));
@@ -264,7 +256,7 @@ public class Board {
 		// *
 		// * *
 
-		if (row == this.sideForCalc && col == 1) {
+		if (row == this.sideForCalc && col == 0) {
 			
 			int[][] test1 = copy(this.gameBoard);
 			swap(row, col, row - 1, col , test1);
@@ -298,7 +290,7 @@ public class Board {
 		// * * *
 		//   *
 
-		if (row == 1 && (col > 1 && col < this.sideForCalc)) {
+		if (row == 0 && (col > 0 && col < this.sideForCalc)) {
 			
 			int[][] test1 = copy(this.gameBoard);
 			swap(row, col, row, col - 1, test1);
@@ -319,7 +311,7 @@ public class Board {
 		// * *
 		// *
 
-		if ((row > 1 && row < this.sideForCalc) && col == 1) {
+		if ((row > 0 && row < this.sideForCalc) && col == 0) {
 			
 			int[][] test1 = copy(this.gameBoard);
 			swap(row, col, row + 1, col , test1);
@@ -340,7 +332,7 @@ public class Board {
 		// * *
 		//   *
 
-		if ((row > 1 && row < this.sideForCalc) && col == this.sideForCalc) {
+		if ((row > 0 && row < this.sideForCalc) && col == this.sideForCalc) {
 			
 			int[][] test1 = copy(this.gameBoard);
 			swap(row, col, row + 1, col , test1);
@@ -360,7 +352,7 @@ public class Board {
 		//   *
 		// * * *
 
-		if (row == this.sideForCalc && (col > 1 && col < this.sideForCalc)) {
+		if (row == this.sideForCalc && (col > 0 && col < this.sideForCalc)) {
 			
 			
 			int[][] test1 = copy(this.gameBoard);
@@ -406,12 +398,12 @@ public class Board {
 		int [][] board = copy(this.gameBoard);
 		
 		
-		for(int runner = 1;!twinCreated && runner < side;runner++) {
-			if(board[runner][1] != 0 && board[runner][2] != 0) {
+		for(int runner = 0;!twinCreated && runner < side;runner++) {
+			if(board[runner][0] != 0 && board[runner][1] != 0) {
 				
-				int holder = board[runner][1];
-				board[runner][1] = board[runner][2];
-				board[runner][2] = holder;
+				int holder = board[runner][0];
+				board[runner][0] = board[runner][1];
+				board[runner][1] = holder;
 				
 				twinCreated = true;
 			}
@@ -429,17 +421,15 @@ public class Board {
 
 		try {
 
-			File f = new File("C:\\Users\\Reginald\\eclipse-workspace\\DataAlgo\\src\\elementary\\gameBoard3x3.txt");
+			File f = new File("C:\\Users\\Reginald\\eclipse-workspace\\8puzzle\\src\\gameBoard3x3.txt");
 			Scanner scan = new Scanner(f);
 
-			int charater = 0;
-
-			leng = scan.nextInt() + 1;
+			leng = scan.nextInt();
 
 			int[][] board = new int[leng][leng];
 
-			for (int runner = 1; runner < leng; runner++) {
-				for (int runnerTwo = 1; runnerTwo < leng; runnerTwo++) {
+			for (int runner = 0; runner < leng; runner++) {
+				for (int runnerTwo = 0; runnerTwo < leng; runnerTwo++) {
 					board[runner][runnerTwo] = scan.nextInt();
 				}
 			}
@@ -447,15 +437,29 @@ public class Board {
 			Board x = new Board(board);
 
 			System.out.println(x.toString());
-
 			System.out.println("Total Manhattan Distance: " + x.manhattan());
 			System.out.println("Total Hamming: " + x.hamming());
+
+			
+
+
+			
+
+//			System.out.println("Total Manhattan Distance: " + x.manhattan());
+//			System.out.println("Total Hamming: " + x.hamming());
 
 			Queue<Board> queue = (Queue<Board>) x.neighbors();
 			
 			Iterator iter = queue.iterator();
 			while(iter.hasNext()) {
-				System.out.println(iter.next().toString());
+				
+				Board b = (Board) iter.next();
+				
+				System.out.println(b.toString());
+				System.out.println("Total Manhattan Distance: " + b.manhattan());
+				System.out.println("Total Hamming: " + b.hamming());
+
+				
 			}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block

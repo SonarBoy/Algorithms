@@ -1,9 +1,23 @@
 package elementary;
+import edu.princeton.cs.algs4.MinPQ;
 
 public class Solver {
 
     // find a solution to the initial board (using the A* algorithm)
     public Solver(Board initial) {
+    	
+    	MinPQ openList = new MinPQ();
+    	MinPQ closedList = new MinPQ();
+    	
+    	
+    	Board currentBoard = initial;
+    	
+    	int manhattan = currentBoard.manhattan();
+    	int hamming = currentBoard.hamming();
+    	
+    	while(!currentBoard.isGoal()) {
+    		
+    	}
     	
     }
 
