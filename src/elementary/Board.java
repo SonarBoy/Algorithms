@@ -13,7 +13,6 @@ import edu.princeton.cs.algs4.Queue;
 
 public class Board {
 
-	private int[][] goalBoard;
 	private int[][] gameBoard;
 	private int side;
 	private int sideForCalc;
@@ -136,18 +135,12 @@ public class Board {
 
 				}
 
-				// totalInPlace = Math.abs(Math.abs(coordinates[0] - runner) +
-				// Math.abs(coordinates[1] - runnerTwo));
-
 			}
 
 		}
 
-		// System.out.println("Total Out of place: " + totalOutPlace);
 
 		return totalOutPlace;
-		
-		//return -1;
 	}
 
 	// sum of Manhattan distances between tiles and goal
@@ -178,12 +171,43 @@ public class Board {
 	// is this board the goal board?
 	public boolean isGoal() {
 		// Arrays.deepEquals(this.gameBoard,this.goalBoard);
-		return Arrays.deepEquals(this.gameBoard, this.goalBoard);
+		
+		int[] coordinates = null;
+		
+		for (int runner = 0; runner < side; runner++) {
+			for (int runnerTwo = 0; runnerTwo < side; runnerTwo++) {
+
+				if (gameBoard[runner][runnerTwo] != 0) {
+
+					coordinates = numberToCoordinates(gameBoard[runner][runnerTwo]);
+
+					if (coordinates[0] != runner || coordinates[1] != runnerTwo) {
+						return false;
+					}
+
+				}
+				
+				if(gameBoard[runner][runnerTwo] == 0) {
+					if(runner != (side - 1) && runnerTwo != (side - 1)) {
+						return false;
+					}
+				}
+
+			}
+
+		}
+		
+		
+		return true;
 	}
 
 	// does this board equal y?
 	public boolean equals(Object y) {
-
+		
+		if(y == null) {
+			throw new IllegalArgumentException();
+		}
+		
 		Board toCompare = (Board) y;
 
 		return this.toString().equals(toCompare.toString());
@@ -372,7 +396,7 @@ public class Board {
 		
 		
 		int[][] test1 = copy(this.gameBoard);
-		swap(row, col, row - 1, col , test1);
+		swap(row, col, row + 1, col , test1);
 		
 		int[][] test2 = copy(this.gameBoard);
 		swap(row, col, row, col + 1 , test2);
@@ -461,6 +485,9 @@ public class Board {
 
 				
 			}
+			
+			
+			System.out.println(x.isGoal());
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
