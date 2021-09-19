@@ -83,7 +83,11 @@ public class Solver {
     			
     			if(!inOpen && !inClosed) {
     				this.moves++;
-    				openList.insert(new SearchNode(checkingNode,this.moves,currentNode));
+    				
+    				SearchNode node = new SearchNode(checkingNode,this.moves,currentNode);
+    				
+    				openList.insert(node);
+    				
     			}
     			
     			
