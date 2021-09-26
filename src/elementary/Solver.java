@@ -1,6 +1,7 @@
 package elementary;
 
 import java.io.File;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Comparator;
 import java.util.Iterator;
@@ -125,44 +126,44 @@ public class Solver {
     			
     			
     			SearchNode runner = currentNode;
-//    			while(runner.prev() != null) {
-//    				if(runner.current().equals(checkingNode)) {
-//    					inClosed = true;
-//    					break;
-//    				}
-//    				runner = runner.prev();
-//    			}
-    			
-    			Iterator<SearchNode> closedListIterator = closedList.iterator();
-    			while(closedListIterator.hasNext()) {
-    				
-    				SearchNode closedNode = closedListIterator.next();
-    				
-    				if(closedNode.current().equals(checkingNode)) {
-    					
+    			while(runner.prev() != null) {
+    				if(runner.current().equals(checkingNode)) {
     					inClosed = true;
-    					//System.out.println("Closed");
     					break;
     				}
-
+    				runner = runner.prev();
     			}
     			
-    			if(!inClosed) {
-    				Iterator<SearchNode> openListIterator = openList.iterator();
-        			while(openListIterator.hasNext()) {
-        				
-        				SearchNode openNode = openListIterator.next();
-        				
-        				if(openNode.current().equals(checkingNode)) {
-        					
-        					inOpen = true;
-        					//System.out.println("Open");
-        					break;
-        				}
-        				
-        			
-        			}
-    			}
+//    			Iterator<SearchNode> closedListIterator = closedList.iterator();
+//    			while(closedListIterator.hasNext()) {
+//    				
+//    				SearchNode closedNode = closedListIterator.next();
+//    				
+//    				if(closedNode.current().equals(checkingNode)) {
+//    					
+//    					inClosed = true;
+//    					//System.out.println("Closed");
+//    					break;
+//    				}
+//
+//    			}
+//    			
+//    			if(!inClosed) {
+//    				Iterator<SearchNode> openListIterator = openList.iterator();
+//        			while(openListIterator.hasNext()) {
+//        				
+//        				SearchNode openNode = openListIterator.next();
+//        				
+//        				if(openNode.current().equals(checkingNode)) {
+//        					
+//        					inOpen = true;
+//        					//System.out.println("Open");
+//        					break;
+//        				}
+//        				
+//        			
+//        			}
+//    			}
 
     			
     				if(!inClosed && !inOpen) {
