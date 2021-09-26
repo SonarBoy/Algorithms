@@ -1,7 +1,6 @@
 package elementary;
 
 import java.io.File;
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Comparator;
 import java.util.Iterator;
@@ -47,31 +46,6 @@ public class Solver {
     				}
     			});
     	
-    	
-    	MinPQ<SearchNode> closedList = new MinPQ<SearchNode>(
-    			(Comparator<SearchNode>) new Comparator<SearchNode>() {    
-    				public int compare(SearchNode s1, SearchNode s2) {
-    					
-    					
-    					if(s1.priority() < s2.priority()) {
-    						return -1;
-    					}else if(s1.priority() > s2.priority()) {
-    						return 1;
-    					}else {
-    						if(s1.current().manhattan() < s2.current().manhattan()) {
-    							return -1;
-    						}else if(s1.current().manhattan() > s2.current().manhattan()) {
-    							return 1;
-    						}else {
-    							return 0;
-    						}
-    					}
-    					
-    					
-    				}
-    			});
-    	
-    	
     	Board currentBoard = initial;
     	SearchNode currentNode = new SearchNode(currentBoard,0,null);
     	
@@ -83,8 +57,6 @@ public class Solver {
 //    		System.out.println("Hamming: "+ currentNode.current().hamming());
 //    		System.out.println(currentNode.current().toString());
     		
-    		
-    		closedList.insert(currentNode);
     		
     		if(currentNode.current().isGoal()) {
     			this.moves = currentNode.moves;
@@ -110,8 +82,6 @@ public class Solver {
     		
     		for(;iter.hasNext();) {
     			Board checkingNode = iter.next();
-    			
-    			
     			node = new SearchNode(checkingNode,nextMoves,currentNode);
     			
     			
@@ -119,39 +89,31 @@ public class Solver {
 //    			System.out.println("Manhattan: "+checkingNode.manhattan());
 //    			System.out.println("Hamming: "+checkingNode.hamming());
 //    			System.out.println("Moves: "+ nextMoves);
-    			
-    			if(currentNode.prev() == null) {
+
+				if(currentNode.prev() == null) {
 					openList.insert(node);
-					//System.out.println(node.current().toString());
+					System.out.println(node.current().toString());
 				}else if (! currentNode.prev().current().equals(checkingNode)) {
 					openList.insert(node);
-					//System.out.println(node.current().toString());
+					System.out.println(node.current().toString());
 				}
-    				
+    			
     			
     		}
 //    		System.out.println("---------------------");
     		
     		currentNode = openList.delMin();
-    		
-//    		Iterator<SearchNode> openListIterator = openList.iterator();
-//			while(openListIterator.hasNext()) {
-//				System.out.println(openListIterator.next().current().toString());
-//			}
-    		
-
-    		
-    		//System.out.println(openList.delMin().current().toString());
+    	
     	}
     	
     	
     	//System.out.println("Moves: "+this.moves);
     	if(currentNode.current().isGoal() == false) {
     		this.isSolve = false;
-    		System.out.println("Unsolved");
+    		//System.out.println("Unsolved");
     	}else {
     		this.isSolve = true;
-    		System.out.println("Solved");
+    		//System.out.println("Solved");
     		int runner = 0;
         	
         	//System.out.println("Runner : " + runner);	
@@ -159,7 +121,7 @@ public class Solver {
     		
     		while(currentNode.prev() != null) {
         		runner++;
-        		System.out.println(currentNode.current().toString());
+        		//System.out.println(currentNode.current().toString());
         		solution.push(currentNode.current());
         		currentNode = currentNode.prev();
         		
@@ -244,53 +206,10 @@ public class Solver {
 			}
 
 			Board x = new Board(board);
-
 			Queue<Board> queue = (Queue<Board>) x.neighbors();
-			
-			
 			Solver solver = new Solver(x);
 			
-//			Iterator iter = queue.iterator();
-//			
-//			MinPQ<SearchNode> minQue = new MinPQ<SearchNode>(
-//	    			(Comparator<SearchNode>) new Comparator<SearchNode>() {    
-//	    				public int compare(SearchNode s1, SearchNode s2) {
-//	    					
-//	    					
-//	    					if(s1.current().manhattan() < s2.current().manhattan()) {
-//	    						return -1;
-//	    					}else if(s1.current().manhattan() > s2.current().manhattan()) {
-//	    						return 1;
-//	    					}else {
-//	    						return 0;
-//	    					}
-//	    					
-//	    				}
-//	    			});;
-//			
-//			while(iter.hasNext()) {
-//				
-//				Board b = (Board) iter.next();
-//				SearchNode search = new SearchNode(b,0,null);
-//				minQue.insert(search);
-//			}
-//			
-//			//minQue.printOut();
-//			
-//			while(!minQue.isEmpty()) {
-//				
-//				SearchNode node = minQue.min();
-//				
-//				System.out.println(node.current().toString());
-//				
-//				minQue.delMin();
-//			}
-			
-			
-			
-			
-			
-			
+
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
