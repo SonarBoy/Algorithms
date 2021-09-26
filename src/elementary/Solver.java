@@ -120,57 +120,13 @@ public class Solver {
 //    			System.out.println("Hamming: "+checkingNode.hamming());
 //    			System.out.println("Moves: "+ nextMoves);
     			
-    			
-    			boolean inOpen = false;
-    			boolean inClosed = false;
-    			
-    			
-    			SearchNode runner = currentNode;
-    			while(runner.prev() != null) {
-    				if(runner.current().equals(checkingNode)) {
-    					inClosed = true;
-    					break;
-    				}
-    				runner = runner.prev();
-    			}
-    			
-//    			Iterator<SearchNode> closedListIterator = closedList.iterator();
-//    			while(closedListIterator.hasNext()) {
-//    				
-//    				SearchNode closedNode = closedListIterator.next();
-//    				
-//    				if(closedNode.current().equals(checkingNode)) {
-//    					
-//    					inClosed = true;
-//    					//System.out.println("Closed");
-//    					break;
-//    				}
-//
-//    			}
-//    			
-//    			if(!inClosed) {
-//    				Iterator<SearchNode> openListIterator = openList.iterator();
-//        			while(openListIterator.hasNext()) {
-//        				
-//        				SearchNode openNode = openListIterator.next();
-//        				
-//        				if(openNode.current().equals(checkingNode)) {
-//        					
-//        					inOpen = true;
-//        					//System.out.println("Open");
-//        					break;
-//        				}
-//        				
-//        			
-//        			}
-//    			}
-
-    			
-    				if(!inClosed && !inOpen) {
-    					
-    						openList.insert(node);
-    				
-    				}
+    			if(currentNode.prev() == null) {
+					openList.insert(node);
+					//System.out.println(node.current().toString());
+				}else if (! currentNode.prev().current().equals(checkingNode)) {
+					openList.insert(node);
+					//System.out.println(node.current().toString());
+				}
     				
     			
     		}
