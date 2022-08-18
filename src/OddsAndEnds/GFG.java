@@ -92,8 +92,7 @@ public static void main(String[] args)
     int N = 9;  
   
     // Given array arr[]  
-    int arr[] = { 10, 20, 15, 14, 13,  
-                25, 5, 4, 3 };  
+    int arr[] = { 10, 20, 15, 14, 13, 25, 5, 4, 3 };  
   
     // Function call  
     findLocalMaximaMinima(N, arr);  

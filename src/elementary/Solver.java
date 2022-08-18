@@ -110,10 +110,10 @@ public class Solver {
     	//System.out.println("Moves: "+this.moves);
     	if(currentNode.current().isGoal() == false) {
     		this.isSolve = false;
-    		//System.out.println("Unsolved");
+    		System.out.println("Unsolved");
     	}else {
     		this.isSolve = true;
-    		//System.out.println("Solved");
+    		System.out.println("Solved");
     		int runner = 0;
         	
         	//System.out.println("Runner : " + runner);	
@@ -121,7 +121,7 @@ public class Solver {
     		
     		while(currentNode.prev() != null) {
         		runner++;
-        		//System.out.println(currentNode.current().toString());
+        		System.out.println(currentNode.current().toString());
         		solution.push(currentNode.current());
         		currentNode = currentNode.prev();
         		

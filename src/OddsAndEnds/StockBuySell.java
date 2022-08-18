@@ -132,7 +132,7 @@ public class StockBuySell {
      StockBuySell stock = new StockBuySell(); 
 
      // stock prices on consecutive days 
-     int price[] = { 100, 180, 260, 310, 40, 535, 695 };
+     int price[] = { 100, 180, 260, 310, 40, 35, 95 };
      
      
      //int price[] = { 1000, 980, 860, 710, 640, 535, 495 };

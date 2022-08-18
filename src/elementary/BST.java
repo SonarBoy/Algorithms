@@ -246,17 +246,84 @@ public class BST<Key extends Comparable<Key>,Value> {
 		return null;
 	}
 	
-	private void inOrder(Node x, Queue<Key> q) {
+	public void inOrder() {
+		inOrder(root);
+	}
+	
+	private void inOrder(Node node) {
 		
-		if(x == null) {
+	       if (node == null)
+	            return;
+	 
+	        /* first recur on left child */
+	        inOrder(node.left);
+	 
+	        /* then print the data of node */
+	        System.out.println("("+node.key + " " + node.value+")");
+	 
+	        /* now recur on right child */
+	        inOrder(node.right);
+		
+	}
+	
+	public void postOrder() {
+		postOrder(root);
+	}
+	
+	private void postOrder(Node node) {
+		
+	       if (node == null)
+	            return;
+	 
+	        /* first recur on left child */
+	       	postOrder(node.left);
+	 
+	        /* now recur on right child */
+	       	postOrder(node.right);
+	        
+	        /* then print the data of node */
+	        System.out.println("("+node.key + " " + node.value+")");
+	 
+	}
+	
+	public void preOrder() {
+		preOrder(root);
+	}
+	
+	private void preOrder(Node node) {
+		
+		if(node == null)
 			return;
-		}
 		
-		inOrder(x.left, q);
+		System.out.println("("+node.key + " " + node.value+")");
 		
-		q.enqueue((Key) x.key);
+		preOrder(node.left);
 		
-		inOrder(x.right, q);
+		preOrder(node.right);
+	}
+	
+	public static void main(String [] args) {
+		
+		BST<Integer,String> tree = new BST<Integer,String>();
+		
+		tree.put(1, "A");
+		tree.put(2, "B");
+		tree.put(4, "D");
+		tree.put(3, "C");
+		tree.put(6, "F");
+		tree.put(5, "E");
+		
+		tree.inOrder();
+		
+		System.out.println();
+		System.out.println();
+		
+		tree.postOrder();
+		
+		System.out.println();
+		System.out.println();
+		
+		tree.preOrder();
 		
 	}
 }
